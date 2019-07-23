@@ -1,0 +1,182 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; font-family: 'Nanum Gothic', sans-serif;
+background: #fff; -ms-overflow-style: none; }
+::-webkit-scrollbar{display: none;}
+
+li{list-style: none;}
+a{text-decoration: none; border: none; outline: none;}
+label, input, button{border: none; outline: none; cursor: pointer;}
+image{border: 0;}
+
+
+/* header 작업 */
+.wrap{width: 100%; height: 100%;}
+
+#hd{width: 100%; height: 100px; position: fixed; top: 0; left: 0%; z-index: 10; transition: 0.6s;}
+.logo{display: block; width: 201px; height: auto; margin-left: 40px; padding-top: 40px; transition: 0.6s; float: left;}
+#gnb{float: left;margin-left: 50px; padding-top: 27px; transition: 0.6s; position: relative;}
+#gnb li.mainmenutxt{float: left; padding: 1em; margin-right: 15px;}
+#gnb li a img{display: block; margin: 5px;}
+.submenu{position: absolute; top: 80px;  width: 150px;
+visibility: hidden; transition: 0.5s; opacity: 0; z-index: 50; border: 1px solid #000;}
+#sub1{left: -30px;}
+#sub2{left: 98px;}
+#sub3{left: 218px;}
+#sub4{left: 361px;}
+#sub5{left: 525px;}
+#sub6{left: 680px;}
+#sub7{left: 875px;}
+.submenu li{line-height: 3; }
+.submenu li:hover a.submenutxt{color: #e4e4e4;}
+.submenu li a.submenutxt{display: block; font-size: 12px; text-align: center; color: #000;}
+#gnb li.mainmenutxt:hover .submenu{visibility: visible; opacity: 1;}
+#gnb.on{margin-top: -110px;}
+#gnb.off{margin-top: 0px;}
+.logo.on{margin-top: -110px;}
+.logo.off{margin-top: 0px;}
+
+
+
+
+/*메뉴박스작업*/
+.menu_icon{position: absolute; top: 30px; right: 2%;}
+.menu_icon img{display: block; width: 90%; height: auto; padding: 5px;}
+#menu_box{background: rgba(0, 0, 0, 0.85); position: fixed;
+top: 0px; left: 0%; width: 100%; height: 100%; z-index: 99; transition: 0.7s; 
+display: none;}
+.mymenu_box{position: absolute; top: 4%; right: 8%;}
+.mymenu li{float: left; margin-right: 40px;}
+.mymenu li a{display: block; font-size: 14px; color: #b9b9b9; font-weight: bold;}
+.close{position: absolute; top: 3%; right: 2%; display: block; padding: 5px;}
+.search{position: absolute; top: 45%; right: 18%;}
+#keyword{width: 300px; height: 35px; text-indent: 20px; background: none; 
+border: 2px solid #fff; border-radius: 30px; color: #b9b9b9;}
+.search_btn{width: 40px; height: 40px; background: transparent;
+position: absolute;top: 0; right: -14%; opacity: 0;}
+.search_icon{position: absolute; top: 5px; right: -40px;}
+.mtxt_box{position: absolute; top: 13%;}
+.mtxtimg img{display: block; }
+.mtxt{float: left; margin-left: 250px; width: 250px; height: auto;}
+.mtxt a.mtxtimg{display: block; padding-top: 20px; padding-bottom: 20px; margin-top: 25px;}
+.stxt{position: absolute; left: 60%; margin-left: 280px; width: 800px;}
+#stxt1{top: 2%;}
+#stxt2{top: 17%;}
+#stxt3{top: 31%;}
+#stxt4{top: 45%;}
+#stxt5{top: 60%;}
+#stxt6{top: 74%;}
+#stxt7{top: 88%;}
+.stxt li{float: left; line-height: 5; margin-right: 30px;}
+.stxt li a{display: block; color: #b9b9b9; margin: 5px; font-size: 14px;}
+.stxt li:hover a{color: #ffffff;}
+.icon_box{position: absolute; top: 55%; right: 20%;}
+.icon_box li{margin-top: 20px;}
+
+
+/* con1 작업 */
+#con1{clear: both; position: relative;width: 100%; height: 100vh; overflow: hidden;}
+.con1_vsimgs{width: 800%; height: 100vh;}
+.con1_vsimgs li{float: left; width: 12.5%; height: 100vh; background-repeat: no-repeat;
+background-size: cover; background-position: center center;}
+.con1_vsimgs li.item1{background-image: url(./images/vs1.png);}
+.con1_vsimgs li.item2{background-image: url(./images/vs2.jpg);}
+.con1_vsimgs li.item3{background-image: url(./images/vs3.jpg);}
+.con1_vsimgs li.item4{background-image: url(./images/vs4.jpg);}
+.con1_vsimgs li.item5{background-image: url(./images/vs5.jpg);}
+.con1_vsimgs li.item6{background-image: url(./images/vs6.png);}
+.con1_vsimgs li.item7{background-image: url(./images/vs7.jpg);}
+.vstxt{margin-bottom: 80rem; transition: 0.6s; opacity: 0;}
+#vstxt1, #vstxt2, #vstxt4, #vstxt6{margin-left: 15rem;} 
+#vstxt5, #vstxt7{margin-left: 80rem;}
+#vstxt3{margin-left: 70rem;}
+.con1_vsimgs li.on .vstxt{margin-top: 22rem; opacity: 1;}
+.vs_btn_box{position: absolute; bottom: 5%; left: calc(50% - 140px); width: 280px; height: 10px;}
+.vs_btns li{float: left; width: 5px; height: 10px; transition: 0.6s;
+margin-right: 30px;}
+.vs_btns li button.btn{display: block; width: 15px; height: 10px; background:rgba(255,255,255,0.3); margin: 0 auto; line-height: 30px;}
+.vs_btns li.on{background:rgba(255,255,255,1); width: 40px;} 
+
+
+
+/* con2 작업 */
+#con2{clear: both; width: 100%; height: 100vh; overflow: hidden; position: relative;}
+.con2_vsimgs{width: 500%; height: 100%;}
+.con2_vsimgs li{width: 20%; float: left; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+.con2_vsimgs li.item1{background-image: url(./images/col1.jpg);}
+.con2_vsimgs li.item2{background-image: url(./images/col2.jpg);}
+.con2_vsimgs li.item3{background-image: url(./images/col3.jpg);}
+.con2_vsimgs li.item4{background-image: url(./images/col4.jpg);}
+.con2_vsimgs li.item5{background-image: url(./images/col5.jpg);}
+.more_box{margin-left: 6rem; margin-top: 4rem; position: relative;}
+.more{display: block; padding: 10px; width: 230px; height: 35px; color: #ffffff; font-size: 24px;
+border: 3px solid #fff; text-indent: 40px; float: left; border-radius: 100px; line-height: 35px; }
+.colarrow{position: absolute; width: 40px; height: auto; left: 160px; }
+.colarrow img{display: block; width: 40px; height: auto; margin: -3px;}
+
+@keyframes colarrow {
+    from{left:155px;top: 13px; transform: translate(0deg);}
+    to{left: 180px; top: 13px; transform: translate(0deg);}
+    0%{left: 155px; top: 13px; transform: translate(0deg);}
+    50%{left: 180px; top: 13px; transform: translate(0deg);}
+    100%{left: 155px; top: 13px; transform: translate(0deg);}
+}
+
+.colarrow{
+    animation-name: "colarrow";
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    -webkit-animation-name: "colarrow";
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+
+
+
+.coltxt{ margin-left: 6rem; transition: 0.8s;
+opacity: 0; display: block;display: block;}
+.con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
+.colstxt{display: block; margin-left:5%; padding-top: 3rem;}
+
+.colmenubox{clear: both; position: absolute; bottom: 0; left: 0; background:rgba(0,0,0,0.4);
+width: 100%; height:100px;}
+.arrowbox{width: 25%; height: 100px; background: #000; position: relative; float: left;}
+.arrowleft{position: absolute; right: 35%; top: 22%;}
+.bar{position: absolute;right: 25%;top: 28%;}
+.arrowright{position: absolute;right: 9%; top: 22%;}
+.colmenu{position: absolute; top: 36%; left: 29%; width: 1500px;}
+.colmenu li{float: left; margin-right: 7%;}
+.colmenu li button{display: block; padding: 5px; margin-right: 20px;
+background-color: transparent;}
+.colmenu img{display: block;}
+
+
+/* con3 작업 */
+#con3{clear: both; width: 100%; height:100vh; overflow: hidden;}
+.con3_con{width: 100%; height: 100vh;}
+.con3_con li{width: 33.3333%; float: left; position: relative;
+height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+.con3_con li.item1{background-image: url(./images/event.jpg);}
+.con3_con li.item2{background-image: url(./images/store.jpg);}
+.con3_con li.item3{background-image: url(./images/outlet.jpg);}
+.con3_con li a{display: block;width: 100%; height: 100vh; background-color: rgba(0,0,0,0.3); transition: 0.5s; }
+.con3_con li a:hover{background-color: rgba(0,0,0,0.0); }
+.iconbox{width: 200px; height: 200px; background:rgba(255,255,255,0.2); border-radius: 50%;position: absolute; top:25%; left: 35%;}
+.con3icon1,.con3icon2{display: block; margin-left: 50px; margin-top: 50px; opacity: 0.8;}
+.con3icon3{display: block; margin-left: 40px; margin-top: 40px;}
+.con3txt{display: block; color: #ffffff; position: absolute; left: 34%; bottom: 40%;}
+
+/* 영어문장일 경우, 글씨가 잘릴 수 있으므로 wordbreak:break all; 을 써라. */
+
+.ft{clear: both; width: 100%; height: 330px; background: #000; position: relative;}
+.ftlogo{margin-top: 35px; margin-left: 40px;}
+.ftmenu{margin-top: 40px; margin-left: 40px;}
+.ftmenu li{float: left; margin-right: 40px;}
+.fttxt1{display: block;position: absolute; left: 40px; top: 150px; display: block;}
+.fttxt2{display: block;position: absolute; left: 40px; top: 200px; display: block;}
+.fttxt3{display: block;position: absolute; left: 40px; top: 250px; display: block;}
