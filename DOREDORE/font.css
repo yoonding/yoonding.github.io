@@ -1,9 +1,0 @@
-@charset "uft-8";
-@font-face{
-    font-family: "NanumBarunGothicUltraLight";
-    src: local("NanumBarunGothicUltraLight"), url(./font/NanumBarunGothicUltraLight.eot#iefix), 
-    url(./font/NanumBarunGothicUltraLight.ttf) format("truetype"),
-    url(./font/NanumBarunGothicUltraLight.otf) format("opentype"),
-    url(./font/NanumBarunGothicUltraLight.woff) format("woff")
-    /* eot 인터넷익스플로러 전용 */
-}
