@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="IKEA">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="IKEA, 이케아">
+    <meta name="copyright" content="© Inter IKEA Systems B.V. 1999 - 2019">
+    <title>IKEA</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IKEA">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="IKEA">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css" type="text/css" media="all">
+    <link rel="stylesheet" href="desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    body, html{width: 100%; font-family: 'Nanum Gothic Coding', monospace, 'Yantramanav';
+    background: #fff; -ms-overflow-style: none; }
+    ::-webkit-scrollbar{display: none;}
+    li{list-style: none;}
+    a{text-decoration: none;}
+    label, input, button{border: none; outline: none; background-color: transparent;}
+    image{border: 0;}
+    
+    .wrap{width: 89%; margin: 0 auto;}
+    #header{width: 100%; height: 150px; position: relative;}
+    .logo{display: block;width: 150px; height: 80px;position: absolute; left: calc(50% - 75px); top: 3rem;}
+    .logo img{display: block; width: 100%;}
+    .menu_icon{display: none; width: 56px;position: absolute; top: 3rem;right: 50px;}
+    .menu_icon img{display: block; width: 100%;}
+    
+    
+    
+    .item{background-repeat: no-repeat; background-size: cover; background-position: center; margin: 5px;}
+    .mitem{background-repeat: no-repeat; background-size: cover; background-position: center; margin: 5px;}
+    .item1{background-image: url(images/vs1.jpg); grid-area: item1;}
+    .item2{background-image: url(images/vs2.gif); grid-area: item2;}
+    .item3{background-image: url(images/vs3.jpg); grid-area: item3;}
+    .item4{background-image: url(images/vs4.jpg); grid-area: item4;}
+    .item5{background-image: url(images/vs5.jpg); grid-area: item5;}
+    .item6{background-image: url(images/vs6.jpg); grid-area: item6;}
+    .item7{background-image: url(images/vs7.jpg); grid-area: item7;}
+    .item8{background-image: url(images/vs8.jpg); grid-area: item8;}
+    .item9{background-image: url(images/vs9.jpg); grid-area: item9;}
+    .item10{background-image: url(images/vs10.jpg); grid-area: item10;}
+    
+        /* 데스크탑일 경우 : 3칸 3줄 만들기 */
+    #container{display: grid;
+    grid-template-areas:"item1 item2 item4"
+                        "item1 item3 item4"
+                        "item5 item7 item8"
+                        "item6 item7 item9"
+                        "item10 item10 item10";
+    grid-template-columns: 786px 447px 446px;
+    grid-template-rows: 489px
+                        271px
+                        422px
+                        422px
+                        422px;
+        
+    min-height: 100vh;
+        
+    }
+    /* 
+    grid시스템은 부모에게 display:grid;를 설정해주고    
+    자식들에 대해 영역의 이름을 만들어주어야한다. 
+    grid-area(영역이름 설정)
+    grid-template-areas(영역의 이름을 이용하여 열 및 칸 정하기)
+    grid-template-columns(한줄당 너비) 150px씩 주고 나머지(1fr)
+    grid-template-rows(줄당 너비)
+    */
+
+@media all and (max-width:600px){/*모바일 : 일렬로 만들기*/
+    .container{display: grid;
+    grid-template-areas:"item1"
+                        "item2"
+                        "item3"
+                        "item4"
+                        "item5"
+                        "item6"
+                        "item7";
+    grid-template-columns: 100%;
+    grid-template-rows: 100px
+                        50px
+                        1fr
+                        50px
+                        30px;}
+}
+    
+</style>
+<script>
+    $(document).ready(function() {
+
+    });
+</script>
+
+<body>
+   <div class="wrap">
+    <header id="header">
+       <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+       <button class="menu_icon"><img src="./images/menu_icon.jpg" alt=""></button>
+    </header>
+    <main id="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+        <div class="item item7"></div>
+        <div class="item item8"></div>
+        <div class="item item9"></div>
+        <div class="item item10"></div>
+        
+    </main>
+    </div>
+    <footer id="item footer">
+        
+    </footer>
+</body>
+</html>
