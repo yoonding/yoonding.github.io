@@ -1,0 +1,54 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; background: #fff; font-family: 'Noto Sans KR', sans-serif;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none;}
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+#container{zoom: 1; padding-right: 350px;}
+#container:after{content: ""; display: block; clear: both;}
+#content{float: right; width: 100%; margin-right: -400px; position: relative;}
+#aside{float: left; position: fixed; width: 400px; left: 0;top: 0; z-index: 99; background: #fff;}
+#ft{width: 100%; float: right; height: 80px; background: #000; margin-right: -400px; position: fixed; right: 0;bottom: 0;}
+
+
+/* header */
+.logo{display: block; text-align: center; padding-top : 30px;}
+.m_menubox{ margin-left: 50px; width: 350px; height: auto; }
+.m_menubox li.m_menu{position: relative; width: 155px; height: 30px; margin-top: 2.2rem;}
+.m_menubox li.m_menu:last-child{width: 100px;}
+.m_menubox li.m_menu a{display: block;width: 100%; height: 100%;}
+.m_menubox li.m_menu a img{display: block;}
+.sns_box li{float: left;}
+
+.s_menubox{position: absolute; top: -5px; left: 200px; height: 0; overflow: hidden;
+width: 150px;  transition: 0.6s; height: 0px;}
+.s_menubox li{margin-top: 0.5rem;}
+.s_menubox li a{display: block; width: 100px; height: 20px; color: #000; font-size: 14px; padding: 5px;}
+.m_menubox li.m_menu:hover .s_menubox{height: 250px;opacity: 1;}
+.s_menubox li:hover a{text-decoration: underline; }
+
+.sns_box{width: 220px; height: 50px; position: absolute; left: 100px; top: 0;}
+.sns_box li{float: left; width: 45px; margin-right: 5px;padding: 2px}
+.sns_box li a{display: block; width: 100%;}
+.sns_box img{display: block; width: 100%;}
+
+.tnb_box{width: 320px; height: 50px; margin-top: 5rem; margin-left: 50px;}
+.tnb_box a{display: block; float: left; margin-right: 25px; padding: 5px; width: 40px;}
+.tnb_box a:last-child{margin-right: 0;}
+.tnb_box a img{display: block; width: 100%;}
+
+/* button box */
+.vs_btn_box{position: absolute;top: 22.5rem; left: 60px; width: 15px; height: 180px;}
+.vs_btn_box li{width:15px; height: 15px; background-color: #fff; margin-bottom: 15px;}
+
+/*footer*/
+#ft div{float: right; margin-right: 430px;}
+.ftlogo{width: 120px; float: right; padding: 15px; margin-right: 10px;}
+#ft ul{width: 400px; height: 30px; float: left;margin-top: 1.5rem; }
+#ft ul li{float: left; margin-left: 15px;}
+#ft ul li a{display: block; color: #989898; padding: 5px; font-size: 12px;}
+.copyright{float: left; width: 200px;color: #606060;; font-size: 12px;padding: 5px;text-indent: 15px;}
