@@ -1,0 +1,63 @@
+<article class="page1_menu">
+                <div class="service_menu1">
+                    <a href="" class="service_img1"><img src="./images/con1img.jpg" alt=""></a>
+                    <div class="menubox1">
+                        <h3>통합민원 서비스</h3>
+                        <ul>
+                            <li>민원방문예약상담</li>
+                            <li>자주하는 질문</li>
+                            <li>일반민원신청</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service_menu2">
+                    <a href="" class="service_img2"><img src="./images/con2img.jpg" alt=""></a>
+                    <div class="menubox2">
+                        <h3>바로가기 서비스</h3>
+                        <ul>
+                            <li>토지매수제도</li>
+                            <li>환경영양평가</li>
+                            <li>금강 트레킹</li>
+                            <li>공익비리 익명신고</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="pop">
+                <ul class="pop_imgs">
+                    <li><a href=""><img src="./images/slide1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./images/slide2.jpg" alt=""></a></li>
+                </ul>
+                <ul class="pop_btn">
+                    <li class="pop_btn1"></li>
+                    <li class="pop_btn2"></li>
+                    <li class="pop_btn3"><img src="./images/stop.png" alt=""></li>
+                </ul>
+            </article>
+            <article class="now_box">
+                <button><img src="./images/nowicon1.png" alt=""></button>
+                <button><img src="./images/nowicon2.png" alt=""></button>
+            </article>
+            <div class="notice_box">
+                <div class="notice_tit_box">
+                    <h2 class="notice_tit">새소식</h2>
+                    <a href="" class="plus">
+                        <img src="./images/plus.png" alt="">
+                        <h3>소식 더 보기</h3>
+                    </a>
+                </div>
+                <ul class="notice_con_box">
+                    <li class="notice_con">
+                        <span>2019-04-22</span>
+                        <p>2019 기후변화주간, 나의 지구를 구해줘!</p>
+                    </li>
+                    <li class="notice_con">
+                        <span>2019-04-12</span>
+                        <p>실내 공기질 개선 효과 보안 벌레나무, 보급 시범사업 확대</p>
+                    </li>
+                    <li class="notice_con">
+                        <span>2019-04-12</span>
+                        <p>항일운동의 역사, 다도해해상국립공원 소안도</p>
+                    </li>
+                </ul>
+            </div>

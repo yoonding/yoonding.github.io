@@ -1,0 +1,73 @@
+<div class="menu_box">
+                <ul class="mtxt_box">
+                    <li><a href=""><img src="./images/maintxt1.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">정보공개제도안내</a></li>
+                            <li><a href="">정보목록</a></li>
+                            <li><a href="">사전정보공표</a></li>
+                            <li><a href="">행정정보공개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt2.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">일반민원신청</a></li>
+                            <li><a href="">일반민원조회</a></li>
+                            <li><a href="">서식민원신청</a></li>
+                            <li><a href="">부조리·불친절신고</a></li>
+                            <li><a href="">밀렵밀거래신고</a></li>
+                            <li><a href="">예산낭비신고</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt3.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">청장과의 대화</a></li>
+                            <li><a href="">환경게시판</a></li>
+                            <li><a href="">온라인설문</a></li>
+                            <li><a href="">국민제안</a></li>
+                            <li><a href="">환경참여방</a></li>
+                            <li><a href="">인터넷상담방</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt4.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">부서별자료</a></li>
+                            <li><a href="">환경측정·통계자료</a></li>
+                            <li><a href="">조류(녹조)정보 알림방</a></li>
+                            <li><a href="">환경영향평가</a></li>
+                            <li><a href="">토지매수안내</a></li>
+                            <li><a href="">환경인정보교류</a></li>
+                            <li><a href="">사이버 환경교실</a></li>
+                            <li><a href="">국회관련정보</a></li>
+                            <li><a href="">간행물자료</a></li>
+                            <li><a href="">서식자료실</a></li>
+                            <li><a href="">생태하천 모니터링단</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt5.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">공지·공고</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">보도·해명자료</a></li>
+                            <li><a href="">동영상홍보관</a></li>
+                            <li><a href="">e-환경뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt6.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">금강이야기</a></li>
+                            <li><a href="">금강갤러리</a></li>
+                            <li><a href="">비단물결 금강천리 트레킹</a></li>
+                            <li><a href="">생태탐방</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><img src="./images/maintxt7.png" alt=""></a>
+                        <ul class="stxt_box">
+                            <li><a href="">청장소개</a></li>
+                            <li><a href="">일반현황</a></li>
+                            <li><a href="">수계관리위원회</a></li>
+                            <li><a href="">조직 및 업무</a></li>
+                            <li><a href="">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
