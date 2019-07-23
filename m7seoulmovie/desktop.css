@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+body, html{width: 100%; background: #000; font-family: 'Nanum Gothic Coding', monospace; font-weight: 100;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none; border:0; outline:0; }
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+/* 주요 레이아웃 */
+#menu_box{position: fixed;top: 0;left: 0; width: 390px; height: 100%; float: left;
+z-index: 10; background: #000; box-shadow: 1px 0px 10px #8d819c;}
+#content_wrap{width: calc(100% - 390px); height: 100vh; padding-left: 390px;}
+
+/* header */
+.logo{display: block; margin-left: 120px; padding-top: 30px;}
+
+#gnb{width: 80%; height: auto; padding: 40px 0px 30px 50px;}
+.gnb_box{width: 100%;}
+.gnb_box li.gnb_tit{position: relative; margin-top: 30px;}
+.gnb_box li a.gnb_txt{display: block; padding: 10px; color: #ffffff; font-size: 20px; font-weight: 600;}
+.plus{display: block; float: right; margin-right: 30px;}
+
+
+.sub_box{position: absolute; top: 50px; left: 25px; width: 100%;
+  height: 0px; overflow: hidden; transition: 0.6s;}
+.sub_box.on{height: 200px;}
+
+.sub_box li a{display: block; color: #ffffff;
+    font-size: 14px; width: 40%; height:30px; line-height: 30px;}
+
+
+
+.ft_menu{width: 100%; height: 80px; position: absolute; bottom: 18rem; left: 60px;}
+.ft_menu:before{content: " "; width: 30px; height: 3px; display: block; position: absolute;
+left: 0;bottom: 6rem; color: #5e4e71;}
+.ft_menu li{line-height: 3;}
+.ft_menu li a{display: block; font-size: 12px; color: #ccc; }
+
+
+
+
+
+
+
+
+
+
+/* con 세부설정 */
+.con_box > ul{clear: both; padding-top: 2rem; width: 96%; margin: 0 auto;}
+
+/* ul1 */
+.conslist_box1 li a{display: block; width: 96%; margin: 0 auto;}
+.conslist_box1 li img{display: block; width: 100%;}
+.conslist_box1 li div{width: 96%; margin: 0 auto;}
+
+.border{display: block; width: 100%;}
+
+
+/* ul2 */
+.conslist_box2 li div{width: 96%; margin: 0 auto;}
+.conslist_box2 li.item1{float: left; width: 32.6%;}
+.conslist_box2 li div{width: 96%; margin: 0 auto;}
+.conslist_box2 li.item2{width: 65%; margin-right: 0.6%; overflow: hidden; float: right;}
+
+.conslist_box2 li.item2 .ban6_box{ position: relative;  width: 200%;}
+.conslist_box2 li.item2 .ban6_box li{width: 50%;; float: left;}
+.conslist_box2 li.item2 .ban6_box a{ display: block;}
+.conslist_box2 li.item2 img{display: block; width: 100%;}
+.view{position: absolute;display: block; top: 19rem; left: 20%; color: #ffffff; font-size: 24px;
+border: 1px solid #fff; width: 200px; height: 40px; text-align: center; padding: 5px;
+line-height: 38px;}
+
+/* ul3 */
+.conslist_box3 li a{display: block;width: 96%; margin: 0 auto;}
+.conslist_box3 li img{display: block; width: 100%;}
+.conslist_box3 li div{width: 96%; margin: 0 auto;}

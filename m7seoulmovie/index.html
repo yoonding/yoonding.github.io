@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="서울독립영화제">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="서울독립영화제, 영화, 독립영화, 영화제">
+    <meta name="copyright" content="Copyright ⓒ 서울독립영화제 SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.">
+    <title>서울독립영화제</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="서울독립영화제">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="서울독립영화제">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css" type="text/css" media="all">
+    <link rel="stylesheet" href="desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+    @media screen and (max-width:767px){
+        /* 모바일의 경우 */
+    .conslist_box1{ column-count:1;}
+    .conslist_box3{column-count:1;}
+    }
+    @media screen and (min-width:768px) and (max-width:1280px){
+        /* 태블릿일 경우 */
+    .conslist_box1{ column-count:2;}
+    .conslist_box3{column-count:2;}
+    }  
+    @media screen and (min-width:1281px){
+        /* 데스크탑일 경우 */
+    .conslist_box1{ column-count:3;}
+    .conslist_box1 item4{display: none;}
+    .conslist_box3{column-count:3;}
+    .conslist_box4 item6{display: none;}
+    }
+    </style>
+    <script>
+     
+    </script>
+<body>
+    <aside id="menu_box">
+        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+        <nav id="gnb">
+            <ul class="gnb_box">
+                <li class="gnb_tit">
+                    <a href="" class="gnb_txt">서울독립영화제<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box">
+                        <li><a href="">행사개요</a></li>
+                        <li><a href="">시상/심사위원</a></li>
+                        <li><a href="">조직구성</a></li>
+                        <li><a href="">슬로건/포스터</a></li>
+                        <li><a href="">후원협찬</a></li>
+                        <li><a href="">공식로고</a></li>
+                        <li><a href="">영화제역사</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a href="" class="gnb_txt">상영프로그램<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box">
+                        <li><a href="">개막작</a></li>
+                        <li><a href="">본선경쟁</a></li>
+                        <li><a href="">새로운선택</a></li>
+                        <li><a href="">특별초청</a></li>
+                        <li><a href="">통일기획전</a></li>
+                        <li><a href="">아카이브전</a></li>
+                        <li><a href="">해외초청</a></li>
+                        <li><a href="">상영작검색</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a href="" class="gnb_txt">행사안내<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box">
+                        <li><a href="">상영시간표</a></li>
+                        <li><a href="">상영관</a></li>
+                        <li><a href="">티켓</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a href=""  class="gnb_txt">커뮤니티<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">언론보도</a></li>
+                        <li><a href="">뉴스레터</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a href=""  class="gnb_txt">일상사업<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box">
+                        <li><a href="">뉴스</a></li>
+                        <li><a href="">사업소개</a></li>
+                        <li><a href="">후원안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="ft_menu">
+            <ul>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">이메일무단수집거부</a></li>
+            </ul>
+        </div>
+        <div class="sns_box">
+            <ul class="snss">
+                <li><a href=""><img src="./images/icon1.png" alt=""></a></li>
+                <li><a href=""><img src="./images/icon2.png" alt=""></a></li>
+                <li><a href=""><img src="./images/icon3.png" alt=""></a></li>
+                <li><a href=""><img src="./images/icon4.png" alt=""></a></li>
+                <li><a href=""><img src="./images/icon5.png" alt=""></a></li>
+            </ul>
+        </div>
+        <p class="copyright">
+            주최 : (사)한국독립영화협회, 영화진흥위원회<br>
+            주관 : 서울독립영화제2019 집행위원회<br>
+            (04207)서울시 마포구 마포대로 182-10, 성촌빌딩 301호<br>
+            TEL.02-362-9513<br>
+            FAX.02-363-3154<br>
+            MAIL. SIFF@SIFF.KR<br>
+            Copyright ⓒ 서울독립영화제<br>
+            SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.<br>
+        </p>
+    </aside>
+    <main id="content_wrap">
+        <section class="con_box">
+            <ul class="conslist_box1">
+                <li class="item1">
+                    <a href="" class="ban1">
+                        <img src="./images/vs1.png" alt="">
+                    </a>
+                </li>
+                <li class="item2">
+                    <div href=""  class="ban2">
+                        <img src="./images/border.png" alt="" class="border">
+                        <!-- <span class="tit_box">NEWS</span>
+                        <p class="B_txt">순회상영회 인디피크닉2019<br>
+                        in 독립영화공공상영회(6/28, 7/19)</p>
+                        <p class="S_txt">한 해의 독립영화를 결산하는 축제 서울독립영화제가<br>
+                            새봄을 맞이하며 관객을 찾아갑니다. <br>
+                            인디피크닉2019이 준비한 작품을 <br>
+                            매달 서울 시민청 활짝라운지에서 만나보실 수 있습니다.</p>
+                        <span>자세히 보러가기<img src="./images/arrow.png" alt=""></span> -->
+                    </div>
+                </li>
+                <li class="item3">
+                    <div href="" class="ban3">
+                        <img src="./images/bg.png" alt="">
+                        <!-- <span class="tit_box">PROGRAMS</span>
+                        <p class="B_txt">개막작, 본선경쟁, 아카이브 전 등<br>
+                        여러 프로그램을 만나보세요.</p>
+                        <p class="S_txt">올해 역시 작품 모 두에서 독립영화가 주목하는<br>
+                            멋진 얼굴들을 만날 수 있습니다.<br>
+                            작품이 빚어내는 앙상블과 더불어, 배우들의 활약을 기대하셔도 좋습니다. </p>
+                        <span>자세히 보러가기<img src="./images/arrow.png" alt=""></span> -->
+                    </div>
+                </li>
+                <li class="item4"><div class="ban4"></div></li>
+            </ul>
+            <ul class="conslist_box2">
+                <li class="item1">
+                    <div href="" class="ban5">
+                        <img src="./images/border.png" alt="" class="border">
+                        <!-- <span class="tit_box">NOTICES</span>
+                        <p class="B_txt">서울독립영화제2019<br>
+                        시나리오 크리에이티브<br>
+                        LAB 지원 사업 공모결과 발표</p>
+                        <p class="S_txt">서울독립영화제2019 시나리오 크리에이티브 LAB 접수가<br>
+                            6월 25일(화)로 마감되었습니다.<br>
+                            지원해주신 모든 분들께 감사드립니다.</p>
+                        <span>자세히 보러가기 <img src="./images/arrow.png" alt=""> </span> -->
+                    </div>
+                </li>
+                <li class="item2">
+                    <ul class="ban6_box">
+                        <li><a href=""><img src="./images/vs5.png" alt=""></a></li>
+                        <li><a href=""><img src="./images/vs51.png" alt=""></a></li>
+                        <span class="view">VIEW</span>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="conslist_box3">
+                <li class="item1">
+                    <a href="" class="ban7">
+                        <img src="./images/vs6.png" alt="">
+                    </a>
+                </li>
+                <li class="item2">
+                    <div href="" class="ban8">
+                        <img src="./images/border.png" alt="" class="border">
+                        <!-- <span class="tit_box">NOTICES</span>
+                        <p class="B_txt">서울독립영화제2019<br>
+                        시나리오 크리에이티브<br>
+                        LAB 지원 사업 공모결과 발표</p>
+                        <p class="S_txt">서울독립영화제2019 시나리오 크리에이티브 LAB 접수가<br>
+                            6월 25일(화)로 마감되었습니다.<br>
+                            지원해주신 모든 분들께 감사드립니다.</p>
+                        <span>자세히 보러가기 <img src="./images/arrow.png" alt=""> </span> -->
+                    </div>
+                </li>
+                <li class="item3">
+                    <div class="ban9">
+                        <img src="./images/vdo.png" alt="">
+                        <!-- <span class="tit_box">PROGRAMS</span>
+                        <p class="B_txt">개막작, 본선경쟁, 아카이브 전 등<br>
+                        여러 프로그램을 만나보세요.</p> -->
+                    </div>
+                </li>
+                <li class="item4">
+                    <div class="ban10">
+                        <img src="./images/vs8.png" alt="">
+                        <!-- <span class="tit_box">PROGRAMS</span>
+                        <p class="B_txt">개막작, 본선경쟁, 아카이브 전 등<br>
+                        여러 프로그램을 만나보세요.</p>
+                        <p class="S_txt">올해 역시 작품 모 두에서 독립영화가 주목하는<br>
+                            멋진 얼굴들을 만날 수 있습니다.<br>
+                            작품이 빚어내는 앙상블과 더불어, 배우들의 활약을 기대하셔도 좋습니다. </p>
+                        <span>자세히 보러가기<img src="./images/arrow.png" alt=""></span> -->
+                    </div>
+                </li>
+                <li class="item5">
+                    <div class="ban11">
+                        <img src="./images/border.png" alt="" class="border">
+                        <!-- <span class="tit_box">NOTICES</span>
+                        <p class="B_txt">서울독립영화제2019<br>
+                        시나리오 크리에이티브<br>
+                        LAB 지원 사업 공모결과 발표</p>
+                        <p class="S_txt">서울독립영화제2019 시나리오 크리에이티브 LAB 접수가<br>
+                            6월 25일(화)로 마감되었습니다.<br>
+                            지원해주신 모든 분들께 감사드립니다.</p>
+                        <span>자세히 보러가기 <img src="./images/arrow.png" alt=""> </span> -->
+                    </div>
+                </li>
+                <li class="item6"><div class="ban12"></div></li>
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
