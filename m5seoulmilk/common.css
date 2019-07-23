@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+body, html{width: 100%; background: #fff; font-family: 'malgun-gothic'; font-weight: 100;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none; border:0; outline:0; }
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+.wrap{width: 100%; height: 100%;}
+
+

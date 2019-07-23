@@ -1,0 +1,79 @@
+/* circle_box 영역 */
+.btn_box{width: 350px; height: 200px; margin: 0px auto; padding: 30px;}
+.btns{width: 154px; height: 110px; margin: 0 auto;}
+.btns label{position: absolute; top: 184px; float:  left; margin: 8px; width: 6px; height: 29px; border-radius: 3px; 
+    background-color: rgb(155, 155, 155); transition: 0.4s; }
+.btns label#ck1{left: 883px;}
+.btns label#ck2{left: 903px;}
+.btns label#ck3{left: 923px;}
+.btns label#ck4{left: 943px;}
+.btns label#ck5{left: 963px;}
+.btns label#ck6{left: 983px;}
+.btns label#ck7{left: 1003px;}
+.btns label#ck8{left: 1023px;}
+
+#btn1:checked ~ .btns label#ck1{height: 60px; background: #333; top: 168px;}
+#btn2:checked ~ .btns label#ck2{height: 60px; background: #333; top: 168px;}
+#btn3:checked ~ .btns label#ck3{height: 60px; background: #333; top: 168px;}
+#btn4:checked ~ .btns label#ck4{height: 60px; background: #333; top: 168px;}
+#btn5:checked ~ .btns label#ck5{height: 60px; background: #333; top: 168px;}
+#btn6:checked ~ .btns label#ck6{height: 60px; background: #333; top: 168px;}
+#btn7:checked ~ .btns label#ck7{height: 60px; background: #333; top: 168px;}
+#btn8:checked ~ .btns label#ck8{height: 60px; background: #333; top: 168px;}
+.ck{display: none;}
+
+.tit_box{width: 230px; height: 50px; margin: 0 auto; position: relative;padding: 10px;}
+.tit_box label{font-size: 40px; position: absolute;top: 40px;display: none;transition: 0.6s; }
+.tit_box label:nth-child(1){left: 90px;}
+.tit_box label:nth-child(2){left: 70px;}
+.tit_box label:nth-child(3){left: 50px;}
+.tit_box label:nth-child(4){left: 50px;}
+.tit_box label:nth-child(5){left: 50px;}
+.tit_box label:nth-child(6){left: 70px;}
+.tit_box label:nth-child(7){left: 30px;}
+.tit_box label:nth-child(8){left: 10px;}
+
+#btn1:checked ~ .tit_box label#tit1{display: block;}
+#btn2:checked ~ .tit_box label#tit2{display: block;}
+#btn3:checked ~ .tit_box label#tit3{display: block;}
+#btn4:checked ~ .tit_box label#tit4{display: block;}
+#btn5:checked ~ .tit_box label#tit5{display: block;}
+#btn6:checked ~ .tit_box label#tit6{display: block;}
+#btn7:checked ~ .tit_box label#tit7{display: block;}
+#btn8:checked ~ .tit_box label#tit8{display: block;}
+
+.circle_wrap{width: 84%; height: 1200px; margin: 50px auto;}
+.circle_box{width: auto;}
+.circle_box li{width: 358px; height: 358px; border-radius: 50%; float: left;
+position: relative; margin: 20px; }
+.circle_box li a{transition: transform 1s; transform-style: preserve-3d; display:block; 
+width: 358px; height:358px; }
+.circle_box li:hover a{transform: rotateY(0.5turn);}
+.circle_box li:hover span{opacity: 1;}
+.circle_box li div{position: absolute; top: 0; left: 0%; width: 358px; height: 358px;
+    font-size: 2rem; color: #fff; line-height: 350px; text-align: center; border-radius: 50%;}
+.circle_box li div.back{ background-color: rgba(234, 69, 69, 0.8); 
+    width: 357px; height: 357px;   opacity:0; }
+.circle_box li span{position: absolute; display: block; width: 100%; height: 100%; top: 0.8rem; font-size: 2rem; color: #ffffff; 
+margin-top: 9rem; text-align: center; transition: 0.5s; z-index: 99; opacity: 0; transition: 1s;}
+.circle_box li:nth-child(3) span,.circle_box li:nth-child(6) span,.circle_box li:nth-child(8) span{margin-top: 8rem;}
+.circle_box li:hover span{opacity: 1;}
+.circle_box li:hover div.back  { opacity:0.6; }
+.circle_box li:nth-child(1) div.back,.circle_box li:nth-child(3) div.back,
+.circle_box li:nth-child(6) div.back,.circle_box li:nth-child(8) div.back,.circle_box li:nth-child(9) div.back{
+    background-color: rgba(40, 98, 49, 0.8);}
+.circle_box li div.back img{display: block; width: 100%; height: 100%;}
+.circle_wrap li a {background-repeat: no-repeat; background-position: center center; 
+    background-size: cover;}
+#cw1 li.item1 a{background-image: url(./images/milk1.jpg); }
+#cw1 li.item2 a {background-image: url(./images/milk2.jpg);}
+#cw1 li.item3 a {background-image: url(./images/milk3.jpg);}
+#cw1 li.item4 a {background-image: url(./images/milk4.jpg);}
+#cw1 li.item5 a {background-image: url(./images/milk5.jpg);}
+#cw1 li.item6 a {background-image: url(./images/milk6.jpg);}
+#cw1 li.item7 a {background-image: url(./images/milk7.jpg);}
+#cw1 li.item8 a {background-image: url(./images/milk8.jpg);}
+#cw1 li.item9 a {background-image: url(./images/milk9.jpg);}
+
+
+

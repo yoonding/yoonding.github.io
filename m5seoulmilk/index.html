@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="서울우유협동조합">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="서울우유협동조합, 서울우유, 우유, 음료">
+    <meta name="copyright" content="Copyright © 2014 Seoulmilk. All Rights Reserved.">
+    <title>서울우유협동조합</title>
+    <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="서울우유협동조합">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="서울우유협동조합">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link rel="stylesheet" href="common.css" type="text/css" media="all">
+    <link rel="stylesheet" href="desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".menu_btn").click(function() {
+            $("#gnb").addClass("on");
+        });
+        $("#gnb .close").click(function() {
+            $("#gnb").removeClass("on");
+        });
+        $(".menu_box li.main_txt").click(function(){
+           $(this).find(".sub_box").slideToggle();
+        });
+    });
+</script>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <header id="hd">
+            <button class="menu_btn"><img src="images/menuicon.png"></button>
+            <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+            <button class="search_btn"><img src="./images/searchicon.png" alt=""></button>
+        </header>
+        <nav id="gnb">
+            <ul class="ham_box">
+                <li><a href="">서울우유 공식 쇼핑몰 - 나100샵</a></li>
+                <li><a href="">고객상담실</a></li>
+                <li><a href="">ENG</a></li>
+            </ul>
+            <ul class="menu_box">
+                <li class="main_txt"><a class="main">제품소개</a>
+                    <ul class="sub_box">
+                        <li><a href="">우유류</a></li>
+                        <li><a href="">발효유류</a></li>
+                        <li><a href="">유음료류</a></li>
+                        <li><a href="">커피음료</a></li>
+                        <li><a href="">치즈류</a></li>
+                        <li><a href="">가공식품류</a></li>
+                        <li><a href="">반려동물제품</a></li>
+                        <li><a href="">외국원산지공지</a></li>
+                    </ul>
+                </li>
+                <li class="main_txt"><a class="main">About 서울우유</a>
+                    <ul class="sub_box">
+                        <li><a href="">조합현황</a></li>
+                        <li><a href="">중앙연구소</a></li>
+                        <li><a href="">사회공헌</a></li>
+                        <li><a href="">홍보&이벤트</a></li>
+                        <li><a href="">채용정보</a></li>
+                        <li><a href="">입찰정보</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="main_txt"><a class="main">우유이야기</a>
+                    <ul class="sub_box">
+                        <li><a href="">치즈이야기</a></li>
+                        <li><a href="">우유 관련 정보</a></li>
+                    </ul>
+                </li>
+                <li class="main_txt"><a class="main">견학신청</a></li>
+                <div class="sns_box">
+                    <ul class="snss">
+                        <li>
+                            <span>서울우유 공식 SNS</span>
+                            <a href=""><img src="./images/facebook.png" alt=""></a>
+                            <a href=""><img src="./images/blog.png" alt=""></a>
+                            <a href=""><img src="./images/kakao.png" alt=""></a>
+                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                            <a href=""><img src="./images/youtube.png" alt=""></a>
+                        </li>
+                        <li>
+                            <span>유음료 SNS</span>
+                            <a href=""><img src="./images/blog.png" alt=""></a>
+                        </li>
+                        <li>
+                            <span>아침에주스 SNS</span>
+                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                        </li>
+                        <li>
+                            <span>스페셜티 카페라떼 SNS</span>
+                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                        </li>
+                        <li>
+                            <span>치즈 SNS</span>
+                            <a href=""><img src="./images/facebook.png" alt=""></a>
+                            <a href=""><img src="./images/blog.png" alt=""></a>
+                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                        </li>
+                        <li>
+                            <span>밀크홀1937 SNS</span>
+                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </ul>
+            <button href="" class="close"><img src="./images/close.png" alt=""></button>
+        </nav>
+
+        <div class="circle_wrap">
+            <ul class="circle_box">
+                <li class="item item1">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>우유류</span>
+                </li>
+                <li class="item item2">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>발효유류</span>
+                </li>
+                <li class="item item3">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>유음료류</span>
+                </li>
+                <li class="item item4">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>커피음료</span>
+                </li>
+                <li class="item item5">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>치즈류</span>
+                </li>
+                <li class="item item6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>가공식품류</span>
+                </li>
+                <li class="item item7">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>반려동물제품</span>
+                </li>
+                <li class="item item8">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>우유이야기</span>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <ul class="con_box">
+                <li>
+                    <a href="">
+                        <img src="./images/conimg1.png" alt="">
+                        <span>나100샵</span>
+                        <p>서울우유 공식 쇼핑몰을 만나보세요.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/conimg2.png" alt="">
+                        <span>가정배달주문</span>
+                        <p>가정에서도<br> 신선한 서울우유를 만나세요.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/conimg3.png" alt="">
+                        <span>인재와 채용</span>
+                        <p>서울우유는<br> 도전하는 당신을 기다립니다.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/conimg4.png" alt="">
+                        <span>사회공헌</span>
+                        <p>Milk In Love<br> 건강하고 행복한 미소를 전합니다.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/conimg5.png" alt="">
+                        <span>TV속 CF</span>
+                        <p>두개의 1등급으로 채운다.<br> 체세포수 1등급, 세균수 1A등급</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer id="ft">
+           <div class="ft_wrap">
+            <img src="./images/logo.png" alt="" class="ftlogo">
+            <ul class="ft_menu">
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">이메일</a></li>
+                <li><a href="">무단수집거부</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">공정거래 자율준수 프로그램</a></li>
+                <li><a href="">신용정보활용체제</a></li>
+            </ul>
+            <p class="copyright">전자우편 : seoulmilk@seoulmilk.co.kr(발신전용) | 상호 : 서울우유협동조합 | 조합장 : 문진섭<br>
+                주소 : [도로명]서울특별시 중랑구 중랑천로 71 [지번]서울시 중랑구 상봉2동 137-7<br>
+                사업자번호 : 216-82-00028 | 통신판매업 : 신고번호 중랑 제 2007-0086호<br>
+                Copyright ⓒ 2014 Seoulmilk. All Rights Reserved. </p>
+            <p class="tel"><b>전화문의</b>080-021-5656</p>
+            <img src="./images/ftimg.jpg" alt="" class="NH">
+            </div>
+        </footer>
+    </div>
+</body></html>
