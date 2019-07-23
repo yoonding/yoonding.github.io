@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="라마다프라자제주, 라마다프라자, 제주, 호텔">
+    <meta name="copyright" content="Copyright © 2014 Seoulmilk. All Rights Reserved.">
+    <title>라마다프라자제주</title>
+    <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="라마다프라자제주">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="라마다프라자제주">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+    *{margin: 0;padding: 0;}
+    body, html{width: 100%; font-family:Arial, Helvetica, sans-serif; background: #ffffff;}
+    ul{list-style: none;}
+    a{text-decoration: none; border: none; outline: none;}
+    button, label, input{border: none; outline: none; background: transparent;}
+
+    
+
+    #gnb{position: fixed;bottom: 0; left: 0; width: 100%; height: 91%; display: none; background-color: #d11141;
+    z-index: 10; transition: 0.6s;}
+
+    #hd{background: #fff; width: 100%; height: 100px; overflow: hidden; }
+    .logo{display: block; width: 120px; height: 100px; float: left; margin-left: calc(50% - 75px);}
+    .menu_icon{float: right; margin-right: 30px; margin-top: 15px; width: 70px; height: 70px; }
+    .menu_icon img{display: block; width: 100%;}
+   
+   
+   
+   .section_wrap{display: flex; flex-flow: row wrap; width: 100%; height: 100%; }
+    .section_wrap > .section {flex:1 100%;}
+    .section{ background-repeat: no-repeat; background-position: center center; background-size: cover;position: relative;}
+    #section1{background-image: url(./images/vs1.jpg);}
+    #section2{background-image: url(./images/vs2.jpg);}
+    #section3{background-image: url(./images/vs3.jpg);}
+    .section_wrap div:after{content: ""; width: 100%; height: 100%; background:rgba(0,0,0,0.3); display: block;
+    position: absolute; top: 0; left: 0; opacity: 1; transition: 0.6s; cursor: pointer;}
+    .section_wrap div:hover:after{opacity: 0;}
+
+
+    #sbox1{display: none; transition: 0.5s;}
+    
+
+
+
+
+
+    .fg_tit{color: #ffffff; font-size: 50px; position: absolute; bottom: 22rem; left: 50px;}
+    .fg_stit{color: #ffffff; font-size: 25px; position: absolute; bottom: 19rem; left: 50px;}
+    .fg_com{color: #ffffff; font-size: 18px; position: absolute; bottom: 13rem; left: 50px;}
+    .fg_com:before{content: ""; display: block; width: 50px;height: 1px; position: absolute; 
+    bottom: 4rem; left: 5px;  background-color: #fff; }
+    #ft{background: #000; height: 150px;}
+
+    @media screen and (max-width:767px){
+        
+        
+    }
+    @media screen and (min-width:768px) and (max-width:959px){
+        
+    
+    }
+    @media screen and (min-width:768px){
+
+    }
+    @media screen and (min-width:960px){
+        
+        #section1{order:1; height:calc(100vh - 100px); flex: 1 0px;}
+        #section2{order:2; height:calc(100vh - 100px); flex: 1 0px;}
+        #section3{order:3; height:calc(100vh - 100px); flex: 1 0px;}
+    }
+
+
+
+
+
+
+
+
+
+    </style>
+<script>
+    $(document).ready(function(){
+       
+    });
+</script>
+</head>
+
+<body>
+    <div class="wrapper">
+    <header id="hd">
+        <a href="" class="logo"><img src="./images/header_logo.gif" alt=""></a>
+        <button class="menu_icon"><img src="./images/menu_icon.png" alt=""></button>
+    </header>
+    <nav id="gnb">
+        <ul class="gnb_box">
+            <li><a href="">RESERVATION</a>
+                <ul class="sub_box">
+                    <li><a href="">객실예약</a></li>
+                    <li><a href="">식당예약</a></li>
+                    <li><a href="">연회예약</a></li>
+                </ul>
+            </li>
+            <li><a href="">ACCOMMODATION</a>
+                <ul class="sub_box">
+                    <li><a href="">스탠다드</a></li>
+                    <li><a href="">스위트</a></li>
+                    <li><a href="">온돌</a></li>
+                    <li><a href="">이용안내</a></li>
+                </ul>
+            </li>
+            <li><a href="">DINING & BAR</a>
+                <ul class="sub_box">
+                    <li><a href="">더 블루</a></li>
+                    <li><a href="">스코트라</a></li>
+                    <li><a href="">탐모라</a></li>
+                    <li><a href="">만리향</a></li>
+                    <li><a href="">라마다 델리</a></li>
+                    <li><a href="">블랙 스톤즈</a></li>
+                </ul>
+            </li>
+            <li><a href="">BANQUET & WEDDING</a>
+                <ul class="sub_box">
+                    <li><a href="">라마다볼룸</a></li>
+                    <li><a href="">중연회장</a></li>
+                    <li><a href="">세미나룸</a></li>
+                    <li><a href="">지원 서비스</a></li>
+                    <li><a href="">라마다볼룸 웨딩</a></li>
+                    <li><a href="">탐라홀 웨딩</a></li>
+                    <li><a href="">웨딩 이용안내</a></li>
+                </ul>
+            </li>
+            <li><a href="">FACILITIES</a>
+                <ul class="sub_box">
+                    <li><a href="">스포츠센터</a></li>
+                    <li><a href="">뉴헬리오스</a></li>
+                    <li><a href="">메디컬스파</a></li>
+                    <li><a href="">카지노</a></li>
+                    <li><a href="">하영</a></li>
+                    <li><a href="">지앤담컨설팅</a></li>
+                </ul>
+            </li>
+            <li><a href="">SPESIAL OFFERS</a>
+                <ul class="sub_box">
+                    <li><a href="">패키지</a></li>
+                    <li><a href="">프로모션</a></li>
+                    <li><a href="">오션 멤버쉽</a></li>
+                    <li><a href="">스포츠센터 멤버쉽</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button class="close_btn"><img src="./images/close.png" alt=""></button>
+    </nav>
+    <div class="section_wrap">
+        <div class="section" id="section1">
+            <h1 class="fg_tit">RESERVATION</h1>
+            <span class="fg_stit">예약하기</span>
+            <p class="fg_com">객실예약, 식당예약, 연회예약</p>
+            <div class="sbox" id="sbox1">
+                <img src="./images/bvs1.jpg" alt="">
+                <h1 class="fg_tit">RESERVATION</h1>
+                <span class="fg_stit">예약하기</span>
+                <p class="fg_com">객실예약, 식당예약, 연회예약</p>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <h1 class="fg_tit">BANQUET&WEDDING</h1>
+            <span class="fg_stit">웨딩 이용안내</span>
+            <p class="fg_com">라마다볼룸, 중연회장, 세미나룸 등을 이용해보세요.</p>
+        </div>
+        <div class="section" id="section3">
+            <h1 class="fg_tit">SPECIAL OFFER</h1>
+            <span class="fg_stit">패키지&프로모션</span>
+            <p class="fg_com">라마다 프라자 제주호텔에서 준비한 프로모션을 만나보세요.</p>
+        </div>
+    </div>
+    <footer id="ft">
+
+    </footer>
+</div>
+</body>
+</html>
