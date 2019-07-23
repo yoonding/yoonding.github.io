@@ -1,0 +1,124 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; background: #fff; font-family: 'Noto Sans KR', sans-serif;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none; border: none ; outline: none;}
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+/* 기본설정 */
+#hd{width: 100%; height: 70px; clear: both;  }
+#vs{clear: both; width: 100%; height: 290px;position: relative;
+background-image: url(images/mvs.jpg); background-repeat: no-repeat; background-size: cover;}
+#clinic{width: 100%; height: auto; clear: both; overflow: hidden;}
+#board{width: 100%; height: 100px; clear: both; overflow: hidden; margin-top: 30px; }
+#info{width: 100%; height: 900px; clear: both; overflow: hidden; }
+#ft{width: 100%; height: 170px; clear: both; overflow: hidden; border-top: 2px solid #329544; }
+
+/* header 영역 */
+#gnb{display: none;}
+#tgnb{display: none;}
+.logo{display: block; text-align: center; padding: 10px; padding-top: 1.2rem; width: 35%; float: left; margin-left: 10px;}
+.logo img{display: block; width: 100%;}
+.menu_icon{ float: right; margin-right: 8px; margin-top: 6px;display: block; border-radius: 50%;}
+
+/* menu_box */
+#mgnb{position: fixed; top: 0;right: -110%; background: #d5e3d1; width: 100%; height: 100vh; z-index: 99; transition: 0.5s;}
+#mgnb.on{right: 0;}
+.mgnb_box{width: 100%; height: 500px; margin-top: 4.3rem;}
+.homego{display: block; width: 100px; height: 40px; position: absolute; color: #329544; font-weight: bold;text-align: center; line-height: 40px; margin-top: 15px; padding-left: 20px;}
+.homego:before{content: ""; width: 3px; height: 20px; display: block; position: absolute; top: 11px; left: 20px; background-color: #329544;}
+.mgnb_box > li{width: 100%; background: #329544; border-bottom: 1px solid #fff; height: 50px; position: relative;}
+.mgnb_box li a{width: 100%; display: block; text-indent: 20px;}
+.mgnb_box li > a:after{content: "▼"; color: #fff; display: block; position: absolute; top: 0px; right: 20px; font-size: 12px;}
+.mgnb_txt{text-indent: 15px; line-height: 52px;}
+.mgnb_box li > a.on:after{content: "▲";}
+
+.msub_box{height: 0px; overflow: hidden; transition: 0.5s; width: 100%; background-color: #fff;}
+.msub_box.on{height: 200px;}
+.msub_box li{line-height: 2rem;}
+.msub_box li a{display: block; color: #000; font-size: 16px; font-weight: 500; width: 100%;}
+
+.online{display: block; width: 100%; height: 80px; background: #329544; position: absolute; left: 0; bottom: 0;}
+.online img{display: block; padding: 15px;
+margin-left: 30px; float: left; width: 60px;}
+.online span{display: block; color: #fff; font-size: 18px; padding: 18px; float: right; margin-right: 30px; margin-top: 10px;}
+
+.menubox_img{position: absolute; left: 0; bottom: 45px;}
+.close{position: absolute; top: 3px; right: 0px; background: #329544; border-radius: 50%;
+width: 45px; height: 45px;padding: 5px; margin: 10px;}
+.close img{display: block; width: 100%;}
+
+
+
+
+#vs img{display: none;}
+
+
+/* clinic 영역 */
+.clinic_tit{display: block; margin: 50px auto 30px;}
+.clinic_tit img{display: block; width: 50%;}
+.clinic_con{width: 95%; height: auto; margin: 0 auto;}
+.clinic_box{width: 98%; height: 400px; margin-left: 10px;}
+.clinic_box li{float: left; width: 162px; height: 200px; margin-right: 10px; border: 1px solid #a5a5a5; transition: 0.6s; margin-top: 0.71rem;}
+.clinic_box li a{display: block; width: 100%; height: 100%;}
+.clinic_listbox{width: 143px; height: 340px; padding: 10px;}
+.img_outline{display: block; width: 140px; height: 140px; border: 2px dashed #a5a5a5; border-radius: 50%;
+margin: 0 auto;}
+.clinic_img{display: block; width: 130px; height: 130px; margin: 0 auto;
+    padding: 6px; line-height: 243px;}
+.clinic_confr{clear: both; width: 140px; height: 72px; margin: 20px auto 0;}
+.clinic_box li span{display: block; font-size: 14px; font-weight: bold; 
+    color: #444b54; text-align: center; line-height: 10px; }
+.clinic_icon{display: none;}
+.clinic_box li:active{background: #329544;}
+.clinic_box li:active span{color: #ffffff;}
+.clinic_box li:active .img_outline{border: 2px dashed #fff;}
+
+/* board 영역 */
+#board div.board_box{width: 50%; height:80px; float: left; }
+#news{background-color: #e9fae4;}
+#review{background-color: #d5e3d1;}
+
+.news_tit_box{width: 189px; height: 80px;}
+.news_tit_box h1{font-size: 20px; font-weight: 100; text-indent: 10px;padding: 5px; text-align: center; margin: 20px auto;}
+.news_tit_box a{display: none;}
+.news_mtit{display: none;}
+.news_date{display: none;}
+.news_look{display: none;}
+
+/* info 영역 */
+#info article{float: left; width: 90%; height: 275px; margin-right: 20px; margin-left: 18px;
+border: 1px solid #a5a5a5;}
+.go_servicebox h3{font-size:22px; font-weight: 100; width: 100%; height: 50px; background: #315e39;
+color: #ffffff; text-align: center; line-height: 50px; }
+.itembox{width: 46%; height: 93px; float: left; margin-left: 8px; margin-top: 8px; border: 1px solid #d6d6d6;}
+
+.itembox a{display: block; width: 100%; height: 95%;}
+.itembox img{display: block; float: left; width: 40%; padding: 5px; margin-top: 10px; margin-left: 5px;}
+.itembox span{ display: block; width: 95%; padding-top: 38px; font-size: 13px; color: #333333; text-align: center; font-weight: bold;}
+.itembox:last-child span{padding-top: 26px;}
+.treat_infobox h3{font-size: 22px; font-weight: 100; width: 100%; height: 50px; background: #329544; margin-top: 10px;
+    color: #ffffff; text-align: center; line-height: 50px;}
+.treat_infobox div{width: 250px; height: 150px; margin: 30px auto;}
+.treat_infobox p{font-size: 16px; line-height: 1.5; color: #333333; margin-left: 10px; }
+.delayday1{color: #68aa51; margin-left: 10px; font-size: 14px; }
+.delayday2{font-size: 12px; }
+.treat_infobox p:nth-child(5){color: #df1818;}
+
+.online_box h3{font-size: 22px; font-weight: 100; width: 100%; height: 50px; background: #68aa51;
+    color: #ffffff; text-align: center; line-height: 50px; margin-top: 10px;}
+.online_box ul li{width: 95%; height: 34px; border: 1px solid #a5a5a5; margin-top: 6px;
+margin-left: 8px; }
+.online_box p{color: #333333; font-size: 12px; float: left; width: 120px; height: 20px; margin-top: 6px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+margin-left: 10px;}
+.online_box span{font-size: 10px; color: #333333; float: right; padding-top: 9px; margin-right: 10px;}
+.online_box p:hover{text-decoration: underline; color: #68aa51;}
+
+/* footer 영역 */
+.ft_box{width: 100%; margin-top: 10px;}
+#ft img{display: block;width: 28%; padding: 15px; margin: 0 auto; }
+#ft div.copy_box{clear: both; margin-left: 10px; width: 62%; text-align: center; margin: 0 auto;}
+.copy_box p{display: block; font-size: 9px; line-height: 1.5; text-align: center;}

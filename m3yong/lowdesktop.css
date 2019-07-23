@@ -1,0 +1,59 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; background: #fff; font-family: 'Noto Sans KR', sans-serif;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none;}
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+/* 기본설정 */
+#hd{width: 100%; height: 150px; clear: both; }
+#vs{clear: both; width: 100%; height: auto; overflow: hidden;}
+#clinic{width: 100%; height: 100%; clear: both; overflow: hidden;}
+#board{width: 100%; height: 830px; clear: both; overflow: hidden; margin-top: 30px; }
+#info{width: 100%; height: 500px; clear: both; overflow: hidden; }
+#ft{width: 100%; height: 150px; clear: both; overflow: hidden; border-top: 2px solid #329544; }
+
+/* header 영역 */
+#gnb{display: none;}
+.logo{display: block; text-align: center; padding: 20px;}
+#tgnb{width: 100%; height: 60px; background-color: #329544;}
+.tgnb_box{width: 100%; height: 100%;}
+.tgnb_box li.tgnb_txt{float: left; width: 24.9%;height: 60px; border-right: 1px solid #9bd4a6;
+position: relative;}
+.tgnb_box li.tgnb_txt:last-child{border-right: none; }
+.tgnb_box li.tgnb_txt a{display: block; width: 100%;}
+.tgnb_box li.tgnb_txt img{display: block; margin: 0 auto; padding: 21px;}
+.tgnb_box:hover .tsub_box{visibility: visible;opacity:1; height: 270px;  }
+.tsub_box{position: absolute; top: 60px; left: 0; border-top: 2px solid #fff; 
+    border-bottom: 3px solid #329544; background: #e9fae4; width: 100%;
+height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden; opacity:0; transition: 0.6s;}
+.tsub_box li{width: 100%; line-height: 3.5; transition: 0.5s;}
+.tsub_box li a{display: block; font-size: 13px; color: #000; font-weight: 500; text-align: center;}
+.tsub_box li:hover{background-color: #329544;}
+.tsub_box li:hover a{color: #ffffff; font-weight: 100;}
+
+#vs img{display: block; width: 100%; height: 100%;}
+
+/* clinic 영역 */
+.clinic_tit{display: block; margin: 5rem auto 3rem;}
+.clinic_con{width: 100%; height: 100%;}
+.clinic_box{width: 81.5%;  margin: 0 auto;}
+.clinic_box li{float: left; width: 250px; height: 300px;  margin-top: 3%; margin-right: 3%; border: 1px solid #a5a5a5; transition: 0.6s;}
+.clinic_box li:last-child{margin-right: 0;}
+.clinic_box li a{display: block; width: 100%; height: 100%;}
+.clinic_listbox{width: 90%; height: auto; padding: 5%;}
+.img_outline{display: block; width: 90%; height: 90%; border: 2px dashed #a5a5a5; border-radius: 50%;
+margin: 0 auto; }
+.clinic_img{display: block; width: 90%; height: 90%; margin: 0 auto;
+    padding: 3%;}
+.clinic_img img{display: block; width: 100%; height: 100%;}
+.clinic_confr{clear: both; width: 61%; height:30%; margin: 0 auto; }
+.clinic_box li span{display: block; width: 100%; font-size: 20px; font-weight: bold; 
+    color: #444b54; float: left; line-height: 72px; text-align: center;}
+.clinic_icon{display: none;}
+.clinic_box li:hover{background: #329544;}
+.clinic_box li:hover span{color: #ffffff;}
+.clinic_box li:hover .img_outline{border: 2px dashed #fff;}
