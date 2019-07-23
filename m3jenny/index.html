@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jenny yoga</title>
+    <link rel="stylesheet icon" href="./img/favicon.png">
+    <link rel="apple-touch-icono" sizes="32x32" href="./img/favicon.png">
+    <link rel="stylesheet" href="./common.css">
+    <!-- 메타정보 -->
+    <meta name="title" content="Jenny yoga">
+    <meta name="description" content="Jenny yoga, 요가, 아쉬탕가, 젠링">
+    <meta name="keyword" content="요가, 아쉬탕가, 정통요가, 젠링요가, 젠링">
+    <script src="./js/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#lst_btn2, .lst_btn").click(function(){
+            $("#gnb").toggleClass("on");
+        });
+        $(".mbtn_txt").click(function(){
+            $("#gnb").addClass("on");
+        });
+
+        
+        var ht = parseInt($(window).height())-200; //브라우저 높이를 구해다가
+        $(window).scroll(function(){ //사용자가 윈도우를 스크롤을 했을때(이벤트)
+            var sc = parseInt($(window).scrollTop()); //스크롤되는 양
+        
+            if(sc>=ht){
+                $("#gnb").css("right","-120%");
+            }else{
+                $("#gnb").css("right","-84%");
+            }
+        });
+
+    });
+    
+    
+    </script>
+</head>
+<body>
+    <header class="hd">
+        <a href="index.html" class="logo">
+            <img src="./img/logo.png" alt="">
+        </a>
+        <button class="lst_btn"><img src="./img/lst_btn.png" alt=""></button>
+
+        
+        
+    </header>
+
+    
+    <nav id="gnb">
+        <button id="lst_btn2"><img src="./img/lst_btn.png" alt=""></button>
+        <button class="application">수강<br>신청</button>
+        <div class="mypage">
+            <button class="my"><img src="./img/mypage.png" alt=""></button>
+            <span>로그인</span>
+        </div>
+        
+        <input type="radio" name="rdo" class="rdo" id="ra1" checked>
+        <input type="radio" name="rdo" class="rdo" id="ra2">
+        <input type="radio" name="rdo" class="rdo" id="ra3">
+        <input type="radio" name="rdo" class="rdo" id="ra4">
+        <input type="radio" name="rdo" class="rdo" id="ra5">
+        <div class="menubtn_box">
+            <label for="ra1" class="mbtn_txt" id="menubtn1">제니요가</label>
+            <label for="ra2" class="mbtn_txt" id="menubtn2">수업</label>
+            <label for="ra3" class="mbtn_txt" id="menubtn3">일정</label>
+            <label for="ra4" class="mbtn_txt" id="menubtn4">TTC</label>
+            <label for="ra5" class="mbtn_txt" id="menubtn5">커뮤니티</label>
+            <div class="icon_box">
+                    <ul class="icons">
+                        <li><a href=""><img src="./img/icon1.png" alt=""></a></li>
+                        <li><a href=""><img src="./img/icon2.png" alt=""></a></li>
+                        <li><a href=""><img src="./img/icon3.png" alt=""></a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="tab_con_box">
+            <div class="menucon_box" id="con1">
+                <ul class="sub_box">
+                    <li class="sub_txt">About</li>
+                    <li><a href=""  class="sub_stxt">Jenny Yoga</a></li>
+                    <li><a href=""  class="sub_stxt">Director Jenny</a></li>
+                    <li><a href=""  class="sub_stxt">Teachers</a></li>
+                    <li><a href=""  class="sub_stxt">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="menucon_box" id="con2">
+                <ul class="sub_box">
+                    <li class="sub_txt">Class</li>
+                    <li><a href=""  class="sub_stxt_kr">아쉬탕가마이솔클래스</a></li>
+                    <li><a href=""  class="sub_stxt_kr">일반성인요가클래스</a></li>
+                    <li><a href=""  class="sub_stxt_kr">젠링근막테리피 & 요가</a></li>
+                    <li><a href=""  class="sub_stxt_kr">마르마요가</a></li>
+                </ul>
+            </div>
+            <div class="menucon_box" id="con3">
+                <ul class="sub_box">
+                    <li class="sub_txt">Schedule</li>
+                    <li><a href=""  class="sub_stxt">Time Table</a></li>
+                    <li><a href=""  class="sub_stxt">Menbership</a></li>
+                </ul>
+            </div>           
+            <div class="menucon_box" id="con4">
+                <ul class="sub_box">
+                    <li class="sub_txt">TTC</li>
+                    <li><a href=""  class="sub_stxt_kr">정규요가지도자TTC</a></li>
+                    <li><a href=""  class="sub_stxt_kr">요가해부학 & 철학</a></li>
+                    <li><a href=""  class="sub_stxt_kr">아쉬탕가요가 전문TTC</a></li>
+                    <li><a href=""  class="sub_stxt_kr">젠링요가TTC</a></li>
+                </ul>
+            </div> 
+            <div class="menucon_box" id="con5">
+                <ul class="sub_box">
+                    <li class="sub_txt">Community</li>
+                    <li><a href=""  class="sub_stxt">Notice</a></li>
+                    <li><a href=""  class="sub_stxt_kr">워크샵 & 특강스케쥴</a></li>
+                    <li><a href=""  class="sub_stxt">Gallery</a></li>
+                </ul>
+            </div>  
+        <div>
+        
+    </nav>
+
+    
+
+    <div class="vs">
+        <ul class="vs_frm">
+            <li><a href=""><img src="./img/vs1.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/vs2.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/vs3.jpg" alt=""></a></li>
+            <li><a href=""><img src="./img/vs4.jpg" alt=""></a></li>
+        </ul>
+        <ul class="vs_btn_box">
+            <li class="vs_btn1"><button class="vs_btn"></button></li>
+            <li class="vs_btn2"><button class="vs_btn"></button></li>
+            <li class="vs_btn3"><button class="vs_btn"></button></li>
+            <li class="vs_btn4"><button class="vs_btn"></button></li>
+        </ul>
+        
+    </div>
+
+         <div class="con1">
+             <ul class="con1_box">
+                <li class="scadule">
+                    <img src="./img/clock.png" alt="">
+                    <a href="" class="clock">시간표</a>
+                </li>
+                <li class="membership">
+                    <img src="./img/membership.png" alt="">
+                    <a href="" class="members">membership</a>
+                </li>
+            </ul>
+        </div>
+        <div class="con2">
+            <ul class="con2_box">
+                <p class="con2_txt">Class</p>
+                <li class="class">
+                    <a href="">
+                        <img src="./img/con11.jpg" alt="">
+                    </a>
+                </li>
+                <li class="class">
+                    <a href="">
+                        <img src="./img/con21.jpg" alt="">
+                    </a>
+                </li>
+                <li class="class">
+                    <a href="">
+                        <img src="./img/con31.jpg" alt="">
+                     </a>
+                </li>
+            </ul>
+        </div>
+        <div class="con3">
+                <p class="con3_txt">Teacher</p>
+            <div class="con3_fr">
+            <ul class="con3_box">
+                <li class="teacher">
+                    <a href="">
+                        <div class="tea_img">
+                        <img src="./img/teacher1.JPG" alt=""></div>
+                        <p class="name">이지은 원장</p>
+                        <span class="con3_com">제니요가 대표</span>
+                    </a>
+                </li>
+                <li class="teacher">
+                    <a href="">
+                            <div class="tea_img">
+                                    <img src="./img/teacher2.JPG" alt=""></div>
+                        <p class="name">한가희 강사</p>
+                        <span class="con3_com">아쉬탕가 마이솔 전문</span>
+                    </a>
+                </li>
+                <li class="teacher">
+                    <a href="">
+                            <div class="tea_img">
+                                    <img src="./img/teacher3.JPG" alt=""></div>
+                        <p class="name">이선미 강사</p>
+                        <span class="con3_com">젠링 전문</span>
+                    </a>
+                </li>
+                <li class="teacher">
+                    <a href="">
+                            <div class="tea_img">
+                                    <img src="./img/teacher4.JPG" alt=""></div>
+                        <p class="name">유지향 강사</p>
+                        <span class="con3_com">폼롤러테라피 전문</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    
+
+
+
+    <footer class="ft">
+        <img src="./img/ftlogo.png" alt="" class="ftlogo">
+        <p>
+                    남양주 아쉬탕가제니요가 | 대표 : 이지은 | 전화 : 031-559-6561 <br>
+                    1호점. 경기도 남양주 평내동 604-5(의안로 129-3) 동부프라자 402호<br>
+                    2호점. 경기도 남양주 호평동 674-5(늘을1로 284) 우성빌딩 2층<br>
+                    3호점. 충청북도 제천시 독순로6길1 (의림동 46-1)<br>
+                    Copyright 2017 남양주 아쉬탕가제니요가 all rights reserved.
+        </p>
+    </footer>
+    
+    
+</body>
+</html>

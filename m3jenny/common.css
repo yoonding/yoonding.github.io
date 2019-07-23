@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+body, html{width: 100%; height: 100%; font-family: "맑은고딕", "Malgun Gothic", sans-serif;}
+li{list-style: none;}
+a{text-decoration: none;}
+label, button, input{outline: none; border: none; background: transparent;}
+img{border: none;}
+
+/* header */
+.hd{width: 100%; height: 60px; position: relative; }
+.logo{width: 100px;}
+.logo img{width: 80px; height: auto;
+     margin-left: 20px; margin-top: 10px; }
+.lst_btn{width: 50px; height: 50px; z-index: 500;
+background: #000; position: fixed; top: 5px; right: 5px;}
+.lst_btn img{display: block; width: 60%; height: 60%; margin-left:11px;}
+
+/* 메뉴창 */
+#gnb{position: fixed; top: 0; right: -84%; width: 100%;  height: 100%; transition: 0.6s; z-index: 999;
+background: rgba(0,0,0,0.8);}
+#gnb.on{right: 0;}
+
+#lst_btn2{width:60px; height: 60px; background: #000000;}
+#lst_btn2 img{display: block; width: 60%; height: 60%; margin-left: 12px;}
+.application{position: absolute; top: 60px; left: 0; width: 60px; height: 60px;background: #f8329f; 
+    color: #ffffff; font-size: 12px;}
+.mypage{width: 84%; height: 60px; background: #fff; position: absolute; top: 0; right: 0; }
+.my{float: left; line-height: 50px; margin-top: 12px;}
+.mypage span{display: block; font-size: 14px; color: #000000; line-height: 60px; 
+float: right; margin-right: 20px; font-weight: bold;}
+.my img{width: 40%; height: auto; margin-left: 20px; float: left;}
+.menubtn_box{position: absolute; top: 120px;left: 0;}
+.mbtn_txt{display: block; color: #c0c0c0; background: rgb(75, 75, 75); width: 60px;
+height: 60px; font-size: 12px; text-align: center; line-height: 55px; cursor:pointer; 
+}
+
+.tab_con_box{width:84%; height: auto; position: absolute; right: 0; top: 60px;}
+.menucon_box{width: 100%; height: 100%; display: none;}
+
+#ra1:checked ~ .tab_con_box #con1{display: block;}
+#ra2:checked ~ .tab_con_box #con2{display: block;}
+#ra3:checked ~ .tab_con_box #con3{display: block;}
+#ra4:checked ~ .tab_con_box #con4{display: block;}
+#ra5:checked ~ .tab_con_box #con5{display: block;}
+
+#ra1:checked ~ .menubtn_box #menubtn1{color: #fff;}
+#ra2:checked ~ .menubtn_box #menubtn2{color: #fff;}
+#ra3:checked ~ .menubtn_box #menubtn3{color: #fff;}
+#ra4:checked ~ .menubtn_box #menubtn4{color: #fff;}
+#ra5:checked ~ .menubtn_box #menubtn5{color: #fff;}
+
+
+
+.menubtn_box:after{content: ""; background: #4b4b4b; width: 60px; height: 250px;
+clear: both; display: block;}
+
+.sub_box{margin-left: 40px; margin-top: 30px; text-indent: 10px; transition: 0.5s; 
+}
+
+
+.sub_txt{color: rgba(255,255,255,0.5); width: 200px; font-size: 24px; padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.5); margin-bottom: 10px; text-indent: 10px;}
+.sub_stxt{color:  rgba(255,255,255,0.5); font-size: 14px; width: 200px; height: 35px;
+line-height: 35px;}
+.sub_stxt_kr{color:  rgba(255,255,255,0.5); font-size: 12px; width: 200px; height: 35px;
+    line-height: 35px;}
+
+.rdo {display: none;}
+
+.icon_box{clear: both;display: block; width: 40px; height: auto; position: absolute; left: 10px;bottom:15px;}
+.icons li{width:30px; height: 30px; margin: 5px auto; margin-bottom: 10px;}
+.icons img{display: block; width: 100%; height: 100%; }
+
+
+
+.vs{clear: both; width: 100%; height: 100%; position: relative;}
+.vs_frm{width: 400%;}
+.vs_frm li{float: left; width: 25%;}
+.vs_frm img{display: block; width: 100%; height: auto;}
+.vs_btn_box{position: absolute; bottom: 20%; left: 30%;}
+.vs_btn_box li{float: left; margin-right: 20px;}
+.vs_btn{display: block; width: 10px; height: 10px; border-radius: 5px; background: #c0c0c0;}
+
+#content{clear: both; width: 100%; height: 100%;}
+.con1{width: 100%; height: 70px; background: rgb(75, 75, 75);}
+.con1_box li{float: left; width: 45%; margin-right: 10px;}
+.scadule{display: block; width: 100%; height: 50px; background:  #f8329f; margin-top: 8px; 
+    margin-left: 8px; border: 2px solid #fff;}
+.scadule img{width: 20%; height: auto; margin-left: 35px; margin-top: 8px; float: left;}
+.clock{ font-size: 14px; font-weight: bold; color: #ffffff; display: block; line-height: 52px;
+text-align: center; width: 150px;}
+.membership{display: block; width: 100%; height: 50px; background:  #f8329f; margin-top: 8px; 
+    border: 2px solid #fff; margin-right: 8px;}
+.membership img{width: 25%; height: auto; margin-left: 15px; margin-top: 5px; float: left;}
+.members{font-size: 14px; font-weight: bold; color: #ffffff; display: block; line-height: 52px;
+    text-align: center; width: 165px;}
+
+
+.con2{overflow: hidden; width: 100%; height: auto; }
+.con2_box{width: 90%; text-align: center; margin: 0 auto;}
+.con2_box li{margin-top: 30px;}
+.class img{display: block; width: 100%; height: auto; }
+.con2_txt{font-size: 26px; text-align: center; margin-top: 50px; font-weight: bold;}
+
+.con3{ width: 100%; height: 500px; overflow: hidden; margin-bottom: 80px;}
+.con3_fr{width: 96%; margin-left: 15px;}
+.con3_box{width: 100%; height: auto; margin: 0 auto;}  
+.con3_box li.teacher{float: left; margin-top: 15px; width: 46%; box-shadow: 4px 4px rgb(137, 137, 137,0.3);
+margin-right: 10px; box-sizing:border-box; height:170px; overflow:hidden; }
+.teacher img{display: block; width: 100%; height: 100%;}
+.name{font-size: 12px; margin-top: 10px; color: #000000; font-weight: bold; text-align: center;}
+.con3_com{font-size: 10px; color: #8a8a8a; display: block; text-align: center; 
+    margin-bottom: 10px; margin-top: 5px;}
+.con3_txt{font-size: 26px; text-align: center; margin-top: 50px; font-weight: bold; margin-bottom: 10px;}
+
+
+
+.ft{clear: both; width: 100%; height: 150px; overflow: hidden; background: rgb(75, 75, 75);}
+.ftlogo{width: 90px; height: auto; margin: 10px; margin-left: 145px;}
+.ft p{font-size: 10px; color: #8a8a8a; line-height: 15px; margin-left: 30px;}
+
+
+
+
+
+
+
+
+
