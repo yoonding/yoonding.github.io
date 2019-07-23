@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOREDORE</title>
+    <link rel="shortcut icon" href="./img/favicon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="./img/favicon.png">
+    <!-- 메타 정보 -->
+    <meta name="title" content="DORE DORE">
+    <meta name="description" content="DORE DORE, 케이크, 음료, 카페, 디저트">
+    <meta name="keyword" content="케이크, 음료, 커피, 카페, 디저트"> 
+    <script src="./jquery.min.js"></script>
+    <!-- <script src="./bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css"> -->
+    <!-- glyphicon 연결 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+    <!-- <script src="./all.min.js"></script> -->
+
+    <!-- fontawesome 다운로드 후 링크 -->
+    <script src="./font/all.js"></script>
+    <link rel="stylesheet" href="./font/all.css">
+
+    <!-- xe-icon 다운로드 후 링크 -->
+    <!-- <link rel="stylesheet" href="./xeicon/xeicon.min.css"> -->
+    <link rel="stylesheet" href="./nomalize.css">
+
+    <!-- font 연결 -->
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+    body, html{font-family: 'NanumBarunGothicUltraLight', sans-serif;}
+    </style>
+        
+    <script>
+    $(document).ready(function(){
+        $(".search").click(function(){
+            $("#search_box").addClass("on");
+        });
+        $("#search_box .close").click(function(){
+            $("#search_box").removeClass("on");
+        });
+
+
+        var ht = parseInt($(window).height());
+            $(".more").click(function(){
+                $("body, html").css("scrollTop", ht*1.5);
+                setTimeout(function() {
+                    moreAni();
+                }, 500);    
+            });
+            function moreAni(){
+                $(".cakeimgs2").slideDown(500, function(){
+                    $(".cakeimgs2").addClass("on");
+                });
+            }
+        
+        
+    });
+    </script>
+    <style>
+       #news_box{clear: both; width: 100%; overflow: hidden;}
+       .new_stxt{display: block; font-size: 8px; padding: 50px 5px 5px; width: 90px; 
+        border-bottom: 1px solid #646464; color: #646464; margin: 0 auto; text-align: center;}
+       .new_box{margin-top: 50px; margin-bottom: 50px;}
+       .newtxt{display: block; width: 300px; height: auto; margin: 5px auto 40px;}
+       .newimg{width: 80%; height: 80%; margin-left: 10%;}
+       .newimg img{display: block; width: 100%; height: auto;}
+       .newcom, .ps{display: block; font-size: 11px; color: #646464; width: 80%; line-height: 20px; margin-left: 10%;
+    margin-top: 20px;}
+        .number_box{padding-top: 100px; text-align: center;}
+        .number_box a{margin-right: 20px; color: #646464;}
+        .ps{font-size: 9px;}
+        .new_box{display: none;}
+        #rdo1:checked ~ .new_box#new1_box{display: block;}
+        #rdo2:checked ~ .new_box#new1_box{display: block;}
+        #rdo3:checked ~ .new_box#new2_box{display: block;}
+        #rdo4:checked ~ .new_box#new3_box{display: block;}
+        #rdo5:checked ~ .new_box#new3_box{display: block;}
+        .input{display: none;}
+        .number_box label{margin-right: 20px; font-size: 14px;}
+        .number_box label:last-child{margin-right: 0;}
+        #rdo1:checked ~ .new_box .num1{border-bottom: 1px solid #646464;}
+        #rdo2:checked ~ .new_box .num2{border-bottom: 1px solid #646464;}
+        #rdo3:checked ~ .new_box .num3{border-bottom: 1px solid #646464;}
+        #rdo4:checked ~ .new_box .num4{border-bottom: 1px solid #646464;}
+        #rdo5:checked ~ .new_box .num5{border-bottom: 1px solid #646464;}
+        
+
+    </style>
+   
+</head>
+<body>
+    <header class="hd">
+        <input type="checkbox" class="ck_item" id="ck1">
+        <div class="lst_btn">
+            <label for="ck1">
+            <img src="./img/list.png" alt="">
+            </label>
+        </div>
+        <a href="index.html" class="logo">
+            <img src="./img/logo.png" alt="">
+        </a>
+        <button class="search">
+            <img src="./img/search.png" alt="">
+        </button>
+        
+        <div id="lst_box">
+            <ul class="gnb">
+                <li class="sub">
+                    <a href="./sub2.html" class="sub_txt">DORÉ DORÉ</a>
+                </li>
+                <input type="checkbox" class="lst_menu" id="lst_menu1">
+                <li class="sub">
+                        <label for="lst_menu1" class="sub_txt">MENU</label>
+                    <ul class="ssub menu_sub1">
+                        <li><a href=""class="ssub_txt">New</a></li>
+                        <li><a href="./sub1.html#tab1"class="ssub_txt">Cake</a></li>
+                        <li><a href="./sub1.html#tab2"class="ssub_txt">Beverage</a></li>
+                    </label>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="sub3.html" class="sub_txt">DORÉ DORÉ NEWS</a>
+                </li>
+                <input type="checkbox" class="lst_menu" id="lst_menu2">
+                <li class="sub">
+                    <label for="lst_menu2" class="sub_txt">RECRUIT</label>
+                    <ul class="ssub menu_sub2">
+                        <li><a href="" class="ssub_txt">채용안내</a></li>
+                        <li><a href=""class="ssub_txt">채용문의</a></li>
+                        <li><a href=""class="ssub_txt">입사지원</a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                        <a href=""class="sub_txt">STORE</a>
+                    </li>
+                <li class="sub">
+                    <a href=""class="sub_txt">CONTACT</a>
+                </li>
+                <div class="sns_box">
+                    <li class="sns faceb"><i class="fab fa-facebook-square"></i></li>
+                    <li class="sns insta"><i class="fab fa-instagram"></i></li>
+                </div>
+            </ul>   
+           
+            <label class="close" for="ck1"></label>
+        </div>
+        
+    </header>
+    <div id="news_box">
+        <input type="radio" name="rdo" id="rdo1" class="input">
+        <input type="radio" name="rdo" id="rdo2" class="input" checked>
+        <input type="radio" name="rdo" id="rdo3" class="input">
+        <input type="radio" name="rdo" id="rdo4" class="input">
+        <input type="radio" name="rdo" id="rdo5" class="input">
+
+
+        <span class="new_stxt">DOREDORE NEWS</span>
+        <div class="new_box" id="new1_box">
+            <img src="./img/newtxt1.png" alt="" class="newtxt">
+            <img src="./img/new1.JPG" alt="" class="newimg">
+            <p class="newcom">도레 그로세리의 로컬 프로젝트! <br>
+            각지역의 농산물을 사용한 더 맛있고 신선한 디저트 '금귤케이크'를 소개합니다. <br> 
+            제주산 금귤을 보글보글 졸여서 반죽에 함께 넣고 구워 향긋하고 달콤한 맛이 납니다.
+            크림치즈 아이싱까지 얹어서 부드럽고 쫀득한 맛으로 일품입니다.  <br>
+            금귤 케이크, 가로수길 도레 그로세리에서 만나보세요.
+            </p>
+
+            <div class="number_box">
+                <label for="rdo1" class="num1"><img src="./img/arrow_left.png" alt=""></label>
+                <label for="rdo2" class="num2">1</label>
+                <label for="rdo3" class="num3">2</label>
+                <label for="rdo4" class="num4">3</label>
+                <label for="rdo5" class="num5"><img src="./img/arrow_right.png" alt=""></label>
+            </div>
+        </div>
+        <div class="new_box"  id="new2_box">
+            <img src="./img/newtxt2.png" alt="" class="newtxt">
+            <img src="./img/new3.JPG" alt="" class="newimg">
+            <p class="newcom">오키나와 흑당으로 만든 달콤하고 매력적인 케이크가 신제품으로 나왔습니다.<br>
+                부드러운 크림과 그 크림사이로 발라진 달콤한 흑당의 맛이 조화롭습니다.
+                 흑당 케이크와 함께 흑당 밀크티도 만나보세요.
+            </p>
+            <div class="number_box">
+                <label for="rdo1" class="num1"><img src="./img/arrow_left.png" alt=""></label>
+                <label for="rdo2" class="num2">1</label>
+                <label for="rdo3" class="num3">2</label>
+                <label for="rdo4" class="num4">3</label>
+                <label for="rdo5" class="num5"><img src="./img/arrow_right.png" alt=""></label>
+            </div>
+        </div> 
+        <div class="new_box"  id="new3_box">
+            <img src="./img/newtxt3.png" alt="" class="newtxt">
+            <img src="./img/new2.JPG" alt="" class="newimg">
+            <p class="newcom">도레그로쎄리의 새로운 바나나푸딩이 탄생하였습니다.<br>
+                달콤하고 부드러운 바나나와 바닐라빈 가득한 커스터드 크림을 만나보세요.
+                 차갑게 드시면 더욱 맛있게 즐기실 수 있습니다. <br>
+            </p>
+            <p class="ps">
+                ※ 신사점 한정메뉴로 예약 및 문의는 신사점에서 가능합니다.
+            </p>
+            <div class="number_box">
+                <label for="rdo1" class="num1"><img src="./img/arrow_left.png" alt=""></label>
+                <label for="rdo2" class="num2">1</label>
+                <label for="rdo3" class="num3">2</label>
+                <label for="rdo4" class="num4">3</label>
+                <label for="rdo5" class="num5"><img src="./img/arrow_right.png" alt=""></label>
+            </div>
+        </div>    
+    </div>
+
+
+    <footer class="ft">
+        <nav class="fnb">
+            <ul class="ft_menu">
+                <li><a href="">CONTECT US</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">서울 강남구 도산대로15길 40 Tel.02-540-4553<br>
+                copyright(c) DORE CREATIVE CREW. ALL RIGHT RESERVED
+        </p>
+    </footer>
+    
+</body>
+</html>
