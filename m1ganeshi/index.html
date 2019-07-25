@@ -68,7 +68,7 @@
             
             .icon_box{ width: 100%; height: 100%; margin-top: 34.8rem; position: static; margin-left: 28px;}
             .icon_box li{width: 130px; float: left; margin-right: 8%;}
-            .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px; 10px; text-align: center;}
+            .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px 10px; text-align: center;}
             
            
             
@@ -177,7 +177,7 @@
             
             .icon_box{ width: 100%; height: 100%; margin-top: 54.5rem; position: static; margin-left: 70px;}
             .icon_box li{width: 300px; float: left; margin-right: 8%;}
-            .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0px; 10px; text-align: center;}
+            .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0 10px; text-align: center;}
             
             /* con2 작업 */
             .coltxt{width: 80%; margin-left: 3rem; transition: 0.8s; opacity: 0; padding-top: 3rem;}
@@ -222,17 +222,11 @@
     <script>
         $(document).ready(function(){
             //메뉴버튼 누르면 메뉴박스 나타나게 하기
-            var ck1 = true;
             $(".menu_icon").click(function() {
-                if (ck1) {
-                    $("#menu_box").fadeIn(500);
-                    $(".menu_icon").addClass("on");
-                } else {
-                    $("#menu_box").fadeOut(500);
-                    $(".close").removeClass("on");
-                }
-                ck1 = !ck1;
-
+               $("#menu_box").fadeIn("slow");
+            });
+            $(".close").click(function(){
+                $("#menu_box").fadeOut("slow");
             });
         
             //스크롤하면 로고와 메뉴 사라지게 설정하기
@@ -268,20 +262,6 @@
                 }
             });
 
-            //vs이미지 slide 처리하기
-            // var slide = setInterval(function(){nextAni();}, 2800);
-            // function nextAni(){
-            //         $(".con1_vsimgs").not(":animated").animate({"margin-left":"-100%"},1000, function(){
-            //         $(".con1_vsimgs li").eq(0).appendTo($(".con1_vsimgs"));
-            //         $(".con1_vsimgs").css("margin-left", "0%");
-            //     });
-            // }
-            // function prevAni(){
-            //     $(".con1_vsimgs li").eq(6).appendTo($(".con1_vsimgs"));
-            //     $(".con1_vsimgs").css("margin-left", "-100%");
-            //     $(".con1_vsimgs").not(":animated").animate({"margin-left":"0%"}, 1000);                
-            //     }
-            
             
             $(".vs_btns li").click(function(i){
                 $(this).addClass("on");
@@ -292,14 +272,23 @@
                 $(".con1_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
             });
             
-            $(".colmenu li").click(function(i){
-                $(this).addClass("on");
-                $(this).siblings().removeClass("on"); //siblings(나머지 형제들 li)
-                var idx = $(this).index();
-                $(".con2_vsimgs li").eq(idx).addClass("on")
-                $(".con2_vsimgs li").eq(idx).siblings().removeClass("on");
-                $(".con2_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
-            });
+            // $(".colmenu li").click(function(i){
+            //     $(this).addClass("on");
+            //     $(this).siblings().removeClass("on"); //siblings(나머지 형제들 li)
+            //     var idx = $(this).index();
+            //     $(".con2_vsimgs li").eq(idx).addClass("on")
+            //     $(".con2_vsimgs li").eq(idx).siblings().removeClass("on");
+            //     $(".con2_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
+            // });
+
+            function nextAni(){
+                $(".con1_vsimgs").not(":animated").animate({"margin-left":wd*-1}, 300, function(){
+                    $(".con1_vsimgs li").eq(0).appendTo($("con1_vsimgs"));
+                    $(".con1_vsimgs").css("margin-left","0px");
+                    $(".con1_vsimgs")
+                });
+            }
+            
             
         });
     </script>
