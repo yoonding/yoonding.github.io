@@ -51,7 +51,7 @@
  
  ~~cancleline~~
  
- ![최윤정](img0.jpg);
+ ![최윤정](img0.jpg)
  
  
  
