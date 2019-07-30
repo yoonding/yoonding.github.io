@@ -68,19 +68,20 @@
             
             .icon_box{ width: 100%; height: 100%; margin-top: 34.8rem; position: static; margin-left: 28px;}
             .icon_box li{width: 130px; float: left; margin-right: 8%;}
-            .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px 10px; text-align: center;}
+            .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px; 10px; text-align: center;}
             
            
             
             
             /* con2 작업 */
-            .coltxt{width: 80%;}
-            .coltxt{ margin-left: 1rem; transition: 0.8s;
+            .coltxt{font-size: 35px; left: 2.5rem; transition: 0.8s; top: -0.5rem;
                 opacity: 0;}
+            .con2_vsimgs li.item5 .coltxt{top: 0;}
             .con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
             .colstxt{display: none;}
-            .more_box{margin-left: 1rem; margin-top: 3rem; position: relative;}
-            .more{ width: 200px; height: 20px; font-size: 20px; text-indent: 20px;line-height: 20px;}
+            .more_box{margin-left: 3rem; margin-top: 13rem; position: relative;}
+            .more{ width: 100px; height: 20px; font-size: 20px; text-indent: 20px;line-height: 20px; float: left;}
+            .colarrow{left: -50px;}
             .colarrow img{width: 25px; }
             
             .colmenubox{height: 80px; width: 100%;}
@@ -89,7 +90,8 @@
             .bar{position: absolute;right: 50%;top: 24%; }
             .arrowright{position: absolute;right: 20%; top: 24%;}
             .arrowleft img, .arrowright img{display: block; width: 20px;}
-            .colmenu{display: none;}
+            .colmenu_fr{display: none;}
+            .con2_vsimgs li.item1{background-position: -290px;}
             .con2_vsimgs li.item2{background-position: -630px;}
             .con2_vsimgs li.item4{background-position: -450px;}
             .con2_vsimgs li.item5{background-position: -400px;}
@@ -177,15 +179,16 @@
             
             .icon_box{ width: 100%; height: 100%; margin-top: 54.5rem; position: static; margin-left: 70px;}
             .icon_box li{width: 300px; float: left; margin-right: 8%;}
-            .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0 10px; text-align: center;}
+            .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0px; 10px; text-align: center;}
             
             /* con2 작업 */
-            .coltxt{width: 80%; margin-left: 3rem; transition: 0.8s; opacity: 0; padding-top: 3rem;}
+            .coltxt{font-size: 60px;  left: 3rem; transition: 0.8s; opacity: 0; top: 5rem;}
             .con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
-            .colstxt{display: block; width: 70%; margin-left: 50px;}
-            .more_box{margin-left: 3rem; margin-top: 2.5rem; position: relative;}
+            .colstxt{display: none; width: 75%; margin-left: 50px;}
+            .more_box{margin-left: 3rem; margin-top: 20rem; position: relative;}
             .more{ width: 200px; height: 20px; font-size: 20px; text-indent: 20px;line-height: 20px;}
             .colarrow img{width: 25px; }
+            .con2_vsimgs li.item3 .more_box{margin-top: 24rem;}
             
             .colmenubox{height: 100px; width: 100%;}
             .arrowbox{height: 100px; width: 100%;}
@@ -197,7 +200,8 @@
             .con2_vsimgs li.item2{background-position: -800px;}
             .con2_vsimgs li.item4{background-position: -500px;}
             .con2_vsimgs li.item5{background-position: -480px;}
-            
+            .colmenu_fr{display: none;}
+
             /* con3 */
             .con3_con{height: 100%;}
             .con3_con li{width: 100%; height: 33.3333%; float: none;}
@@ -221,13 +225,31 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(document).ready(function(){
-            //메뉴버튼 누르면 메뉴박스 나타나게 하기
             $(".menu_icon").click(function() {
-               $("#menu_box").fadeIn("slow");
+                $("#menu_box").fadeIn(500);
             });
-            $(".close").click(function(){
-                $("#menu_box").fadeOut("slow");
+            $("#menu_box .close").click(function() {
+                $("#menu_box").fadeOut(500);
             });
+            
+            
+            
+            
+            
+            
+            //메뉴버튼 누르면 메뉴박스 나타나게 하기
+//            var ck1 = true;
+//            $(".menu_icon").click(function() {
+//                if (ck1) {
+//                    $("#menu_box").fadeIn('slow');
+//                    $(".menu_icon").addClass("on");
+//                } else {
+//                    $("#menu_box").fadeOut('slow');
+//                    $(".close").removeClass("on");
+//                }
+//                ck1 = !ck1;
+//
+//            });
         
             //스크롤하면 로고와 메뉴 사라지게 설정하기
             $(window).scroll(function(){
@@ -262,6 +284,20 @@
                 }
             });
 
+            //vs이미지 slide 처리하기
+            // var slide = setInterval(function(){nextAni();}, 2800);
+            // function nextAni(){
+            //         $(".con1_vsimgs").not(":animated").animate({"margin-left":"-100%"},1000, function(){
+            //         $(".con1_vsimgs li").eq(0).appendTo($(".con1_vsimgs"));
+            //         $(".con1_vsimgs").css("margin-left", "0%");
+            //     });
+            // }
+            // function prevAni(){
+            //     $(".con1_vsimgs li").eq(6).appendTo($(".con1_vsimgs"));
+            //     $(".con1_vsimgs").css("margin-left", "-100%");
+            //     $(".con1_vsimgs").not(":animated").animate({"margin-left":"0%"}, 1000);                
+            //     }
+            
             
             $(".vs_btns li").click(function(i){
                 $(this).addClass("on");
@@ -280,16 +316,48 @@
             //     $(".con2_vsimgs li").eq(idx).siblings().removeClass("on");
             //     $(".con2_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
             // });
+            
+            //두 번째 슬라이더
+        var tar, tar_wd, tar_cnt;
+        tar_cnt = $(".con2_vsimgs li").length;
+        tar_wd = parseInt($(".colmenu li").width());
 
-            function nextAni(){
-                $(".con1_vsimgs").not(":animated").animate({"margin-left":wd*-1}, 300, function(){
-                    $(".con1_vsimgs li").eq(0).appendTo($("con1_vsimgs"));
-                    $(".con1_vsimgs").css("margin-left","0px");
-                    $(".con1_vsimgs")
-                });
+        $(".colmenu_fr li").click(function(e){
+            tar = $(this).index();        
+            for(var i=1;i<tar;i++){
+                $(".con2_vsimgs li").eq(0).appendTo($(".con2_vsimgs"));
+                $(".colmenu_fr li").eq(0).appendTo($(".colmenu_fr"));
             }
-            
-            
+            nextAni();
+        });
+        function nextAni(){
+            $(".con2_vsimgs").not(":animated").animate({"margin-left":wd*-1}, 300, function(){
+                $(".con2_vsimgs li").eq(0).appendTo($(".con2_vsimgs"));
+                $(".con2_vsimgs").css("margin-left", "0px");
+                $(".con2_vsimgs li").eq(0).addClass("on");
+                $(".con2_vsimgs li").eq(0).siblings().removeClass("on");
+                $(".colmenu_fr li").eq(0).appendTo($(".colmenu_fr"));
+                $(".colmenu_fr li").removeClass("on");
+                $(".colmenu_fr li").eq(0).addClass("on");
+            });
+        }
+        function prevAni(){
+            $(".con2_vsimgs li").eq(tar_cnt-1).prependTo($(".con2_vsimgs"));
+            $(".con2_vsimgs").css("margin-left", -wd+"px");
+            $(".con2_vsimgs").not(":animated").animate({"margin-left":"0px"}, 300, function(){
+                $(".con2_vsimgs li").eq(0).addClass("on");
+                $(".con2_vsimgs li").eq(0).siblings().removeClass("on");
+                $(".colmenu_fr li").eq(tar_cnt-1).prependTo($(".colmenu_fr"));
+                $(".colmenu_fr li").removeClass("on");
+                $(".colmenu_fr li").eq(0).addClass("on");
+            });
+        }
+        $(".arrowbox li.arrowleft").click(function(){
+            prevAni();
+        });
+        $(".arrowbox li.arrowright").click(function(){
+            nextAni();
+        });
         });
     </script>
 </head>
@@ -526,7 +594,8 @@
             <ul class="con2_vsimgs">
                 <li class="item1 on">
                     <a href="">
-                        <img src="./images/col1txt.png" alt="" class="coltxt">
+                        <span class="coltxt">JEWERLRY COLLECTION</span> 
+                        <!-- <img src="./images/col1txt.png" alt="" class="coltxt"> -->
                         <img src="./images/col11txt.png" alt="" class="colstxt">
                     </a>
                     <div class="more_box">
@@ -537,7 +606,8 @@
                 </li>
                 <li class="item2">
                     <a href="">
-                        <img src="./images/col2txt.png" alt="" class="coltxt">
+                        <span class="coltxt">WEDDING COLLECTION</span>
+                        <!-- <img src="./images/col2txt.png" alt="" class="coltxt"> -->
                         <img src="./images/col21txt.png" alt="" class="colstxt">
                     </a>
                     <div class="more_box">
@@ -548,7 +618,8 @@
                 </li>
                 <li class="item3">
                     <a href="">
-                        <img src="./images/col3txt.png" alt="" class="coltxt">
+                        <span class="coltxt">GANESHI DESIGN COLLECTION</span>
+                        <!-- <img src="./images/col3txt.png" alt="" class="coltxt"> -->
                         <img src="./images/col31txt.png" alt="" class="colstxt">
                     </a>
                     <div class="more_box">
@@ -559,7 +630,8 @@
                 </li>
                 <li class="item4">
                     <a href="">
-                        <img src="./images/col4txt.png" alt="" class="coltxt">
+                        <span class="coltxt">PRIMIUM COLLECTION</span>
+                        <!-- <img src="./images/col4txt.png" alt="" class="coltxt  contxt4"> -->
                         <img src="./images/col41txt.png" alt="" class="colstxt">
                     </a>
                     <div class="more_box">
@@ -570,7 +642,8 @@
                 </li>
                 <li class="item5">
                     <a href="">
-                        <img src="./images/col5txt.png" alt="" class="coltxt">
+                            <span class="coltxt">GIFT COLLECTION</span>
+                        <!-- <img src="./images/col5txt.png" alt="" class="coltxt  contxt5"> -->
                         <img src="./images/col51txt.png" alt="" class="colstxt">
                     </a>
                     <div class="more_box">
@@ -581,18 +654,20 @@
                 </li>
             </ul>
             <div class="colmenubox">
-                <div class="arrowbox">
-                    <a href="" class="arrowleft"><img src="./images/arrow_left.png" alt=""></a>
+                <ul class="arrowbox">
+                    <li href="" class="arrowleft"><button><img src="./images/arrow_left.png" alt=""></button></li>
                     <img src="./images/bar.png" alt="" class="bar">
-                    <a href="" class="arrowright"><img src="./images/arrow_right.png" alt=""></a>
-                </div>
-                <ul class="colmenu">
-                    <li class="colbtn on"><button><img src="./images/coltxt1.png" alt=""></button></li>
-                    <li class="colbtn"><button><img src="./images/coltxt2.png" alt=""></button></li>
-                    <li class="colbtn"><button><img src="./images/coltxt3.png" alt=""></button></li>
-                    <li class="colbtn"><button><img src="./images/coltxt4.png" alt=""></button></li>
-                    <li class="colbtn"><button><img src="./images/coltxt5.png" alt=""></button></li>
+                    <li href="" class="arrowright"><button><img src="./images/arrow_right.png" alt=""></button></li>
                 </ul>
+                <div class="colmenu_fr">
+                    <ul class="colmenu">
+                        <li class="colbtn on"><button><img src="./images/coltxt1.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt2.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt3.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt4.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt5.png" alt=""></button></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="con" id="con3">

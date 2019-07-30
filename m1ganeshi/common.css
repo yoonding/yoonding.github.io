@@ -41,15 +41,15 @@ visibility: hidden; transition: 0.5s; opacity: 0; z-index: 50; border: 1px solid
 
 /*메뉴박스작업*/
 .menu_icon{position: absolute; top: 30px; right: 2%;}
+.menu_icon.on #menu_box{display: block;}
 .menu_icon img{display: block; width: 90%; height: auto; padding: 5px;}
-#menu_box{background: rgba(0, 0, 0, 0.85); position: fixed;
-top: 0; left: 0; width: 100%; height: 100%; z-index: 99; 
+#menu_box{ position: fixed;
+top: 0px; left: 0%; width: 100%; height: 100%; z-index: 99;background: rgba(0, 0, 0, 0.85); transition: 0.7s; 
 display: none;}
 .mymenu_box{position: absolute; top: 4%; right: 8%;}
 .mymenu li{float: left; margin-right: 40px;}
 .mymenu li a{display: block; font-size: 14px; color: #b9b9b9; font-weight: bold;}
 .close{position: absolute; top: 3%; right: 2%; display: block; padding: 5px;}
-.close img{display: block; width: 100%;}
 .search{position: absolute; top: 45%; right: 18%;}
 #keyword{width: 300px; height: 35px; text-indent: 20px; background: none; 
 border: 2px solid #fff; border-radius: 30px; color: #b9b9b9;}
@@ -57,7 +57,7 @@ border: 2px solid #fff; border-radius: 30px; color: #b9b9b9;}
 position: absolute;top: 0; right: -14%; opacity: 0;}
 .search_icon{position: absolute; top: 5px; right: -40px;}
 .mtxt_box{position: absolute; top: 13%;}
-.mtxtimg img{display: block;}
+.mtxtimg img{display: block; }
 .mtxt{float: left; margin-left: 250px; width: 250px; height: auto;}
 .mtxt a.mtxtimg{display: block; padding-top: 20px; padding-bottom: 20px; margin-top: 25px;}
 .stxt{position: absolute; left: 60%; margin-left: 280px; width: 800px;}
@@ -109,6 +109,7 @@ margin-right: 30px;}
 .con2_vsimgs li.item3{background-image: url(./images/col3.jpg);}
 .con2_vsimgs li.item4{background-image: url(./images/col4.jpg);}
 .con2_vsimgs li.item5{background-image: url(./images/col5.jpg);}
+
 .more_box{margin-left: 6rem; margin-top: 4rem; position: relative;}
 .more{display: block; padding: 10px; width: 230px; height: 35px; color: #ffffff; font-size: 24px;
 border: 3px solid #fff; text-indent: 40px; float: left; border-radius: 100px; line-height: 35px; }
@@ -137,23 +138,26 @@ border: 3px solid #fff; text-indent: 40px; float: left; border-radius: 100px; li
 }
 
 
-
-
-.coltxt{ margin-left: 6rem; transition: 0.8s;
-opacity: 0; display: block;display: block;}
+.coltxt{font-size: 80px; font-weight: 500; color: #ffffff; position: absolute;
+    top: -1rem; left: 6rem; transition: 0.8s;
+opacity: 0; display: block;}
 .con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
-.colstxt{display: block; margin-left:5%; padding-top: 3rem;}
+.colstxt{display: block; margin-left:5%; padding-top: 14rem;transition: 0.8s;
+    opacity: 0;}
+.con2_vsimgs li.on .colstxt{margin-top: 1rem; opacity: 1;}
 
 .colmenubox{clear: both; position: absolute; bottom: 0; left: 0; background:rgba(0,0,0,0.4);
 width: 100%; height:100px;}
 .arrowbox{width: 25%; height: 100px; background: #000; position: relative; float: left;}
-.arrowleft{position: absolute; right: 35%; top: 22%;}
+.arrowbox button{background: transparent;}
+.arrowleft{position: absolute; right: 35%; top: 22%; }
 .bar{position: absolute;right: 25%;top: 28%;}
 .arrowright{position: absolute;right: 9%; top: 22%;}
-.colmenu{position: absolute; top: 36%; left: 29%; width: 1500px;}
-.colmenu li{float: left; margin-right: 7%;}
-.colmenu li button{display: block; padding: 5px; margin-right: 20px;
-background-color: transparent;}
+.colmenu_fr{position: absolute;position: absolute; top: 36%; left: 29%; width: 1500px;height: 100px;}
+.colmenu_fr li{float: left; margin-right: 7%;}
+.colmenu_fr li button{display: block; padding: 5px; margin-right: 20px;
+background-color: transparent;padding: 15px;}
+.colmenu_fr li.on button{border-top: 2px solid #fff;}
 .colmenu img{display: block;}
 
 
