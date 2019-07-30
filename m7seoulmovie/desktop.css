@@ -17,6 +17,7 @@ z-index: 10; background: #000; box-shadow: 1px 0px 10px #8d819c;}
 
 /* header */
 .logo{display: block; margin-left: 120px; padding-top: 30px;}
+.menu_icon{display: none;}
 
 #gnb{width: 80%; height: 100vh; padding: 40px 0px 30px 50px;}
 .gnb_box{width: 100%; height: auto;}
@@ -53,14 +54,8 @@ left: 0; bottom: 5rem; color: #5e4e71;}
 
 
 
-
-
-
-
-
 /* con 세부설정 */
 .con_box > ul{clear: both; padding-top: 2rem; width: 96%; margin: 0 auto;}
-
 /* ul1 */
 .conslist_box1 li a{display: block; width: 96%; margin: 0 auto; }
 .conslist_box1 li img{display: block; width: 100%;}
@@ -73,25 +68,52 @@ left: 0; bottom: 5rem; color: #5e4e71;}
 .S_txt{position: absolute; top: 10rem; left: 40px;color: #fff; font-size: 12px; line-height: 1.5; width: 80%;}
 .S_txt1{position: absolute; top: 12rem; left: 40px;color: #fff; font-size: 12px; line-height: 1.5; width: 80%;}
 .S_txt3{position: absolute; top: 5rem; left: 40px;color: #9d84bc; font-size: 12px; line-height: 1.5; width: 80%;}
-.go{position: absolute; top: 18rem; left: 40px;color: #fff; font-size: 12px;padding: 5px; width: 25%;}
-.go2{position: absolute; top: 14rem; left: 40px;color: #fff; font-size: 12px;padding: 5px; width: 25%;}
-.keyword{position: absolute; top: 10rem; left: 40px;}
+.morebox{display: block;}
+.more{position: absolute; top: 18rem; left: 30px;color: #fff; font-size: 12px;padding: 5px; width: 25%; height: 30px; line-height: 30px; text-align: center;}
+.go{position: absolute; top: 18.3rem; left: 10rem;padding: 5px; width: 6%; height: 30px;background-repeat: no-repeat; background-size: auto; background-position: center; background-image:url(images/arrow.png);}
+
+
 
 /* ul2 */
 .conslist_box2 li div{width: 96%; margin: 0 auto;}
 .conslist_box2 li.item1{float: left; width: 32.6%;}
 .conslist_box2 li div{width: 96%; margin: 0 auto; position: relative;}
-.conslist_box2 li.item2{width: 65%; margin-right: 0.6%; overflow: hidden; float: right;}
+.conslist_box2 li.item2{width: 65%; margin-right: 0.6%; overflow: hidden; float: right;
+position: relative;}
 
 .conslist_box2 li.item2 .ban6_box{ position: relative;  width: 200%;}
-.conslist_box2 li.item2 .ban6_box li{width: 50%;; float: left;}
+.conslist_box2 li.item2 .ban6_box li.b_it{width: 50%;; float: left; transition: 1s;}
 .conslist_box2 li.item2 .ban6_box a{ display: block;}
 .conslist_box2 li.item2 img{display: block; width: 100%;}
 .view{position: absolute;display: block; top: 19rem; left: 20%; color: #ffffff; font-size: 24px;
 border: 1px solid #fff; width: 200px; height: 40px; text-align: center; padding: 5px;
-line-height: 38px;}
+line-height: 38px; z-index: 100;}
+.btn_box{p width: 100%; height: 150px;}
+.btn_box li{float: left; position: absolute; top: 10rem;}
+.btn_box li.left{left: 0;}
+.btn_box li.right{right: 0;}
+
 
 /* ul3 */
 .conslist_box3 li a{display: block;width: 96%; margin: 0 auto; position: relative;}
 .conslist_box3 li img{display: block; width: 100%;}
 .conslist_box3 li div{width: 96%; margin: 0 auto; position: relative;}
+.conslist_box3 li div.ban9, .conslist_box3 li div.ban11{margin-top: 26px; padding-bottom: 30px;}
+
+.more0{position: absolute; top: -10rem; left: 30px;color: #fff; font-size: 12px;padding: 5px; width: 25%; height: 30px; line-height: 30px; text-align: center;}
+.go0{position: absolute; top: -9.7rem; left: 10rem;padding: 5px; width: 6%; height: 30px;background-repeat: no-repeat; background-size: auto; background-position: center; background-image:url(images/arrow.png);}
+
+.select{position: absolute; top: 10rem; left: 2.5rem; height: 32px; width: 100px; text-indent: 10px; color: #747474;}
+.keyword{position: absolute; top: 13rem; left: 40px; width: 302px; height: 25px; padding: 5px; background-color: #fff; text-indent: 10px;}
+.search_btn{position: absolute; top: 13rem; left: 22rem;display: block;background-color: #5e4e71; background-image: url(./images/search.png); background-repeat: no-repeat; background-size: cover; background-position: center; width: 36px; height: 35px; text-indent: -9999px;}
+
+.border{opacity: 0; transition: 0.6s;}
+#content_wrap .item:hover .border{opacity: 1;}
+
+/* video */
+
+#vdo1{ display:block; width: 100%; height: 100%; border-radius: 40px 0;}
+#play_btn{font-size: 3em; position: absolute; top: 40%; left: calc(50% - 50px); width: 100px;
+color: #ffffff;}
+
+

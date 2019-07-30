@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+body, html{width: 100%; background: #000; font-family: 'Nanum Gothic Coding', monospace; font-weight: 100;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none; border:0; outline:0; }
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+/* 주요 레이아웃 */
+#menu_box{position: fixed;top: 0;left: -39.5%; width: 390px; height: 100vh; float: left;
+z-index: 10; background: #000; box-shadow: 1px 0px 10px #8d819c; transition: 0.6s;}
+#content_wrap{width: calc(100% - 80px); height: 100vh; padding-left: 85px;}
+#menu_box.on{left: 0;}
+/* header */
+.logo{display: block; margin-left: 30px; padding-top: 20px; width: 120px;}
+.logo img{display: block; width: 100%;}
+.menu_icon{position: absolute; top: 20px; right: 20px;}
+
+#gnb{width: 80%; height: 100vh; padding: 40px 0px 30px 30px;}
+.gnb_box{width: 100%; height: auto;}
+.gnb_box li.gnb_tit{margin-top: 30px;}
+.gnb_box li a.gnb_txt{display: block; padding: 10px; color: #ffffff; font-size: 20px; font-weight: 600;}
+.plus{display: block; float: right; margin-right: 30px;}
+
+.sub_box{width: 100%; height: 0px; overflow: hidden; transition: 0.6s; margin-top: 10px;margin-left: 30px;}
+
+.sub_box.on{height: 200px;}
+
+.sub_box li{margin-top:0.5rem;}
+.sub_box li a{display: block; color: #ffffff;
+    font-size: 14px; width: 40%; height:30px; line-height: 30px;}
+/*
+.gnb_box li:hover .sub_box.sub1{height: 260px;}
+.gnb_box li:hover .sub_box.sub2{height: 300px;}
+.gnb_box li:hover .sub_box.sub3{height: 120px;}
+.gnb_box li:hover .sub_box.sub4{height: 120px;}
+.gnb_box li:hover .sub_box.sub5{height: 120px;}
+*/
+
+
+.ft_menu{clear: both; width: 100%; height: 80px; position: absolute; bottom: 19rem; left: 30px; por}
+.ft_menu:before{content: ""; width: 30px; height: 3px; display: block; position: absolute;
+left: 0; bottom: 5rem; color: #5e4e71;}
+.ft_menu li{width: 30%;}
+.ft_menu li a{ width: 100%; display: block; font-size: 12px; color: #ccc; padding: 5px;margin-top: 1rem;}
+
+.sns_box{clear: both; position: absolute; left: 25px; bottom: 12rem;}
+.sns_box li{float: left; margin: 5px; width: 40px; height: 40px;}
+.sns_box li img{display: block; width: 100%;}
+.copyright{clear: both; width: 80%; color: #9d84bc; line-height: 1.5; font-size: 10.5px; position: absolute; left: 30px; bottom: 3rem; }
+
+
+
+
+/* con 세부설정 */
+.con_box > ul{clear: both; padding-top: 2rem; width: 96%; margin: 0 auto;}
+
+/* ul1 */
+.conslist_box1 li a{display: block; width: 96%; margin: 0 auto; }
+.conslist_box1 li img{display: block; width: 100%;}
+.conslist_box1 li div{width: 96%; margin: 0 auto; position: relative;}
+.border{display: block; width: 100%;}
+.conslist_box1 li.item2{margin-top: 21px;}
+.conslist_box1 li.item3{margin-top: 20px;}
+
+.tit_box1{position: absolute; top: 1.5rem;left: 30px; color: #9d84bc; padding: 5px; width: 100px; text-align: center; font-size: 12px; border: 1px solid #9d84bc;}
+.tit_box2{position: absolute; top: 1.5rem;left: 30px; color: #fff; padding: 5px; width: 100px; text-align: center; font-size: 12px; border: 1px solid #fff;}
+.B_txt{position: absolute; top: 4rem; left: 30px;color: #fff; font-size: 16px; line-height: 1.5;}
+.S_txt{position: absolute; top: 8rem; left: 30px;color: #fff; font-size: 11px; line-height: 1.5; width: 80%;}
+.S_txt1{position: absolute; top: 10rem; left: 30px;color: #fff; font-size: 11px; line-height: 1.5; width: 80%;}
+.S_txt3{position: absolute; top: 5rem; left: 40px;color: #9d84bc; font-size: 12px; line-height: 1.5; width: 80%;}
+.morebox{display: block;}
+.more{position: absolute; top: 14rem; left: 30px;color: #fff; font-size: 10px;padding: 5px; width: 25%; height: 30px; line-height: 30px; text-align: center;}
+.go{position: absolute; top: 14.3rem; left: 8rem;padding: 5px; width: 10%; height: 30px;background-repeat: no-repeat; background-size: auto; background-position: center; background-image:url(images/arrow.png);}
+
+.con_box .S_txt br, .con_box .S_txt1 br{display: none;}
+
+/* ul2 */
+.conslist_box2 li div{width: 96%; margin: 0 auto;}
+.conslist_box2 li.item1{width:41.5%; position: absolute; top: 23rem;left: 6.5rem;}
+.conslist_box2 li div{width: 96%; margin: 0 auto; position: relative;}
+.conslist_box2 li.item2{width: 100%; margin-right: 0.6%; overflow: hidden; position: relative;}
+
+
+.conslist_box2 li.item2 .ban6_box{   width: 200%;}
+.conslist_box2 li.item2 .ban6_box li.b_it{width: 50%; float: left; transition: 1s;}
+.conslist_box2 li.item2 .ban6_box a{ display: block;}
+.conslist_box2 li.item2 img{display: block; width: 100%;}
+.view{position: absolute;display: block; top: 14rem; left: 38%; color: #ffffff; font-size: 18px;
+border: 1px solid #fff; width: 150px; height: 30px; text-align: center; padding: 5px; z-index: 5;
+line-height: 30px;}
+.btn_box{p width: 100%; height: 150px;}
+.btn_box li{float: left; position: absolute; top: 6.5rem; width: 60px;}
+.btn_box li.left{left: 0;}
+.btn_box li.right{right: 0;}
+
+/* ul3 */
+.conslist_box3 li a{display: block;width: 98%; margin: 0 auto; position: relative;}
+.conslist_box3 li img{display: block; width: 100%;}
+.conslist_box3 li div{width: 96%; margin: 0 auto; position: relative;}
+.conslist_box3 li div.ban9, .conslist_box3 li div.ban11{margin-top: 26px; padding-bottom: 30px;}
+.conslist_box3 li.item2{margin-top: 30px;}
+
+.more0{position: absolute; top: -4rem; left: 30px;color: #fff; font-size: 10px;padding: 5px; width: 25%; height: 30px; line-height: 30px; text-align: center;}
+.go0{position: absolute; top: -3.7rem; left: 8rem;padding: 5px; width: 10%; height: 30px;background-repeat: no-repeat; background-size: auto; background-position: center; background-image:url(images/arrow.png);}
+
+.select{position: absolute; top: 8rem; left: 2rem; height: 28px; width: 80px; text-indent: 10px; color: #747474;}
+.keyword{position: absolute; top: 10.5rem; left: 32px; width: 200px; height: 21px; padding: 5px; background-color: #fff; text-indent: 10px;font-size: 12px;}
+.search_btn{position: absolute; top: 10.45rem; left: 15rem;display: block;background-color: #5e4e71; background-image: url(./images/search.png); background-repeat: no-repeat; background-size: cover; background-position: center; width: 32px; height: 33px; text-indent: -9999px;}
+
+
+/* video */
+
+#vdo1{ display:block; width: 100%; height: 100%; border-radius: 40px 0;}
+#play_btn{font-size: 3em; position: absolute; top: 35%; left: calc(50% - 40px); width: 80px;
+color: #ffffff;}
