@@ -51,13 +51,14 @@
                 $("#mgnb").removeClass("on");
             });
             
-            $(".mgnb_box li a").click(function(){ $(this).siblings(".msub_box").stop().not(":animated").slideDown(500);
+            $(".mgnb_box li a.g_tit").click(function(){ 
+                $(this).siblings(".msub_box").stop().not(":animated").slideDown(500);
                 $(this).addClass("on");
                 return false;                
             });
             $(document).mousedown(function(){
                 $(".msub_box").slideUp(500);
-                $(".mgnb_box li a").removeClass("on");
+                $(".mgnb_box li a.g_tit").removeClass("on");
             });
         });
 
@@ -71,7 +72,7 @@
         <nav id="gnb">
             <ul class="gnb_box">
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu1.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu1.png" alt=""></a>
                     <ul class="sub_box" id="sub1">
                         <li><a href="">인사말</a></li>
                         <li><a href="">의료진소개</a></li>
@@ -82,7 +83,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu2.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu2.png" alt=""></a>
                     <ul class="sub_box" id="sub2">
                         <li><a href="">진료안내</a></li>
                         <li><a href="">용한의원 한약</a></li>
@@ -92,7 +93,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu3.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu3.png" alt=""></a>
                     <ul class="sub_box" id="sub3">
                         <li><a href="">우울증</a></li>
                         <li><a href="">불면증</a></li>
@@ -103,7 +104,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu4.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu4.png" alt=""></a>
                     <ul class="sub_box" id="sub4">
                         <li><a href="">난청</a></li>
                         <li><a href="">이명</a></li>
@@ -111,7 +112,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu5.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu5.png" alt=""></a>
                     <ul class="sub_box" id="sub5">
                         <li><a href="">해독이 필요한 이유</a></li>
                         <li><a href="">병의 원인 - 독소란?</a></li>
@@ -120,7 +121,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu6.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu6.png" alt=""></a>
                     <ul class="sub_box" id="sub6">
                         <li><a href="">교통사고후유증</a></li>
                         <li><a href="">두통</a></li>
@@ -130,7 +131,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu7.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu7.png" alt=""></a>
                     <ul class="sub_box" id="sub6">
                         <li><a href="">아동청소년</a></li>
                         <li><a href="">심신의학질환</a></li>
@@ -140,7 +141,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu8.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu8.png" alt=""></a>
                     <ul class="sub_box" id="sub7">
                         <li><a href="">ADHD</a></li>
                         <li><a href="">틱장애</a></li>
@@ -149,7 +150,7 @@
                     </ul>
                 </li>
                 <li class="gnb_txt">
-                    <a href=""><img src="./images/menu9.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu9.png" alt=""></a>
                     <ul class="sub_box" id="sub6">
                         <li><a href="">한의원소식</a></li>
                         <li><a href="">언론보도 및 홍보자료</a></li>
@@ -246,7 +247,6 @@
                     </ul>
                 </li>
             </ul>
-            <img src="./images/menuboximg.png" alt="" class="menubox_img">
             <a class="online"><img src="./images/online.png" alt=""><span>궁금한 점이 있으신가요?</span></a>
             <button class="close"><img src="./images/close.png" alt=""></button>
         

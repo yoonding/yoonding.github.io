@@ -46,7 +46,7 @@ background-image: url(images/mvs.jpg); background-repeat: no-repeat; background-
 margin-left: 30px; float: left; width: 60px;}
 .online span{display: block; color: #fff; font-size: 18px; padding: 18px; float: right; margin-right: 30px; margin-top: 10px;}
 
-.menubox_img{position: absolute; left: 0; bottom: 45px;}
+
 .close{position: absolute; top: 3px; right: 0px; background: #329544; border-radius: 50%;
 width: 45px; height: 45px;padding: 5px; margin: 10px;}
 .close img{display: block; width: 100%;}
