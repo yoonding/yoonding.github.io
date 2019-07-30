@@ -13,3 +13,24 @@ button, label, input{outline: none; border: none; cursor: pointer; background: t
 .wrap{width: 100%; height: 100%;}
 
 
+/* header 영역 */
+#hd{clear: both; width: 100%; height: 120px; overflow: hidden;}
+.menu_btn{display: block; margin-left: 50px;margin-top: 30px; padding: 5px;
+float: left;}
+.logo{display: block; padding: 5px; margin-top: 25px; width: 250px; margin-top: 25px; 
+    margin-left: 720px; float: left;}
+.search_btn{display: block; float: right; margin-right: 50px; margin-top: 30px;}
+
+
+
+/*footer영역*/
+#ft{clear: both; width: 100%; height: 150px; overflow: hidden; }
+.ft_wrap{width: 1350px; margin: 0 auto;}
+.ftlogo{display: block; margin-top: 1.5rem;float: left; padding: 10px; margin-right: 50px;}
+.ft_menu{width: 1500px; height: 30px; }
+.ft_menu li{float: left; margin-right: 20px; padding: 5px;}
+.ft_menu li a{display: block; color: #000; font-weight: bold;}
+.copyright{width: 600px; height: auto;display: block; padding: 5px; margin-top: 10px; font-size: 12px; line-height: 1.4; float: left; font-weight: bold;}
+.tel{float: right; padding-top: 15px; font-weight: bold; font-size: 20px;}
+.tel b{margin-right: 10px; color: #467e43; font-size: 20px;}
+.NH{display: block;float: right; margin-top: 0.7rem;}

@@ -4,7 +4,7 @@
 float: left; width: 50px; height: 50px;}
 .menu_btn img{display: block; width: 100%;}
 .logo{display: block; padding: 5px; margin-top: 30px; width: 150px; margin-top: 12px; 
-    margin-left: 48px; float: left;}
+    margin-left: 42px; float: left;}
 .logo img{display: block; width: 100%;}
 .search_btn{display: block; float: right; margin-right: 15px; margin-top: 10px; width: 45px; height: 45px;}
 .search_btn img{display: block; width: 100%;}
@@ -26,9 +26,10 @@ position: absolute; top: 1.5rem; left: 20px; background: #fff;}
 .menu_box li a.main{display: block; color: #467e43; font-size: 20px; text-indent: 5px; padding: 10px; font-weight: border;
 font-weight: 500; border-bottom: 3px solid #467e43;}
 .menu_box li a.main:after{content: "▼"; display: block; font-size: 15px; float: right; margin-right: 5px;margin-top: 5px;}
+.menu_box li:last-child a.main:after{content: "";}
 .main_txt .main:after.on{content: "▲";}
 
-.sub_box{width: 60%; overflow: hidden; display:none;}
+.sub_box{width: 60%; overflow: hidden; display: none;}
 .sub_box li{width: 100%;}
 .sub_box li a{display: block; color: #467e43; font-weight: 500; width: 95%; text-indent: 30px; line-height: 2.5rem; padding: 5px; font-weight: bold;}
 

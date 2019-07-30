@@ -18,10 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet icon" href="./images/favicon.png">
     <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
-    <link rel="stylesheet" href="common.css" type="text/css" media="all">
     <link rel="stylesheet" href="sub_desktop.css" type="text/css" media="screen and (min-width:960px)">
-    <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
-    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="sub_tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="sub_mobile.css" type="text/css" media="screen and (max-width:767px)">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(document).ready(function() {
@@ -31,6 +30,65 @@
             $("#gnb .close").click(function() {
                 $("#gnb").removeClass("on");
             });
+
+            var n=0, cnt=$(".circle_box .item").length;
+        var inter1 = setInterval(function(){
+            if(n<cnt){ fnc1(n); }
+            n=n+1;
+        }, 200);
+        function fnc1(d){
+            $(".circle_box .item").eq(d).find(".dp1").removeClass("dp1")
+            .addClass("fr");
+            $(".circle_box .item").eq(d).find(".dp2").removeClass("dp2")
+            .addClass("bk");
+        }
+        var tar;
+        $(".btn_box li").click(function(){
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            tar = $(this).attr("data-group");
+            $(".tit_box li").filter("[data-group="+tar+"]").addClass("on");
+            $(".tit_box li").not("[data-group="+tar+"]").removeClass("on");
+			$(".circle_box .item").css("display", "none");
+            if(parseInt(tar)==0){
+                cnt = $(".circle_box .it").length;
+				$(".circle_box .item").css("display", "block");
+            } else {
+                cnt = $(".circle_box .item").filter("[data-group="+tar+"]").length;
+				$(".circle_box .item").filter("[data-group="+tar+"]").css("display", "block");
+            }
+            n = 0;
+            var inter2 = setInterval(function(){
+                if(n<cnt){
+                    if(parseInt(tar)==0){
+                        fnc1(n);  //전체 선택시 모든 콘텐츠가 나오도록 구현
+                    } else {
+                        fnc2(n);  //선택된 data-group가 나오도록 구현
+                    }
+                }
+                n=n+1;
+            }, 200);
+        });
+        function fnc2(f){
+			$(".circle_box .item").filter("[data-group="+tar+"]").eq(f).find(".dp1").removeClass("dp1").addClass("fr");
+			$(".circle_box .item").filter("[data-group="+tar+"]").eq(f).find(".dp2").removeClass("dp2").addClass("bk");
+        }
+
+
+
+        // var ht = parseInt($(window).height());
+        //     $(".more").click(function(){
+        //         $("body, html").css("scrollTop", ht*1.5);
+        //         setTimeout(function() {
+        //             moreAni();
+        //         }, 500);    
+        //     });
+        //     function moreAni(){
+        //         $(".cakeimgs2").slideDown(500, function(){
+        //             $(".cakeimgs2").addClass("on");
+        //         });
+        //     }
+
         });
     </script>
 </head>
@@ -39,7 +97,7 @@
     <div class="wrap">
         <header id="hd">
             <button class="menu_btn"><img src="images/menuicon.png"></button>
-            <a href="index.html" class="logo"><img src="./images/logo.png" alt=""></a>
+            <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
             <button class="search_btn"><img src="./images/searchicon.png" alt=""></button>
         </header>
         <nav id="gnb">
@@ -118,100 +176,302 @@
         </nav>
 
         <div class="btn_box">
-            <input type="radio" name="btn" class="ck" id="btn1" checked>
-            <input type="radio" name="btn" class="ck" id="btn2">
-            <input type="radio" name="btn" class="ck" id="btn3">
-            <input type="radio" name="btn" class="ck" id="btn4">
-            <input type="radio" name="btn" class="ck" id="btn5">
-            <input type="radio" name="btn" class="ck" id="btn6">
-            <input type="radio" name="btn" class="ck" id="btn7">
-            <input type="radio" name="btn" class="ck" id="btn8">
-            <div class="btns">
-                <label href="" for="btn1" id="ck1"></label>
-                <label href="" for="btn2" id="ck2"></label>
-                <label href="" for="btn3" id="ck3"></label>
-                <label href="" for="btn4" id="ck4"></label>
-                <label href="" for="btn5" id="ck5"></label>
-                <label href="" for="btn6" id="ck6"></label>
-                <label href="" for="btn7" id="ck7"></label>
-                <label href="" for="btn8" id="ck8"></label>
-            </div>
-            <div class="tit_box">
-                <label for="btn1" id="tit1">전체</label>
-                <label for="btn2" id="tit2">우유류</label>
-                <label for="btn3" id="tit3">발효유류</label>
-                <label for="btn4" id="tit4">유음료류</label>
-                <label for="btn5" id="tit5">커피음료</label>
-                <label for="btn6" id="tit6">치즈류</label>
-                <label for="btn7" id="tit7">가공식품류</label>
-                <label for="btn8" id="tit8">반려동물제품</label>
-            </div>
+            <ul class="btns">
+                <li class="item1 on" data-group="0" ><button></button></li>
+                <li class="item2" data-group="1" ><button></button></li>
+                <li class="item3" data-group="2" ><button></button></li>
+                <li class="item4" data-group="3" ><button></button></li>
+                <li class="item5" data-group="4" ><button></button></li>
+                <li class="item6" data-group="5" ><button></button></li>
+                <li class="item7" data-group="6" ><button></button></li>
+                <li class="item8" data-group="7" ><button></button></li>
+            </ul>
+            <ul class="tit_box">
+                <li class="item1 on" data-group="0"><span class="tit">전체</span></li>
+                <li class="item1" data-group="1"><span class="tit">우유류</span></li>
+                <li class="item1" data-group="2"><span class="tit">발효유류</span></li>
+                <li class="item1" data-group="3"><span class="tit">유음료류</span></li>
+                <li class="item1" data-group="4"><span class="tit">커피음료</span></li>
+                <li class="item1" data-group="5"><span class="tit">치즈류</span></li>
+                <li class="item1" data-group="6"><span class="tit">가공식품류</span></li>
+                <li class="item1" data-group="7"><span class="tit">반려동물제품</span></li>
+            </ul>
         </div>
 
         <div class="circle_wrap" id="cw1">
             <ul class="circle_box">
-                <li class="item item1">
+                <li class="item item1" data-group="1">
                     <a href="" class="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
                     <span>MilkLab</span>
                 </li>
-                <li class="item item2">
+                <li class="item item2" data-group="2">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>비요뜨</span>
+                </li>
+                <li class="item item3" data-group="3">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>사과/오렌지/<br>자두나무</span>
+                </li>
+                <li class="item item4" data-group="4">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>스페셜티<br>카페라떼</span>
+                </li>
+                <li class="item item5" data-group="5">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>뽀로로가 좋아하는<br>칼슘왕 치즈</span>
+                </li>
+                <li class="item item6" data-group="6">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>아침에버터</span>
+                </li>
+                <li class="item item7" data-group="7">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>아이펫밀크</span>
+                </li>
+                <li class="item item8" data-group="1">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
                     <span>홈밀크</span>
                 </li>
-                <li class="item item3">
+                <li class="item item9" data-group="2">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>듀오</span>
+                </li>
+                <li class="item item10" data-group="3">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>유기농주스</span>
+                </li>
+                <li class="item item11" data-group="4">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>스타벅스커피</span>
+                </li>
+                <li class="item item12" data-group="5">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>앙팡 유기농<br>어린이치즈</span>
+                </li>
+                <li class="item item13" data-group="6">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>서울우유<br>버터</span>
+                </li>
+                <li class="item item14" data-group="1">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
-                    <span>나100%<br>저지방우유</span>
+                    <span>나100%<br>저지방</span>
                 </li>
-                <li class="item item4">
+                <li class="item item15" data-group="2">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
-                    <span>앙팡</span>
+                    <span>요하임</span>
                 </li>
-                <li class="item item5">
+                <li class="item item16" data-group="3">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>아침에 주스</span>
+                </li>
+                <li class="item item17" data-group="4">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>커피빈<br>스페셜티블랜드</span>
+                </li>
+                <li class="item item18" data-group="5">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>서울우유<br>체다치즈</span>
+                </li>
+                <li class="item item19" data-group="6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>신선한 크림으로<br>만든 휘핑크림</span>
+                </li>
+                <li class="item item20" data-group="1">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>앙팡<br>성장기우유</span>
+                </li>
+                <li class="item item21" data-group="2">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>목장의 신선함이<br>살아있는 요구르트</span>
+                </li>
+                <li class="item item22" data-group="3">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>리이브</span>
+                </li>
+                <li class="item item23" data-group="4">
+                    <a href="" class="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>카페오레</span>
+                </li>
+                <li class="item item24" data-group="5">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>어린이치즈<br>앙팡</span>
+                </li>
+                <li class="item item25" data-group="6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>쫄깃하고 고소한<br>치즈육포</span>
+                </li>
+                <li class="item item26" data-group="1">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
                     <span>나100%</span>
                 </li>
-                <li class="item item6">
+                <li class="item item27" data-group="2">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
-                    <span>서울우유<br>딸기/초코/바나나우유</span>
+                    <span>짜요짜요</span>
                 </li>
-                <li class="item item7">
+                <li class="item item28" data-group="3">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
-                    <span>꿀딴지</span>
+                    <span>아침에주스<br>100%</span>
                 </li>
-                <li class="item item8">
+                <li class="item item29" data-group="5">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>앙팡 유기농<br>아기치즈</span>
+                </li>
+                <li class="item item30" data-group="6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>핫초코</span>
+                </li>
+                <li class="item item31" data-group="1">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>딸기/초콜릿/바나나<br>우유</span>
+                </li>
+                <li class="item item32" data-group="2">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>앙팡<br>요구르트</span>
+                </li>
+                <li class="item item33" data-group="5">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>테이스티치즈</span>
+                </li>
+                <li class="item item34" data-group="6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>프리미엄 커피믹스<br>킹커피</span>
+                </li>
+                <li class="item item35" data-group="1">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>꿀단지</span>
+                </li>
+                <li class="item item36" data-group="2">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>요하임</span>
+                </li>
+                <li class="item item37" data-group="6">
+                    <a href="">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </a>
+                    <span>신선한 우유로 만든<br>생크림</span>
+                </li>
+                <li class="item item38" data-group="1">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
                     <span>목장의 신선함이<br>살아있는 우유</span>
                 </li>
-                <li class="item item9">
+                <li class="item item39" data-group="2">
                     <a href="">
                         <div class="front"></div>
                         <div class="back"></div>
                     </a>
-                    <span>맛!단지</span>
+                    <span>장건강<br>프로바이오틱</span>
                 </li>
             </ul>
         </div>

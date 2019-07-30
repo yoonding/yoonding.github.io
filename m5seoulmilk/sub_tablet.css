@@ -1,3 +1,19 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+body, html{width: 100%; background: #fff; font-family: 'malgun-gothic'; font-weight: 100;
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none; border:0; outline:0; }
+image{border: none;}
+button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
+
+.wrap{width: 100%; height: 100%;}
+
+
+
 /* header 영역 */
 #hd{clear: both; width: 100%; height: 120px; overflow: hidden;}
 .menu_btn{display: block; margin-left: 35px;margin-top: 30px; padding: 5px;
@@ -6,6 +22,8 @@ float: left;}
     margin-left: 190px; float: left;}
 .logo img{display: block; width: 100%;}
 .search_btn{display: block; float: right; margin-right: 30px; margin-top: 30px;}
+
+
 
 /* 메뉴박스 */
 #gnb{position: fixed; top: 0; left: -110%; width: 100%; height: 100vh; 
@@ -50,6 +68,18 @@ color: #fff; font-weight: 500;}
 .close img{display: block; width: 90%; height: auto;}
 
 
+.btn_box{width: 350px; height: 200px; margin: 0px auto; }
+.btns{width: 160px; height: 110px; margin: 0 auto;}
+.btns li{float: left; margin: 5px; width: 10px; height: 30px;position: relative;}
+.btns li button{position: absolute; top: 2rem; float:  left; margin: 8px; width: 7px; height: 29px; border-radius: 3px; 
+    background-color: rgb(155, 155, 155); transition: 0.4s; }
+.btns li.on button{height: 80px; top: 0.5rem; background: #286231cc;}
+
+.tit_box{width: 240px; height: 50px; margin:20px auto; position: relative;padding: 10px;}
+.tit_box li{width: 100%; height: 50px; line-height: 50px; text-align: center; display: none;}
+.tit_box li.on{display: block;}
+.tit_box li span{font-size: 32px; transform: 0.6s;}
+
 /* circle_box 영역 */
 .circle_wrap{width: 95%; height: 1400px; margin: 0px auto;}
 .circle_box{width: auto;}
@@ -61,43 +91,61 @@ width: 324px; height:324px; }
 .circle_box li:hover span{opacity: 1;}
 .circle_box li div{position: absolute; top: 0; left: 0%; width: 324px; height: 324px;
     font-size: 2rem; color: #fff; line-height: 324px; text-align: center;}
-.circle_box li div.back{ background-color: rgba(234, 69, 69, 0.8); 
+.circle_box li div.back{ background-color: rgb(237, 28, 36); 
     width: 324px; height: 324px; border-radius: 50%;  opacity:0; }
-.circle_box li span{position: absolute; display: block; width: 100%; height: 100%; top: 0.8rem; font-size: 2rem; color: #ffffff;
-line-height: 324px; text-align: center; transition: 0.5s; z-index: 99;}
-
+.circle_box li span{position: absolute; display: block; width: 100%; height: 100%; top: 7rem; font-size: 2rem; color: #ffffff; line-height: 50px;
+margin-top: 0rem; text-align: center; transition: 0.5s; z-index: 99; opacity: 0; transition: 1s;}
+.circle_box li span
+.circle_box li:hover span{opacity: 1;}
 .circle_box li:hover div.back  { opacity:0.6; }
-.circle_box li:nth-child(1) div.back,.circle_box li:nth-child(3) div.back,
-.circle_box li:nth-child(6) div.back,.circle_box li:nth-child(8) div.back{
-    background-color: rgba(40, 98, 49, 0.8);}
+.circle_box li:nth-child(2n) div.back{background-color: #286231cc;}
 .circle_box li div.back img{display: block; width: 100%; height: 100%;}
 .circle_wrap li a {background-repeat: no-repeat; background-position: center center; 
     background-size: cover;}
-.circle_wrap li.item1 a {background-image: url(./images/li1.png); }
-.circle_wrap li.item2 a {background-image: url(./images/li2.png);}
-.circle_wrap li.item3 a {background-image: url(./images/li3.png);}
-.circle_wrap li.item4 a {background-image: url(./images/li4.png);}
-.circle_wrap li.item5 a {background-image: url(./images/li5.png);}
-.circle_wrap li.item6 a {background-image: url(./images/li6.png);}
-.circle_wrap li.item7 a {background-image: url(./images/li7.png);}
-.circle_wrap li.item8 a {background-image: url(./images/li8.png);}
 
 
-/* content영역 */
-#content{clear: both; width: 100%;height: 1700px; background: #467e43;
-     margin-top: 6rem;}
-.con_box{width: 95%; height: 100%; margin: 0 auto;}
-.con_box li {float: left; margin: 30px; padding-top: 2rem; position: relative;}
-.con_box li:nth-child(4){margin: 30px 0px 30px 30px;}
-.con_box span{display: block; font-size: 24px; margin-top: 10px; color: #ffffff; 
-    padding: 10px; border-bottom: 1px solid #fff;font-weight: 600; 
-    text-align: center; }
-.con_box p{display: block; color: #ffffff; text-align: center; padding: 20px;
-line-height: 1.5;}
-.con_box li:nth-child(3) span{margin-top: 30px;}
-.con_box li:nth-child(1) span{margin-top: 38px;}
-.con_box li:nth-child(4) span,.con_box li:nth-child(5) span{margin-top: 36px;}
-.con_box li:nth-child(5) span, .con_box li:nth-child(5) p{margin-left: 30px;}
+
+
+#cw1 li.item1 a{background-image: url(./images/milk1.jpg); }
+#cw1 li.item2 a {background-image: url(./images/yo1.jpg);}
+#cw1 li.item3 a {background-image: url(./images/ju1.jpg);}
+#cw1 li.item4 a {background-image: url(./images/co1.jpg);}
+#cw1 li.item5 a {background-image: url(./images/ch1.jpg);}
+#cw1 li.item6 a {background-image: url(./images/ga1.jpg);}
+#cw1 li.item7 a {background-image: url(./images/pet.jpg);}
+#cw1 li.item8 a {background-image: url(./images/milk2.jpg);}
+#cw1 li.item9 a {background-image: url(./images/yo2.jpg);}
+#cw1 li.item10 a{background-image: url(./images/ju2.jpg); }
+#cw1 li.item11 a {background-image: url(./images/co2.jpg);}
+#cw1 li.item12 a {background-image: url(./images/ch2.jpg);}
+#cw1 li.item13 a {background-image: url(./images/ga2.jpg);}
+#cw1 li.item14 a {background-image: url(./images/milk3.jpg);}
+#cw1 li.item15 a {background-image: url(./images/yo3.jpg);}
+#cw1 li.item16 a{background-image: url(./images/ju3.jpg); }
+#cw1 li.item17 a {background-image: url(./images/co3.jpg);}
+#cw1 li.item18 a {background-image: url(./images/ch3.jpg);}
+#cw1 li.item19 a {background-image: url(./images/ga3.jpg);}
+#cw1 li.item20 a {background-image: url(./images/milk4.jpg);}
+#cw1 li.item21 a {background-image: url(./images/yo4.jpg);}
+#cw1 li.item22 a {background-image: url(./images/ju4.jpg);}
+#cw1 li.item23 a {background-image: url(./images/co4.jpg);}
+#cw1 li.item24 a {background-image: url(./images/ch4.jpg);}
+#cw1 li.item25 a{background-image: url(./images/ga4.jpg); }
+#cw1 li.item26 a {background-image: url(./images/milk5.jpg);}
+#cw1 li.item27 a {background-image: url(./images/yo5.jpg);}
+#cw1 li.item28 a {background-image: url(./images/ju5.jpg);}
+#cw1 li.item29 a {background-image: url(./images/ch5.jpg);}
+#cw1 li.item30 a {background-image: url(./images/ga5.jpg);}
+#cw1 li.item31 a {background-image: url(./images/milk6.jpg);}
+#cw1 li.item32 a {background-image: url(./images/yo6.jpg);}
+#cw1 li.item33 a {background-image: url(./images/ch6.jpg);}
+#cw1 li.item34 a {background-image: url(./images/ga6.jpg);}
+#cw1 li.item35 a {background-image: url(./images/milk7.jpg);}
+#cw1 li.item36 a {background-image: url(./images/yo7.jpg);}
+#cw1 li.item37 a {background-image: url(./images/ga7.jpg);}
+#cw1 li.item38 a {background-image: url(./images/milk8.jpg);}
+#cw1 li.item39 a {background-image: url(./images/yo8.jpg);}
+ 
 
 /*footer영역*/
 #ft{clear: both; width: 100%; height: 150px; overflow: hidden; }
@@ -110,6 +158,3 @@ line-height: 1.5;}
 .copyright{width: 490px; height: auto;display: block; padding: 5px; margin-top: 10px; font-size: 10px; line-height: 1.4; float: left;}
 .tel{display: none;}
 .NH{display: none;}
-
-
-
