@@ -8,24 +8,27 @@ a{text-decoration: none;}
 image{border: none;}
 button, label, input{outline: none; border: none; cursor: pointer; background: transparent;}
 
-#container{zoom: 1; padding-right: 350px;}
-#container:after{content: ""; display: block; clear: both;}
-#content{float: right; width: 100%; height: 100vh; overflow: hidden; margin-right: -400px; position: relative;}
-#aside{float: left; position: fixed; width: 400px; left: 0;top: 0; z-index: 99; background: #fff;}
-#ft{width: 100%; float: right; height: 80px; background: #000; margin-right: -400px; position: fixed; right: 0;bottom: 0;}
+
+#aside{width: 100%; height:80px;}
+#content{clear: both; width: 100%; height: 100vh; position: relative;}
+#ft{width: 100%;height: 150px; background: #000; }
 
 
 /* header */
-.logo{display: block; text-align: center; padding-top : 30px;}
-.m_menubox{ margin-left: 50px; width: 350px; height: auto; }
-.m_menubox li.m_menu{position: relative; width: 155px; height: 30px; margin-top: 2.2rem;}
+.menu_icon{float: left; margin: 18px;display: block; width: 43px; height: 43px;}
+.menu_icon img{display: block; width: 100%;}
+.logo{display: block; padding-top : 25px; width: 100px; height: auto; margin-left: calc(50% - 120px); float: left;}
+.logo img{display: block; width: 100%;}
+.m_menubox{position: fixed; top: 0px; left:-110%; z-index: 100;width: 500px; height: 100vh; background: #fff; transition: 0.6s; }
+.m_menubox.on{left: 0;}
+.m_menubox div{margin-top: 7rem; margin-left: 5rem;}
+.m_menubox li.m_menu{ width: 155px; height: 30px; margin-top: 3rem;position: relative;}
 .m_menubox li.m_menu:last-child{width: 100px;}
 .m_menubox li.m_menu a{display: block;width: 100%; height: 100%;}
 .m_menubox li.m_menu a img{display: block;}
 .sns_box li{float: left;}
-.menu_icon{display: none;}
-.close{display: none;}
-.s_menubox{position: absolute; top: -5px; left: 200px; height: 0; overflow: hidden;
+
+.s_menubox{position: absolute; top: -5px; left: 250px; height: 0; overflow: hidden;
 width: 150px;  transition: 0.6s; height: 0px;}
 .s_menubox li{margin-top: 0.5rem;}
 .s_menubox li a{display: block; width: 100px; height: 20px; color: #000; font-size: 14px; padding: 5px;}
@@ -37,28 +40,29 @@ width: 150px;  transition: 0.6s; height: 0px;}
 .sns_box li a{display: block; width: 100%;}
 .sns_box img{display: block; width: 100%;}
 
-.tnb_box{width: 320px; height: 50px; margin-top: 5rem; margin-left: 50px;}
-.tnb_box a{display: block; float: left; margin-right: 25px; padding: 5px; width: 40px;}
+.close{position: absolute; top: 2rem; right: 2rem; border: 1px solid #000;
+width: 40px; height: 40px; padding: 10px; display: block;}
+.close img{display: block; width: 100%;}
+
+
+
+.tnb_box{width: 130px; height: 50px; float: right; padding-top: 20px;}
+.tnb_box a{display: block; float: left; margin-right: 25px; padding: 5px; width: 30px;}
 .tnb_box a:last-child{margin-right: 0;}
 .tnb_box a img{display: block; width: 100%;}
 
+.vs_box{width: 100vw;clear: both;}
+.vs_box li a{display: block; width: 100vw;}
+.vs_box li a img{width: 100%;}
+
+
+
 /* button box */
-.btn_fr{position: absolute;top: 22rem; left: 60px; width: 15px; height: 180px;z-index: 99;}
-.vs_btn_box{clear: both; width: 100%; height: 180px; position: relative; }
-.btn_fr li{position: absolute; left: 0;}
-.btn_fr li.it1{top: 20px;}
-.btn_fr li.it2{top: 50px;}
-.btn_fr li.it3{top: 80px;}
-.btn_fr li.it4{top: 110px;}
-.btn_fr li button{position: absolute; top: 0; width:15px; height: 15px; background-color: #fff; margin-bottom: 15px;transition: 0.6s;}
-.btn_fr li.on button{background-color: rgb(197, 45, 45);}
-
-
-
+.btn_fr{display: none;}
 
 
 /*footer*/
-#ft div{float: right; margin-right: 430px;}
+#ft div{margin-right: 430px;}
 .ftlogo{width: 120px; float: right; padding: 15px; margin-right: 10px;}
 #ft ul{width: 400px; height: 30px; float: left;margin-top: 1.5rem; }
 #ft ul li{float: left; margin-left: 15px;}

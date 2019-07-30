@@ -24,11 +24,66 @@
     <!-- 웹사이트 정보, 검색어, 저자, 앱이름, 3분 주기로 자동새로고침 -->
     <meta http-equiv="refresh" content="180">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+    var wd_s = $(window).width();
+    var wd = $(".vs_box li").height();
+    var sl = $(".vs_box");
+    var btn1 = $(".btn_fr .vs_btn_box");
+    var len = $(".vs_box li").length;
+    function nextSlideAni(){
+        sl.not(":animated").animate({"margin-top":-wd+"px"}, 600, function(){
+            sl.find("li").eq(0).appendTo(sl);
+            sl.css("margin-top", "0px");
+            btn1.find("li").eq(0).appendTo(btn1);
+            btn1.find("li").removeClass("on");
+            btn1.find("li").eq(0).addClass("on");
+        });
+    }
+    function prevSlideAni(){
+        sl.find("li").eq(len-1).prependTo(sl);
+        sl.css("margin-top", -wd+"px");
+        sl.not(":animated").animate({"margin-top":"0px"}, 600, function(){
+            btn1.find("li").eq(len-1).prependTo(btn1);
+            btn1.find("li").removeClass("on");
+            btn1.find("li").eq(0).addClass("on");
+        });
+    }
+    var intv1 = setInterval(function(){ 
+        nextSlideAni();
+    }, 3000);
+    $(".btn_fr li").click(function(){
+        clearInterval(intv1);
+        var ix = $(this).index();
+        for(var i=0;i<ix-1;i++){
+            sl.find("li").eq(0).appendTo(sl);
+            btn1.find("li").eq(0).appendTo(btn1);
+        }
+        nextSlideAni();
+        intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+    });
+
+    // menu박스 나타나게하기
+    $(".menu_icon").click(function(){
+        $(".m_menubox").addClass("on");
+    });
+    $(".m_menubox .close").click(function(){
+        $(".m_menubox").removeClass("on");
+    });
+
+
+
+
+    });
+    </script>
 </head>
 <body>
+    <div id="container">
     <aside id="aside">
+            <button class="menu_icon"><img src="./images/menu_icon.jpg" alt=""></button>
         <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
         <ul class="m_menubox">
+            <div>
             <li class="m_menu">
                 <a href="">
                     <img src="./images/menu1.png" alt="">
@@ -115,6 +170,8 @@
                     <li><a href=""><img src="./images/sns4.jpg" alt=""></a></li>
                 </ul>
             </li>
+        </div>
+            <button class="close"><img src="./images/close.png" alt=""></button>
         </ul>
         <div class="tnb_box">
             <a href=""><img src="./images/my.png" alt=""></a>
@@ -123,18 +180,39 @@
     </aside>
     <content id="content">
         <ul class="vs_box">
-            <li><a href=""><img src="./images/vs1.jpg" alt=""></a></li>
-            <li><a href=""><img src="./images/vs2.jpg" alt=""></a></li>
-            <li><a href=""><img src="./images/vs3.jpg" alt=""></a></li>
-            <li><a href=""><img src="./images/vs4.jpg" alt=""></a></li>
+            <li class="on"><a href=""><img src="./images/vs1.jpg" alt="" class="vs1"></a></li>
+            <li><a href=""><img src="./images/vs2.jpg" alt="" class="vs2"></a></li>
+            <li><a href=""><img src="./images/vs3.jpg" alt="" class="vs3"></a></li>
+            <li><a href=""><img src="./images/vs4.jpg" alt="" class="vs4"></a></li>
         </ul>
-        <ul class="vs_btn_box">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
+        <div class="btn_fr">
+            <ul class="vs_btn_box">
+                <li class="it1 on"><button></button></li>
+                <li class="it2"><button></button></li>
+                <li class="it3"><button></button></li>
+                <li class="it4"><button></button></li>
+            </ul>
+        </div>
     </content>
+
+    <script>
+            // 모바일에서 이미지 바꾸기
+            $(window).resize(function(){
+                var m_wd = $(window).width();
+                if (m_wd < 768) {
+                    $(".vs1").attr("src","./images/vs11.jpg");
+                    $(".vs2").attr("src","./images/vs21.jpg");
+                    $(".vs3").attr("src","./images/vs31.jpg");
+                    $(".vs4").attr("src","./images/vs41.jpg");
+                } else{
+                    $(".vs1").attr("src","./images/vs1.jpg");
+                    $(".vs2").attr("src","./images/vs2.jpg");
+                    $(".vs3").attr("src","./images/vs3.jpg");
+                    $(".vs4").attr("src","./images/vs4.jpg");
+                }
+            }).resize();
+            </script>
+</div>
     <footer id="ft">
        <div>
            <img src="./images/ftlogo.png" alt="" class="ftlogo">
