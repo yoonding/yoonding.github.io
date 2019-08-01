@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GANESHI</title>
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch-icono" sizes="32x32" href="././images/favicon.png">
+    <link rel="stylesheet" href="common.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <!-- 메타정보 -->
+    <meta name="title" content="GANESHI">
+    <meta name="description" content="주얼리, 귀걸이, 악세사리, 가네시, GANESHI">
+    <meta name="keyword" content="목걸이, 팔찌, 귀걸이, 악세사리, 주얼리">
+    <style>
+        @media screen and (max-width:767px) {
+            /* 모바일 사이즈 */
+
+            /* con1 작업 */
+            .logo{width: 120px; height: auto; margin-left: 25px; padding-top: 30px;}
+            .logo img{width: 100%; height: 100%;}
+            #gnb{display: none;}
+            .menu_icon{top: 18px; right: 0.5%; }
+            .menu_icon img{display: block; width: 70%; height: auto;}
+            .con1_vsimgs li.item1{background-position: -620px;}
+            .con1_vsimgs li.item2{background-position: -500px;}
+            .con1_vsimgs li.item3{background-position: -180px;}
+            .con1_vsimgs li.item4{background-position: -530px;}
+            .con1_vsimgs li.item5{background-position: -240px;}
+            .con1_vsimgs li.item6{background-position: -460px;}
+            .con1_vsimgs li.item7{background-position: -250px;}
+            .vstxt{width: 83%; margin: 0;}
+            #vstxt1, #vstxt2, #vstxt4{margin-left: 2rem;} 
+            #vstxt3{margin-left: 2.8rem; width: 280px;}
+            #vstxt4{width: 200px; margin-left: 5.2rem;}
+            #vstxt5{margin-left: 2.6rem;}
+            #vstxt6{margin-left: 4rem; width: 250px;}
+            #vstxt7{margin-left: 1.3rem;}
+            #vstxt2, #vstxt5{width: 250px;margin-left: 4rem;}
+            .con1_vsimgs li.on .vstxt{margin-top: 26rem; }
+            .vs_btn_box{position: absolute; bottom: 5%; left: calc(50% - 100px); width: 280px; height: 10px;}
+            .vs_btns li{float: left; width: 5px; height: 10px; transition: 0.6s;
+            margin-right: 20px;}
+            .vs_btns li button.btn{display: block; width: 15px; height: 10px; background:rgba(255,255,255,0.3); margin: 0 auto; line-height: 30px;}
+            .vs_btns li.on{background:rgba(255,255,255,1); width: 40px;} 
+            
+
+            /* menubox 작업 */
+            .mymenu_box{right: 35%;}
+            .stxt{display: none;}
+            .mymenu li{margin-right: 20px;}
+            .mymenu li a{font-size: 12px; color: #b9b9b9;}
+            .mymenu li.item2, .mymenu li.item5{display: none;} 
+            .close{right: 5%;}
+            .close img{width: 30px; height: 30px;}
+            .search{top: 12%; right: 22%;}
+            #keyword{width: 250px;}
+            
+            .mtxt_box{top: 15%; border-bottom: 1px solid #484848; padding-bottom: 1rem; width: 100%;}
+            .mtxt{margin-left: 45px; margin-top: 40px;}
+            .mtxt img{height: 18px;}
+            .mtxt a.mtxtimg{padding-top: 15px; padding-bottom: 20px; margin-top: 0;}
+            .mtxt img.mtxtimg2{height: 16px;} 
+            .mtxt img.mtxtimg4{height: 18px;}
+            .mtxt img.mtxtimg5{height: 16px;}
+            
+            .icon_box{ width: 100%; height: 100%; margin-top: 33.5rem; position: static; margin-left: 28px;}
+            .icon_box li{width: 130px; float: left; margin-right: 8%;}
+            .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px 10px; text-align: center;}
+         
+           
+            
+            
+            /* con2 작업 */
+            .coltxt{font-size: 35px; left: 2.5rem; transition: 0.8s; top: -0.5rem;
+                opacity: 0;}
+            .con2_vsimgs li.item5 .coltxt{top: 0;}
+            .con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
+            .colstxt{display: none;}
+            .more_box{margin-left: 3rem; margin-top: 13rem; position: relative;}
+            .more{ width: 100px; height: 20px; font-size: 20px; text-indent: 20px;line-height: 20px; float: left;}
+            .colarrow{left: -50px;}
+            .colarrow img{width: 25px; }
+            
+            .colmenubox{height: 80px; width: 100%;}
+            .arrowbox{height: 80px; width: 100%;}
+            .arrowleft{position: absolute; left: 20%; top: 24%; }
+            .bar{position: absolute;right: 50%;top: 24%; }
+            .arrowright{position: absolute;right: 20%; top: 24%;}
+            .arrowleft img, .arrowright img{display: block; width: 20px;}
+            .colmenu_fr{display: none;}
+            .con2_vsimgs li.item1{background-position: -290px;}
+            .con2_vsimgs li.item2{background-position: -630px;}
+            .con2_vsimgs li.item4{background-position: -450px;}
+            .con2_vsimgs li.item5{background-position: -400px;}
+            
+            /* con3 */
+            .con3_con{height: 100%;}
+            .con3_con li{width: 100%; height: 33.3333%; float: none;}
+            .con3_con li.item1{background-position: center -150px;}
+            .con3_con li.item2{background-position: center -120px;}
+            .con3_con li.item3{background-position: center -115px;}
+            .iconbox{width: 120px; height: 120px;position: absolute; top:24%; left: 10%;}
+            .con3icon1,.con3icon2{float: left; margin-left: 25px; margin-top: 25px;}
+            .con3icon3{float: left; margin-left: 27px; margin-top: 27px;}
+            .iconbox img{width: 70px;}
+            .con3txt{display: block; color: #ffffff; position: static; float: right; height: 30px; margin-top: 25%;
+            margin-right: 15%;} 
+            
+            /* footer */
+            .ft{height: 150px;}
+            .ftlogo{margin-top: 30px; margin-left: calc(50% - 75px); width: 130px; height: auto;}
+            .ftmenu{margin-top: 20px; margin-left: 40px;}
+            .ftmenu li{margin-right: 20px;}
+            .ftmenu li:nth-child(2){display: none;}
+            .fttxt1, .fttxt2, .fttxt3{display: none;}
+            .ftmenu:after{content: "COPYRIGHT STORY W ALL RIGHTS RESERVED."; display: block; position: absolute; top: 75%; left: 15%; color: #c6c6c6; font-size: 12px;}
+            
+        
+        }
+
+        @media screen and (min-width:768px) and (max-width:1279px) {
+            /* 태블릿 */
+            /* con1 작업 */
+            .logo{width: 200px; height: auto; margin-left: 30px; padding-top: 40px;}
+            .logo img{width: 100%; height: 100%;}
+            #gnb{display: none;}
+            .menu_icon{top: 30px; right: 4%; }
+            .menu_icon img{display: block; width: 90%; height: auto;}
+            .con1_vsimgs li.item1{background-position: -880px;}
+            .con1_vsimgs li.item2{background-position: -620px;}
+            .con1_vsimgs li.item3{background-position: -180px;}
+            .con1_vsimgs li.item4{background-position: -650px;}
+            .con1_vsimgs li.item5{background-position: -150px;}
+            .con1_vsimgs li.item6{background-position: -610px;}
+            .con1_vsimgs li.item7{background-position: -230px;}
+            .vstxt{width: 83%; margin: 0;}
+            #vstxt4, #vstxt6{margin-left: 2rem;} 
+            #vstxt1{height: 15%; width: auto; margin-top: 41rem; margin-left: 13rem;}
+            #vstxt3{margin-left: 14rem; width: 350px;margin-top: 41rem;}
+            #vstxt4{width: 240px; margin-left: 17rem; margin-top: 41rem;}
+            #vstxt5{margin-left: 15rem;}
+            #vstxt6{width: 300px; margin-left: 15rem; margin-top: 41rem;}
+            #vstxt7{margin-left: 13rem; width: 350px;margin-top: 42rem;}
+            #vstxt2, #vstxt5{width: 300px; margin-top: 41rem;}
+            .con1_vsimgs li.on .vstxt{margin-top: 26rem; }
+            .vs_btn_box{position: absolute; bottom: 8%; left: calc(50% - 170px); width: 500px; height: 30px;}
+            .vs_btns li{float: left; width: 30px; height: 20px; transition: 0.6s;
+            margin-right: 20px;}
+            .vs_btns li button.btn{display: block; width: 30px; height: 20px; background:rgba(255,255,255,0.3); margin: 0 auto; line-height: 30px;}
+            .vs_btns li.on{background:rgba(255,255,255,1); width: 70px;} 
+            
+            /* menubox 작업 */
+            .mymenu_box{left: 7%;}
+            .stxt{display: none;}
+            .mymenu li{margin-right: 30px;}
+            .mymenu li a{font-size: 18px; color: #b9b9b9;}
+            .mymenu li.item2, .mymenu li.item5{display: block;} 
+            .close{right: 5%;}
+            .close img{width: 40px; height: 40px;}
+            .search{top: 12%; right: 23%;}
+            .search img{display: block; width: 40px;}
+            .search_icon{ top: 10px; right: -55px;}
+            .search_btn{width: 40px; height: 40px; 
+            top: 0; right: -11%; opacity: 0;}
+            #keyword{width: 450px; height: 50px; font-size: 16px; text-indent: 30px; padding: 3px;}
+            
+            .mtxt_box{top: 20%; border-bottom: 1px solid #484848; padding-bottom: 3rem; width: 100%;}
+            .mtxt{margin-left: 80px;}
+            .mtxt img{height: 25px;}
+            .mtxt a.mtxtimg{padding-top: 20px; padding-bottom: 20px; margin-top: 20px;}
+            .mtxt img.mtxtimg1{height: 25px;}
+            .mtxt img.mtxtimg2{height: 23px;} 
+            .mtxt img.mtxtimg3{height: 27px;}
+            .mtxt img.mtxtimg4{height: 25px;}
+            .mtxt img.mtxtimg5{height: 23px;}
+            
+            .icon_box{ width: 100%; height: 100%; margin-top: 54rem; position: static; margin-left: 70px;}
+            .icon_box li{width: 300px; float: left; margin-right: 8%;}
+            .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0px 10px; text-align: center;}
+            
+            /* con2 작업 */
+            .coltxt{font-size: 60px;  left: 3rem; transition: 0.8s; opacity: 0; top: 5rem;}
+            .con2_vsimgs li.on .coltxt{margin-top: 6rem; opacity: 1;}
+            .colstxt{display: none; width: 75%; margin-left: 50px;}
+            .more_box{margin-left: 3rem; margin-top: 20rem; position: relative;}
+            .more{ width: 200px; height: 20px; font-size: 20px; text-indent: 20px;line-height: 20px;}
+            .colarrow img{width: 25px; }
+            .con2_vsimgs li.item3 .more_box{margin-top: 24rem;}
+            
+            .colmenubox{height: 100px; width: 100%;}
+            .arrowbox{height: 100px; width: 100%;}
+            .arrowleft{position: absolute; left: 20%; top: 30%; }
+            .bar{position: absolute;right: 50%;top: 29%; }
+            .arrowright{position: absolute;right: 20%; top: 30%;}
+            .arrowleft img, .arrowright img{display: block; width: 20px;}
+            .colmenu{display: none;}
+            .con2_vsimgs li.item2{background-position: -800px;}
+            .con2_vsimgs li.item4{background-position: -500px;}
+            .con2_vsimgs li.item5{background-position: -480px;}
+            .colmenu_fr{display: none;}
+
+            /* con3 */
+            .con3_con{height: 100%;}
+            .con3_con li{width: 100%; height: 33.3333%; float: none;}
+            .con3_con li.item1{background-position: center -160px;}
+            .con3_con li.item2{background-position: center -300px;}
+            .con3_con li.item3{background-position: center -115px;}
+            .iconbox{width: 200px; height: 200px;position: absolute; top:23%; left: 18%;}
+            .con3icon1,.con3icon2{float: left; margin-left: 50px; margin-top: 50px;}
+            .con3icon3{float: left; margin-left: 50px; margin-top: 52px;}
+            .iconbox img{width: 100px;}
+            .con3txt{display: block; color: #ffffff; position: static; float: right; height: 50px; margin-top: 20%; 
+            margin-right: 17%;}
+            
+        }
+
+        @media screen and (min-width:1280px) {
+            /* 데스크탑 */
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu_box").css("display","none");
+            $(".menu_icon").click(function() {
+                $("#menu_box").fadeIn(500);
+            });
+            $("#menu_box .close").click(function(){
+                $("#menu_box").fadeOut(500);
+            });
+            
+            
+        
+            //스크롤하면 로고와 메뉴 사라지게 설정하기
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                // consol.log(sc_top);
+                    if(sc_top>=500 && sc_top<5000){
+                        $("#gnb, .logo").addClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    } else if(sc_top>=1200){
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").addClass("off");
+                    } else{
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    }
+            });
+
+            //스크롤시 페이지만큼 내려가게 설정하기
+            var vsh = $(window).height();
+            var wd = $(window).width();
+            $(".con").each(function(index){
+                $(this).attr("data-val", index*vsh);
+            });
+            $(".con").on("mousewheel DOMMMouseScroll", function(e){
+                var prepo = parseInt($(this).attr("data-val"));
+                if(e.originalEvent.wheelDelta >= 0){
+                    $("html, body").stop().animate({scrollTop:prepo - vsh});
+                    return false;
+                } else if(e.originalEvent.wheelDelta < 0){
+                    $("html, body").stop().animate({scrollTop:prepo + vsh});
+                    return false;
+                }
+            });
+
+            //vs이미지 slide 처리하기
+            // var slide = setInterval(function(){nextAni();}, 2800);
+            // function nextAni(){
+            //         $(".con1_vsimgs").not(":animated").animate({"margin-left":"-100%"},1000, function(){
+            //         $(".con1_vsimgs li").eq(0).appendTo($(".con1_vsimgs"));
+            //         $(".con1_vsimgs").css("margin-left", "0%");
+            //     });
+            // }
+            // function prevAni(){
+            //     $(".con1_vsimgs li").eq(6).appendTo($(".con1_vsimgs"));
+            //     $(".con1_vsimgs").css("margin-left", "-100%");
+            //     $(".con1_vsimgs").not(":animated").animate({"margin-left":"0%"}, 1000);                
+            //     }
+            
+            
+            $(".vs_btns li").click(function(i){
+                $(this).addClass("on");
+                $(this).siblings().removeClass("on"); //siblings(나머지 형제들 li)
+                var idx = $(this).index();
+                $(".con1_vsimgs li").eq(idx).addClass("on")
+                $(".con1_vsimgs li").eq(idx).siblings().removeClass("on");
+                $(".con1_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
+            });
+            
+            // $(".colmenu li").click(function(i){
+            //     $(this).addClass("on");
+            //     $(this).siblings().removeClass("on"); //siblings(나머지 형제들 li)
+            //     var idx = $(this).index();
+            //     $(".con2_vsimgs li").eq(idx).addClass("on")
+            //     $(".con2_vsimgs li").eq(idx).siblings().removeClass("on");
+            //     $(".con2_vsimgs").not(":animated").animate({"margin-left":idx*-1*wd});
+            // });
+            
+            //두 번째 슬라이더
+        var tar, tar_wd, tar_cnt;
+        tar_cnt = $(".con2_vsimgs li").length;
+        tar_wd = parseInt($(".colmenu li").width());
+
+        $(".colmenu_fr li").click(function(e){
+            tar = $(this).index();        
+            for(var i=1;i<tar;i++){
+                $(".con2_vsimgs li").eq(0).appendTo($(".con2_vsimgs"));
+                $(".colmenu_fr li").eq(0).appendTo($(".colmenu_fr"));
+            }
+            nextAni();
+        });
+        function nextAni(){
+            $(".con2_vsimgs").not(":animated").animate({"margin-left":wd*-1}, 300, function(){
+                $(".con2_vsimgs li").eq(0).appendTo($(".con2_vsimgs"));
+                $(".con2_vsimgs").css("margin-left", "0px");
+                $(".con2_vsimgs li").eq(0).addClass("on");
+                $(".con2_vsimgs li").eq(0).siblings().removeClass("on");
+                $(".colmenu_fr li").eq(0).appendTo($(".colmenu_fr"));
+                $(".colmenu_fr li").removeClass("on");
+                $(".colmenu_fr li").eq(0).addClass("on");
+            });
+        }
+        function prevAni(){
+            $(".con2_vsimgs li").eq(tar_cnt-1).prependTo($(".con2_vsimgs"));
+            $(".con2_vsimgs").css("margin-left", -wd+"px");
+            $(".con2_vsimgs").not(":animated").animate({"margin-left":"0px"}, 300, function(){
+                $(".con2_vsimgs li").eq(0).addClass("on");
+                $(".con2_vsimgs li").eq(0).siblings().removeClass("on");
+                $(".colmenu_fr li").eq(tar_cnt-1).prependTo($(".colmenu_fr"));
+                $(".colmenu_fr li").removeClass("on");
+                $(".colmenu_fr li").eq(0).addClass("on");
+            });
+        }
+        $(".arrowbox li.arrowleft").click(function(){
+            prevAni();
+        });
+        $(".arrowbox li.arrowright").click(function(){
+            nextAni();
+        });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="hd">
+            <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+            <nav id="gnb">
+                <ul class="con1_menu">
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt1.png" alt="">
+                            <ul class="submenu" id="sub1">
+                                <li><a href="" class="submenutxt">매장찾기</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt2.png" alt="">
+                            <ul class="submenu" id="sub2">
+                                <li><a href="" class="submenutxt">다이아목걸이</a></li>
+                                <li><a href="" class="submenutxt">목걸이</a></li>
+                                <li><a href="" class="submenutxt">팔찌/발찌</a></li>
+                                <li><a href="" class="submenutxt">반지</a></li>
+                                <li><a href="" class="submenutxt">귀걸이</a></li>
+                                <li><a href="" class="submenutxt">커플링</a></li>
+                                <li><a href="" class="submenutxt">웨딩</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt3.png" alt="">
+                            <ul class="submenu" id="sub3">
+                                <li><a href="" class="submenutxt">베스트상품</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt4.png" alt="">
+                            <ul class="submenu" id="sub4">
+                                <li><a href="" class="submenutxt">가네시 디자인</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt5.png" alt="">
+                            <ul class="submenu" id="sub5">
+                                <li><a href="" class="submenutxt">프리미엄 콜렉션</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt"><a href="">
+                            <img src="./images/menutxt6.png" alt="">
+                            <ul class="submenu" id="sub6">
+                                <li><a href="" class="submenutxt">TV 속 GANESHI</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="mainmenutxt">
+                        <a href="">
+                            <img src="./images/menutxt7.png" alt="">
+                            <ul class="submenu" id="sub7">
+                                <li><a href="" class="submenutxt">문의게시판</a></li>
+                                <li><a href="" class="submenutxt">1:1상담</a></li>
+                                <li><a href="" class="submenutxt">주문배송조회</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="menu_icon"><img src="./images/menuicon.png" alt=""></a>
+        </header>
+        <div id="menu_box">
+            <div class="mymenu_box">
+                <ul class="mymenu">
+                    <li class="item1"><a href="">로그인</a></li>
+                    <li class="item2"><a href="">회원가입</a></li>
+                    <li class="item3"><a href="">MY GANISH</a></li>
+                    <li class="item4"><a href="">MY CART</a></li>
+                    <li class="item5"><a href="">MY ORDER</a></li>
+                </ul>
+            </div>
+            <form action="" class="search">
+                <input type="text" id="keyword" class="in_data" placeholder="검색어를 입력하세요.">
+                <img src="./images/search.png" alt="" class="search_icon">
+                <input type="submit" class="search_btn">
+            </form>
+            <div class="mtxt_box">
+                <ul class="mtxt">
+                    <li>
+                        <a href="" class="mtxtimg">
+                            <img src="./images/bmenutxt1.png" alt="" class="mtxtimg1"></a>
+                        <ul class="stxt" id="stxt1">
+                            <li><a href="">매장 찾기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt2.png" alt="" class="mtxtimg2"></a>
+                        <ul class="stxt" id="stxt2">
+                            <li><a href="">다이아목걸이</a></li>
+                            <li><a href="">목걸이</a></li>
+                            <li><a href="">팔찌/발찌</a></li>
+                            <li><a href="">반지</a></li>
+                            <li><a href="">귀걸이</a></li>
+                            <li><a href="">커플링</a></li>
+                            <li><a href="">웨딩</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt3.png" alt="" class="mtxtimg3"></a>
+                        <ul class="stxt" id="stxt3">
+                            <li><a href="">베스트상품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt4.png" alt="" class="mtxtimg4"></a>
+                        <ul class="stxt" id="stxt4">
+                            <li><a href="">가네시 디자인</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt5.png" alt="" class="mtxtimg5"></a>
+                        <ul class="stxt" id="stxt5">
+                            <li><a href="">프리미엄 콜렉션</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt6.png" alt="" class="mtxtimg6"></a>
+                        <ul class="stxt" id="stxt6">
+                            <li><a href="">TV 속 GANESHI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="mtxtimg"><img src="./images/bmenutxt7.png" alt="" class="mtxtimg7"></a>
+                        <ul class="stxt" id="stxt7">
+                            <li><a href="">문의게시판</a></li>
+                            <li><a href="">1:1상담</a></li>
+                            <li><a href="">주문배송조회</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="icon_box">
+                <li><a href=""><img src="./images/sns1.png" alt="" class="icon1"></a></li>
+                <li><a href=""><img src="./images/sns4.png" alt="" class="icon4"></a></li>
+                <li><a href=""><img src="./images/sns2.png" alt="" class="icon2"></a></li>
+                <li><a href=""><img src="./images/sns3.png" alt="" class="icon3"></a></li>
+            </ul>
+            <button href="" class="close"><img src="./images/close.png" alt=""></button>
+        </div>
+
+        <script>
+            //모바일에서 텍스트 이미지 바꾸기
+            $(window).resize(function() {
+                var wd_s = $(window).width();
+                if (wd_s < 768) {
+                    $(".icon1").attr("src", "./images/msns1.png");
+                    $(".icon4").attr("src", "./images/msns4.png");
+                    $(".icon2").attr("src", "./images/msns2.png");
+                    $(".icon3").attr("src", "./images/msns3.png");
+                } else {
+                    $(".icon1").attr("src", "./images/sns1.png");
+                    $(".icon4").attr("src", "./images/sns4.png");
+                    $(".icon2").attr("src", "./images/sns2.png");
+                    $(".icon3").attr("src", "./images/sns3.png");
+                }
+            }).resize();
+        </script>
+
+
+        <div class="con" id="con1">
+            <ul class="con1_vsimgs">
+                <li class="item1 on">
+                    <a href="">
+                        <img src="./images/vs1txt.png" alt="" class="vstxt" id="vstxt1">
+                    </a>
+                </li>
+                <li class="item2">
+                    <a href="">
+                        <img src="./images/vs2txt.png" alt="" class="vstxt" id="vstxt2">
+                    </a>
+                </li>
+                <li class="item3">
+                    <a href="">
+                        <img src="./images/vs3txt.png" alt="" class="vstxt" id="vstxt3">
+                    </a>
+                </li>
+                <li class="item4">
+                    <a href="">
+                        <img src="./images/vs4txt.png" alt="" class="vstxt" id="vstxt4">
+                    </a>
+                </li>
+                <li class="item5">
+                    <a href="">
+                        <img src="./images/vs5txt.png" alt="" class="vstxt" id="vstxt5">
+                    </a>
+                </li>
+                <li class="item6">
+                    <a href="">
+                        <img src="./images/vs6txt.png" alt="" class="vstxt" id="vstxt6">
+                    </a>
+                </li>
+                <li class="item7">
+                    <a href="">
+                        <img src="./images/vs7txt.png" alt="" class="vstxt" id="vstxt7">
+                    </a>
+                </li>
+
+            </ul>
+            <!-- <script>
+                //모바일에서 텍스트 이미지 바꾸기
+            $(window).resize(function () {    
+                var wd_s = $(window).width();
+                if(wd_s<768){
+                    $("#vstxt1").attr("src", "./images/mvs1txt.png");
+                } else {
+                    $("#vstxt1").attr("src", "./images/vs1txt.png");
+                }
+            }).resize();       
+            </script> -->
+
+            <div class="vs_btn_box">
+                <ul class="vs_btns">
+                    <li class="vsbtn on"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                    <li class="vsbtn"><button class="btn"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="con" id="con2">
+            <ul class="con2_vsimgs">
+                <li class="item1 on">
+                    <a href="">
+                        <span class="coltxt">JEWERLRY COLLECTION</span> 
+                        <!-- <img src="./images/col1txt.png" alt="" class="coltxt"> -->
+                        <img src="./images/col11txt.png" alt="" class="colstxt">
+                    </a>
+                    <div class="more_box">
+                        <a href="" class="more">MORE
+                            <span class="colarrow"><img src="./images/colarrow.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="item2">
+                    <a href="">
+                        <span class="coltxt">WEDDING COLLECTION</span>
+                        <!-- <img src="./images/col2txt.png" alt="" class="coltxt"> -->
+                        <img src="./images/col21txt.png" alt="" class="colstxt">
+                    </a>
+                    <div class="more_box">
+                        <a href="" class="more">MORE
+                            <span class="colarrow"><img src="./images/colarrow.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="item3">
+                    <a href="">
+                        <span class="coltxt">GANESHI DESIGN COLLECTION</span>
+                        <!-- <img src="./images/col3txt.png" alt="" class="coltxt"> -->
+                        <img src="./images/col31txt.png" alt="" class="colstxt">
+                    </a>
+                    <div class="more_box">
+                        <a href="" class="more">MORE
+                            <span class="colarrow"><img src="./images/colarrow.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="item4">
+                    <a href="">
+                        <span class="coltxt">PRIMIUM COLLECTION</span>
+                        <!-- <img src="./images/col4txt.png" alt="" class="coltxt  contxt4"> -->
+                        <img src="./images/col41txt.png" alt="" class="colstxt">
+                    </a>
+                    <div class="more_box">
+                        <a href="" class="more">MORE
+                            <span class="colarrow"><img src="./images/colarrow.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="item5">
+                    <a href="">
+                            <span class="coltxt">GIFT COLLECTION</span>
+                        <!-- <img src="./images/col5txt.png" alt="" class="coltxt  contxt5"> -->
+                        <img src="./images/col51txt.png" alt="" class="colstxt">
+                    </a>
+                    <div class="more_box">
+                        <a href="" class="more">MORE
+                            <span class="colarrow"><img src="./images/colarrow.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="colmenubox">
+                <ul class="arrowbox">
+                    <li href="" class="arrowleft"><button><img src="./images/arrow_left.png" alt=""></button></li>
+                    <img src="./images/bar.png" alt="" class="bar">
+                    <li href="" class="arrowright"><button><img src="./images/arrow_right.png" alt=""></button></li>
+                </ul>
+                <div class="colmenu_fr">
+                    <ul class="colmenu">
+                        <li class="colbtn on"><button><img src="./images/coltxt1.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt2.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt3.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt4.png" alt=""></button></li>
+                        <li class="colbtn"><button><img src="./images/coltxt5.png" alt=""></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="con" id="con3">
+            <ul class="con3_con">
+                <li class="item1">
+                    <a href="" class="event_box">
+                        <div class="iconbox">
+                            <img src="./images/eventicon.png" alt="" class="con3icon1">
+                        </div>
+                        <img src="./images/eventtxt.png" alt="" class="con3txt">
+                    </a>
+                </li>
+                <li class="item2">
+                    <a href="" class="store_box">
+                        <div class="iconbox">
+                            <img src="./images/storeicon.png" alt="" class="con3icon2">
+                        </div>
+                        <img src="./images/storetxt.png" alt="" class="con3txt">
+                    </a>
+                </li>
+                <li class="item3">
+                    <a href="" class="outlet_box">
+                        <div class="iconbox">
+                            <img src="./images/outleticon.png" alt="" class="con3icon3">
+                        </div>
+                        <img src="./images/outlettxt.png" alt="" class="con3txt">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer class="ft">
+            <img src="./images/ftlogo.png" alt="" class="ftlogo">
+            <ul class="ftmenu">
+                <li><a href=""><img src="./images/ftmenu1.png" alt=""></a></li>
+                <li><a href=""><img src="./images/ftmenu2.png" alt=""></a></li>
+                <li><a href=""><img src="./images/ftmenu3.png" alt=""></a></li>
+                <li><a href=""><img src="./images/ftmenu4.png" alt=""></a></li>
+                <li><a href=""><img src="./images/ftmenu5.png" alt=""></a></li>
+            </ul>
+            <img src="./images/fttxt1.jpg" alt="" class="fttxt1">
+            <img src="./images/fttxt2.jpg" alt="" class="fttxt2">
+            <img src="./images/fttxt3.jpg" alt="" class="fttxt3">
+        </footer>
+
+    </div>
+</body>
+
+</html>
