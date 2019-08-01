@@ -1,0 +1,241 @@
+* {margin: 0;padding: 0;}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #fff;
+    overflow-x: hidden;}
+
+ul,li {list-style: none;}
+
+a {
+    text-decoration: none;
+    color: #000000;}
+
+img {border: none;}
+
+input {outline: none;}
+
+select {
+    font-size: 12px;
+    vertical-align: middle;
+    margin-top: 1px;
+    outline: none;
+    border: none;}
+
+/*전체레이아웃*/
+#wrap {width: 100%;}
+
+/*헤더영역*/
+#header {
+    clear: both;
+    width: 100%;
+    height: 114px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(sliceimg_belif/img/check_bgd.jpg);
+    background-repeat: no-repeat;}
+
+#logo {
+    width: 112px;
+    height: 59px;
+    margin: 28px auto;}
+
+.skipnav {
+    position: absolute;
+    top: 14px;
+    right: 353px;}
+
+.skipnav ul {
+    overflow: hidden;}
+
+.skipnav ul li {
+    float: left;
+    margin-right: 27px;}
+
+.skipnav ul li a {
+    font-family: "Nanum Gothic"; 
+    font-size: 12px; 
+    font-weight: bold;}
+
+#lan {
+    position: absolute;
+    top: 16px;
+    right: 290px;
+    width: 67px;
+    padding-left: 20px;
+    border: none;
+    background-image: url(./sliceimg_belif/img/place_icon.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 8px 0;
+    }
+
+#lan option {
+    font-size: 12px;}
+    
+
+/*메인메뉴*/
+#nav {
+    clear: both;
+    width: 100%;
+    height: 41px;
+    background: #000000;
+    position: relative;}
+
+#nav ul {
+    width: 1322px;
+    margin: 0 auto;
+    overflow: hidden;}
+
+#nav ul li {
+    float: left;
+    margin-right: 121px;}
+
+#nav ul li a {
+    font-family: 'Nanum Gothic';
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 39px;
+    text-align: center;}
+
+#nav ul li a:hover{
+    color: #5193cd;
+    font-weight: bolder;}
+#nav img{
+    position: absolute;
+    right: 295px;
+    top: 10px;
+    cursor: pointer;}
+
+/*sub Image 영역*/
+#subImg{
+    clear: both;
+    width: 100%;
+    height: 470px;}
+#subImg img{
+    display: block;
+    width: 100%;
+    height: 470px;}
+
+/*sub메뉴영역*/
+#scWarp{
+    clear: both;
+    width: 1920px;
+    height: 1800px;}
+.subnav{
+    width: 1035px;
+    height: 26px;
+    margin: 80px auto 0;
+    overflow: hidden;}
+.subnav li{
+    float: left;
+    padding-left: 60px;}
+.subnav li:nth-child(1){
+    padding-left: 80px;}
+.subnav li:nth-child(8){
+    padding-right: 80px;}
+.subnav li a{
+    font-size: 16px;
+    font-weight: 600;}
+.subnav li a:hover{
+    color: #5193cd;}
+
+/*content*/
+.ProWarp{
+    clear: both;
+    width: 1322px;
+    height: 1422px;
+    margin: 0 auto;}
+.ProWarp ul{
+    width: 100%;
+}
+.ProWarp li{
+    width: 330px;
+    height: 660px;
+    float: left;
+    margin-top: 130px;}
+.content{
+    margin-top: 39px;}
+.ProWarp .comment{
+    font-size: 14px;
+    color: #898989;
+    text-align: center;}
+.ProWarp .proName{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;}
+.ProWarp .priceml{
+    margin-top: 27px;
+    color: #5193cd;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;}
+.ProWarp .priceml span{
+    color: #000;
+    font-weight: 500;}
+.ProWarp li:nth-child(2) .priceml{margin-top: 47px;}
+
+/*quick메뉴*/
+.quickWrap{
+    position: fixed;
+    top: 48%;
+    right: 0;}
+.Quicklogo{
+    margin-left: 3px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 70px;
+    height: auto;}
+.Qarrow img{
+    width: 25px;
+    height: auto;}
+.TOP{
+    position: absolute;
+    left: 25px;
+    bottom: 100px;
+    z-index: 10;}
+.END{
+    position: absolute;
+    left: 25px;
+    bottom: -60px;
+    z-index: 10;}
+
+/*footer*/
+#footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 150px;
+    background: #000;    
+    overflow: hidden;}
+#footer ul{
+    width: 1322px;
+    margin: 25px auto;}
+#footer li{
+    float: left;
+    margin-right: 15px;}
+#footer li:after{
+    content:"|"; 
+    padding-left: 15px; 
+    color: #ccc;}
+#footer li:last-child:after{content:"";}
+#footer li a{
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 600;}
+#footer p{
+    width: 1322px;
+    clear: both;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 20px;
+    margin: 0 auto;}
+#footer span{padding: 0 15px;}
+#footer .tel{
+    margin-left: 5px;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 600;}
