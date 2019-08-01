@@ -92,9 +92,9 @@
         
         
         
-        .menu_txt{float: right; width: 330px;}
-        .menu_txt li{float: left; padding: 10px; margin-top: 2.5rem; margin-right: 4rem;}
-        .menu_txt li a{color: #414141; font-size: 20px; font-weight: bold; transition: 0.3s; display: block; }
+        .menu_txt{width: 350px; position: absolute; top: 1.5rem; right: 3rem;}
+        .menu_txt li{float: left; padding: 15px 40px;}
+        .menu_txt li a{color: #414141; font-size: 24px; font-weight: bold; transition: 0.3s; display: block; }
         
         /* 메뉴 텍스트 효과 */
         .menu_txt a.menu1:hover, .menu_txt a.menu2:hover{
@@ -110,7 +110,7 @@
         .menu_txt a.menu1:before,.menu_txt a.menu1:after{
         position: absolute;
         top: 0rem;
-        left: 42.5rem;
+        left: -5.5rem;
         content: "◯";
         display: block;
         width: 100%;
@@ -122,7 +122,7 @@
         .menu_txt a.menu2:before,.menu_txt a.menu2:after{
         position: absolute;
         top: 0rem;
-        left: 52.5rem;
+        left: 5.5rem;
         content: "◯";
         display: block;
         width: 100%;
@@ -144,8 +144,8 @@
         -webkit-animation: drop 1s 0.5s;
         }
         @keyframes drop {
-        0% {opacity: 1;font-size: 0;top:55px;}
-        100% {opacity: 0;font-size: 60px;top:25px;}
+        0% {opacity: 1;font-size: 0;top:25px;}
+        100% {opacity: 0;font-size: 70px;top:-15px;}
         }
         
         
@@ -209,16 +209,17 @@
        </a>
        <div class="menu_box">
            <ul>
-               <li><a href="">Introduce</a></li>
-               <li><a href="">Portfolio</a></li>
-               <li><a href="">Contact</a></li>
+               <li><a href="./index.html">Intro</a></li>
+               <li><a href="./introduce.html">Introduce</a></li>
+               <li><a href="./gallary.html">Portfolio</a></li>
+               <li><a href="./contact.html">Contact</a></li>
            </ul>
            <button class="close"><img src="./images/close.png" alt=""></button>
        </div>
        <nav class="menu_txt">
            <ul>
-               <li><a href="" class="menu1">PORTFOLIO</a></li>
-               <li><a href="" class="menu2">CONTACT</a></li>
+               <li><a href="./gallary.html" class="menu1">PORTFOLIO</a></li>
+               <li><a href="./contact.html" class="menu2">CONTACT</a></li>
            </ul>
        </nav>
    </header>

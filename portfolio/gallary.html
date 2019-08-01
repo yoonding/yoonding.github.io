@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YOONJEONG PORTFOLIO</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menu_icon").click(function(){
+                $(this).addClass("on");
+                $(".menu_box").addClass("on");
+            });
+            $(".menu_box .close").click(function(){
+                $(".menu_box").removeClass("on");
+                $(".menu_icon").removeClass("on");
+            });
+
+            
+
+            // 탭메뉴
+            $(".page").css("display", "none");
+            $(".page").eq(0).fadeIn(800);
+            $(".page").find(".data").removeClass("on");
+            $(".page").eq(0).find(".data").addClass("on");
+            $(".gal_tits .galtit").click(function(index){
+                var bun = $(this).index();
+                $(".page").eq(bun).fadeIn(800);
+                $(".page").eq(bun).siblings().css("display", "none");
+                $(".page").eq(bun).find(".data").addClass("on");
+                $(".page").eq(bun).siblings().find(".data").removeClass("on");
+            });
+
+            $(document).ready(function(){
+                $(this).find(".data").addClass("on"); 
+            });
+
+            
+            //팝업(상세페이지)
+            $(".data li").click(function(){
+                var tar = $(this).attr("data-tar"); //갤러리의 몇번째 
+                $("#pop1").fadeIn(500);
+                $("#pop1 .tab_fr").css("display", "none");
+                $("#pop1 .tab_fr").filter(tar).css("display", "block");
+                
+            });
+            $(".tab_fr .tab_close").click(function(){
+                $("#pop1").fadeOut(500);
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html{width: 100%; height: 100vh; font-family: 'Abel', sans-serif; background-image: url(images/background2.jpg); -ms-overflow-style: none; position: relative;}
+        ::-webkit-scrollbar{display: none;}
+        ul{list-style: none;}
+        a{outline: none; border: none; text-decoration: none;}
+        button{outline: none; border: none; background: transparent; cursor: pointer;}
+        #hd{width: 100%; position: fixed; top: 0; left: 0;}
+        
+        .menu_icon{width: 120px; height: 60px; float: left; padding-top: 1.5rem; display: block; margin-left: 0rem; cursor: pointer; background-color: #414141; transition: 0.6s;}
+        .menu_icon.on{height: 100vh;}
+        .menu_icon li:nth-child(1):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 2rem; left: 2.7rem;}
+        .menu_icon li:nth-child(2):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 3.2rem; left: 2.7rem;}
+        
+        .menu_box{position: fixed; top: 0; left: -110%; width: 500px; height: 100vh; background-color: #414141; z-index: 1000; transition: 1s; transform: translateX(0); z-index: 100;}
+        .menu_box.on{left: 0%;}
+        .menu_box ul{width: 150px; margin: 19rem auto; padding: 10px;}
+        .menu_box li a{color: #fff; font-size: 26px; line-height: 4; text-align: center; display: block;}
+        .close{width: 50px; height: 50px; display: block; position: absolute; top: 8rem; left: 14rem;padding: 10px;}
+        .close img{display: block; width: 100%;}
+        
+        
+        
+        /* menu_box li 효과주기*/
+        .menu_box a::before, .menu_box a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+        }
+        .menu_box a:hover{
+        color:#fff;
+        }
+        .menu_box a::before {
+        content: '[';
+        margin-right: 12px;
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        transform: translateX(20px);
+        }
+        .menu_box a::after {
+        content: ']';
+        margin-left: 12px;
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        transform: translateX(-20px);
+        }
+        .menu_box a:hover::before,
+        .menu_box a:hover::after,
+        .menu_box a:focus::before,
+        .menu_box a:focus::after {
+        color:#fff;
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+        }
+        
+        .menu_txt{width: 350px; position: absolute; top: 1.5rem; right: 3rem;}
+        .menu_txt li{float: left; padding: 15px 40px;}
+        .menu_txt li a{color: #414141; font-size: 24px; font-weight: bold; transition: 0.3s; display: block; }
+         
+
+        /* 갤러리  */
+        .gal_tit_box{width: 43%; height: 40px; padding:150px 0px 0px 550px;}
+        .gal_tits li.galtit{float: left; padding: 10px; width: 250px; height: 40px; }
+        .galtit button{width: 100%; line-height: 3; color: #d4d4d4; text-align: center; font-size: 20px; 
+            text-shadow: 2px 2px 1px #676767; margin: 0 auto;}
+        .gal_tits li {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                }
+
+                .gal_tits li button {
+                -webkit-transition: -webkit-transform 0.5s ease;
+                transition: -webkit-transform 0.5s ease;
+                transition: transform 0.5s ease;
+                transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+                -webkit-transition: transform 0.5s ease;
+                }
+
+                .gal_tits li button:before {
+                position: absolute;
+                top: 100%;
+                content: attr(data-link-alt);
+                color: #d4d4d4;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                }
+
+                .gal_tits li:hover button,
+                .gal_tits li:focus button {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                }
+    </style>
+    <style> /* 갤러리 */
+    .page{clear: both; width:100vw; height:100vh; margin-top: 200px; }
+    .page1.on, .page2.on, .page3.on{display: block;}
+    .page_con {width:100vw; height:100vh; }    
+    .pg_tit { width: 280px; margin: 0 auto; margin-top: 150px; line-height:3; text-align:center; color:#d4d4d4; font-weight: lighter; font-size: 30px;
+    border-bottom: 1px solid #d4d4d4; border-top: 1px solid #d4d4d4;}
+        .data{width: 1770px; margin: 0 auto;}
+    .data li{float: left; margin: 8%;}
+    .data li { display:block; opacity:0; transition:0.5s; overflow-x:hidden; cursor: pointer;}
+    .data.on li { opacity:1; }
+    .data li.it1 { transition-delay:0.4s; }
+    .data li.it2 { transition-delay:0.8s; }
+    .data li.it3 { transition-delay:1.2s; }
+    .data li.it4 { transition-delay:1.6s; }
+    .data li.it5 { transition-delay:2s; }
+    .data li.it6 { transition-delay:2.4s; }
+    .it_tit { color:#d4d4d4; line-height:3; text-align: center; padding: 30px; }
+    .pic{display: block; width: 100%;}
+       
+    </style>
+    <style> /* 탭 */
+    .tab_contain { display:none; position: fixed; top:0; left:0; width: 100%; height: 100%; background: rgba(114, 114, 114, 0.8); z-index: 10; }
+    .tab_fr { display:none; }
+    .tab_close{width: 100px; height: 60px; position: absolute; top: 2.5rem; left:56rem;}
+    .tab_close img{display: block; width: 100%;}
+    .tab_box{width: 80%; height: 70%; background: #1f1f1f;  box-shadow: 5px 5px 10px #3e3e3e; border-radius: 10px; position: absolute; top: 12rem; left: 12rem;}
+    .tab_img{margin: 6.5rem 0 5rem 8rem;  float: left; }
+    .tab_img img{display: block; width: 100%;}
+    .tab_right{float: right; width: 750px; margin-right: 40px;}
+    .tab_tit{font-size: 36px; color: #d4d4d4; padding: 20px; margin-top: 5rem;  width: 500px; float: right; text-align: center; margin-right: 110px; border-bottom: 2px solid #d4d4d4;}
+    .con_box{padding: 10px; margin: 10px 0 0px 0px; width: 600px; height: 200px; margin-left: 2rem;float: right; margin-right: 60px;}
+    .t_mcon{width: 100%; height: 40px; margin-top: 20px; }
+    .tab_ctit{font-size: 12px; color: #1f1f1f; padding: 8px; background:  #d4d4d4; width: 150px; text-align: center; margin-top: 10px; margin-left: 20px; float: left;}
+    .t_mcon a{display: block;padding: 5px; text-indent:20px; font-size: 16px; color: #d4d4d4; line-height: 40px;}
+    .tab_com{font-size: 14px; color: #d4d4d4; line-height: 25px; padding: 5px; width: 360px; float: right; margin-right: 30px; margin-top: 12px;}
+    .tab_com2{font-size: 16px; color: #d4d4d4; line-height: 20px; padding: 5px; width: 360px; float: right; margin-right: 50px; margin-top: 10px;}
+    .color_box{width:620px; clear: both; margin-left: 80px; height: 170px; position: relative;}
+    .tab_colortit{font-size: 12px; color: #1f1f1f; padding: 8px; background:  #d4d4d4; width: 150px; text-align: center; margin-top: 30px; margin-left: 20px;}
+    .colors{width: 100%;}
+    .colors li{float: left; margin: 15px;}
+    .colors li.co11:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#ed1c24; }
+    .colors li.co12:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#467e43; }
+    .colors li.co13:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#484848; }
+    .colors li.co21:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#000;}
+    .colors li.co22:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#fff; }
+    .colors li.co31:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#053863; }
+    .colors li.co32:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#e4022e; }
+    .colors li.co41:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#9d84bc; }
+    .colors li.co42:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#5e4e71; }
+    .colors li.co43:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+    .colors li.co51:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#e9fae4; }
+    .colors li.co52:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#68aa51; }
+    .colors li.co53:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#329544;}
+    .colors li.co61:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#ce1024; }
+    .colors li.co62:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#000; }
+    .colors li.co71:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#fff; }
+    .colors li.co72:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#5193cd; }
+    .colors li.co73:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+    .colors li.co81:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#f5f2e9; }
+    .colors li.co82:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#7f0019; }
+    .colors li.co83:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+    .colors li.co91:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#f2f1ed; }
+    .colors li.co92:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#f9af42; }
+    .colors li.co93:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+    .colors li.co111:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#fff; }
+    .colors li.co112:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#faf7f3; }
+    .colors li.co113:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+    .colors li.co121:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 20rem; bottom: 1rem; background-color:#f8329f; }
+    .colors li.co122:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 14rem; bottom: 1rem; background-color:#4b4b4b; }
+    .colors li.co123:after{content: ""; width: 80px; height: 80px; border-radius: 50%; display: block; position: absolute; right: 8rem; bottom: 1rem; background-color:#000;}
+        
+
+  
+    </style>
+</head>
+<body>
+   <header id="hd">
+       <a class="menu_icon">
+          <ul>
+               <li></li>
+               <li></li>
+           </ul>
+       </a>
+       <div class="menu_box">
+           <ul>
+               <li><a href="./index.html">Intro</a></li>
+               <li><a href="./introduce.html">Introduce</a></li>
+               <li><a href="./gallary.html">Portfolio</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+           </ul>
+           <button class="close"><img src="./images/close.png" alt=""></button>
+       </div>
+   </header>
+   <nav class="gal_tit_box">
+       <ul class="gal_tits">
+           <li class="galtit"><button class="btn btn1" data-link-alt="반응형웹">Responsive Web</button></li>
+           <li class="galtit"><button class="btn btn2" data-link-alt="데스크탑">Desktop</button></li>
+           <li class="galtit"><button class="btn btn3" data-link-alt="모바일">Mobile</button></li>
+       </ul>
+   </nav>
+   <main class="gal_fr">
+   <div class="page page1 on">
+        <div class="page_con">
+            <h2 class="pg_tit">Responsive Web</h2>
+            <ul class="data">
+                <li class="it1" data-tar="#tab1">
+                    <img src="./images/mockup1.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">서울우유협동조합</h2>
+                    </div>
+                </li>
+                <li class="it2" data-tar="#tab2">
+                        <img src="./images/mockup2.png" alt="" class="pic">
+                        <div class="txt_fr">
+                            <h2 class="it_tit">Ganeshi [가네쉬]</h2>
+                        </div>
+                </li>
+                <li class="it3" data-tar="#tab3">
+                    <img src="./images/mockup3.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">금강유역환경청</h2>
+                    </div>
+                </li>
+                <li class="it4" data-tar="#tab4">
+                    <img src="./images/mockup4.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">서울독립영화제</h2>
+                    </div>
+                </li>
+                <li class="it5" data-tar="#tab5">
+                    <img src="./images/mockup5.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">용한의원</h2>
+                    </div>
+                </li>
+                <li class="it6" data-tar="#tab6">
+                    <img src="./images/mockup6.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">Singles [싱글즈]</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page page2">
+        <div class="page_con">
+            <h2 class="pg_tit">Desktop</h2>
+            <ul class="data">
+                <li class="it1" data-tar="#tab7">
+                    <img src="./images/mockup7.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">beilf [빌리프]</h2>
+                    </div>
+                </li>
+                <li class="it2" data-tar="#tab8">
+                    <img src="./images/mockup8.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">MUJI [무인양품]</h2>
+                    </div>
+                </li>
+                <li class="it3" data-tar="#tab9">
+                    <img src="./images/mockup9.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">경기문화포털</h2>
+                    </div>
+                </li>
+                <li class="it4" data-tar="#tab10">
+                    <img src="./images/mockup10.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">Spring commma [스프링콤마]</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   <div class="page page3">
+        <div class="page_con">
+            <h2 class="pg_tit">Mobile</h2>
+            <ul class="data">
+                <li class="it1" data-tar="#tab11">
+                    <img src="./images/mockup11.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">DOREDORE [도레도레]</h2>
+                    </div>
+                </li>
+                <li class="it2" data-tar="#tab12">
+                    <img src="./images/mockup12.png" alt="" class="pic">
+                    <div class="txt_fr">
+                        <h2 class="it_tit">제니요가학원</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab_contain" id="pop1">
+        <div class="tab_fr" id="tab1">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup1.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">서울우유협동조합</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m5seoulmilk</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">반응형 기술 : 고정 박스형<br>시각적으로 서울우유의 대표 색상인 빨간색과 초록색을 이용함으로써 명시성을 높였고, 애니메이션 효과인 rotateY를 적용하여 사용자의 흥미를 유발하도록 제작하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">malgun-gothic</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co11"></li>
+                                <li class="co12"></li>
+                                <li class="co13"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab2">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup2.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">Ganeshi [가네쉬]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m1ganeshi</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">full-page로, Ganeshi 브랜드의 대표 모델 이미지를 visual에 적용시킴으로써 광고효과를 극대화하고자 하였으며, Ganeshi만의 스타일들을 한눈에 보기 용이하도록 버튼 형식으로 디자인하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2"> Nanum Gothic </p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co21"></li>
+                                <li class="co22"></li>
+                                <li class="co23"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab3">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup3.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">금강유역환경청</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m2kumkang</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">금강과 관련된 이미지를 활용하여 full-page로 디자인하였고, 공기업의 대표 색상인 빨간색, 파란색을 이용하여 공기업의 이미지를 나타내었으며, 메인 페이지에 바로 가기 버튼을 삽입하여 사용자가 접근하기 쉽도록 디자인하였다. </p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Noto Sans KR</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co31"></li>
+                                <li class="co32"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab4">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup4.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">서울독립영화제</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m7seoulmovie</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">반응형 기술 : column <br>서울독립영화제의 목적에 맞는 게시글을 순서대로 배치하여 사용자의 접근성을 높이고자 하였다. 또한 박스 형태로 주제를 분류하여 가시성을 높였다. </p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Nanum Gothic Coding</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co41"></li>
+                                <li class="co42"></li>
+                                <li class="co43"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab5">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup5.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">용한의원</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m3yong</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">사용자에게 병원에 대한 신뢰성과 편안한 이미지를 제공하기 위해 초록색상을 이용하였고, 사용자의 접근성 및 목적성을 높이고자 대표적인 질환들과 게시글을 메인 페이지에 배치하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Noto Sans KR</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co51"></li>
+                                <li class="co52"></li>
+                                <li class="co53"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab6">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup6.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">Singles [싱글즈]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">반응형 기술 : nagative margin <br>매일 업데이트되는 기사 글을 활용하여 visual에 배치하여 매거진의 느낌을 살렸다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Mermaid, Sandol-Gothic</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co61"></li>
+                                <li class="co62"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab7">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup7.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">belif [빌리프]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/belif</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">메인 페이지의 헤더 부분은 빌리프의 대표 제품인 욕실 에센스에서 영감받아 디자인하였다. belif의 베스트 제품 및 신제품에 대한 배너를 visual 영역에 넣음으로써 광고효과도 증대화하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Neuton, Nanum-Gothic</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co71"></li>
+                                <li class="co72"></li>
+                                <li class="co73"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab8">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup8.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">MUJI [무인양품]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/muji</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">MUJI의 상표 디자인에 아이디어를 얻어 디자인하였다. 상품을 분류별로 깔끔하게 배치하여 소비자가 제품에 대한 정보를 쉽게 파악하고 이용할 수 있도록 하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">YDIYGO, KreanAH3</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co81"></li>
+                                <li class="co82"></li>
+                                <li class="co83"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab9">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup9.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">경기문화포털</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/kyeongkiculture</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">재미있는 콘셉트로 구현하고자 Line 스타일로 디자인하였다. 경기문화포털 홈페이지에 맞게 경기도에서 제작한 '경기천년제목' 폰트를 활용하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">경기천년제목</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co91"></li>
+                                <li class="co92"></li>
+                                <li class="co93"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab10">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup10.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">Spring Comma [스프링콤마]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/springcomma</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com"></p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2"></p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class=""></li>
+                                <li class=""></li>
+                                <li class=""></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab11">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup11.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">DOREDORE [도레도레]</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/doredore</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">감성을 자극하는 네이밍을 가진 케이크 브랜드인 DOREDORE의 이미지를 살려 심플하게 디자인하였다. 케이크을 통해 나타내는 DOREDORE의 감성과 색감을 그대로 전달하고자 하였다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">NanumBarunGothicUltraLight</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co111"></li>
+                                <li class="co112"></li>
+                                <li class="co113"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_fr" id="tab12">
+            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            <div class="tab_box">
+                <img src="./images/mockup12.png" alt="" class="tab_img">
+                <div class="tab_right">
+                    <h2 class="tab_tit">제니요가학원</h2>
+                    <div class="con_box">
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">홈페이지 바로가기</h4>
+                            <a href="">https://yoonding.github.io/m3jenny</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">상세설명</h4>
+                            <p class="tab_com">학원 특성에 맞게 주요 카테고리에 포인트 색상을 주었고, 로고의 색상을 활용하여 전반적인 페이지 디자인에 접목시켰다.</p>
+                        </div>
+                    </div>
+                    <div class="color_box">
+                            <div class="t_mcon">
+                                    <h4 class="tab_ctit">타이포</h4>
+                                    <p class="tab_com2">Malgun-Gothic</p>
+                                </div>
+                        <h4 class="tab_colortit">컬러</h4>
+                            <ul class="colors">
+                                <li class="co121"></li>
+                                <li class="co122"></li>
+                                <li class="co123"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

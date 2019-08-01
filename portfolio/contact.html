@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YOONJEONG PORTFOLIO</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Lalezar&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menu_icon").click(function(){
+                $(this).addClass("on");
+                $(".menu_box").addClass("on");
+            });
+            $(".menu_box .close").click(function(){
+                $(".menu_box").removeClass("on");
+                $(".menu_icon").removeClass("on");
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html{width: 100%; height: 100vh; font-family: 'Abel', sans-serif; background-image: url(images/background.jpg); -ms-overflow-style: none; position: relative;}
+        ::-webkit-scrollbar{display: none;}
+        ul{list-style: none;}
+        a{outline: none; border: none; text-decoration: none;}
+        button{outline: none; border: none; background: transparent; cursor: pointer;}
+        #hd{width: 100%; height: 120px; }
+        
+        .menu_icon{width: 120px; height: 60px; float: left; padding-top: 1.5rem; display: block; margin-left: 0rem; cursor: pointer; background-color: transparent; transition: 0.6s;}
+        .menu_icon.on{height: 100vh;}
+        .menu_icon li:nth-child(1):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 2.5rem; left: 2.7rem;}
+        .menu_icon li:nth-child(2):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 3.7rem; left: 2.7rem;}
+        
+        .menu_box{position: fixed; top: 0; left: -110%; width: 500px; height: 100vh; background-color: #414141; z-index: 1000; transition: 1s; transform: translateX(0);}
+        .menu_box.on{left: 0%;}
+        .menu_box ul{width: 150px; margin: 19rem auto; padding: 10px;}
+        .menu_box li a{color: #fff; font-size: 26px; line-height: 4; text-align: center; display: block;}
+        .close{width: 50px; height: 50px; display: block; position: absolute; top: 8rem; left: 14rem;padding: 10px;}
+        .close img{display: block; width: 100%;}
+        
+        
+        /* menu_box li 효과주기*/
+        .menu_box a::before, .menu_box a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+        }
+        .menu_box a:hover{
+        color:#fff;
+        }
+        .menu_box a::before {
+        content: '[';
+        margin-right: 12px;
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        transform: translateX(20px);
+        }
+        .menu_box a::after {
+        content: ']';
+        margin-left: 12px;
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        transform: translateX(-20px);
+        }
+        .menu_box a:hover::before,
+        .menu_box a:hover::after,
+        .menu_box a:focus::before,
+        .menu_box a:focus::after {
+        color:#fff;
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+        }
+        
+    </style>
+    <style>
+        .contact_B{width: 35%; height: 65%; box-shadow: 5px 5px 10px #3e3e3e; margin: 4rem auto 0; background-repeat: no-repeat; background-position: center; background-size: cover; background-image: url(images/background3.jpg); position: relative;}
+        .con{width: 100%; height: 50px; padding: 10px;}
+        .tit{color: #fff; font-size: 60px; text-align: center; padding: 70px 0 10px 0;}
+        .con{width: 100%; padding: 10px;}
+        .stit{color: #d4d4d4; font-size: 22px; padding: 10px; margin: 30px 0 0 170px;}
+        .stit2{color: #d4d4d4; font-size: 22px; padding: 10px; margin: 40px 0 0 176px}
+/*        .stit2:after{content: ""; width: 1px; height: 180px; display: block; background: #d4d4d4; position: absolute;top: 20.9rem; left: 23.9rem;}*/
+        .tit_con{font-size: 18px; color: #d4d4d4; margin-left: 10px;}
+        
+        
+        .me{width: 25%; margin-top: -35px; margin-left: 300px;}
+        .me li{width: 100%; height: 50px;}
+        .meicon{width: 35px; padding: 2px; margin-left: 0px; float: left; }
+        .meicon img{display: block; width: 100%;}
+        .me span{color: #d4d4d4; font-size: 16px; display: block; line-height: 35px; text-indent: 25px; width: 250px;}
+        .meicon2{width: 35px; padding: 5px; margin-left: 0px; float: left; }
+    </style>
+</head>
+<body>
+   <header id="hd">
+       <a class="menu_icon">
+          <ul>
+               <li></li>
+               <li></li>
+           </ul>
+       </a>
+       <div class="menu_box">
+           <ul>
+               <li><a href="./index.html">Intro</a></li>
+               <li><a href="./introduce.html">Introduce</a></li>
+               <li><a href="./gallary.html">Portfolio</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+           </ul>
+           <button class="close"><img src="./images/close.png" alt=""></button>
+       </div>
+    </header>
+    <div class="contact_B">
+        <h1 class="tit">- CONTACT -</h1>
+        <div class="con">
+        <p class="stit">Phone　 |　<span class="tit_con">010-8648-4486</span></p>
+        
+        </div>
+        <div class="con">
+        <p class="stit">E-mail　 |　<span class="tit_con">dbswjd2777@naver.com</span></p>
+        
+        </div>
+        <div class="social_box">
+           <p class="stit2">Social 　 |　</p>
+            <ul class="me">
+                <li><img src="./images/contacticon1.png" alt="" class="meicon"><span>hwyj14@gmail.com</span></li>
+                <li><img src="./images/contacticon2.png" alt="" class="meicon"><span>dbswjd2777@naver.com</span></li>
+                <li><img src="./images/contacticon3.png" alt="" class="meicon"><span>yoonding_i</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
