@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="금강유역환경청">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="금강유역환경청, 금강, 토지, 환경부">
+    <meta name="copyright" content="COPYRIGHT 2009금강유역환경청. ALL RIGHT RESERVED.">
+    <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="금강유역환경청">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="금강유역환경청">
+    <title>금강유역환경청</title>
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link rel="stylesheet" href="desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <!-- 웹사이트 정보, 검색어, 저자, 앱이름, 3분 주기로 자동새로고침 -->
+    <meta http-equiv="refresh" content="180">
+    <!-- 앱에서 필요한 내용 환경설정 json(manifest.json) 연결
+    앱에서는 웹사이트, 모바일에 대한 셋팅이 먹히지 않기때문에 연결한다. -->
+    <link rel="manifest" href="manifest.json">
+    <!-- 아이콘 폰트 링크 (어썸아이콘) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <!-- jquery 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        //애널리틱스-빅데이터 관리해주는 사이트다. 이 script를 넣은 데이터를 기준으로 방문자 등을 분석해준다. 구글아이디로 가입.
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143287217-1');
+    </script>
+<script>
+
+        $(document).ready(function(){
+
+            $(".menuicon").click(function() {
+                $(".gnb, .tbn").toggleClass("open");
+            });
+
+            //반응형 메뉴 펼치기
+            $(".gnb_box .mtxt").click(function(){
+                $(this).find(".sub_menu").slideToggle();
+
+            });
+
+
+            //모바일에서 로고 이미지 바꾸기
+            $(window).resize(function() {
+                var wd_s = $(window).width();
+                if (wd_s < 1000) {
+                    $(".hdlogo").attr("src", "./images/mlogo.png");
+                } else {
+                    $(".hdlogo").attr("src", "./images/logo.png");
+                }
+            }).resize();
+
+            
+             
+            // 팝업 슬라이더
+            var popslide = $(".pop").width();
+            setInterval(function(){nextAni();},2800);
+            function nextAni(){
+                $(".pop_imgs").not(":animated").animate({"margin-left":"-100%"},500, function(){
+                    $(".pop_imgs li").eq(0).appendTo($(".pop_imgs"));
+                    $(".pop_imgs").css("margin-left","0px");
+                    $(".pop_btn li").eq(0).appendTo($(".pop_btn"))
+                    $(".pop_btn li").removeClass("on");
+                    $(".pop_btn li").eq(0).addClass("on");
+                });
+            }
+            var intv = setInterval(function(){
+                nextAni();
+            },3000);
+
+            $(".pop_btn .pop_btn1").click(function(){
+                clearInterval(intv);
+                nextAni();
+                intv = setInterval(function(){
+                nextAni();
+                },3000);
+            });
+            $(".pop_btn .pop_btn2").click(function(){
+                clearInterval(intv);
+                nextAni();
+                intv = setInterval(function(){
+                nextAni();
+                },3000);
+            });
+
+            
+           
+                
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                    if(sc_top>=100 && sc_top<5000){
+                        $(".logo, .gnb").addClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    } else {
+                        $(".logo, .gnb").removeClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    }
+                             
+            });        
+                    
+           var vsh = $(window).height();
+           var wd = $(window).width();
+           $(".page").each(function(index){
+               $(this).attr("data-val", index*vsh);
+           });
+           $(".page").on("mousewheel DOMMMouseScroll", function(e){
+               var prepo = parseInt($(this).attr("data-val"));
+               if(e.originalEvent.wheelDelta >= 0){
+                   $("html, body").stop().animate({scrollTop:prepo - vsh});
+                   return false;
+               } else if(e.originalEvent.wheelDelta < 0){
+                   $("html, body").stop().animate({scrollTop:prepo + vsh});
+                   return false;
+               }
+           });
+         
+            
+            /*gallery 슬라이드*/
+            $(window).resize(function(){
+            var wd = $(window).width();
+                var dwd = $(".gal_box").width() - 160;
+                var sl = $(".gals");
+                var btn = $(".g_btn");
+                var len = $(".gals li.gal").length;
+                function nextAni(){
+                    sl.not(":animated").animate({"margin-left":-dwd+"px"}, 600, function(){
+                        sl.find("li.gal").eq(0).appendTo(sl);
+                        sl.css("margin-left","160px");
+                    });
+                }
+                function prevAni(){
+                    sl.find("li.gal").eq(len-1).prependTo(sl);
+                    sl.css("margin-left", -dwd+"px");
+                    sl.not(":animated").animate({"margin-left":"160px"}, 600);
+                }
+                
+                $(".g_btn .gal_left").click(function(){
+                    clearInterval(intv);
+                    prevAni();
+                });
+                $(".g_btn .gal_right").click(function(){
+                    clearInterval(intv);
+                    nextAni();
+                });
+            }).resize(); 
+
+
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header id="hd">
+            <a href="" class="logo"><img src="./images/logo.png" alt=""
+            class="hdlogo"></a>
+            <div class="hdbtn_box">
+                <button class="home"><img src="./images/home.png" alt=""></button>
+                <button class="search"><img src="./images/search.png" alt=""></button>
+                <button class="menuicon"><img src="./images/menuicon.jpg" alt="" ></button>
+            </div>
+            <div class="tbn">
+               <input type="checkbox" id="tnb1" class="tnb1">
+                <a href="" class="tbn_login">로그인</a>
+                <div class="lang">
+                    <label for="tnb1" class="cur desk">한국어</label>
+                    <ul class="lang_cel">
+                        <li><a href="">영어</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="gnb">
+                <ul class="gnb_box">
+                    <li class="mtxt" id="main_txt1"><a class="main_txt"><img src="./images/maintxt1.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu1">
+                            <li><a href="">정보공개제도안내</a></li>
+                            <li><a href="">정보목록</a></li>
+                            <li><a href="">사전정보공표</a></li>
+                            <li><a href="">행정정보공개</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt2"><a class="main_txt"><img src="./images/maintxt2.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu2">
+                            <li><a href="">일반민원신청</a></li>
+                            <li><a href="">일반민원조회</a></li>
+                            <li><a href="">서식민원신청</a></li>
+                            <li><a href="">부조리·불친절신고</a></li>
+                            <li><a href="">밀렵밀거래신고</a></li>
+                            <li><a href="">예산낭비신고</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt3"><a class="main_txt"><img src="./images/maintxt3.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu3">
+                            <li><a href="">청장과의 대화</a></li>
+                            <li><a href="">환경게시판</a></li>
+                            <li><a href="">온라인설문</a></li>
+                            <li><a href="">국민제안</a></li>
+                            <li><a href="">환경참여방</a></li>
+                            <li><a href="">인터넷상담방</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt4"><a class="main_txt"><img src="./images/maintxt4.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu4">
+                            <li><a href="">부서별자료</a></li>
+                            <li><a href="">환경측정·통계자료</a></li>
+                            <li><a href="">조류(녹조)정보 알림방</a></li>
+                            <li><a href="">환경영향평가</a></li>
+                            <li><a href="">토지매수안내</a></li>
+                            <li><a href="">환경인정보교류</a></li>
+                            <li><a href="">사이버 환경교실</a></li>
+                            <li><a href="">국회관련정보</a></li>
+                            <li><a href="">간행물자료</a></li>
+                            <li><a href="">서식자료실</a></li>
+                            <li><a href="">생태하천 모니터링단</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt5"><a class="main_txt"><img src="./images/maintxt5.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu5">
+                            <li><a href="">공지·공고</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">보도·해명자료</a></li>
+                            <li><a href="">동영상홍보관</a></li>
+                            <li><a href="">e-환경뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt6"><a class="main_txt"><img src="./images/maintxt6.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu6">
+                            <li><a href="">금강이야기</a></li>
+                            <li><a href="">금강갤러리</a></li>
+                            <li><a href="">비단물결 금강천리 트레킹</a></li>
+                            <li><a href="">생태탐방</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt7"><a class="main_txt"><img src="./images/maintxt7.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu7">
+                            <li><a href="">청장소개</a></li>
+                            <li><a href="">일반현황</a></li>
+                            <li><a href="">수계관리위원회</a></li>
+                            <li><a href="">조직 및 업무</a></li>
+                            <li><a href="">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            
+
+        </header>
+        <div class="page" id="page1">
+            <img src="./images/line.jpg" alt="" class="line1">
+            <div class="frame">
+                <img src="./images/contxt1.png" alt="" class="vstit1">
+
+
+                <article class="page1_menu">
+                    <img src="./images/con1img.jpg" alt="" class="service_img1">
+                    <div class="menubox1">
+                        <h3>통합민원 서비스</h3>
+                        <ul>
+                            <li><a href="">민원방문예약상담</a></li>
+                            <li><a href="">자주하는 질문</a></li>
+                            <li><a href="">일반민원신청</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="service_menu2">
+                        <img src="./images/con1img2.jpg" alt="" class="service_img2">
+                        <div class="menubox2">
+                            <h3>바로가기 서비스</h3>
+                            <ul>
+                                <li><a href="">토지매수제도</a></li>
+                                <li><a href="">환경영양평가</a></li>
+                                <li><a href="">금강 트레킹</a></li>
+                                <li><a href="">공익비리 익명신고</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pop">
+                    <ul class="pop_imgs">
+                        <li><a href=""><img src="./images/slide1.jpg" alt=""></a></li>
+                        <li><a href=""><img src="./images/slide2.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="pop_btn">
+                        <li class="pop_btn1 on"></li>
+                        <li class="pop_btn2"></li>
+                    </ul>
+                </article>
+
+                <article class="now_box">
+                    <button class="now_box1">
+                        <img src="./images/nowicon1.png" alt="">
+                        <span>금강이야기</span>
+                    </button>
+                    <button class="now_box2">
+                        <img src="./images/nowicon2.png" alt="">
+                        <span>지역탐방</span>
+                    </button>
+                </article>
+
+                
+            </div>
+            <div class="notice_box">
+                <div class="notice_tit_box">
+                    <h2 class="notice_tit1">새소식</h2>
+                    <a href="" class="plus">
+                        <img src="./images/plus.png" alt="">
+                        <h3>소식 더 보기</h3>
+                    </a>
+                    <h2 class="notice_tit2">SNS</h2>
+                </div>
+                <ul class="notice_con_box">
+                    <li class="notice_con" id="con1">
+                        <div class="circle circle1"></div>
+                        <a href="">
+                            <span>2019-04-22</span>
+                            <p>2019 기후변화주간, 나의 지구를 구해줘!</p>
+                        </a>
+                    </li>
+                    <li class="notice_con" id="con2">
+                        <div class="circle circle2"></div>
+                        <a href="">
+                            <span>2019-04-12</span>
+                            <p>실내 공기질 개선 효과 보안 벌레나무, 보급 시범사업 확대</p>
+                        </a>
+                    </li>
+                    <li class="notice_con" id="con3">
+                        <div class="circle circle3"></div>
+                        <a href="">
+                            <span>2019-04-12</span>
+                            <p>항일운동의 역사, 다도해해상국립공원 소안도</p>
+                        </a>
+                    </li>
+                    <div class="sns_box" id="sns">
+                        <ul class="snss">
+                            <li><a href=""><img src="./images/sns1.png" alt="">Twitter</a></li>
+                            <li><a href=""><img src="./images/sns2.png" alt="">Facebook</a></li>
+                            <li><a href=""><img src="./images/sns3.png" alt="">Blog</a></li>
+                            <li><a href=""><img src="./images/sns4.png" alt="">Youtube</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+        <div class="page" id="page2">
+            <img src="./images/line.jpg" alt="" class="line2">
+            <div class="frame">
+               <ul>
+                    <li class="mvs2txt"><img src="./images/mvs2txt.png" alt=""></li>
+                </ul>
+                <img src="./images/contxt2.png" alt="" class="vstit2">
+            </div>
+            
+            <div class="gal_box">
+                <ul class="gals">
+                    <li class="gal gal1">
+                        <ul class="g_fr">
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal1.jpg" alt="">
+                                    <p>충남 금산 천내습지</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal2.jpg" alt="">
+                                    <p>충남 부여 구드래나루의 금강</p> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal3.jpg" alt="">
+                                    <p>부여 수북장에서 내려다 본 금강</p> 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gal gal2">
+                        <ul class="g_fr">
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal4.jpg" alt="">
+                                    <p>충남 금산 천내습지 2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal5.jpg" alt="">
+                                    <p>충남 부여 구드래나루의 금강 2</p> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal6.jpg" alt="">
+                                    <p>부여 수북장에서 내려다 본 금강 2</p> 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gal gal3">
+                        <ul class="g_fr">
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal2.jpg" alt="">
+                                    <p>충남 금산 천내습지 3</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal3.jpg" alt="">
+                                    <p>충남 부여 구드래나루의 금강 3</p> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./images/gal5.jpg" alt="">
+                                    <p>부여 수북장에서 내려다 본 금강 3</p> 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="gal_btn_box">
+                    <ul class="g_btn">
+                        <li><button class="gal_left"><img src="./images/arrow1.png" alt=""></button></li>
+                        <li><button class="gal_right"><img src="./images/arrow2.png" alt=""></button></li>
+                    </ul>
+                </div>
+            </div>
+            
+        
+            <div class="notice_box2">
+                <div class="notice_tit_box2">
+                    <h2 class="notice_tit3">일정안내</h2>
+                    <a href="" class="online">
+                        <h3>→　온라인 신청하러가기</h3>
+                    </a>
+                </div>
+                <ul class="notice_con_box">
+                    <li class="notice_con" id="con1">
+                        <div class="circle circle4"></div>
+                        <a href="">
+                            <span>2019-07-14</span>
+                            <p>[신청중]8/20 '녹조바로알기 소통교실' 2회차 운영 안내(대청호, 정수장, 생태습지 견학) </p>
+                        </a>
+                    </li>
+                    <li class="notice_con" id="con2">
+                        <div class="circle circle1"></div>
+                        <a href="">
+                            <span>2019-06-21</span>
+                            <p>『금강의 숨겨진 핫플레이스 탐방 2회차』 신청안내</p>
+                        </a>
+                    </li>
+                    <li class="notice_con" id="con3">
+                        <div class="circle circle2"></div>
+                        <a href="">
+                            <span>2019-05-23</span>
+                            <p>『금강의 숨겨진 핫플레이스 탐방』 신청안내</p>
+                        </a>
+                    </li>
+                    <li class="notice_con" id="con4">
+                        <div class="circle circle3"></div>
+                        <a href="">
+                            <span>2019-04-12</span>
+                            <p>2019년도 제5회차 『비단물결 금강천리 트레킹』 참가신청 및 일정안내</p>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <img src="./images/line.jpg" alt="" class="line3">
+            <div class="frame">
+                <img src="./images/contxt3.png" alt="" class="vstit3">
+                <div class="card_box">
+                    <ul class="cardnews">
+                        <li><a href=""><img src="./images/card1.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card2.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card3.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card4.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card5.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card6.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card7.PNG" alt=""></a></li>
+                        <li><a href=""><img src="./images/card1.PNG" alt=""></a></li>
+                        
+                    </ul>
+                    <div class="card_btn_box">
+                        <button class="card_right">
+                            <img src="./images/gal_right.png" alt="">
+                            <span>더 보기</span>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+            <div class="footer">
+                    <ul class="ftmenu">
+                        <li><a href="">개인정보침해정보센터</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">영상정보처리기기 운영·관리방침</a></li>
+                        <li><a href="">저작권정책</a></li>
+                        <li><a href="">홈페이지이용안내</a></li>
+                        <li><a href="">홈페이지개선의견</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <img src="./images/ftlogoo.png" alt="">
+                    <p>(35220) 대전광역시 서구 청사로 128 칼릭스빌딩 / TEL:042-865-0800 COPYRIGHT 2009 금강유역환경청. ALL RIGHT RESERVED. <br>
+                        본 홈페이지에서 게지된 이메일주소를 자동으로 수집하는 것을 거부하며, 이를 위반시 관련법에 의거 처벌 등을 유념하시기 바랍니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
