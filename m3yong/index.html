@@ -18,12 +18,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet icon" href="./images/favicon.png">
     <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
-    <link rel="stylesheet" href="common.css" type="text/css" media="all">
     <link rel="stylesheet" href="desktop.css" type="text/css" media="screen and (min-width:1920px)">
     <link rel="stylesheet" href="tabletpro.css" type="text/css" media="screen and (min-width:1024px) and (max-width:1919px)">
     <link rel="stylesheet" href="tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:1023px)">
     <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width:767px)">
-    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+
     <!-- 웹사이트 정보, 검색어, 저자, 앱이름, 3분 주기로 자동새로고침 -->
     <meta http-equiv="refresh" content="180">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -51,14 +50,10 @@
                 $("#mgnb").removeClass("on");
             });
             
-            $(".mgnb_box li a.g_tit").click(function(){ 
-                $(this).siblings(".msub_box").stop().not(":animated").slideDown(500);
-                $(this).addClass("on");
-                return false;                
-            });
-            $(document).mousedown(function(){
-                $(".msub_box").slideUp(500);
-                $(".mgnb_box li a.g_tit").removeClass("on");
+
+            $("#mgnb a.g_tit").click(function(i){ 
+                var slen = $(".msub_box").index();
+                $(this).next(".msub_box").slideToggle(500); 
             });
         });
 
@@ -207,7 +202,7 @@
             <span class="homego">홈으로 가기</span>
             <ul class="mgnb_box">
                 <li class="mgnb_txt">
-                    <a href=""><img src="./images/menu1.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu1.png" alt=""></a>
                     <ul class="msub_box" id="msub1">
                         <li><a href="">인사말</a></li>
                         <li><a href="">의료진소개</a></li>
@@ -218,7 +213,7 @@
                     </ul>
                 </li>
                 <li class="mgnb_txt">
-                    <a href=""><img src="./images/menu2.png" alt=""></a>
+                    <a class="g_tit"><img src="./images/menu2.png" alt=""></a>
                     <ul class="msub_box" id="msub2">
                         <li><a href="">진료안내</a></li>
                         <li><a href="">용한의원 한약</a></li>
@@ -228,7 +223,7 @@
                     </ul>
                 </li>
                 <li class="mgnb_txt">
-                    <a href=""><img src="./images/tclinictxt.png" alt=""></a>
+                    <a  class="g_tit"><img src="./images/tclinictxt.png" alt=""></a>
                     <ul class="msub_box" id="msub3">
                         <li><a href="">정신건강클리닉</a></li>
                         <li><a href="">청력클리닉</a></li>
@@ -239,7 +234,7 @@
                     </ul>
                 </li>
                 <li class="mgnb_txt">
-                    <a href=""><img src="./images/menu9.png" alt=""></a>
+                    <a  class="g_tit"><img src="./images/menu9.png" alt=""></a>
                     <ul class="msub_box" id="msub4">
                         <li><a href="">한의원소식</a></li>
                         <li><a href="">언론보도 및 홍보자료</a></li>
