@@ -62,7 +62,7 @@ padding-right: 20px; transition: 0.8s; }
 .gnb:before{content: ""; display: block; width: 500px; height: 0px; background: #03224b; 
 position: absolute; top: 90px; left: -500px; overflow: hidden; visibility: hidden; opacity: 0; transition: 0.8s;}
 .gnb:hover:before {visibility: visible; opacity: 1;height: 440px; }
-.gnb:after{content: ""; display: block; width: 340px; height: 40px; background:#03224b;
+.gnb:after{content: ""; display: block; width: 340px; height: 0px; background:#03224b;
 position: absolute; top: 90px; left: 1225px; overflow: hidden; visibility: hidden; opacity: 0; transition: 0.8s;}
 .gnb:hover:after {visibility: visible; opacity: 1;height: 440px; }
 .ck{display: none;}
@@ -162,7 +162,7 @@ text-align: center;}
 .g_fr li img{display: block; width: 100%;}
 
 .g_fr{width: 80%;margin-top: 40px; margin-left: 15px; overflow: hidden;}
-.g_fr li{ float: left; width: 33.3333%; height: auto; overflow: hidden; }
+.g_fr li{ float: left; width: 33.3333%; height: 332px; overflow: hidden; }
 .g_fr li a{display: block; width: 100%; position: relative;overflow: hidden;}
 .g_fr li a img{width: 100%; display: block;}
 .g_fr li a p{display: block; color: #ffffff; padding: 5px; position: absolute;

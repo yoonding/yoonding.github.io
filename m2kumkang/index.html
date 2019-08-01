@@ -51,10 +51,11 @@
                 $(".gnb, .tbn").toggleClass("open");
             });
 
-            $(".gnb a.main_txt").click(function(){
+            //반응형 메뉴 펼치기
+            $(".gnb_box .mtxt").click(function(){
                 $(this).find(".sub_menu").slideToggle();
+
             });
-          
 
 
             //모바일에서 로고 이미지 바꾸기
@@ -66,6 +67,8 @@
                     $(".hdlogo").attr("src", "./images/logo.png");
                 }
             }).resize();
+
+            
              
             // 팝업 슬라이더
             var popslide = $(".pop").width();
@@ -133,8 +136,6 @@
             /*gallery 슬라이드*/
             $(window).resize(function(){
             var wd = $(window).width();
-            if(wd>=960) {
-                console.log("윤정아 데스크탑이다.");
                 var dwd = $(".gal_box").width() - 160;
                 var sl = $(".gals");
                 var btn = $(".g_btn");
@@ -159,12 +160,6 @@
                     clearInterval(intv);
                     nextAni();
                 });
-
-            } else if(wd>=768 && wd<=959){
-                console.log("윤정아 태블릿이다.");
-            } else {
-                console.log("윤정아 모바일이다.");
-            }
             }).resize(); 
 
 
@@ -180,7 +175,6 @@
             <a href="" class="logo"><img src="./images/logo.png" alt=""
             class="hdlogo"></a>
             <div class="hdbtn_box">
-                
                 <button class="home"><img src="./images/home.png" alt=""></button>
                 <button class="search"><img src="./images/search.png" alt=""></button>
                 <button class="menuicon"><img src="./images/menuicon.jpg" alt="" ></button>
@@ -431,7 +425,7 @@
                         <ul class="g_fr">
                             <li>
                                 <a href="">
-                                    <img src="./images/gal7.jpg" alt="">
+                                    <img src="./images/gal2.jpg" alt="">
                                     <p>충남 금산 천내습지 3</p>
                                 </a>
                             </li>

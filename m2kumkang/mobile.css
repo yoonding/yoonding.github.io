@@ -27,18 +27,16 @@ background: #fff;}
 /* header */
 .logo{display: block; position: absolute; top: 12px; left:12px; width: 130px; height:auto; }
 .logo img{display: block; width: 100%;}
-.gnb{clear: both; position: fixed; top: 90px; right: -110%; width: 80%; height: 100vh; background-color: #03224b; transition: 0.6s;}
+.gnb{clear: both;overflow-y: auto; position: fixed; height: 100%; top: 90px; right: -110%; width: 80%; background-color: #03224b; transition: 0.6s;}
 .gnb.open{right: 0;}
-.gnb_box{width: 83%; height: 540px; padding: 20px; margin-left: 5px;}
+.gnb_box{width: 83%; height: 100vh; padding: 10px 20px 100px 20px; margin-left: 5px;}
 .gnb_box li.mtxt{width: 100%; line-height: 4; position: relative; padding: 5px; border-bottom: 1px solid #3e5574;}
 .main_txt img{display: block; margin-top: 20px; width: 30%; margin-left: 5px;}
 .main_txt{display: block; padding: 5px;}
-.main_txt:after{content: "▼"; display: block; position: absolute; right: 15px; top: 14px; color: #fff; font-size: 10px;}
-.sub_menu{ display: block; width: 180px; height: 0px; margin-left: 20px;
-    overflow: hidden;}
-.sub_menu li{width: 160px; line-height: 3;}
-.sub_menu li a{display: block; color: #d9d9d9; line-height: 3;}
 
+.sub_menu{width: 180px; margin-left: 20px; display: none; margin-top: 10px;}
+.sub_menu li{width: 180px; line-height: 3;}
+.sub_menu li a{display: block; color: #d9d9d9; line-height: 3;}
 
 .tbn{position: fixed; top: 60px; right: -110%; width: 80%;
 background-color: #3e5574; transition: 0.6s;}
@@ -103,13 +101,15 @@ font-weight: 100; border-top: 5px solid #da0000;}
 
 /* 바로가기 영역 */
 .now_box{ clear: both; margin-top: 1rem;}
-.now_box button{width: 48%; float: left; }
+.now_box button{width: 48%; height: 60px; float: left; }
 .now_box button:first-child{margin-right: 13px;}
 .now_box1{width: 186px; height: 80px; background: #0c67a5; }
 .now_box2{width: 186px; height: 80px; background: #dd6931; }
 
-.now_box1 img, .now_box2 img{display: block;  padding: 5px; margin: 10px 10px 10px 15px; float: left;}
-.now_box1 span, .now_box2 span{display: block; color: #fff; font-weight: bold; padding: 5px;margin-top: 25px;
+.now_box1 img{display: block;  padding: 2px; margin: 10px 10px 10px 25px; float: left; width: 25px;}
+.now_box2 img{display: block;  padding: 2px; margin: 10px 10px 10px 25px; float: left; width: 30px;}
+
+.now_box1 span, .now_box2 span{display: block; color: #fff; font-weight: bold; padding: 5px;margin-top: 15px;
 font-size: 14px; width: 140px;}
 
 /* 공지사항 및 sns 영역*/
@@ -144,37 +144,36 @@ text-align: center;}
 .mvs2txt img{display: block; width: 100%; padding-top: 3rem; padding-bottom: 2rem; }
 
 .gal_box{width: 100%; height: 16rem;}
-.gals{width: 900%; height: 100%; overflow: hidden;}
-.gals li{float: left; width: 100%;}
-.gal{position: absolute; width: 100%;}
-.g_fr{width: 300px; height: 280px; overflow: hidden; margin: 0 auto; }
-.g_fr li{float: left;}
-.g_fr li img{display: block; width: 100%;}
-.gals li p{display: block; color: #ffffff; padding: 5px; position: absolute;
-bottom: 10px;right: 10px;}
-.gal_left{width: 15%; position: absolute; top: 12.5rem; left: 10px;}
-.gal_right{width: 15%; position: absolute; top: 12.5rem; right: 10px;}
-.gal_left img,.gal_right img{display: block; width: 100%;}
+.gals{width: 300px; height: 250px; overflow: hidden; margin-left: 40px; position: relative;}
+.gals::after{content: "충남 금산 천내습지"; display: block; position: absolute; bottom: 10px; right: 10px; color: #ffffff;
+font-size: 14px;}
+.gal_box::after{content:"더 보러가기"; color: #fff; background: rgba(35, 35, 41, 0.7);
+    text-align: center; width: 150px; height: 35px; line-height: 35px; font-size: 14px;
+    display: block; position: absolute; bottom:16rem; left: 7.5rem; }
+.gal_left{ display: none;}
+.gal_right{display: none;}
+
 
 /* 일정안내 영역 */
 .notice_box2{ width: 100%; margin-top: 5rem; position: relative;}
 .notice_tit_box2{width: 100%;height: 45px; border-bottom: 1px solid rgb(255, 255, 255,0.4);}
-.notice_tit3{color: #fff; font-weight: 100; margin-left: 140px; float: left;}
-.online h3{height: 40px; color: #fff; font-weight: 100; line-height: 35px; margin-left: 1610px;}
+.notice_tit3{color: #fff; font-weight: 100; margin-left: 40px; float: left;}
+.online h3{height: 40px; color: #fff; font-weight: 100; line-height: 35px; font-size: 12px; float: right; margin-right: 20px;}
 .circle4{position: absolute; bottom: 165px; left: 30px;}
 
 /* page3 */
 .line3{display: none;}
 .vstit3{display: block; width: 40%; padding: 30px; margin: 0 auto; }
 .vstit3 img{display: block; width: 100%;}
-.card_box{width: 100%;}
-.cardnews{width: 100%; height: 330px; position: relative;}
+.card_box{width: 90%; margin-left: 35px;}
+.cardnews{width: 90%; height: 330px; position: relative; float: left;}
 .cardnews li{position: absolute;}
 .cardnews li img{display: block; width:100%; height: auto; }
-.card_left{width: 10%; position: absolute; top: 9rem; left: 10px; padding: 5px;}
-.card_left img{ display: block; width: 100%;}
-.card_right{width: 10%; position: absolute; top: 9rem; right: 10px;padding: 5px;} 
-.card_right img{ display: block; width: 100%;}
+.card_right{display: none;} 
+.cardnews::after{content:"더 보러가기"; color: #fff; background: rgba(35, 35, 41, 0.7);
+    text-align: center; width: 150px; height: 35px; line-height: 35px; font-size: 14px;
+    display: block; position: absolute; bottom:0rem; left: 4rem; }
+
 
 .footer{width: 100%; margin-top: 3rem; border-bottom: 1px solid rgb(255, 255, 255,0.4);}
 .ftmenu{width: 84%; height: 30px; margin: 0 auto;}
