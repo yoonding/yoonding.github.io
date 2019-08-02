@@ -31,37 +31,40 @@
     var sl = $(".vs_box");
     var btn1 = $(".btn_fr .vs_btn_box");
     var len = $(".vs_box li").length;
-    function nextSlideAni(){
-        sl.not(":animated").animate({"margin-top":-wd+"px"}, 600, function(){
-            sl.find("li").eq(0).appendTo(sl);
-            sl.css("margin-top", "0px");
-            btn1.find("li").eq(0).appendTo(btn1);
-            btn1.find("li").removeClass("on");
-            btn1.find("li").eq(0).addClass("on");
-        });
-    }
-    function prevSlideAni(){
-        sl.find("li").eq(len-1).prependTo(sl);
-        sl.css("margin-top", -wd+"px");
-        sl.not(":animated").animate({"margin-top":"0px"}, 600, function(){
-            btn1.find("li").eq(len-1).prependTo(btn1);
-            btn1.find("li").removeClass("on");
-            btn1.find("li").eq(0).addClass("on");
-        });
-    }
-    var intv1 = setInterval(function(){ 
-        nextSlideAni();
-    }, 3000);
-    $(".btn_fr li").click(function(){
-        clearInterval(intv1);
-        var ix = $(this).index();
-        for(var i=0;i<ix-1;i++){
-            sl.find("li").eq(0).appendTo(sl);
-            btn1.find("li").eq(0).appendTo(btn1);
+    sl.css("margin-top", -wd+32+"px");
+    if(wd_s>=960){
+        function nextSlideAni(){
+            sl.not(":animated").animate({"margin-top":wd*-2+32+"px"}, 600, function(){
+                sl.find("li").eq(0).appendTo(sl);
+                sl.css("margin-top", -wd+32+"px");
+                btn1.find("li").eq(0).appendTo(btn1);
+                btn1.find("li").removeClass("on");
+                btn1.find("li").eq(0).addClass("on");
+            });
         }
-        nextSlideAni();
-        intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
-    });
+        function prevSlideAni(){
+            sl.find("li").eq(len-1).prependTo(sl);
+            sl.css("margin-top", wd*-2+32+"px");
+            sl.not(":animated").animate({"margin-top":-wd+32+"px"}, 600, function(){
+                btn1.find("li").eq(len-1).prependTo(btn1);
+                btn1.find("li").removeClass("on");
+                btn1.find("li").eq(0).addClass("on");
+            });
+        }
+        var intv1 = setInterval(function(){ 
+            nextSlideAni();
+        }, 3000);
+        $(".btn_fr li").click(function(){
+            clearInterval(intv1);
+            var ix = $(this).index();
+            for(var i=0;i<ix-1;i++){
+                sl.find("li").eq(0).appendTo(sl);
+                btn1.find("li").eq(0).appendTo(btn1);
+            }
+            nextSlideAni();
+            intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+        }).resize();
+    }
 
     // menu박스 나타나게하기
     $(".menu_icon").click(function(){
@@ -180,10 +183,10 @@
     </aside>
     <content id="content">
         <ul class="vs_box">
+            <li><a href=""><img src="./images/vs4.jpg" alt="" class="vs4"></a></li>
             <li class="on"><a href=""><img src="./images/vs1.jpg" alt="" class="vs1"></a></li>
             <li><a href=""><img src="./images/vs2.jpg" alt="" class="vs2"></a></li>
             <li><a href=""><img src="./images/vs3.jpg" alt="" class="vs3"></a></li>
-            <li><a href=""><img src="./images/vs4.jpg" alt="" class="vs4"></a></li>
         </ul>
         <div class="btn_fr">
             <ul class="vs_btn_box">
