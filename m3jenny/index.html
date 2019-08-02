@@ -34,6 +34,52 @@
             }
         });
 
+
+        
+    var wd = $(".vs").width();
+    var sl = $(".vs_frm");
+    var btn1 = $(".btn_fr .vs_btn_box");
+    var len = $(".vs_frm li").length;
+    function nextSlideAni(){
+        sl.not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+            sl.find("li").eq(0).appendTo(sl);
+            sl.css("margin-left", "0px");
+            btn1.find("li").eq(0).appendTo(btn1);
+            btn1.find("li").removeClass("on");
+            btn1.find("li").eq(0).addClass("on");
+        });
+    }
+    function prevSlideAni(){
+        sl.find("li").eq(len-1).prependTo(sl);
+        sl.css("margin-left", -wd+"px");
+        sl.not(":animated").animate({"margin-left":"0px"}, 600, function(){
+            btn1.find("li").eq(len-1).prependTo(btn1);
+            btn1.find("li").removeClass("on");
+            btn1.find("li").eq(0).addClass("on");
+        });
+    }
+    var intv1 = setInterval(function(){ 
+        nextSlideAni();
+    }, 3000);
+
+    $(".btn_fr li").click(function(){
+        clearInterval(intv1);
+        var ix = $(this).index();
+        for(var i=0;i<ix-1;i++){
+            sl.find("li").eq(0).appendTo(sl);
+            btn1.find("li").eq(0).appendTo(btn1);
+        }
+        nextSlideAni();
+        intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+    });
+
+
+
+
+
+
+
+
     });
     
     
@@ -129,17 +175,19 @@
 
     <div class="vs">
         <ul class="vs_frm">
-            <li><a href=""><img src="./img/vs1.jpg" alt=""></a></li>
+            <li class="on"><a href=""><img src="./img/vs1.jpg" alt=""></a></li>
             <li><a href=""><img src="./img/vs2.jpg" alt=""></a></li>
             <li><a href=""><img src="./img/vs3.jpg" alt=""></a></li>
             <li><a href=""><img src="./img/vs4.jpg" alt=""></a></li>
         </ul>
-        <ul class="vs_btn_box">
-            <li class="vs_btn1"><button class="vs_btn"></button></li>
-            <li class="vs_btn2"><button class="vs_btn"></button></li>
-            <li class="vs_btn3"><button class="vs_btn"></button></li>
-            <li class="vs_btn4"><button class="vs_btn"></button></li>
-        </ul>
+        <div class="btn_fr">
+            <ul class="vs_btn_box">
+                <li class="vs_btn1 on"><button class="vs_btn"></button></li>
+                <li class="vs_btn2"><button class="vs_btn"></button></li>
+                <li class="vs_btn3"><button class="vs_btn"></button></li>
+                <li class="vs_btn4"><button class="vs_btn"></button></li>
+            </ul>
+        </div>
         
     </div>
 
