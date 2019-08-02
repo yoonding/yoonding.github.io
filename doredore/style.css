@@ -5,8 +5,9 @@
 
 /* content */
 .slide{clear: both; width: 100vw; height: auto; overflow: hidden;}
-.vs{width: 500%; height: 370px; overflow: hidden;}
-.vs li{width: 20%; height: auto;}
+.vs{width: 500%; height: 360px; position: relative;}
+.vsimg{position: absolute; width: 20%; top: 0; left: 0; opacity: 0; transition:0.8s;}
+.vsimg.on{opacity: 1;}
 .vs img{width: 100%; height: 100%;}
 
 .vs_menu_box{clear: both; overflow: hidden; width: 100vw;}
