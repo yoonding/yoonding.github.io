@@ -21,36 +21,27 @@ z-index: 10; background: #000; box-shadow: 1px 0px 10px #8d819c; transition: 0.6
 .menu_icon{position: absolute; top: 15px; right: 10px; width: 40px; height: 40px;}
 .menu_icon img{display: block; width: 100%;}
 
-#gnb{width: 80%; height: 100vh; padding: 30px 0px 30px 50px;}
+#gnb{width: 80%; height: 100%; overflow-y: auto; padding: 30px 0px 30px 50px;}
 .gnb_box{width: 100%;}
 .gnb_box li.gnb_tit{margin-top: 15px;}
 .gnb_box li a.gnb_txt{display: block; padding: 10px; color: #ffffff; font-size: 18px; font-weight: 600;}
 .plus{display: block; float: right; margin-right: 30px;}
 
-.sub_box{width: 100%; height: 0px; overflow: hidden; transition: 0.6s; margin-top: 10px;margin-left: 30px;}
+.sub_box{width: 88%; display: none; margin-top: 10px; padding-top: 15px;}
 
-.sub_box.on{height: 200px;}
 
-.sub_box li{margin-top:0.5rem;}
+.sub_box li{margin-top:0.7rem;}
 .sub_box li a{display: block; color: #ffffff;
-    font-size: 14px; width: 40%; height:30px; line-height: 30px;}
-/*
-.gnb_box li:hover .sub_box.sub1{height: 260px;}
-.gnb_box li:hover .sub_box.sub2{height: 300px;}
-.gnb_box li:hover .sub_box.sub3{height: 120px;}
-.gnb_box li:hover .sub_box.sub4{height: 120px;}
-.gnb_box li:hover .sub_box.sub5{height: 120px;}
-*/
+    font-size: 14px; width: 40%; height:30px; line-height: 30px; text-indent: 20px;}
 
-
-.ft_menu{clear: both; width: 74%; height: 80px; position: absolute; bottom: 4rem; left: 40px;
+.ft_menu{clear: both; width: 88%; height: 80px;margin-top: 80px; padding-bottom: 20px;
 border-top: 2px solid #5e4e71;}
-.ft_menu:before{content: ""; width: 30px; height: 3px; display: block; position: absolute;
+.ft_menu:before{content: ""; width: 60px; height: 3px; display: block; position: absolute;
 left: 0; bottom: 5rem; color: #5e4e71;}
-.ft_menu li{width: 40%; float: left; margin: 5px; margin-left: 17px;}
+.ft_menu li{width: 100%; float: left; margin: 5px; margin-left: 17px;}
 .ft_menu li a{ width: 100%; display: block; font-size: 12px; color: #ccc; padding: 5px;margin-top: 1rem;}
 
-.sns_box{clear: both; position: absolute; left: 60px; bottom: 2rem;}
+.sns_box{clear: both;margin-top: 30px; margin-left: 15px; padding-bottom: 200px;}
 .sns_box li{float: left; margin: 5px; width: 40px; height: 40px;}
 .sns_box li img{display: block; width: 100%;}
 .copyright{clear: both; width: 80%; color: #9d84bc; line-height: 1.5; font-size: 10.5px; position: absolute; left: 30px; bottom: 3rem;display: none; }

@@ -62,11 +62,10 @@
 </style>
 <script>
     $(document).ready(function() {
-        $("#gnb a.gnb_txt").click(function(){
-            $(".sub_box").removeClass("on");
-            $(this).next(".sub_box").addClass("on");
-            $("#gnb a.gnb_txt").removeClass("on");
-            $(this).addClass("on");
+        $("#gnb a.gnb_txt").click(function(i){
+            var sidx = $(".sub_box").index();
+            $(this).next(".sub_box").slideToggle(500).css("border-top","1px solid #9d84bc");
+            
         });
 
         $(".menu_icon").click(function(){
@@ -171,33 +170,33 @@
                 </li>
 
             </ul>
-
+            <div class="ft_menu">
+                <ul>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                </ul>
+            </div>
+            <div class="sns_box">
+                <ul class="snss">
+                    <li><a href=""><img src="./images/icon1.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon2.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon3.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon4.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon5.png" alt=""></a></li>
+                </ul>
+            </div>
+            <p class="copyright">
+                주최 : (사)한국독립영화협회, 영화진흥위원회<br>
+                주관 : 서울독립영화제2019 집행위원회<br>
+                (04207)서울시 마포구 마포대로 182-10, 성촌빌딩 301호<br>
+                TEL.02-362-9513<br>
+                FAX.02-363-3154<br>
+                MAIL. SIFF@SIFF.KR<br>
+                Copyright ⓒ 서울독립영화제<br>
+                SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.<br>
+            </p>
         </nav>
-        <div class="ft_menu">
-            <ul>
-                <li><a href="">개인정보취급방침</a></li>
-                <li><a href="">이메일무단수집거부</a></li>
-            </ul>
-        </div>
-        <div class="sns_box">
-            <ul class="snss">
-                <li><a href=""><img src="./images/icon1.png" alt=""></a></li>
-                <li><a href=""><img src="./images/icon2.png" alt=""></a></li>
-                <li><a href=""><img src="./images/icon3.png" alt=""></a></li>
-                <li><a href=""><img src="./images/icon4.png" alt=""></a></li>
-                <li><a href=""><img src="./images/icon5.png" alt=""></a></li>
-            </ul>
-        </div>
-        <p class="copyright">
-            주최 : (사)한국독립영화협회, 영화진흥위원회<br>
-            주관 : 서울독립영화제2019 집행위원회<br>
-            (04207)서울시 마포구 마포대로 182-10, 성촌빌딩 301호<br>
-            TEL.02-362-9513<br>
-            FAX.02-363-3154<br>
-            MAIL. SIFF@SIFF.KR<br>
-            Copyright ⓒ 서울독립영화제<br>
-            SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.<br>
-        </p>
+        
     </aside>
     <main id="content_wrap">
         <section class="con_box">
@@ -261,9 +260,8 @@
                 </li>
                 <li class="item2">
                     <ul class="ban6_box">
-                        <li class="b_it"><a href=""><img src="./images/vs5.png" alt=""></a></li>
-                        <li class="b_it"><a href=""><img src="./images/vs51.png" alt=""></a></li>
-                        <span class="view">VIEW</span>
+                        <li class="b_it"><a href=""><img src="./images/vs5.png" alt=""></li>
+                        <li class="b_it"><a href=""><img src="./images/vs51.png" alt=""></li>
                         
                     </ul>
                     <ul class="btn_box">
