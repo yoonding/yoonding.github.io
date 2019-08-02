@@ -64,7 +64,7 @@
     $(document).ready(function() {
         $("#gnb a.gnb_txt").click(function(i){
             var sidx = $(".sub_box").index();
-            $(this).next(".sub_box").slideToggle(500).css("border-top","1px solid #9d84bc");
+            $(this).next(".sub_box").slideToggle(500).css({"border-top":"1px solid #9d84bc","border-bottom":"1px solid #9d84bc"});
             
         });
 

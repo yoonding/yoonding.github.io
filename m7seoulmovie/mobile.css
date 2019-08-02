@@ -24,15 +24,15 @@ z-index: 10; background: #000; box-shadow: 1px 0px 10px #8d819c; transition: 0.6
 #gnb{width: 80%; height: 100%; overflow-y: auto; padding: 30px 0px 30px 50px;}
 .gnb_box{width: 100%;}
 .gnb_box li.gnb_tit{margin-top: 15px;}
-.gnb_box li a.gnb_txt{display: block; padding: 10px; color: #ffffff; font-size: 18px; font-weight: 600;}
+.gnb_box li a.gnb_txt{display: block; padding: 10px; color: #ffffff; font-size: 16px;}
 .plus{display: block; float: right; margin-right: 30px;}
 
-.sub_box{width: 88%; display: none; margin-top: 10px; padding-top: 15px;}
+.sub_box{width: 88%; display: none; margin-top: 10px; padding-top: 10px; padding-bottom: 10px;}
 
 
 .sub_box li{margin-top:0.7rem;}
 .sub_box li a{display: block; color: #ffffff;
-    font-size: 14px; width: 40%; height:30px; line-height: 30px; text-indent: 20px;}
+    font-size: 14px; width: 100%; height:30px; line-height: 30px; text-indent: 20px;}
 
 .ft_menu{clear: both; width: 88%; height: 80px;margin-top: 80px; padding-bottom: 20px;
 border-top: 2px solid #5e4e71;}
@@ -62,7 +62,8 @@ left: 0; bottom: 5rem; color: #5e4e71;}
 
 .tit_box1{position: absolute; top: 1.5rem;left: 30px; color: #9d84bc; padding: 5px; width: 100px; text-align: center; font-size: 12px; border: 1px solid #9d84bc;}
 .tit_box2{position: absolute; top: 1.5rem;left: 30px; color: #fff; padding: 5px; width: 100px; text-align: center; font-size: 12px; border: 1px solid #fff;}
-.B_txt{position: absolute; top: 4rem; left: 30px;color: #fff; font-size: 16px; line-height: 1.5;}
+.B_txt{width: 80%; position: absolute; top: 4rem; left: 30px;color: #fff; font-size: 16px; line-height: 1.5;}
+.B_txt br{display: none;}
 .S_txt{position: absolute; top: 8rem; left: 30px;color: #fff; font-size: 11px; line-height: 1.5; width: 80%; display: none;}
 .S_txt1{position: absolute; top: 10rem; left: 30px;color: #fff; font-size: 11px; line-height: 1.5; width: 80%; display: none;}
 .S_txt3{position: absolute; top: 5rem; left: 40px;color: #9d84bc; font-size: 12px; line-height: 1.5; width: 80%; display: block;}
@@ -102,9 +103,9 @@ line-height: 30px;}
 .more0{position: absolute; top: -7rem; left: 25px;color: #fff; font-size: 10px;padding: 5px; width: 30%; height: 30px; line-height: 30px; text-align: center;}
 .go0{position: absolute; top: -6.7rem; left: 8rem;padding: 5px; width: 10%; height: 30px;background-repeat: no-repeat; background-size: auto; background-position: center; background-image:url(images/arrow.png);}
 
-.select{position: absolute; top: 7rem; left: 1.5rem; height: 28px; width: 90px; text-indent: 10px; color: #747474;}
+.select{position: absolute; top: 7rem; left: 1.5rem; height: 28px; width: 90px; text-indent: 10px; color: #747474; background: #fff;}
 .keyword{position: absolute; top: 9.5rem; left: 25px; width: 210px; height: 21px; padding: 5px; background-color: #fff; text-indent: 10px;font-size: 12px;}
-.search_btn{position: absolute; top: 9.45rem; left: 13.4rem;display: block;background-color: #5e4e71; background-image: url(./images/search.png); background-repeat: no-repeat; background-size: cover; background-position: center; width: 32px; height: 33px; text-indent: -9999px;}
+.search_btn{position: absolute; top: 9.45rem; left: 13.4rem;display: block;background-color: #5e4e71; background-image: url("./images/search.png"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 32px; height: 33px; text-indent: -9999px;}
 
 
 
