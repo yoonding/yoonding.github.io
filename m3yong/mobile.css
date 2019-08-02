@@ -11,7 +11,7 @@ button, label, input{outline: none; border: none; cursor: pointer; background: t
 /* 기본설정 */
 #hd{width: 100%; height: 70px; clear: both;  }
 #vs{clear: both; width: 100%; height: 290px;position: relative;
-background-image: url(images/mvs.jpg); background-repeat: no-repeat; background-size: cover;}
+background-image: url("images/mvs.jpg"); background-repeat: no-repeat; background-size: cover;}
 #clinic{width: 100%; height: auto; clear: both; overflow: hidden;}
 #board{width: 100%; height: 100px; clear: both; overflow: hidden; margin-top: 30px; }
 #info{width: 100%; height: 900px; clear: both; overflow: hidden; }
@@ -25,20 +25,22 @@ background-image: url(images/mvs.jpg); background-repeat: no-repeat; background-
 .menu_icon{ float: right; margin-right: 8px; margin-top: 6px;display: block; border-radius: 50%;}
 
 /* menu_box */
-#mgnb{position: fixed; top: 0;right: -110%;background: #d5e3d1; overflow-y: auto; width: 100%; height: 100vh; z-index: 99; transition: 0.5s;}
+#mgnb{position: fixed; top: 0;right: -110%;background: #d5e3d1; overflow-y: auto; width: 100%; height: 90%; z-index: 99; transition: 0.5s;}
 #mgnb.on{right: 0;}
 .mgnb_box{width: 100%; margin-top: 4.3rem; }
 .homego{display: block; width: 100px; height: 40px; position: absolute; color: #329544; font-weight: bold;text-align: center; line-height: 40px; margin-top: 15px; padding-left: 20px;}
 .homego:before{content: ""; width: 3px; height: 20px; display: block; position: absolute; top: 11px; left: 20px; background-color: #329544;}
-.mgnb_box > li{width: 100%; background: #329544; border-bottom: 1px solid #fff; position: relative;}
-.mgnb_box li a{width: 100%; display: block; text-indent: 20px;padding: 15px;}
+.mgnb_box li.mgnb_txt{width: 100%; background: #329544; border-bottom: 1px solid #fff; position: relative;}
+.mgnb_box li.mgnb_txt a.g_tit{width: 100%; display: block; text-indent: 20px;padding: 15px;}
 
 
-.msub_box{width: 100%; display: none; margin: 10px 0 10px 0px; border-top: 1px solid #fff;}
-.msub_box li{ width: 100%;}
-.msub_box li a{display: block; color: #fff; font-size: 16px; font-weight: 500; width: 250px; line-height: 1; margin-left: 15px;}
+.msub_box{width: 100%; display: none; background: #d5e3d1; margin:0px 0 10px 0px; border-top: 1px solid #fff; padding-top: 20px;}
+.msub_box li{ width: 100%; height: 40px;}
+.msub_box li a{display: block; color: #329544; font-size: 14px; font-weight: 600; width: 250px; text-indent: 50px;}
 
-.online{display: block; width: 100%; height: 80px; background: #329544; margin-top: 298px;}
+
+.online{position: fixed; right: -110%;bottom: 0; display: block; width: 100%; height: 80px; background: #329544; border-top: 2px solid #fff; transition: 0.5s;}
+.online.on{right: 0;}
 .online img{display: block; padding: 15px;
 margin-left: 30px; float: left; width: 60px;}
 .online span{display: block; color: #fff; font-size: 18px; padding: 18px; float: right; margin-right: 30px; margin-top: 10px;}
