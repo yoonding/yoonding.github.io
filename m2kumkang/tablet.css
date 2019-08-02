@@ -29,12 +29,12 @@ background: #fff;}
 .logo img{display: block; width: 100%;}
 .gnb{clear: both; position: fixed; overflow-y: auto; top: 150px; right: -110%; width: 80%; height: 100%; background-color: #03224b; transition: 0.6s;}
 .gnb.open{right: 0;}
-.gnb_box{width: 83%; height: 100vh; padding: 10px 20px 200px 20px; margin-left: 5px;}
+.gnb_box{width: 83%; min-height: 100vh; padding: 10px 20px 200px 20px; margin-left: 5px;}
 .gnb_box li.mtxt{width: 100%;margin-top: 20px; margin-left: 10px; position: relative; padding: 10px; border-bottom: 1px solid #3e5574;}
 .main_txt img{display: block; margin-top: 20px; width: 23%; margin-left: 5px;}
 .main_txt{display: block; padding: 5px;}
 
-.sub_menu{width: 250px; margin-left: 20px; display: none; margin-top: 20px;}
+.sub_menu{width: 250px; margin-left: 20px; overflow-y: auto; display: none; margin-top: 20px;}
 .sub_menu li{width: 250px; line-height: 3;}
 .sub_menu li a{display: block; color: #d9d9d9; line-height: 3; font-size: 22px;}
 

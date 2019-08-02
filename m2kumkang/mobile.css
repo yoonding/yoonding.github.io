@@ -29,7 +29,7 @@ background: #fff;}
 .logo img{display: block; width: 100%;}
 .gnb{clear: both;overflow-y: auto; position: fixed; height: 100%; top: 90px; right: -110%; width: 80%; background-color: #03224b; transition: 0.6s;}
 .gnb.open{right: 0;}
-.gnb_box{width: 83%; height: 100vh; padding: 10px 20px 100px 20px; margin-left: 5px;}
+.gnb_box{width: 83%; min-height: 100vh; padding: 10px 20px 100px 20px; margin-left: 5px;}
 .gnb_box li.mtxt{width: 100%; line-height: 4; position: relative; padding: 5px; border-bottom: 1px solid #3e5574;}
 .main_txt img{display: block; margin-top: 20px; width: 30%; margin-left: 5px;}
 .main_txt{display: block; padding: 5px;}
