@@ -7,73 +7,85 @@
     <link rel="stylesheet" href="belif_main.css">
     <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#gnb li.product").click(function(){
+            //     $(this).find(".sub").slideDown(500);
+            // });
+        });
+    </script>
 </head>
 
 <body>
-    <!--    header#header>nav.skipnav>ul>li*3>a-->
     <div id="wrap">
         <header id="header">
-            <!--       h1#logo>a>img-->
-            <h1 id="logo"><a href=""><img src="./images/belif_logo.png" alt=""></a></h1>
+            <h1 id="logo"><a href="belif_main.html"><img src="./images/belif_logo.png" alt=""></a></h1>
 
             <select name="language" id="lan">
                 <option value="">KOR</option>
                 <option value="">ENG</option>
             </select>
             <nav class="skipnav">
-                <!--skipnav가 햄버거메뉴 지칭-->
                 <ul>
                     <li><a href="">Ligin</a></li>
                     <li><a href="">Join</a></li>
                     <li><a href="">My page</a></li>
                 </ul>
             </nav>
-            <!--        select>option*2-->
 
         </header>
 
         <nav id="gnb">
             <ul class="main">
                 <li><a href="" class="main_txt">I am belif</a></li>
-                <li><a href="" class="main_txt product">Product</a></li>
+                <li class="product"><a href="belif_sub.html" class="main_txt">Product</a>
+                    <ul class="sub">
+                        <li class="pro pro1">
+                            <h2 class="pro_mtxt">Category</h2>
+                            <ul>
+                                <li><a href="belif_sub.html" class="pro_stxt">New Product</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Best Product</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Skin Care</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Whitening</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Body</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Cushion & BB, Sun</a></li>
+                            </ul>
+                        </li>
+                        <li class="pro pro2">
+                            <h2 class="pro_mtxt">Manology</h2>
+                            <ul>
+                                <li><a href="belif_sub.html" class="pro_stxt">101</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Original</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Cleansing</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Sun</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Master</a></li>
+                            </ul>
+                        </li>
+                        <li class="pro sub_wrap">
+                            <div class="pro3">
+                                <h2 class="pro_mtxt">Special</h2>
+                                <a href="" class="pro_stxt">CRYSTALLINE </a>
+                            </div>
+                            <div class="pro4">
+                                <h2 class="pro_mtxt">For Baby</h2>
+                                <a href="" class="pro_stxt">Baby</a>
+                            </div>
+                            <div class="pro5">
+                                <h2><a href="" class="pro_mtxt">PRODUCT MAP →</a></h2>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="" class="main_txt">Wonderland</a></li>
                 <li><a href="" class="main_txt">Event</a></li>
                 <li><a href="" class="main_txt last">Online Stamp</a></li>
             </ul>
-            <ul class="sub">
-                    <div class="pro1">
-                        <li class="pro_mtxt">Category</li>
-                        <li><a href=""  class="pro_stxt">New Product</a></li>
-                        <li><a href="" class="pro_stxt">Best Product</a></li>
-                        <li><a href="" class="pro_stxt">Skin Care</a></li>
-                        <li><a href="" class="pro_stxt">Whitening</a></li>
-                        <li><a href="" class="pro_stxt">Body</a></li>
-                        <li><a href="" class="pro_stxt">Cushion & BB, Sun</a></li>
-                    </div>
-                    <div class="pro2">
-                        <li class="pro_mtxt">Manology</li>
-                        <li><a href="" class="pro_stxt">101</a></li>
-                        <li><a href="" class="pro_stxt">Original</a></li>
-                        <li><a href="" class="pro_stxt">Cleansing</a></li>
-                        <li><a href="" class="pro_stxt">Sun</a></li>
-                        <li><a href="" class="pro_stxt">Master</a></li>
-                    </div>
-                    <div class="pro3">
-                        <li class="pro_mtxt">Special</li>
-                        <li><a href="" class="pro_stxt">CRYSTALLINE </a></li>
-                    </div>
-                    <div class="pro4">
-                        <li class="pro_mtxt">For Baby</li>
-                        <li><a href="" class="pro_stxt">Baby</a></li>
-                    </div>
-                    <li class="pro5">
-                        <a href="" class="pro_mtxt">PRODUCT MAP →</a>
-                    </li>
-                </ul>
+            
                 <form action="" class="search_fr">
                     <input type="text" id="keyword" class="in_data">
                     <button class="search_img">
-                        <img src="././images/search.png" alt="검색">
+                        <img src="./images/search.png" alt="검색">
                     </button>
                 </form>
         </nav>
@@ -101,15 +113,15 @@
                 </a>
                 <div id="bestbox">
                     <div id="bestpro1">
-                        <img id="bestimg" class="bestimg1" src="./images/Bestseller_cushion-bomb.jpg" alt="뉴메로10">
+                        <img id="bestimg" class="bestimg1" src="./images/bestseller_cushion-bomb.jpg" alt="뉴메로10">
                     </div>
                     <div id="bestpro2">
-                        <img id="bestimg" class="bestimg2" src="./images/Bestseller_Numero10.jpg" alt="뉴메로10">
-                        <h3 class="pro">뉴메로 10 에센스</h3>
-                        <img class=comment src="./images/numero_comment.png" alt="">
+                        <img id="bestimg" class="bestimg2" src="./images/bestseller_Numero10.jpg" alt="뉴메로10">
+                        <h3 class="pro"><a href="">뉴메로 10 에센스</a></h3>
+                        <a href=""><img class=comment src="./images/numero_comment.png" alt=""></a>
                     </div>
                     <div id="bestpro3">
-                        <img id="bestimg" class="bestimg3" src="./images/Bestseller_chamomile-ticture.jpg" alt="카모마일팅쳐">
+                        <img id="bestimg" class="bestimg3" src="./images/bestseller_chamomile-ticture.jpg" alt="카모마일팅쳐">
                     </div>
                 </div>
             </div>
@@ -132,7 +144,7 @@
 
             <div id="wonderWrap">
                 <div id=Title class="titleImg3">
-                    <img src="./images/belif%20wonderland.png" alt="">
+                    <img src="./images/belif wonderland.png" alt="">
                 </div>
                 <h3 class="subTitle">- The belif story -</h3>
                 <img class="video" src="./images/video.jpg" alt="">
@@ -303,7 +315,7 @@
             <img class="Quicklogo" src="./images/belif_logo_quick.png" alt="Quicklogo">
             <div class="Qarrow">
                 <a class="TOP" href=""><img src="./images/top_icon.png" alt="TOP"></a>
-                <a class="END" href=""><img src="./images/END_icon.png" alt="END"></a>
+                <a class="END" href=""><img src="./images/end_icon.png" alt="END"></a>
             </div>
         </div>
 

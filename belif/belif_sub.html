@@ -14,7 +14,7 @@
     <div id="wrap">
         <header id="header">
             <!--       h1#logo>a>img-->
-            <h1 id="logo"><a href=""><img src="./images/belif_logo.png" alt=""></a></h1>
+            <h1 id="logo"><a href="belif_main.html"><img src="./images/belif_logo.png" alt=""></a></h1>
 
             <select name="language" id="lan">
                 <option value="">KOR</option>
@@ -32,17 +32,59 @@
 
         </header>
 
-        <nav id="nav">
-            <ul>
-                <li><a href="">I am belif</a></li>
-                <li><a href="">product</a></li>
-                <li><a href="">Wonderland</a></li>
-                <li><a href="">Event</a></li>
-                <li><a href="">Oline stamp</a></li>
+        <nav id="gnb">
+            <ul class="main">
+                <li><a href="" class="main_txt">I am belif</a></li>
+                <li class="product"><a href="belif_sub.html" class="main_txt">Product</a>
+                    <ul class="sub">
+                        <li class="pro pro1">
+                            <h2 class="pro_mtxt">Category</h2>
+                            <ul>
+                                <li><a href="belif_sub.html" class="pro_stxt">New Product</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Best Product</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Skin Care</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Whitening</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Body</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Cushion & BB, Sun</a></li>
+                            </ul>
+                        </li>
+                        <li class="pro pro2">
+                            <h2 class="pro_mtxt">Manology</h2>
+                            <ul>
+                                <li><a href="belif_sub.html" class="pro_stxt">101</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Original</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Cleansing</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Sun</a></li>
+                                <li><a href="belif_sub.html" class="pro_stxt">Master</a></li>
+                            </ul>
+                        </li>
+                        <li class="pro sub_wrap">
+                            <div class="pro3">
+                                <h2 class="pro_mtxt">Special</h2>
+                                <a href="" class="pro_stxt">CRYSTALLINE </a>
+                            </div>
+                            <div class="pro4">
+                                <h2 class="pro_mtxt">For Baby</h2>
+                                <a href="" class="pro_stxt">Baby</a>
+                            </div>
+                            <div class="pro5">
+                                <h2><a href="" class="pro_mtxt">PRODUCT MAP →</a></h2>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="" class="main_txt">Wonderland</a></li>
+                <li><a href="" class="main_txt">Event</a></li>
+                <li><a href="" class="main_txt last">Online Stamp</a></li>
             </ul>
-            <img src="./images/search.png" alt="">
+            
+                <form action="" class="search_fr">
+                    <input type="text" id="keyword" class="in_data">
+                    <button class="search_img">
+                        <img src="./images/search.png" alt="검색">
+                    </button>
+                </form>
         </nav>
-
         <div id="subImg">
             <img src="./images/skincare_img.jpg" alt="subimg">
         </div>
