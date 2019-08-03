@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>belif-believe in truth</title>
+    <link rel="stylesheet" href="belif_main.css">
+    <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // vs 슬라이드
+            var wd = $("#visual").width();
+            var sl = $(".vs_box");
+            var btn1 = $(".vsbtn_bar .btn_bars");
+            var btn2 = $(".arrow_box");
+            var len = $(".vs_box li").length;
+            function nextSlideAni(){
+                sl.not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                    sl.find("li").eq(0).appendTo(sl);
+                    sl.css("margin-left", "0px");
+                    btn1.find("li").eq(0).appendTo(btn1);
+                    btn1.find("li").removeClass("on");
+                    btn1.find("li").eq(0).addClass("on");
+                });
+            }
+            function prevSlideAni(){
+                sl.find("li").eq(len-1).prependTo(sl);
+                sl.css("margin-left", -wd+"px");
+                sl.not(":animated").animate({"margin-left":"0px"}, 600, function(){
+                    btn1.find("li").eq(len-1).prependTo(btn1);
+                    btn1.find("li").removeClass("on");
+                    btn1.find("li").eq(0).addClass("on");
+                });
+            }
+            var intv1 = setInterval(function(){ 
+             nextSlideAni();
+            }, 3000);
+            $(".arrow_box li.left").click(function(){
+                clearInterval(intv1);
+                prevSlideAni();
+                intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+            });
+            $(".arrow_box li.right").click(function(){
+                clearInterval(intv1);
+                nextSlideAni();
+                intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+            });
+            $(".vsbtn_bar li").click(function(){
+                clearInterval(intv1);
+                var ix = $(this).index();
+                for(var i=0;i<ix-1;i++){
+                    sl.find("li").eq(0).appendTo(sl);
+                    btn1.find("li").eq(0).appendTo(btn1);
+                }
+                nextSlideAni();
+                intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+            });
+            
+            // best 
+            var bestwd = $(".best_box li").width();
+            var bestlen = $(".best_box li").length;
+            var bestml;
+            $(".best_btn_box button.best_left").click(function(){ //이전 이미지
+                bestml = parseInt($(".best_box").css("margin-left"));
+                if(bestml<0){
+                    $(".best_box").not(":animated").animate({"margin-left":"+="+bestwd+"px"}, 600);
+                } else {
+                    $(".best_box").not(":animated").animate({"margin-left":bsetwd*(bsetlen-1)*-1+"px"}, 600);
+                }
+            });
+            $(".best_btn_box button.best_right").click(function(){ //다음 이미지
+                bestml = parseInt($(".best_box").css("margin-left"));
+                if(bestml>(bestwd*(bestlen-1)*-1)){
+                    $(".best_box").not(":animated").animate({"margin-left":"-="+bestwd+"px"}, 600);
+                } else {
+                    $(".best_box").not(":animated").animate({"margin-left":"0px"}, 600);
+                }    
+            });
+
+
+
+            
+            // line 탭
+            $(".line_vs li").css("display","none");
+            $(".line_vs li").eq(0).fadeIn(500);
+            $(".line_vs li").removeClass("on");
+            $(".line_vs li").eq(0).addClass("on");
+            $(".line_menus li").click(function(index){
+                var linem = $(this).index();
+                $(".line_vs li").eq(linem).fadeIn(500);
+                $(".line_vs li").eq(linem).siblings().css("display","none");
+                $(".line_vs li").eq(linem).addClass("on");
+                $(".line_vs li").eq(linem).siblings().removeClass("on");
+            });
+
+            // instagram
+
+                var inswd = $(".insta_box li").width();
+                var inssl = $(".insta_box");
+                var insbtn = $(".g_btn");
+                var inslen = $(".insta_box li").length;
+                function nextAni(){
+                    inssl.not(":animated").animate({"margin-left":-inswd+"px"}, 600, function(){
+                        inssl.find("li").eq(0).appendTo(inssl);
+                        inssl.css("margin-left","0px");
+                    });
+                }
+                function prevAni(){
+                    inssl.find("li").eq(inslen-1).prependTo(inssl);
+                    inssl.css("margin-left", -inswd+"px");
+                    inssl.not(":animated").animate({"margin-left":"0px"}, 600);
+                }
+                nextSlideAni();
+                intv3 = setInterval(function(){ nextAni(); }, 2000);
+                
+                $(".insta_btn li.ins_left").click(function(){
+                    clearInterval(intv3);
+                    prevAni();
+                });
+                $(".insta_btn li.ins_right").click(function(){
+                    clearInterval(intv3);
+                    nextAni();
+                });
+
+
+                // Quick 버튼
+                var topBtn = $(".quickWrap button.TOP");
+                var endBtn = $(".quickWrap button.END");
+                var quick = $(".quickWrap");
+                $(window).scroll(function(){
+                    var sc_top = $(this).scrollTop();
+                    if(sc_top>=700){
+                        quick.fadeIn();
+                    } else{
+                        quick.fadeOut();
+                    }
+                });
+                topBtn.click(function(){
+                    $("body, html").stop().animate({"scrollTop":"0px"});
+                });
+                endBtn.click(function(){
+                    $("body, html").stop().animate({"scrollTop":$(document).height()});
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo"><img src="./images/belif_logo.png" alt=""></a>
+        <div class="skipnav">
+            <ul>
+                <li><a href="">Ligin</a></li>
+                <li><a href="">Join</a></li>
+                <li><a href="">My page</a></li>
+            </ul>
+        </div>
+        <select name="language" id="lan">
+            <option value="">KOR</option>
+            <option value="">ENG</option>
+        </select>
+    </header>
+
+    <nav id="gnb">
+        <ul class="main">
+            <li><a href="" class="main_txt">I am belif</a></li>
+            <li class="product"><a href="belif_sub.html" class="main_txt">Product</a>
+                <ul class="sub">
+                    <li class="pro pro1">
+                        <h2 class="pro_mtxt">Category</h2>
+                        <ul>
+                            <li><a href="belif_sub.html" class="pro_stxt">New Product</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Best Product</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Skin Care</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Whitening</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Body</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Cushion & BB, Sun</a></li>
+                        </ul>
+                    </li>
+                    <li class="pro pro2">
+                        <h2 class="pro_mtxt">Manology</h2>
+                        <ul>
+                            <li><a href="belif_sub.html" class="pro_stxt">101</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Original</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Cleansing</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Sun</a></li>
+                            <li><a href="belif_sub.html" class="pro_stxt">Master</a></li>
+                        </ul>
+                    </li>
+                    <li class="pro sub_wrap">
+                        <div class="pro3">
+                            <h2 class="pro_mtxt">Special</h2>
+                            <a href="" class="pro_stxt">CRYSTALLINE </a>
+                        </div>
+                        <div class="pro4">
+                            <h2 class="pro_mtxt">For Baby</h2>
+                            <a href="" class="pro_stxt">Baby</a>
+                        </div>
+                        <div class="pro5">
+                            <h2><a href="" class="pro_mtxt">PRODUCT MAP →</a></h2>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="" class="main_txt">Wonderland</a></li>
+            <li><a href="" class="main_txt">Event</a></li>
+            <li><a href="" class="main_txt last">Online Stamp</a></li>
+        </ul>
+
+        <form action="" class="search_fr">
+            <input type="text" id="keyword" class="in_data">
+            <button class="search_img">
+                <img src="./images/search.png" alt="검색">
+            </button>
+        </form>
+    </nav>
+
+    <figure id="visual">
+        <ul class="vs_box">
+            <li><a href=""><img src="./images/main_img_1.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/main_img_2.jpg" alt=""></a></li>
+        </ul>
+        <ul class="arrow_box">
+            <li class="left"><button><img src="./images/main_arrow_left.png" alt=""></button></li>
+            <li class="right"><button><img src="./images/main_arrow_right.png" alt=""></button></li>
+        </ul>
+        <div class="vsbtn_bar">
+            <ul class="btn_bars">
+                <li class="bar1 on"><button></button></li>
+                <li class="bar2"><button></button></li>
+            </ul>
+        </div>
+    </figure>
+
+    <div class="con1">
+        <img src="./images/bestseller.png" alt="" class="con_title">
+        <div class="best_fr">
+            <ul class="best_box">
+                <li class="it1">
+                    <a href="" class="product">
+                        <img src="./images/bestseller_cushion-bomb.jpg" alt="">
+                        <h3 class="pro_name">모이스춰 밤 쿠션</h3>
+                        <p class="pro_com">26시간 촉촉함이 지속되는 수분 폭탄 쿠션!</p>
+                    </a>
+                       
+                   
+                </li>
+                <li class="it2">
+                    <a href="" class="product">
+                        <img src="./images/bestseller_Numero10.jpg" alt="">
+                    </a>
+                    <a href="" class="pro_txt">
+                        <h3 class="pro_name">뉴메로 10 에센스</h3>
+                        <p class="pro_com">10초 만에 사라져버리는 수분을 지켜주는<br> 욕실 전용 수분 수호 에센스</p>
+                    </a>
+                </li>
+                <li class="it3">
+                    <a href="" class="product">
+                        <img src="./images/bestseller_chamomile-ticture.jpg" alt=""></a>
+                    <a href="" class="pro_txt">
+                        <h3 class="pro_name">더 트루 팅쳐 오브 카모마일</h3>
+                        <p class="pro_com">93%함유된 생기 알람 팅쳐로 푸석하고<br>칙칙해진 피부에 생기를 깨워줍니다.</p>
+                    </a>
+                </li>
+                <li class="it4">
+                    <a href="" class="product">
+                        <img src="./images/bestitem5.png" alt=""></a>
+                    <a href="" class="pro_txt">
+                        <h3 class="pro_name">더 트루 크림 - 모이스춰라이징 밤</h3>
+                        <p class="pro_com">건조한 피부의 불편함도 가라앉힌 힘<br>컴프리 리프</p>
+                    </a>
+                </li>
+                <li class="it5">
+                    <a href="" class="product">
+                        <img src="./images/bestitem4.png" alt=""></a>
+                    <a href="" class="pro_txt">
+                        <h3 class="pro_name">클래식 에센스 인크리멘트</h3>
+                        <p class="pro_com">24시간 지속되는 놀라운 보습력,<br>에센스의 본질에 가장 충실한 에센스
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="best_btn_box">
+            <button class="best_left"><img src="./images/bestseller_arrow_left.png" alt=""></button>
+            <button class="best_right"><img src="./images/bestseller_arrow_right.png" alt=""></button>
+        </div>
+    </div>
+    
+    <div class="con2">
+        <img src="./images/belifline.png" alt="" class="con_title">
+        <div class="line_menu_box">
+            <ul class="line_menus">
+                <li><button class="line_btn1">Peat miracle</button></li>
+                <li><button class="line_btn2">Prime infusion repair</button></li>
+                <li><button class="line_btn3">Problem solution</button></li>
+                <li><button class="line_btn4">CRYSTALLINE</button></li>
+                <li><button class="line_btn5">Whitening</button></li>
+                <li><button class="line_btn6">Manology</button></li>
+            </ul>
+        </div>
+        <ul class="line_vs">
+            <li class="on"><a href=""><img src="./images/peat-miracle_img.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/line2img.png" alt=""></a></li>
+            <li><a href=""><img src="./images/line4img.png" alt=""></a></li>
+            <li><a href=""><img src="./images/line3img.png" alt=""></a></li>
+            <li><a href=""><img src="./images/line5img.png" alt=""></a></li>
+            <li><a href=""><img src="./images/line6img.png" alt=""></a></li>
+        </ul>
+    </div>
+    
+    <div class="con3">
+        <img src="./images/belifwonderland.png" alt="" class="con_title">
+        <h2>- The belif story -</h2>
+        <div id="mv_fr">
+            <iframe src="https://player.vimeo.com/video/316644383" width="1500" height="1000" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="con4">
+        <img src="./images/belif-event.png" alt="" class="con_title">
+        <ul class="event_box">
+            <li class="it1"><a href="">
+               <img src="./images/event_1.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment1">
+                        늘 감사한 당신께, <br>
+                        프리미엄 안티에이징<br>
+                        GIFT EVENT<br>
+                        <span>2019.05.01~2019.05.08</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it2"><a href="">
+               <img src="./images/event_2.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment2">
+                        예민해진 피부 잠재우기<br>
+                        프로젝트<br>
+                        <span>2019.06.20~2019.06.25</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it3"><a href="">
+              <img src="./images/event_3.jpg" alt="">
+               <div class="event_com">
+                    <h3 class="eventComment eventComment3">
+                        빌리프 새해 이벤트<br>
+                        더 트루 팅쳐 오브 - 카모마일<br>
+                        20% OFF<br>
+                        <span>2019.01.20~2019.01.31</span>
+                    </h3>
+                </div>
+                </a>
+            </li>
+            <li class="it4"><a href="">
+               <img src="./images/event_4.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment4">
+                        발렌타인데이엔 맨올로지<br>
+                        GIFT BOX EVENT<br>
+                        <span>2019.02.10~2019.02.14</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it5"><a href="">
+               <img src="./images/event_5.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment5">
+                        빌리프와 함께하는<br>
+                        로즈데이 이벤트<br>
+                        <span>2019.07.01~2019.07.05</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it6"><a href="">
+              <img src="./images/event_6.jpg" alt="">
+               <div class="event_com">
+                    <h3 class="eventComment eventComment6">
+                        지구환경까지 생각하는<br>
+                        빌리프 이벤트<br>
+                        <span>2019.07.01~2019.07.05</span>
+                    </h3>
+                </div>
+                </a>
+            </li>
+            <li class="it7"><a href="">
+               <img src="./images/event_7.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment7">
+                        빌리프 & 틱톡<br>
+                        콜라보 이벤트<br>
+                        <span>2019.12.28~2019.12.31</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it8"><a href="">
+               <img src="./images/event_8.jpg" alt="">
+                <div class="event_com">
+                    <h3 class="eventComment eventComment8">
+                        여름휴가 이벤트<br>
+                        SALE SEASON<br>
+                        <span>2019.06.01~2019.06.10</span>
+                    </h3>
+                </div>
+            </a></li>
+            <li class="it9"><a href="">
+              <img src="./images/event_9.jpg" alt="">
+               <div class="event_com">
+                    <h3 class="eventComment eventComment9">
+                        빌리프 아쿠아밤<br>
+                        키트 증정 이벤트<br>
+                        <span>2019.08.21~2019.08.25</span>
+                    </h3>
+                </div>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+  
+    
+    <div class="con5">
+        <img src="./images/belif-instagram.png" alt="" class="con_title">
+        <h2>#belif.official</h2>
+        <div class="insta_vs">
+            <ul class="insta_box">
+                <li class=""><a href=""><img src="./images/instagram_1.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment1">
+                        #빌리프 #belif<br>
+                        #모이스춰라이징밤<br>
+                        #수분크림 #보습크림<br>
+                        #보습폭탄 #수분베이스
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_2.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment2">
+                        #빌리프 #belif<br>
+                        #UV_프로텍터_스텐바이유_베이직_비비<br>
+                        #UV_프로텍터_멀티_선스크린<br>
+                        #UV_프로텍터_톤업_선스크린<br>
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_3.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment3">
+                        #빌리프 #belif<br>
+                        #유쓰크리에이터_에이지넉다운밤<br>
+                        #안티에이징세럼 #주름개선<br>
+                        #항산화효과 #피부탄력 #모공탄력
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_4.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment4">
+                        #빌리프 #belif<br>
+                        #빌리프이벤트 #새해이벤트<br>
+                        #신년감사선물 #한정수량<br>
+                        #모이스춰라이징밤<br>
+                        #모이스춰아쿠아밤
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_5.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment4">
+                        #빌리프 #belif<br>
+                        #빌리프이벤트 #새해이벤트<br>
+                        #신년감사선물 #한정수량<br>
+                        #모이스춰라이징밤<br>
+                        #모이스춰아쿠아밤
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_6.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment4">
+                        #빌리프 #belif<br>
+                        #빌리프이벤트 #새해이벤트<br>
+                        #신년감사선물 #한정수량<br>
+                        #모이스춰라이징밤<br>
+                        #모이스춰아쿠아밤
+                    </h3>
+                </div>
+                </a></li>
+                <li class=""><a href=""><img src="./images/instagram_7.jpg" alt="">
+                <div class="instaTxt">
+                    <h3 class="instaComment instaComment4">
+                        #빌리프 #belif<br>
+                        #빌리프이벤트 #새해이벤트<br>
+                        #신년감사선물 #한정수량<br>
+                        #모이스춰라이징밤<br>
+                        #모이스춰아쿠아밤
+                    </h3>
+                </div>
+                </a></li>
+            </ul>
+        </div>
+        <ul class="insta_btn">
+            <li class="ins_left"><button><img src="./images/belif-instagram-arrow_left.png" alt=""></button></li>
+            <li class="ins_right"><button><img src="./images/belif-instagram-arrow_right.png" alt=""></button></li>
+        </ul>
+    </div>
+  
+
+
+    <div class="quickWrap">
+        <button class="TOP"><img src="./images/top_icon.png" alt="TOP"></button>
+        <img class="quicklogo" src="./images/belif_logo_quick.png" alt="Quicklogo">
+        <button class="END"><img src="./images/end_icon.png" alt="END"></button>
+    </div>
+
+        
+    <footer id="footer">
+            <ul>
+                <li><a href="">CONTACT US</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </ul>
+            <p>COPYRIGHT @ LG HOUSEHOLD & HEALTH CARE LTD. ALL RIGHT RESERVED <span>|</span><a class="tel" href="tel:080-023-7007">고객상담실 : 080-023-7007</a></p>
+
+        </footer>
+</body></html>

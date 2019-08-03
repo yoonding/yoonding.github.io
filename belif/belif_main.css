@@ -1,0 +1,188 @@
+* {margin: 0;padding: 0;}
+
+body, html {width: 100%; font-family: 'Nanum Gothic', sans-serif; background-color: #fff;}
+ul{list-style: none;}
+a { text-decoration: none; color: #000000;}
+img {border: none;}
+input, button, select, label{outline: none; border: none; background: transparent;}
+
+
+
+/*헤더영역*/
+#header { clear: both; width: 100%; height: 114px; overflow: hidden;
+    background-image: url("./images/check_bgd.jpg"); background-size: contain;background-position: center; background-repeat: no-repeat;}
+
+.logo { width: 112px; height: 59px; float: left; display: block; margin-top: 1.5rem; margin-left: calc(50% - 56px);}
+
+.skipnav {float: left; width: 250px; height: 20px;margin-left: 21rem;}
+.skipnav ul li { float: left; margin: 20px;}
+.skipnav ul li a { font-size: 14px; font-weight: bold; display: block;}
+
+#lan {width: 102px; height: 29px; border: 2px solid #ccc;
+    margin-top: 14px;margin-left: 4px; background-repeat: no-repeat; background-image: url("./images/place_icon.png"); background-size: auto; background-position: 5px; text-indent: 20px; background-color: #fff;}
+    
+
+/*메인메뉴*/
+#gnb{clear: both; width: 100vw; height: 45px; background: #000000; position: relative;}
+.main{width: 1000px; height: 40px; margin-left: 280px; line-height: 40px;}
+.main li{float: left;position: relative;}
+.main li a.main_txt{display: block; color: #fff; font-weight: bold; font-size: 16px; margin-right: 100px; margin-top: 3px; transition: 0.3s;}
+.main li a.main_txt:hover{color: #5193cd; font-weight: bold;}
+
+/*서브메뉴*/
+.sub{position: absolute; top: 45px; left: 0; width: 100vw; height: 0px; background: rgba(0,0,0,0.9); z-index: 500; transition: 0.7s; opacity: 0; overflow: hidden; }
+#gnb li.product:before{content: ""; display: block; width: 448px; height: 0px; position: absolute; left:-448px; top: 45px; background: rgba(0,0,0,0.9); z-index: 500; overflow: hidden; opacity: 0; transition: 0.7s;}
+#gnb li.product:hover:before{opacity: 1; height: 450px;}
+.sub_fr{width: 1500px;}
+.sub li.pro{width: 300px; height: 350px; float: left; margin-right: 50px;}
+.sub_wrap div{margin-bottom: 30px;}
+.pro_mtxt{color:  rgba(255,255,255,0.8); font-size: 18px; display: block; width: 250px; height: 35px; border-bottom: 1px solid rgba(255,255,255,0.8); text-align: left;text-indent: 10px; line-height: 35px; padding: 8px; margin: 8px;}
+.pro_mtxt:last-child{border-bottom: none;}
+.pro_stxt{color: #fff; display: block; width: 250px; font-size: 14px; text-align: left; text-indent: 20px; line-height: 3;}
+.pro_stxt:hover{color: #5193cd; font-weight: bold;}
+.pro5 a.pro_mtxt:hover{background: #fff; color: #5195cd; border-radius: 5px; transition: 0.4s;}
+#gnb li.product:hover .sub{height: 450px; opacity: 1;}
+
+.search_fr{position: absolute; top: 12px; right: 305px;}
+.in_data{background: transparent; border-bottom: 1px solid rgba(255,255,255,0.8);
+border-top: none; border-left: none; border-right: none; color: #fff;
+width: 200px; height: 20px; float: left; line-height: 20px; outline: none;float: left; }
+.search_img{display: block; width: 20px; height: 20px; background: transparent;
+     border: none; padding-left: 5px; outline: none; cursor: pointer;}
+
+
+
+/* vs 작업*/
+#visual{  clear: both; position: relative; width: 100%; height: 703px; overflow: hidden;}
+.vs_box{width: 200%;}
+.vs_box a{display: block;}
+.vs_box li{float: left; width: 50%;}
+
+.arrow_box{position: absolute; width: 100%; margin-top: 17rem;}
+.arrow_box li{float: left; padding: 15px; cursor: pointer;}
+.arrow_box li.left{float: left; margin-left: 50px;}
+.arrow_box li.right{float: right; margin-right: 50px;}
+.arrow_box button{background: transparent; display: block;}
+
+.vsbtn_bar{width: 160px; position: absolute; bottom: 4rem; left: calc(50% - 80px);}
+.btn_bars{position: relative;}
+.btn_bars li button{position: absolute; bottom: 0; width: 80px; height: 7px; background-color: rgba(255,255,255,0.5);}
+.btn_bars li.bar1 button{left: 0;}
+.btn_bars li.bar2 button{left: 80px;}
+.btn_bars li.on button{background-color: #fff;}
+
+
+/* best 영역 */
+.con1{width: 100%; height: 800px; overflow: hidden; clear: both; position: relative;}
+.con_title{display: block; margin: 100px auto;}
+.best_fr{width: 1400px;  height: 600px; margin: 0 auto; overflow: hidden;}
+.best_box{width: 200%; height: 500px;}
+.best_box li{float: left; width: 20%;}
+.best_box li a.product{display: block; width: 100%;height: 400px; cursor: pointer;}
+.best_box li a.product img{display: block;}
+.best_box li:nth-child(2) a.product img, .best_box li:nth-child(3) a.product img{margin-left: 90px;}
+.pro_name{width: 50%; font-size: 20px; text-align: center; display: block; padding: 20px;}
+.pro_com{width: 55%; display: block; color: #5193cd; font-weight: bold; text-align: center; font-size: 14px;}
+.best_box li a.pro_txt{display: block;}
+.best_btn_box{position: absolute; top:23rem; left: 5%; width: 90%; }
+.best_btn_box button{display: block; padding: 20px; cursor: pointer;}
+.best_btn_box button img{display: block; width: 130%;}
+.best_btn_box button.best_left{float: left; margin-left: 50px;}
+.best_btn_box button.best_right{float: right; margin-right: 50px;}
+
+
+/* line 영역 */
+.con2 .con_title{margin-top: 150px;}
+.line_menu_box{ width: 1200px; margin: 0 auto; padding-bottom: 100px; }
+.line_menus{width: 100%;}
+.line_menus li{float: left; margin: 30px;}
+.line_menus li button{position: relative; cursor: pointer;padding: 10px; font-family: 'Nanum Gothic', sans-serif; font-weight: bold; font-size: 18px; display: block;}
+.line_menus li button:after{content: ""; width: 0%; height: 3px; display: block;
+    position: absolute; bottom: 0; left: 0px; transition: 0.5s;}
+.line_menus li button:before{content: ""; width: 0%; height: 3px; display: block;
+    position: absolute; top: 0; right: 0px; transition: 0.5s;}
+.line_menus li button:hover:after{width: 100%;}
+.line_menus li button:hover:before{width: 100%;}
+.line_menus li button.line_btn1:after, .line_menus li button.line_btn1:before{background-color: rgb(44, 95, 39);}
+.line_menus li button.line_btn2:after, .line_menus li button.line_btn2:before{background-color: rgb(75, 35, 12);}
+.line_menus li button.line_btn3:after, .line_menus li button.line_btn3:before{background-color:rgb(12, 129, 113);}
+.line_menus li button.line_btn4:after, .line_menus li button.line_btn4:before{background-color: rgb(218, 147, 147);}
+.line_menus li button.line_btn5:after, .line_menus li button.line_btn5:before{background-color: rgb(214, 214, 214);}
+.line_menus li button.line_btn6:after, .line_menus li button.line_btn6:before{background-color: rgb(63, 63, 63);}
+
+.line_vs{width: 100%; height: 590px; overflow: hidden;}
+.line_vs li{position: absolute;}
+.line_vs li.on{display: block;}
+.line_vs li img{width: 100%; display: block;}
+
+
+
+/* wonderland 영역 */
+.con3{clear: both; width: 100%;}
+.con3 .con_title{margin-bottom: 40px;}
+.con3 h2{text-align: center;}
+#mv_fr{width: 1500px; margin: 0 auto;}
+
+/* event 영역 */
+.con4{clear: both; width: 100%; height: 1600px; overflow: hidden;}
+.con4 .con_title{margin-bottom: 40px;}
+.event_box{width: 1335px; margin: 70px auto;}
+.event_box li{float: left; position: relative;}
+.event_box li a{display: block; width: 100%;margin:5px;}
+.event_box img{width: 434px; height: 434px; display: block;}
+.event_box li:before{content: ""; width:434px; height: 434px; display: block; position: absolute; top: 0;left: 0; background: rgba(0,0,0,0.7); margin: 5px; cursor: pointer; opacity: 0; transition: 0.5s;}
+.event_box li:hover:before{opacity: 1;}
+.event_com{opacity: 0; transition: 0.5s;}
+.event_box li:hover .event_com{opacity: 1; }
+.eventComment{color: #fff;text-align: center;line-height: 40px;    font-size: 22px;font-weight: 500; position: absolute; top: 30%; left: 17%; padding: 20px; border-top: 2px solid #fff; border-bottom: 2px solid #fff;}
+.eventComment1{top: 26%;}
+.eventComment3{top: 26%;}
+
+
+
+/* insta 영역 */
+.con5{clear: both; width: 100%; position: relative;}
+.con5 .con_title{margin-bottom: 40px;}
+.con5 h2{text-align: center;}
+.insta_vs{width: 1168px; height: 292px; margin: 050px auto; overflow: hidden;}
+.insta_box{width: 200%;}
+.insta_box li{float: left; width: 292px; position: relative;}
+
+.instaTxt{ position: absolute; bottom: 0; left: 0; width: 100%;
+    height: 100%; background: rgba(0,0,0,0.7); transition: all 0.5s;
+    opacity: 0;}
+.instaTxt h3{
+    color: #fff; font-size: 14px;font-weight: 500;line-height: 25px;
+    position: absolute;}
+.instaComment1{top: 33%;left: 26%;}
+.instaComment2{top: 32%;left: 8%;}
+.instaComment3{top: 32%;left: 15%;}
+.instaComment4{top: 28%;left: 22%;}
+.instaTxt:hover{opacity: 1;}
+
+.insta_btn{width: 75%; height: 60px; position: absolute; top: 18rem; left: 15rem;}
+.insta_btn li.ins_left{float: left;}
+.insta_btn li.ins_right{float: right;}
+.insta_btn button{cursor: pointer; padding: 15px;}
+.insta_btn button img{display: block; width: 120%;}
+
+
+
+/*quick메뉴*/
+.quickWrap{width: 83px; height: 300px; position: fixed; bottom: 20%; right: 10px; z-index: 10; display: none;}
+.quicklogo{display: block; width: 90%; position: absolute; bottom: 10px; right: 10px;}
+.TOP{ position: absolute; left: 25px; bottom: 100px; cursor: pointer;}
+.END{ position: absolute; left: 25px; bottom: -60px;cursor: pointer; }
+
+
+/*footer*/
+#footer{ width: 100%; height: 100px; margin-top: 150px; background: #000;overflow: hidden;}
+#footer ul{ width: 1322px; margin: 25px auto;}
+#footer li{ float: left;margin-right:30px; position: relative;}
+#footer li:before{content:"|"; display: block; position: absolute; top: 0; left: 0; color: #939191;}
+#footer li:last-child:after{content:"";}
+#footer li a{ color: #939191; font-size: 12px; font-weight: 600; display: block; text-align: center; text-indent: 10px; padding-top: 3px;}
+#footer p{ width: 1322px; clear: both; color: #939191; font-size: 12px;
+    font-weight: 600; padding-top: 20px; margin: 0 auto;}
+#footer span{padding: 0 15px;}
+#footer .tel{ margin-left: 5px; color: #939191;font-size: 12px;font-weight: 600;}
