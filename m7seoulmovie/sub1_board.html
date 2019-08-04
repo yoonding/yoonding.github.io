@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="서울독립영화제">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="서울독립영화제, 영화, 독립영화, 영화제">
+    <meta name="copyright" content="Copyright ⓒ 서울독립영화제 SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.">
+    <title>서울독립영화제 - Notice</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="서울독립영화제">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="서울독립영화제">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sub1_board_desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="sub1_board_tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="sub1_board_mobile.css" type="text/css" media="screen and (max-width:767px)">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $("#gnb a.gnb_txt").click(function(i){
+            $(this).css("color","#9d84bc");
+            var sidx = $(".sub_box").index();
+            $(this).next(".sub_box").slideToggle(500).css({"border-top":"1px solid #9d84bc","border-bottom":"1px solid #9d84bc"});
+            
+        });
+
+        $(".menu_icon").click(function(){
+            $("#menu_box").toggleClass("on");
+        });
+        
+       
+    });
+</script>
+</head>
+<body>
+    <aside id="menu_box">
+        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+        <button class="menu_icon"><img src="./images/menu_icon.png" alt=""></button>
+        <nav id="gnb">
+            <ul class="gnb_box">
+                <li class="gnb_tit">
+                    <a class="gnb_txt">서울독립영화제<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box sub1">
+                        <li><a href="">행사개요</a></li>
+                        <li><a href="">시상/심사위원</a></li>
+                        <li><a href="">조직구성</a></li>
+                        <li><a href="">슬로건/포스터</a></li>
+                        <li><a href="">후원협찬</a></li>
+                        <li><a href="">공식로고</a></li>
+                        <li><a href="">영화제역사</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a class="gnb_txt">상영프로그램<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box sub2">
+                        <li><a href="">개막작</a></li>
+                        <li><a href="">본선경쟁</a></li>
+                        <li><a href="">새로운선택</a></li>
+                        <li><a href="">특별초청</a></li>
+                        <li><a href="">통일기획전</a></li>
+                        <li><a href="">아카이브전</a></li>
+                        <li><a href="">해외초청</a></li>
+                        <li><a href="">상영작검색</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a class="gnb_txt">행사안내<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box sub3">
+                        <li><a href="">상영시간표</a></li>
+                        <li><a href="">상영관</a></li>
+                        <li><a href="">티켓</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a class="gnb_txt">커뮤니티<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box sub4">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">언론보도</a></li>
+                        <li><a href="">뉴스레터</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_tit">
+                    <a class="gnb_txt">일상사업<img src="./images/plus.png" alt="" class="plus"></a>
+                    <ul class="sub_box sub5">
+                        <li><a href="">뉴스</a></li>
+                        <li><a href="">사업소개</a></li>
+                        <li><a href="">후원안내</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="ft_menu">
+                <ul>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                </ul>
+            </div>
+            <div class="sns_box">
+                <ul class="snss">
+                    <li><a href=""><img src="./images/icon1.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon2.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon3.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon4.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/icon5.png" alt=""></a></li>
+                </ul>
+            </div>
+            <p class="copyright">
+                주최 : (사)한국독립영화협회, 영화진흥위원회<br>
+                주관 : 서울독립영화제2019 집행위원회<br>
+                (04207)서울시 마포구 마포대로 182-10, 성촌빌딩 301호<br>
+                TEL.02-362-9513<br>
+                FAX.02-363-3154<br>
+                MAIL. SIFF@SIFF.KR<br>
+                Copyright ⓒ 서울독립영화제<br>
+                SEOUL INDEPENDENT FILM FESTIVAL All rights reserved.<br>
+            </p>
+        </nav>
+        
+    </aside>
+    <main id="content_wrap">
+      <img src="./images/boardimg.jpg" alt="" class="boardimg">
+       <p class="board_stxt">커뮤니티 > 공지사항</p>
+       <h1 class="board_tit">공지사항</h1>
+        <div class="board_box">
+            <table id="tb5" class="tb">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num"><a href="">10</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 새로운선택 부문 상영작 발표 </a></td>
+                            <td class="date">18.10.15</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">9</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 본선경쟁 부문 상영작 발표 </a></td>
+                            <td class="date">18.10.15</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">8</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 [본선경쟁/새로운선택] 발표 예정 공지</a></td>
+                            <td class="date">18.10.08</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">7</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 배우프로젝트 - 60초 독백 페스티벌</a></td>
+                            <td class="date">18.10.04</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">6</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 슬로건 & 티저포스터 공개!</a></td>
+                            <td class="date">18.10.04</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">5</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제 × 네이버 - 독립영화 차기작 프로젝트 : 인디트라이앵글2018 지원작 발표</a></td>
+                            <td class="date">18.09.19</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">4</a></td>
+                            <td class="tb_tit"><a href=""> 서울독립영화제2018 자원활동가 모집 (9/17~10/8)</a></td>
+                            <td class="date">18.09.11</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">3</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 작품 공모 마감</a></td>
+                            <td class="date">18.09.03</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">2</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 단기스태프(운영팀) 채용공고</a></td>
+                            <td class="date">18.08.21</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">1</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2017 베스트 컬렉션 블루레이 안내</a></td>
+                            <td class="date">18.08.09</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <a href="#tb1">≪</a>
+                                <a href="#tb1">1</a>
+                                <a href="#tb2">2</a>
+                                <a href="#tb3">3</a>
+                                <a href="#tb4">4</a>
+                                <a class="on">5</a>
+                                <a href="#tb5">≫</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+            <table id="tb4" class="tb">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num"><a href="">20</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 개막작 [잠시 쉬어가도 좋아] 발표</a></td>
+                            <td class="date">18.11.09</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">19</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 본선경쟁/새로운선택 부문 심사위원 공개 </a></td>
+                            <td class="date">18.11.09</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">18</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 특별기획 - 독립영화 아카이브전 : 복원을 시작하다</a></td>
+                            <td class="date">18.11.08</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">17</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 특별기획 - 전환기의 한반도 : 평화와 통일의 영화</a></td>
+                            <td class="date">18.11.08</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">16</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 해외초청 부문 상영작 발표</a></td>
+                            <td class="date">18.11.01</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">15</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 특별초청 부문 선정의 변</a></td>
+                            <td class="date">18.10.31</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">14</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 새로운선택 부문 선정의 변</a></td>
+                            <td class="date">18.10.31</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">13</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 특별초청 국내부문 상영작 발표</a></td>
+                            <td class="date">18.10.22</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">12</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 본선경쟁 부문 장편 예심 심사평</a></td>
+                            <td class="date">18.10.15</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">11</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 본선경쟁 부문 단편 예심 심사평</a></td>
+                            <td class="date">18.10.15</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <a href="#tb1">≪</a>
+                                <a href="#tb1">1</a>
+                                <a href="#tb2">2</a>
+                                <a href="#tb3">3</a>
+                                <a class="on">4</a>
+                                <a href="#tb5">5</a>
+                                <a href="#tb5">≫</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+            <table id="tb3" class="tb">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num"><a href="">30</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 개막영상 연출자 발표</a></td>
+                            <td class="date">18.11.22</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">29</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 초대권 사용 안내</a></td>
+                            <td class="date">18.11.21</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">28</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 시네토크 안내</a></td>
+                            <td class="date">18.11.20</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">27</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 티켓카탈로그 변경사항 공지 (11/26)</a></td>
+                            <td class="date">18.11.19</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">26</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 티켓 카탈로그 배포 안내</a></td>
+                            <td class="date">18.11.16</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">25</a></td>
+                            <td class="tb_tit"><a href="">독립영화 인터뷰 매거진 NOW 17호 '우리는 여기에 있다' - 독립예술영화관 스페셜</a></td>
+                            <td class="date">18.11.16</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">24</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 토크포럼 안내</a></td>
+                            <td class="date">18.11.16</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">23</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 온라인 예매 안내</a></td>
+                            <td class="date">18.11.13</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">22</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 심야상영 밤새GO!</a></td>
+                            <td class="date">18.11.13</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">21</a></td>
+                            <td class="tb_tit"><a href="">'배우프로젝트 - 60초 독백 페스티벌' 예심 선정자 및 심사위원 발표 </a></td>
+                            <td class="date">18.11.12</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <a href="#tb1">≪</a>
+                                <a href="#tb1">1</a>
+                                <a href="#tb2">2</a>
+                                <a class="on">3</a>
+                                <a href="#tb4">4</a>
+                                <a href="#tb5">5</a>
+                                <a href="#tb5">≫</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+            <table id="tb2" class="tb">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num"><a href="">40</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2019 프로그램팀 채용공고 (5/28-6/5)</a></td>
+                            <td class="date">19.05.28</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">39</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2019 시나리오 크리에이티브 LAB 지원 사업 공모 [6월 10일 - 6월 25일]</a></td>
+                            <td class="date">19.05.20</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">38</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 새로운선택 부문 심사평</a></td>
+                            <td class="date">118.12.10</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">37</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 본선경쟁 부문 심사평</a></td>
+                            <td class="date">18.12.10</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">36</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 배우프로젝트 - 60초 독백 페스티벌 수상자 발표</a></td>
+                            <td class="date">18.12.08</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">35</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 수상작 발표</a></td>
+                            <td class="date">18.12.07</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">34</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 깜짝상영작 발표</a></td>
+                            <td class="date">18.12.05</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">33</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 관객이벤트 안내</a></td>
+                            <td class="date">18.11.29</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">32</a></td>
+                            <td class="tb_tit"><a href="">독립영화제2018 일일자원활동가 안내</a></td>
+                            <td class="date">18.11.28</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">31</a></td>
+                            <td class="tb_tit"><a href="">『다시 만난 독립영화』: 독립영화 아카이브, 구술사 프로젝트 발간</a></td>
+                            <td class="date">18.11.28</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <a href="#tb1">≪</a>
+                                <a href="#tb1">1</a>
+                                <a class="on">2</a>
+                                <a href="#tb3">3</a>
+                                <a href="#tb4">4</a>
+                                <a href="#tb5">5</a>
+                                <a href="#tb5">≫</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+            <table id="tb1" class="tb">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num notinum"><a href="">공지</a></td>
+                            <td class="tb_tit noti_tit"><a href=""> 서울독립영화제2019 후반제작지원 사업 공모 [8월 5일(월) ~ 8월 16일(금), 오후 6시]</a></td>
+                            <td class="date notidate">19.07.29</td>
+                        </tr>
+                        <tr>
+                            <td class="num notinum"><a href="">공지</a></td>
+                            <td class="tb_tit noti_tit"><a href="">서울독립영화제2019 작품 공모 안내 [8월 1일(목) ~ 9월 2일(월), 오후 7시]</a></td>
+                            <td class="date notidate">19.05.03</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">48</a></td>
+                            <td class="tb_tit"><a href="">사무국 정동진독립영화제 출장 안내 [8월 2일(금)-8월 5일(월)] </a></td>
+                            <td class="date">19.07.29</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">47</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2019 시나리오 크리에이티브 LAB 심사 결과 발표 </a></td>
+                            <td class="date">19.07.24</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">46</a></td>
+                            <td class="tb_tit"><a href="">[한낮의 피크닉] 관객과의 대화(GV) 안내</a></td>
+                            <td class="date">19.07.12</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">45</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2019 시나리오 크리에이티브 LAB 지원 사업 공모결과 발표</a></td>
+                            <td class="date">19.06.27</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">44</a></td>
+                            <td class="tb_tit"><a href="">독립영화 인터뷰 매거진 NOW 18호 '우리는 어떻게 첫 장편영화를 완성했는가'</a></td>
+                            <td class="date">19.06.25</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">43</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2018 개막작 <한낮의 피크닉> 7월 4일 개봉</a></td>
+                            <td class="date">19.06.05</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">42</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제 사무국 이전 안내</a></td>
+                            <td class="date">19.06.04</td>
+                        </tr>
+                        <tr>
+                            <td class="num"><a href="">41</a></td>
+                            <td class="tb_tit"><a href="">서울독립영화제2019 사전 토크포럼 - All About First Feature Film</a></td>
+                            <td class="date">19.05.31</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <a href="#tb1">≪</a>
+                                <a class="on">1</a>
+                                <a href="#tb2">2</a>
+                                <a href="#tb3">3</a>
+                                <a href="#tb4">4</a>
+                                <a href="#tb5">5</a>
+                                <a href="#tb5">≫</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+            </table>
+        </div>
+            
+       
+    </main>
+</body></html>
