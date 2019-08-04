@@ -1,0 +1,96 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; font-family: 'Nanum Gothic', sans-serif;
+background: #e0d5c5; -ms-overflow-style: none; }
+::-webkit-scrollbar{display: none;}
+
+li{list-style: none;}
+a{text-decoration: none; border: none; outline: none;}
+label, input, button{border: none; outline: none; cursor: pointer; background: transparent;}
+image{border: 0;}
+
+
+/* header 작업 */
+.wrap{width: 100%; height: 100%;}
+
+#hd{width: 100%; height: 100px; position: fixed; top: 0; left: 0%; z-index: 10; transition: 0.6s;}
+.logo{display: block; width: 201px; height: auto; margin-left: 40px; padding-top: 40px; transition: 0.6s; float: left;}
+#gnb{float: left;margin-left: 50px; padding-top: 27px; transition: 0.6s; position: relative;}
+#gnb li.mainmenutxt{float: left; padding: 1em; margin-right: 15px;}
+#gnb li a img{display: block; margin: 5px;}
+.submenu{position: absolute; top: 80px;  width: 150px;
+visibility: hidden; transition: 0.5s; opacity: 0; z-index: 50; border: 1px solid #000;}
+#sub1{left: -30px;}
+#sub2{left: 98px;}
+#sub3{left: 218px;}
+#sub4{left: 361px;}
+#sub5{left: 525px;}
+#sub6{left: 680px;}
+#sub7{left: 875px;}
+.submenu li{line-height: 3; }
+.submenu li:hover a.submenutxt{color: #000;}
+.submenu li a.submenutxt{display: block; font-size: 12px; text-align: center; color: #000;}
+#gnb li.mainmenutxt:hover .submenu{visibility: visible; opacity: 1;}
+#gnb.on{margin-top: -110px;}
+#gnb.off{margin-top: 0px;}
+.logo.on{margin-top: -110px;}
+.logo.off{margin-top: 0px;}
+
+
+
+
+/*메뉴박스작업*/
+.menu_icon{position: absolute; top: 30px; right: 2%; cursor: pointer;}
+.menu_icon.on #menu_box{display: block;}
+.menu_icon img{display: block; width: 90%; height: auto; padding: 5px;}
+#menu_box{ position: fixed;
+top: 0px; left: 0%; width: 100%; height: 100%; z-index: 99;background: rgba(0, 0, 0, 0.85); }
+.mymenu_box{position: absolute; top: 4%; right: 8%;}
+.mymenu li{float: left; margin-right: 40px;}
+.mymenu li a{display: block; font-size: 14px; color: #b9b9b9; font-weight: bold;}
+.close{position: absolute; top: 3%; right: 2%; display: block; padding: 5px;}
+.search{position: absolute; top: 50%; right: 18%;}
+#keyword{width: 300px; height: 35px; text-indent: 20px; background: none; 
+border: 2px solid #fff; border-radius: 30px; color: #b9b9b9;}
+.search_btn{width: 40px; height: 40px; background: transparent;
+position: absolute;top: 0; right: -14%; opacity: 0;}
+.search_icon{position: absolute; top: 5px; right: -40px;}
+.mtxt_box{position: absolute; top: 18%;}
+.mtxtimg img{display: block; }
+.mtxt{float: left; margin-left: 250px; width: 250px; height: auto;}
+.mtxt a.mtxtimg{display: block; padding-top: 20px; padding-bottom: 20px; margin-top: 25px;}
+.stxt{position: absolute; left: 60%; margin-left: 280px; width: 800px;}
+#stxt1{top: 2%;}
+#stxt2{top: 17%;}
+#stxt3{top: 31%;}
+#stxt4{top: 45%;}
+#stxt5{top: 60%;}
+#stxt6{top: 74%;}
+#stxt7{top: 88%;}
+.stxt li{float: left; line-height: 5; margin-right: 30px;}
+.stxt li a{display: block; color: #b9b9b9; margin: 5px; font-size: 14px;}
+.stxt li:hover a{color: #ffffff;}
+.icon_box{position: absolute; top: 60%; right: 20%;}
+.icon_box li{margin-top: 20px;}
+
+/* store 영역 */
+.store_box{ width: 80%; margin: 0 auto; height: 1000px; margin-bottom: 600px; }
+.storetit{display: block; width: 30%; margin: 15rem auto 0;}
+.store_stxt{font-size: 13px; text-align: center;}
+.stores{margin-top: 5rem; margin-left: 13rem;}
+.stores li{width: 30%; height: 200px; float: left;padding: 20px; margin-top: 50px;}
+.stores .title{font-size: 18px; font-weight: bold;padding: 10px;}
+.stores .comment{font-size: 14px;padding: 10px; line-height: 1.5;}
+.stores a{border-bottom: 1px solid #000; padding: 5px; color: #000; margin-left: 5px; margin-top: 10px; font-size: 14px;}
+
+
+
+/* 영어문장일 경우, 글씨가 잘릴 수 있으므로 wordbreak:break all; 을 써라. */
+
+.ft{clear: both; width: 100%; height: 330px; background: #000; position: relative;}
+.ftlogo{margin-top: 35px; margin-left: 40px;}
+.ftmenu{margin-top: 40px; margin-left: 40px;}
+.ftmenu li{float: left; margin-right: 40px;}
+.fttxt1{display: block;position: absolute; left: 40px; top: 150px; display: block;}
+.fttxt2{display: block;position: absolute; left: 40px; top: 200px; display: block;}
+.fttxt3{display: block;position: absolute; left: 40px; top: 250px; display: block;}
