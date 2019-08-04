@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="title" content="Singles">
     <meta name="author" content="YOONJEONG">
@@ -26,58 +26,58 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
     $(document).ready(function(){
-    var wd_s = $(window).width();
-    var wd = $(".vs_box li").height();
-    var sl = $(".vs_box");
-    var btn1 = $(".btn_fr .vs_btn_box");
-    var len = $(".vs_box li").length;
-    sl.css("margin-top", -wd+32+"px");
-    if(wd_s>=960){
-        function nextSlideAni(){
-            sl.not(":animated").animate({"margin-top":wd*-2+32+"px"}, 600, function(){
-                sl.find("li").eq(0).appendTo(sl);
-                sl.css("margin-top", -wd+32+"px");
-                btn1.find("li").eq(0).appendTo(btn1);
-                btn1.find("li").removeClass("on");
-                btn1.find("li").eq(0).addClass("on");
+        // menu박스 나타나게하기
+        $(".menu_icon").click(function(){
+                $(".m_menubox").addClass("on");
             });
-        }
-        function prevSlideAni(){
-            sl.find("li").eq(len-1).prependTo(sl);
-            sl.css("margin-top", wd*-2+32+"px");
-            sl.not(":animated").animate({"margin-top":-wd+32+"px"}, 600, function(){
-                btn1.find("li").eq(len-1).prependTo(btn1);
-                btn1.find("li").removeClass("on");
-                btn1.find("li").eq(0).addClass("on");
+            $(".m_menubox .close").click(function(){
+                $(".m_menubox").removeClass("on");
             });
-        }
-        var intv1 = setInterval(function(){ 
-            nextSlideAni();
-        }, 3000);
-        $(".btn_fr li").click(function(){
-            clearInterval(intv1);
-            var ix = $(this).index();
-            for(var i=0;i<ix-1;i++){
-                sl.find("li").eq(0).appendTo(sl);
-                btn1.find("li").eq(0).appendTo(btn1);
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+            var wd_s = $(window).width();
+            var wd = $(".vs_box li").height();
+            var sl = $(".vs_box");
+            var btn1 = $(".btn_fr .vs_btn_box");
+            var len = $(".vs_box li").length;
+            sl.css("margin-top", -wd+32+"px");
+            if(wd_s>=960){
+                function nextSlideAni(){
+                    sl.not(":animated").animate({"margin-top":wd*-2+32+"px"}, 600, function(){
+                        sl.find("li").eq(0).appendTo(sl);
+                        sl.css("margin-top", -wd+32+"px");
+                        btn1.find("li").eq(0).appendTo(btn1);
+                        btn1.find("li").removeClass("on");
+                        btn1.find("li").eq(0).addClass("on");
+                    });
+                }
+                function prevSlideAni(){
+                    sl.find("li").eq(len-1).prependTo(sl);
+                    sl.css("margin-top", wd*-2+32+"px");
+                    sl.not(":animated").animate({"margin-top":-wd+32+"px"}, 600, function(){
+                        btn1.find("li").eq(len-1).prependTo(btn1);
+                        btn1.find("li").removeClass("on");
+                        btn1.find("li").eq(0).addClass("on");
+                    });
+                }
+                var intv1 = setInterval(function(){ 
+                    nextSlideAni();
+                }, 3000);
+                $(".btn_fr li").click(function(){
+                    clearInterval(intv1);
+                    var ix = $(this).index();
+                    for(var i=0;i<ix-1;i++){
+                        sl.find("li").eq(0).appendTo(sl);
+                        btn1.find("li").eq(0).appendTo(btn1);
+                    }
+                    nextSlideAni();
+                    intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
+                });
             }
-            nextSlideAni();
-            intv1 = setInterval(function(){ nextSlideAni(); }, 3000);
-        }).resize();
-    }
 
-    // menu박스 나타나게하기
-    $(".menu_icon").click(function(){
-        $(".m_menubox").addClass("on");
-    });
-    $(".m_menubox .close").click(function(){
-        $(".m_menubox").removeClass("on");
-    });
-
-
-
-
-    });
+    }).resize();
     </script>
 </head>
 <body>
