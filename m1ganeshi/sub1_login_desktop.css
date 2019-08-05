@@ -77,7 +77,7 @@ position: absolute;top: 0; right: -14%; opacity: 0;}
 .login_box{ width: 70%; margin: 0 auto; height: 800px;}
 .login_box h2{text-align: center; width: 40%; margin: 0 auto; font-size: 20px; color: #000; text-indent: 15px;border-bottom: 2px solid #000; padding: 20px; margin-top: 15rem;}
 
-#frm1{width: 29%; height: 300px; margin: 50px auto; }
+#frm1{width: 33%; height: 300px; margin: 50px auto; }
 #frm1 div{width: 60%; height: 40px; margin-top: 10px;}
 .frm_tit{width: 150px; font-size: 14px; line-height: 40px; font-weight: bold; display: block; float: left;}
 #frm1 div input.text{font-size: 12px; border: 1px solid #ccc; padding: 10px; width: 250px;}
