@@ -21,6 +21,12 @@
             
 
             // 탭메뉴
+
+            $(".gal_tits li button").click(function(){
+                $(this).addClass("on");
+                $(this).parent().siblings().find("button").removeClass("on");
+            });
+
             $(".page").css("display", "none");
             $(".page").eq(0).fadeIn(800);
             $(".page").find(".data").removeClass("on");
@@ -116,11 +122,33 @@
          
 
         /* 갤러리  */
-        .gal_tit_box{width: 43%; height: 40px; padding:150px 0px 0px 550px;}
-        .gal_tits li.galtit{float: left; padding: 10px; width: 250px; height: 40px; }
+        .gal_tit_box{width: 43%; height: 50px; padding:150px 0px 0px 550px;}
+        .gal_tits li.galtit{float: left; padding: 10px; width: 250px; height: 50px;}
         .galtit button{width: 100%; line-height: 3; color: #d4d4d4; text-align: center; font-size: 20px; 
             text-shadow: 2px 2px 1px #676767; margin: 0 auto;}
-        .gal_tits li {
+
+
+            .gal_tit_box li button{
+  padding:10px;
+  background:transparent;
+  border: 1px solid #d4d4d4;
+  box-shadow:inset 0 0 0 0 #d4d4d4;
+  -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
+  -moz-transition: -moz-box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out;
+}
+.gal_tit_box li button:hover{
+  color:#000;
+  text-shadow: none;
+}
+.gal_tit_box li button:hover{
+  box-shadow:inset 0 100px 0 0 #d4d4d4;
+}
+
+.gal_tit_box li button.on{background: #d4d4d4; color: #000; text-shadow: none;}
+
+
+        /* .gal_tits li {
                 position: relative;
                 display: inline-block;
                 overflow: hidden;
@@ -137,26 +165,27 @@
                 .gal_tits li button:before {
                 position: absolute;
                 top: 100%;
+                margin-top:10px;
                 content: attr(data-link-alt);
-                color: #d4d4d4;
                 -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
                 }
 
                 .gal_tits li:hover button,
                 .gal_tits li:focus button {
-                -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
-                }
+                    height: 60px;
+                -webkit-transform: translateY(-120%);
+                transform: translateY(-120%);
+                } */
     </style>
     <style> /* 갤러리 */
-    .page{clear: both; width:100vw; height:100vh; margin-top: 200px; }
+    .page{clear: both; width:80vw; height:100vh; margin-top: 200px; }
     .page1.on, .page2.on, .page3.on{display: block;}
     .page_con {width:100vw; height:100vh; }    
-    .pg_tit { width: 280px; margin: 0 auto; margin-top: 150px; line-height:3; text-align:center; color:#d4d4d4; font-weight: lighter; font-size: 30px;
-    border-bottom: 1px solid #d4d4d4; border-top: 1px solid #d4d4d4;}
+    .pg_tit { width: 280px; margin: 0 auto; margin-top: 150px; margin-bottom: 150px; line-height:3; text-align:center; color:#d4d4d4
+    ; border-top: 1px solid #d4d4d4; border-bottom: 1px solid #d4d4d4;font-weight: lighter; font-size: 30px;}
         .data{width: 1770px; margin: 0 auto;}
-    .data li{float: left; margin: 8%;}
+    .data li{float: left; margin: 5% 8%;}
     .data li { display:block; opacity:0; transition:0.5s; overflow-x:hidden; cursor: pointer;}
     .data.on li { opacity:1; }
     .data li.it1 { transition-delay:0.4s; }
@@ -165,21 +194,21 @@
     .data li.it4 { transition-delay:1.6s; }
     .data li.it5 { transition-delay:2s; }
     .data li.it6 { transition-delay:2.4s; }
-    .it_tit { color:#d4d4d4; line-height:3; text-align: center; padding: 30px; }
+    .it_tit { color:#d4d4d4; line-height:3; text-align: center; padding: 30px;margin-left: 3rem; }
     .pic{display: block; width: 100%;}
        
     </style>
     <style> /* 탭 */
     .tab_contain { display:none; position: fixed; top:0; left:0; width: 100%; height: 100%; background: rgba(114, 114, 114, 0.8); z-index: 10; }
     .tab_fr { display:none; }
-    .tab_close{width: 100px; height: 60px; position: absolute; top: 2.5rem; left:56rem;}
+    .tab_close{width: 100px; height: 60px; position: absolute; top:1rem; right:1rem;}
     .tab_close img{display: block; width: 100%;}
-    .tab_box{width: 80%; height: 70%; background: #1f1f1f;  box-shadow: 5px 5px 10px #3e3e3e; border-radius: 10px; position: absolute; top: 12rem; left: 12rem;}
-    .tab_img{margin: 6.5rem 0 5rem 8rem;  float: left; }
+    .tab_box{width: 80%; height: 90%; background: #1f1f1f;  box-shadow: 5px 5px 10px #3e3e3e; border-radius: 10px; position: absolute; top: 3rem; left: 12rem;}
+    .tab_img{margin: 13rem 0 5rem 8rem;  float: left; }
     .tab_img img{display: block; width: 100%;}
-    .tab_right{float: right; width: 750px; margin-right: 40px;}
+    .tab_right{float: right; width: 750px; margin-right: 40px; margin-top: 3rem;}
     .tab_tit{font-size: 36px; color: #d4d4d4; padding: 20px; margin-top: 5rem;  width: 500px; float: right; text-align: center; margin-right: 110px; border-bottom: 2px solid #d4d4d4;}
-    .con_box{padding: 10px; margin: 10px 0 0px 0px; width: 600px; height: 220px; margin-left: 2rem;float: right; margin-right: 60px;}
+    .con_box{padding: 10px; margin: 10px 0 0 0; width: 600px; height: 280px; margin-left: 2rem;float: right; margin-right: 60px;}
     .t_mcon{width: 100%; height: 40px; margin-top: 20px; }
     .tab_ctit{font-size: 12px; color: #1f1f1f; padding: 8px; background:  #d4d4d4; width: 150px; text-align: center; margin-top: 10px; margin-left: 20px; float: left;}
     .t_mcon a{display: block;padding: 5px; text-indent:20px; font-size: 16px; color: #d4d4d4; line-height: 40px;}
@@ -345,8 +374,9 @@
     </div>
     <div class="tab_contain" id="pop1">
         <div class="tab_fr" id="tab1">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup1.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">서울우유협동조합</h2>
@@ -354,6 +384,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m5seoulmilk" target="blank">https://yoonding.github.io/m5seoulmilk</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 제품소개(sub page)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -376,8 +410,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab2">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup2.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">Ganeshi [가네쉬]</h2>
@@ -385,6 +420,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m1ganeshi" target="blank">https://yoonding.github.io/m1ganeshi</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 로그인(log-in), 회원가입(join), 매장찾기(store)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -407,8 +446,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab3">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup3.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">금강유역환경청</h2>
@@ -416,6 +456,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m2kumkang" target="blank">https://yoonding.github.io/m2kumkang</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 로그인(log-in), 회원가입(join), 국민마당-환경게시판(board)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -437,8 +481,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab4">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup4.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">서울독립영화제</h2>
@@ -446,6 +491,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m7seoulmovie" target="blank">https://yoonding.github.io/m7seoulmovie</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 상영프로그램(program), 커뮤니티(community)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -468,8 +517,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab5">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup5.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">용한의원</h2>
@@ -477,6 +527,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m3yong" target="blank">https://yoonding.github.io/m3yong</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 한의원소개-찾아오시는 길(introduce), 클리닉(clinic)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -499,8 +553,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab6">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup6.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">Singles [싱글즈]</h2>
@@ -508,6 +563,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m4singles" target="blank">https://yoonding.github.io/m4singles</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지 </h4>
+                            <p class="tab_com">메인(index), 로그인(log-in), 회원가입(join), fashion-화보</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -529,8 +588,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab7">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+           
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup7.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">belif [빌리프]</h2>
@@ -538,6 +598,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/belif" target="blank">https://yoonding.github.io/belif</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com">메인(index),스킨케어(product-skincare)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -560,8 +624,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab8">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+           
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup8.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">MUJI [무인양품]</h2>
@@ -569,6 +634,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/muji" target="blank">https://yoonding.github.io/muji</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com">메인(index),기획전</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -591,8 +660,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab9">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+            
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup9.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">경기문화포털</h2>
@@ -600,6 +670,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/kyeongkiculture" target="blank">https://yoonding.github.io/kyeongkiculture</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com">메인(index), 문화행사, 로그인(log-in), 회원가입(join)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -622,8 +696,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab10">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+           
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup10.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">Spring Comma [스프링콤마]</h2>
@@ -631,6 +706,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/springcomma" target="blank">https://yoonding.github.io/springcomma</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com"></p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -653,8 +732,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab11">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+           
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup11.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">DOREDORE [도레도레]</h2>
@@ -662,6 +742,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/doredore"target="blank">https://yoonding.github.io/doredore</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com">메인(index), DOREDORE, MENU-CAKE, MENU-BEVERAGE, DOREDORE NEWS</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
@@ -684,8 +768,9 @@
             </div>
         </div>
         <div class="tab_fr" id="tab12">
-            <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
+           
             <div class="tab_box">
+                    <button class="tab_close"><img src="./images/tab_close.png" alt=""></button>
                 <img src="./images/mockup12.png" alt="" class="tab_img">
                 <div class="tab_right">
                     <h2 class="tab_tit">제니요가학원</h2>
@@ -693,6 +778,10 @@
                         <div class="t_mcon">
                             <h4 class="tab_ctit">홈페이지 바로가기</h4>
                             <a href="https://yoonding.github.io/m3jenny"target="blank">https://yoonding.github.io/m3jenny</a>
+                        </div>
+                        <div class="t_mcon">
+                            <h4 class="tab_ctit">제작페이지</h4>
+                            <p class="tab_com">메인(index)</p>
                         </div>
                         <div class="t_mcon">
                             <h4 class="tab_ctit">상세설명</h4>
