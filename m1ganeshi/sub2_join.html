@@ -167,7 +167,20 @@
                 $("#menu_box").fadeOut(500);
             });
             
-          
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                // consol.log(sc_top);
+                    if(sc_top>=100 && sc_top<5000){
+                        $("#gnb, .logo").addClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    } else if(sc_top>=1200){
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").addClass("off");
+                    } else{
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    }
+            });
            
         });
     </script>

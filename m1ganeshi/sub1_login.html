@@ -49,7 +49,23 @@
             .icon_box li{width: 130px; float: left; margin-right: 8%;}
             .icon_box li a{display: block; width: 130px; height: 30px; line-height: 30px;margin-right: 0; padding: 0px 10px; text-align: center;}
          
-           
+                       /* login 영역 */
+.login_box{ width: 70%; margin: 0 auto; height:600px;}
+.login_box h2{text-align: center; width: 80%; margin: 0 auto; font-size: 16px; color: #000; text-indent: 15px;
+    border-bottom: 1px solid #000; padding: 20px; margin-top: 7rem;}
+
+#frm1{width: 72%; height: 300px; margin: 50px auto; }
+#frm1 div{width: 80%; height: 40px; margin-top: 50px;}
+.frm_tit{width: 100%; font-size: 14px; line-height: 40px; font-weight: bold; display: block; float: none; margin-left: -15px;}
+#frm1 div input.text{font-size: 12px; border: 1px solid #ccc; padding: 10px; width: 100%; margin-left: -10px;}
+.login_search{width: 100%; display: block; font-size: 12px; color: #000000; margin-left: 5rem; padding: 5px; margin-top: 40px;}
+.login_search a:hover{border-bottom: 1px solid #000;}
+#frm1 div input.frmBtn2{background: #000000; color: #ffffff; padding: 10px; width: 100%; margin-left: 0px; margin-top: 0px;}
+#frm1 div input.frmBtn1{border: 1px solid #ccc; padding: 10px; width: 100%; margin-left: 0px; display: none;}
+
+.memberno{color: #000000; font-size: 12px; font-weight: bold; padding: 10px; margin-top: 15px; margin-left: -10px;}
+.join_btn{ display: block;background: rgb(119, 119, 119); padding: 10px; width: 170px; margin-left: 0px;}
+.join_btn button{display: block; color: #ffffff;margin: 0 auto; }
             
             
             
@@ -104,7 +120,23 @@
             .icon_box li{width: 300px; float: left; margin-right: 8%;}
             .icon_box li a{display: block; width: 200px; height: 40px; line-height: 40px;margin-right: 0; padding: 0px 10px; text-align: center;}
             
-            
+            /* login 영역 */
+.login_box{ width: 70%; margin: 0 auto; height:600px;}
+.login_box h2{text-align: center; width: 80%; margin: 0 auto; font-size: 20px; color: #000; text-indent: 15px;
+    border-bottom: 1px solid #000; padding: 20px; margin-top: 10rem;}
+
+#frm1{width: 72%; height: 300px; margin: 50px auto; }
+#frm1 div{width: 60%; height: 40px; margin-top: 10px;}
+.frm_tit{width: 100px; font-size: 14px; line-height: 40px; font-weight: bold; display: block; float: left;}
+#frm1 div input.text{font-size: 12px; border: 1px solid #ccc; padding: 10px; width: 250px;}
+.login_search{display: block; font-size: 12px; color: #000000; margin-left: 16rem; padding: 5px;}
+.login_search a:hover{border-bottom: 1px solid #000;}
+#frm1 div input.frmBtn2{background: #000000; color: #ffffff; padding: 10px; width: 150px; margin-left: 0px;}
+#frm1 div input.frmBtn1{border: 1px solid #ccc; padding: 10px; width: 150px; margin-left: 40px;}
+
+.memberno{color: #000000; font-size: 12px; font-weight: bold; padding: 10px; margin-top: 30px; margin-left: 30px;}
+.join_btn{ display: block;background: rgb(119, 119, 119); padding: 10px; width: 280px; margin-left: 40px;}
+.join_btn button{display: block; color: #ffffff;margin: 0 auto; }
             
         }
 
@@ -124,7 +156,21 @@
                 $("#menu_box").fadeOut(500);
             });
             
-          
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                // consol.log(sc_top);
+                    if(sc_top>=100 && sc_top<5000){
+                        $("#gnb, .logo").addClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    } else if(sc_top>=1200){
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").addClass("off");
+                    } else{
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    }
+            });
+
            
         });
     </script>
@@ -297,7 +343,23 @@
 
         <main class="login_box">
             <h2>로그인</h2>
-            
+            <form action="" id="frm1">
+                <div style="width:100%">
+                    <span class="frm_tit">아이디</span>
+					<input type="text" class="text" id="m_id" placeholder="아이디 입력" class="inputCon">
+				</div>
+                <div style="width:100%">
+                    <span class="frm_tit">비밀번호</span>
+					<input type="password" class="text" id="m_pw" placeholder="암호 입력" class="inputCon">
+                </div>
+                <span class="login_search"><a href="">아이디</a>/<a href="">비밀번호 찾기</a></span>
+				<div style="width:100%">
+					<input type="submit" value="취소" class="frmBtn1">
+					<input type="reset" value="로그인" class="frmBtn2">
+                </div>
+                <p class="memberno">아직 회원이 아니신가요?</p>
+                <a href="sub2_join.html" class="join_btn"><button>회원가입</button></a>
+			</form>
             
             
             

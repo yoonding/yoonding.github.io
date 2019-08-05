@@ -141,7 +141,20 @@
                 $("#menu_box").fadeOut(500);
             });
             
-          
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                // consol.log(sc_top);
+                    if(sc_top>=100 && sc_top<5000){
+                        $("#gnb, .logo").addClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    } else if(sc_top>=1200){
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").addClass("off");
+                    } else{
+                        $("#gnb, .logo").removeClass("on");
+                        $("#gnb, .logo").removeClass("off");
+                    }
+            });
            
         });
     </script>
@@ -320,42 +333,43 @@
                <li>
                    <p class="title">[현대백화점 무역센터점]</p>
                    <p class="comment">서울 강남구 테헤란로 517<br>현대백화점 무역센터점 2층<br>02-3467-8536</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=975bf63f20536790238c9f2dc56dcb1e&pinId=38248533&pinType=site&lat=e3b6afd9484864fc7bc7846e139b3846&dlevel=11&enc=b64" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 천호점]</p>
                    <p class="comment">서울 강동구 천호대로 1005<br>현대백화점 무역천호점 1층<br>02-2225-7126</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=602516ef64d8e5c9d166229c38c89c53&pinId=38575995&lat=4305ba619ae1747df6f026403011baf2&dlevel=11&enc=b64&pinType=site" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 신촌점]</p>
                    <p class="comment">서울 서대문남구 신촌로 83<br>현대백화점 신촌점 2층<br>02-3145-2260</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=187c266ad8ac28749996a4df634cb069&pinId=1933121107&lat=2a2bd7b5198f872246d9671bef40a6c2&dlevel=8&enc=b64&pinType=site
+                   " target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[롯데백화점 본점]</p>
                    <p class="comment">서울 중구 소공동 1<br>롯데백화점 본점 지하 1층<br>02-772-3742</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=956b0b3914ac6dd915756786eb55b4f1&pinId=1908343480&lat=b5f4982b30709af7da5f4b24568ca0d1&dlevel=8&enc=b64&pinType=site" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 판교점]</p>
                    <p class="comment">경기 성남시 분당구 판교역로 146번길 20<br>현대백화점판교점 1층<br>031-5170-3163</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=79a9e4a84fa6e4a51f253b38f2d75bd2&pinId=240444476&lat=6b515d7a2a743624b3409e8e0a543e4e&dlevel=11&enc=b64&pinType=site" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 부산점]</p>
                    <p class="comment">부산 동구 범일로 125<br>현대백화점부산점 1층<br>051-667-0132</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=84def8567d6201e06caccf53ce4ae4b1&pinId=38590306&lat=25060b95d400046b52dc2c29e95d711d&dlevel=11&enc=b64&pinType=site" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 충청점]</p>
                    <p class="comment">충북 청주시 흥덕구 직지대로 308<br>현대백화점 충청점 1층<br>043-909-4146</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=691aaf506f2c2f3d2453925fd47e3ef5&pinId=1178180967&pinType=site&lat=6c63f77e3d54eb789866fd38da63e49a&dlevel=11&enc=b64" target="blank">Map</a>
                </li>
                <li>
                    <p class="title">[현대백화점 대구점]</p>
                    <p class="comment">대구 북구 태평로 161<br>롯데백화점 대구점 지하1층<br>053-660-2993</p>
-                   <a href="">Map</a>
+                   <a href="https://map.naver.com/?mapmode=0&lng=d18444f385a091b554ff7b23eb5db7d4&pinId=1194030715&lat=e1db678a6840cd04e2c79e885a9905e7&dlevel=11&enc=b64&pinType=site" target="blank">Map</a>
                </li>
            </ul>
             
