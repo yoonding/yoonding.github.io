@@ -51,27 +51,40 @@ left: 0; bottom: 6rem; background: #5e4e71;}
 .board_tit{color: #ccc; font-size: 32px; font-weight: lighter; text-align: center; padding: 30px; margin-bottom: 20px;}
 
 
-table{display: table;}
-tr{display: table-row;}
-th, td{display: table-cell;}
-.tb{width: 1000px;position: absolute; background: #000; left: calc(50% - 305px);z-index: 10;}
 
 
-.tb th{background: #5e4e71;color: #fff; font-weight: lighter;}
-.tb th, .tb td{line-height: 42px;}
-.tb td{color: #ccc;  border-bottom: 1px solid #5e4e71; }
-.tb tr a{color: #ccc;}
-.tb .num{ width: 10%; text-align: center;}
-.tb .tb_tit{ width: 75%; text-indent: 1em;}
-.tb .date{text-align: center;}
-/*.tb tfoot{clear: both; width: 100%;}*/
-.tb tfoot td{line-height: 80px; text-align: center; border-bottom: none;}
-.tb tfoot td a{padding: 5px 10px;}
-.tb tfoot td a.on{ color: #fff; background: #5e4e71;}
-.tb:target{z-index: 11;}
-
-.tb .notinum a{color: #a28fba;}
-.tb .noti_tit a{color: #a28fba;}
-.tb .notidate{color: #a28fba;}
 
 
+
+/* 게시판 */
+.tb{margin: 1em 0; min-width: 300px; border-top: 2px solid #5e4e71; border-bottom: 2px solid #5e4e71;} 
+.tb th{display: none;}
+.tb td{display:block; clear:both; line-height: 3; }
+.tb td:first-child{padding-top: 0.5em;}
+.tb td:last-child{padding-bottom: 0.5em;}
+.tb td:before{
+    content: attr(data-val) ": ";
+    font-weight: bold;
+    width:100px;
+    color: #5e4e71;
+    display:block;
+    float:left;
+    margin-left: 15px;
+}
+.num_box{clear: both; margin-left: 10rem; margin-top: 2rem;}
+.tb td a{color: #ccc; text-decoration: none;}
+
+.tb th .tb td{text-align: left;}
+
+.board_fr{width: 100%; padding: 20px; position: absolute; top: 15rem; background: #000; z-index: 10;}
+.board_fr div{line-height: 80px; }
+.board_fr div a{padding: 5px 15px; color: #ccc;}
+.board_fr div a.on{ color: #ccc; background: #5e4e71;}
+.board_fr:target{z-index: 11;}
+
+.num{ text-align:left; color: #cccccc; border-top: 1px solid #5e4e71;}
+.numnone{border-top: none;}
+.date{ text-align:left; color: #cccccc; }
+.title a{ display:block; overflow: hidden; white-space: nowrap; 
+    text-overflow: ellipsis; padding-left:0px; width:500px; float:left; line-height:48px;  
+padding-right: 20px; }

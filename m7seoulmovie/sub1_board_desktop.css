@@ -50,26 +50,51 @@ top: -20px; left: 5px; background: #5e4e71;}
 .board_stxt{color: #ccc; width: 300px; padding: 15px; margin-left:50px; margin-top: 30px; font-size: 14px;}
 .board_tit{color: #ccc; font-size: 32px; font-weight: lighter; text-align: center; padding: 30px; margin-bottom: 20px;}
 
-table{display: table;}
-tr{display: table-row;}
-th, td{display: table-cell;}
-.tb{width: 1000px;position: absolute; background: #000; left: calc(50% - 305px);z-index: 10;}
+
+.tb{margin: 1em 0; min-width: 300px; border-bottom: 2px solid #5e4e71} 
+    /*  min-width: 300; 최소 넓이는 반응형(모바일)사이즈만큼으로 설정 */
+    .tb tr{border-top: 1px solid #5e4e71; border-bottom: 1px solid #5e4e71;}
+    .tb th{display: none;}
+    /* th 안넣으면 위배되므로 넣어주어야하는데  */
+    .tb td{display: block;}
+    .tb td:first-child{padding-top: 0.5em;}
+    .tb td:last-child{padding-bottom: 0.5em;}
+    .tb td:before{
+        content: attr(data-val) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+
+    .tb th .tb td{text-align: left;}
+    
+        
+    .board_fr{width: 1000px; position: absolute; top: 22rem; background: #000; left: calc(50% - 305px); z-index: 10;}
+    .board_fr div{line-height: 80px; }
+    .board_fr div a{padding: 5px 10px; color: #ccc;}
+    .board_fr div a.on{ color: #ccc; background: #5e4e71;}
+    .board_fr:target{z-index: 11;}
+    
+    .num{width:100px; text-align: center;}
+    .date{width:150px; text-align: center;}
+    .title { width:740px; }
+    
+    .num_box{clear: both; margin-left: 20rem; margin-top: 3rem;}
+    .tb td a{color: #fff; text-decoration: none;}
 
 
-.tb th{background: #5e4e71;color: #fff; font-weight: lighter;}
-.tb th, .tb td{line-height: 42px;}
-.tb td{color: #ccc;  border-bottom: 1px solid #5e4e71; }
-.tb tr a{color: #ccc;}
-.tb .num{ width: 10%; text-align: center;}
-.tb .tb_tit{ width: 75%; text-indent: 1em;}
-.tb .tb_tit a:hover{border-bottom: 1px solid #ccc;}
-.tb .date{text-align: center;}
-/*.tb tfoot{clear: both; width: 100%;}*/
-.tb tfoot td{line-height: 80px; text-align: center; border-bottom: none;}
-.tb tfoot td a{padding: 5px 10px;}
-.tb tfoot td a.on{ color: #fff; background: #5e4e71;}
-.tb:target{z-index: 11;}
 
-.tb .notinum a{color: #a28fba;}
-.tb .noti_tit a{color: #a28fba;}
-.tb .notidate{color: #a28fba;}
+
+    
+    @media screen and (min-width:960px){
+    .tb td:before{display: none;}
+    .tb th, .tb td{display: table-cell; padding: 0.25em 0.5em; line-height: 50px;}
+    }
+    .tit{color: #34495e;}
+    .tb{background: #000; color: #ffffff; border-radius: 0.2em;}
+    .tb tr{border: 1px solid #46637e; }
+    .tb th, .tb td{margin: 0.5em 1em;}
+    .tb th, .tb td:before{color: #ccc; background: #5e4e71;}
+
+    
+    
