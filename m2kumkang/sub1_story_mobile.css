@@ -1,0 +1,107 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body, html{width: 100%; font-family: 'Noto Sans KR', sans-serif; 
+-ms-overflow-style: none;}
+::-webkit-scrollbar{display: none;}
+ul{list-style: none;}
+a{text-decoration: none;}
+input, button, label, select{outline: none; border:none; background: transparent;}
+img{border: none;}
+
+.wrap{width: 100%; height: 100%; }
+.frame{width: 90%; margin: 0 auto; position: relative; overflow: hidden;}
+#hd{clear: both; width: 100%; height: 60px; position: fixed; top: 0; left: 0; z-index: 99;
+background: #fff;}
+#page1{clear: both; width: 100%; position: relative; padding-bottom: 970px;}
+#page2{clear: both; width: 100%; height: 100vh; position: relative;}
+#page3{clear: both; width: 100%; height: 100vh; position: relative;}
+#ft{clear: both; width: 100%; height: 100px; position: relative; background: #000;}
+
+/* page */
+.page{background-repeat: no-repeat; background-size: cover; 
+    background-position: center center; width: 100%; height: 100vh; }
+.page#page1{background-image: url(./images/vs1.jpg);}
+.page#page2{background-image: url(./images/vs2.jpg);}
+.page#page3{background-image: url(./images/vs3.jpg);}
+
+/* header */
+.logo{display: block; position: absolute; top: 12px; left:12px; width: 130px; height:auto; }
+.logo img{display: block; width: 100%;}
+.gnb{clear: both;overflow-y: auto; position: fixed; height: 100%; top: 90px; right: -110%; width: 80%; background-color: #03224b; transition: 0.6s;}
+.gnb.open{right: 0;}
+.gnb_box{width: 83%; min-height: 100vh; padding: 10px 20px 100px 20px; margin-left: 5px;}
+.gnb_box li.mtxt{width: 100%; line-height: 4; position: relative; padding: 5px; border-bottom: 1px solid #3e5574;}
+.main_txt img{display: block; margin-top: 20px; width: 30%; margin-left: 5px;}
+.main_txt{display: block; padding: 5px;}
+
+.sub_menu{width: 180px; margin-left: 20px; display: none; margin-top: 10px;}
+.sub_menu li{width: 180px; line-height: 3;}
+.sub_menu li a{display: block; color: #d9d9d9; line-height: 3;}
+
+.tbn{position: fixed; top: 60px; right: -110%; width: 80%;
+background-color: #3e5574; transition: 0.6s;}
+.tbn.open{right: 0;}
+.tbn.close{right: -110%;}
+.tbn a.tbn_login{display: block; color: #000; font-size: 16px; padding: 5px; width: 50%; text-align: center; border-right: 1px solid #859fc1; color: #fff; font-size: 14px; float: left;}
+.lang{float: left; width: 46%;}
+.desk{display: block; font-size: 14px; color: #ffffff; width: 100%; text-align: center; line-height: 27px;}
+.lang_cel{ background: #03224b; margin-top: 10px; display: none; z-index: 100;}
+.lang_cel li a{display: block; font-size: 14px; color: #ffffff; line-height: 3; text-align: center;}
+
+.hdbtn_box{width: 85px; float: right; padding-top: 12px; margin-right: 15px;}
+.home{display: none;}
+.menuicon{float: right;width: 35px; height: 35px; background: #da0000; border-radius: 50%;}
+.menuicon img{display: block; width: 60%; margin-left: 7px;}
+.search{width: 35px; height: 35px; background: #03224b; border-radius: 50%; float: left; margin-right: 10px;}
+.search img{width: 60%;}
+.tnb1{display: none;}
+
+
+/* main */
+.storyimg{display: block; width: 100%; padding-top: 3.8rem;}
+.story_tit{text-indent: 7.5rem; font-size: 18px; padding:15px; background: #03224b;color: #ffff;}
+.main_con{width: 85%; margin: 0 auto; padding-top: 0.5rem;}
+.main_con h3{color: #053c85;  font-size: 18px; }
+.main_con p{line-height: 1.6em; width: 97%; margin-left: 2.5%;}
+.main_con img{display: block; padding: 40px 0 40px 0; width:90%; margin-left: 1rem;}
+.com1{ padding: 0px 10px 10px 0; margin-top: 30px;}
+.com2, .com3, .com4, .com5{margin-top: 50px; padding: 10px 10px 10px 0;}
+.storycom{color: #666666; font-size: 13px; font-weight: bold;}
+.storycom2{font-size: 15px;}
+.storycom3{font-size: 15px; margin-top: 20px; padding: 0px 15px 15px 0px;}
+
+
+
+
+
+
+.footer{clear: both; width: 100%; height: 140px; margin-top: 100px; background: #03224b;}
+.ftmenu{width: 950px; height: 50px; margin: 0 auto; border-bottom: 1px solid #666; }
+.ftmenu li{float: left; margin: 20px;}
+.ftmenu li:nth-child(1), .ftmenu li:nth-child(3), .ftmenu li:nth-child(5){display: none;}
+.ftmenu li:nth-child(2){margin-left: 2rem;}
+.ftmenu li a{display: block; color: #ccc; font-size: 12px;}
+
+.copyright{width: 100vw; height: 60px;margin-left: 2rem;margin-top: 20px;}
+.copyright img{display: block;width:120px; margin-left: 5.5rem;}
+.copyright p{display: block;color: #ccc; font-size: 10px; 
+font-weight: 100; width:730px; padding-top: 10px; display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

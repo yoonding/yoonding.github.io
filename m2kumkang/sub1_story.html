@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="금강유역환경청">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="금강유역환경청, 금강, 토지, 환경부">
+    <meta name="copyright" content="COPYRIGHT 2009금강유역환경청. ALL RIGHT RESERVED.">
+    <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="금강유역환경청">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="금강유역환경청">
+    <title>금강유역환경청</title>
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link rel="stylesheet" href="sub1_story_desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="sub1_story_tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="sub1_story_mobile.css" type="text/css" media="screen and (max-width:767px)">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <!-- 웹사이트 정보, 검색어, 저자, 앱이름, 3분 주기로 자동새로고침 -->
+    <meta http-equiv="refresh" content="180">
+    <!-- 앱에서 필요한 내용 환경설정 json(manifest.json) 연결
+    앱에서는 웹사이트, 모바일에 대한 셋팅이 먹히지 않기때문에 연결한다. -->
+    <link rel="manifest" href="manifest.json">
+    <!-- 아이콘 폰트 링크 (어썸아이콘) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <!-- jquery 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        //애널리틱스-빅데이터 관리해주는 사이트다. 이 script를 넣은 데이터를 기준으로 방문자 등을 분석해준다. 구글아이디로 가입.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-143287217-1');
+    </script>
+<script>
+
+        $(document).ready(function(){
+
+            $(".menuicon").click(function() {
+                $(".gnb, .tbn").toggleClass("open");
+            });
+
+            //반응형 메뉴 펼치기
+            $(".gnb_box .mtxt").click(function(){
+                $(this).find(".sub_menu").slideToggle();
+
+            });
+
+
+            //모바일에서 로고 이미지 바꾸기
+            $(window).resize(function() {
+                var wd_s = $(window).width();
+                if (wd_s < 1000) {
+                    $(".hdlogo").attr("src", "./images/mlogo.png");
+                } else {
+                    $(".hdlogo").attr("src", "./images/logo.png");
+                }
+            }).resize();
+
+            
+        
+            
+           
+                
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                    if(sc_top>=100 && sc_top<5000){
+                        $(".logo, .gnb").addClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    } else {
+                        $(".logo, .gnb").removeClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    }
+                             
+            });        
+                    
+           var vsh = $(window).height();
+           var wd = $(window).width();
+           $(".page").each(function(index){
+               $(this).attr("data-val", index*vsh);
+           });
+           $(".page").on("mousewheel DOMMMouseScroll", function(e){
+               var prepo = parseInt($(this).attr("data-val"));
+               if(e.originalEvent.wheelDelta >= 0){
+                   $("html, body").stop().animate({scrollTop:prepo - vsh});
+                   return false;
+               } else if(e.originalEvent.wheelDelta < 0){
+                   $("html, body").stop().animate({scrollTop:prepo + vsh});
+                   return false;
+               }
+           });
+         
+            
+        
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header id="hd">
+            <a href="index.html" class="logo"><img src="./images/logo.png" alt=""
+            class="hdlogo"></a>
+            <div class="hdbtn_box">
+                <button class="home"><img src="./images/home.png" alt=""></button>
+                <button class="search"><img src="./images/search.png" alt=""></button>
+                <button class="menuicon"><img src="./images/menuicon.jpg" alt="" ></button>
+            </div>
+            <div class="tbn">
+               <input type="checkbox" id="tnb1" class="tnb1">
+                <a href="" class="tbn_login">로그인</a>
+                <div class="lang">
+                    <label for="tnb1" class="cur desk">한국어</label>
+                    <ul class="lang_cel">
+                        <li><a href="">영어</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="gnb">
+                <ul class="gnb_box">
+                    <li class="mtxt" id="main_txt1"><a class="main_txt"><img src="./images/maintxt1.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu1">
+                            <li><a href="">정보공개제도안내</a></li>
+                            <li><a href="">정보목록</a></li>
+                            <li><a href="">사전정보공표</a></li>
+                            <li><a href="">행정정보공개</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt2"><a class="main_txt"><img src="./images/maintxt2.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu2">
+                            <li><a href="">일반민원신청</a></li>
+                            <li><a href="">일반민원조회</a></li>
+                            <li><a href="">서식민원신청</a></li>
+                            <li><a href="">부조리·불친절신고</a></li>
+                            <li><a href="">밀렵밀거래신고</a></li>
+                            <li><a href="">예산낭비신고</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt3"><a class="main_txt"><img src="./images/maintxt3.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu3">
+                            <li><a href="">청장과의 대화</a></li>
+                            <li><a href="">환경게시판</a></li>
+                            <li><a href="">온라인설문</a></li>
+                            <li><a href="">국민제안</a></li>
+                            <li><a href="">환경참여방</a></li>
+                            <li><a href="">인터넷상담방</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt4"><a class="main_txt"><img src="./images/maintxt4.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu4">
+                            <li><a href="">부서별자료</a></li>
+                            <li><a href="">환경측정·통계자료</a></li>
+                            <li><a href="">조류(녹조)정보 알림방</a></li>
+                            <li><a href="">환경영향평가</a></li>
+                            <li><a href="">토지매수안내</a></li>
+                            <li><a href="">환경인정보교류</a></li>
+                            <li><a href="">사이버 환경교실</a></li>
+                            <li><a href="">국회관련정보</a></li>
+                            <li><a href="">간행물자료</a></li>
+                            <li><a href="">서식자료실</a></li>
+                            <li><a href="">생태하천 모니터링단</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt5"><a class="main_txt"><img src="./images/maintxt5.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu5">
+                            <li><a href="">공지·공고</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">보도·해명자료</a></li>
+                            <li><a href="">동영상홍보관</a></li>
+                            <li><a href="">e-환경뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt6"><a class="main_txt"><img src="./images/maintxt6.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu6">
+                            <li><a href="sub1_story.html">금강이야기</a></li>
+                            <li><a href="">금강갤러리</a></li>
+                            <li><a href="">비단물결 금강천리 트레킹</a></li>
+                            <li><a href="">생태탐방</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt7"><a class="main_txt"><img src="./images/maintxt7.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu7">
+                            <li><a href="">청장소개</a></li>
+                            <li><a href="">일반현황</a></li>
+                            <li><a href="">수계관리위원회</a></li>
+                            <li><a href="">조직 및 업무</a></li>
+                            <li><a href="">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <img src="./images/storyimg.jpg" alt="" class="storyimg">
+            <h1 class="story_tit">금강 이야기</h1>
+            <div class="main_con">
+                <div class="story_intro">
+                    <h3 class="com1">※ 금강 이야기 개요</h3>
+                    <p class="storycom">전북 장수군 신무산 발원하여 충북과 충남을 거쳐 강경에서부터 충남·전북의 도계를 이루면서 서해로 흘러드는 강.</p>
+                    <p class="storycom2"><br>
+                    - [위치] 전북 장수군 신무산, 충청남도, 충청북도, 금강하구언<br>
+                    - [면적] 역면적 9,810㎢<br>
+                    - [길이] 395.9km<br>
+                    <br>
+                    길이395.9km, 유역면적 9,810㎢, 옥천 동쪽에서 보청천(報靑川), 조치원 남부에서 미호천(美湖川), 기타 초강(草江)ㆍ갑천(甲川)등 크고 작은 20개의 지류가 합류한다. 상류부에서는 감입곡류하면서 무주에서 무주구천동, 영동에서 양산팔경(陽山八景)등 계곡미를 이루며, 하류의 부여에서는 백마강이라는 별칭으로 불리면서 부소산(扶藻山)을 침식하여 백제 멸망사에 일화를 남긴 낙화암을 만들었다. 강경부근에서 하구까지의 구간은 익곡(溺谷)을 이루어 군산ㆍ강경 등 하항이 발달하였으며, 종래 부강(芙江)까지 작은 배가 소항하여 내륙수로로 크게 이용되어 왔으나 호남선의 개통, 자동차교통의 발달로 그 기능을 상실하였다. <br>
+                    <br>
+                    상류부에 대전분지ㆍ청주분지, 중류부에 호서평야(湖西平野), 하류부에 전북평야가 전개되어 전국 유수의 쌀생산지대를 이룬다. 그와 같은 해상교통의 발달과 농업 생산으로 일찍이 연안에 공주ㆍ부여ㆍ강경 등 고도와 옛 상업도시가 발달하였다. 1980년 신탄진 부근에 대청 다목적댐이 건설되었다. 기후는 한반도 중앙에 위치하여 온대 북한계에 가까워 유역의 평균기온은 11.0~12.5℃, 연간 수량은 1,100~1,300mm이다. <br>
+                    </p>
+                </div>
+                <div class="story_intro">
+                    <h3 class="com2">※ 두웅습지 보호지역</h3>
+                    <p class="storycom">두웅습지는 신두리해안사구의 배후습지로서 습지 및 습지에 서식하는 야생동 · 식물을 보호하기 위하여 2002년 11월 1일 습지보호지역으로 지정되었다.</p>
+                    <img src="./images/storyimg2.jpg" alt="">
+                    <p class="storycom2"><b><두웅습지와 주변의 동 · 식물></b><br>
+                        - 동물 : 멸종위기종인 금개구리, 맹꽁이, 표범장지뱀 등<br>
+                        - 식물 : 사구식물인 갯그령, 통보리사초군락, 수생식물인 붕어마름ㆍ수련 등<br>
+                    </p>
+
+                    <h3 class="com3">※ 습지보호지역의 지정</h3>
+                    <p class="storycom">두웅습지는 신두리 해안사구의 남쪽에 위치하는 사구의 배후습지로서 습지의 보호 및 습지에 서식하는 야생동·식물을 보호하기 위하여 환경부가 2002년 11월 1일 습지보호지역으로 지정하였다.</p>
+                    <img src="./images/storyimg3.jpg" alt="">
+                    <p class="storycom2"><b><두웅습지 습지보호지역 지정 현황></b><br>
+                        - 지정일 : 2002.11.1<br>
+                        - 지정목적 : 신두리해안사구의 배후습지 및 희귀야생동·식물의 서식지 보호<br>
+                        - 위치 : 충남 태안군 원북면 신두리 일원<br>
+                        - 면적 : 64,595㎡<br>
+                        - 지정근거 :「습지보전법」제8조
+                    </p>
+                    <h3 class="com4">※ 두웅습지의 생태학적 중요성</h3>
+                    <p class="storycom2"> 두웅습지와 같은 ‘사구배후습지’의 물은 배후지로부터 공급되는 것뿐만 아니라 사구지대 하부의 거대한 담수 탱크와 연계되어 있어 수위가 낮아질 경우 사구지대로부터 역으로 보충되어 물이 거의 마르지 않는다.
+                        따라서, 두웅습지는 이곳을 터전으로 하는 습지 동·식물에게 안정적인 수분 공급원인 동시에 서식지이고, 금개구리나 맹꽁이 같은 중요한 양서류와 수서 곤충류의 산란지이다.
+                    </p>
+                    <h3  class="com5">※ 두웅습지의 자연생태</h3>
+                    <p class="storycom3"><b>식물상</b><br>
+                        - 두웅습지와 주변지역의 식물상은 집수구역에 127종, 그 주변 사구에 147종, 습지식물 18종 분포<br>
+                        - 침수식물인 붕어마름, 부엽식물인 애기마름, 수련과 정수식물인 겨풀, 매자기, 큰고랭이, 갈대 군락이 분포<br>
+                        - 사구식생은 갯그령, 통보리사초, 좀보리사초, 해당화, 갯메꽃, 띠, 혼합초지 군락이 작은 규모로 분포
+                        
+                    </p>
+                    <p class="storycom3"><b>동물상</b><br>
+                        - 어류상 : 5과 9종이 분포하고 있으며, 기름종개과와 망둑어과 어류가 각 3종씩으로써 가장 많이 출현하였고, 한반도 어류의 전형적인 분포상과는 큰 차이를 보임<br>
+                        - 조류 : 두웅습지 주위에서 39종 서식<br>
+                        - 양서·파충류 : 조사대상지역에서 총 8과 10속 14종이 서식하고 있으며, 멸종위기야생 동·식물Ⅱ급인 금개구리, 맹꽁이, 표범장지뱀 등 3종 서식<br>
+                        - 육상곤충상 : 총 11목 52과 110종이 신두리지역에서 서식<br>
+                        - 저서성 대형무척추동물상 : 두웅습지 및 그 일대의 사구배후습지에서 총 10목 24과 49종 서식
+                    </p>
+                    <img src="./images/ani1.jpg" alt="">
+                </div>
+
+            </div>
+            
+        </main>
+
+
+
+
+        <footer class="footer">
+            <ul class="ftmenu">
+                <li><a href="">개인정보침해정보센터</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">영상정보처리기기 운영·관리방침</a></li>
+                <li><a href="">저작권정책</a></li>
+                <li><a href="">홈페이지이용안내</a></li>
+                <li><a href="">홈페이지개선의견</a></li>
+            </ul>
+            <div class="copyright">
+                <img src="./images/ftlogoo.png" alt="">
+                <p>(35220) 대전광역시 서구 청사로 128 칼릭스빌딩 / TEL:042-865-0800 COPYRIGHT 2009 금강유역환경청. ALL RIGHT RESERVED. <br>
+                    본 홈페이지에서 게지된 이메일주소를 자동으로 수집하는 것을 거부하며, 이를 위반시 관련법에 의거 처벌 등을 유념하시기 바랍니다.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
