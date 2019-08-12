@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YOONJEONG PORTFOLIO</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Lalezar&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menu_icon").click(function(){
+                $(this).addClass("on");
+                $(".menu_box").addClass("on");
+            });
+            $(".menu_box .close").click(function(){
+                $(".menu_box").removeClass("on");
+                $(".menu_icon").removeClass("on");
+            });
+
+            $(".menu_txt a.menu2").click(function(){
+                $("#skill_box").addClass("open");
+            });
+            $("#skill_box .skill_close").click(function(){
+                $("#skill_box").removeClass("open");
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html{width: 100%; height: 100vh; font-family: 'Abel', sans-serif; background-image: url(images/background.jpg); -ms-overflow-style: none; position: relative;}
+        ::-webkit-scrollbar{display: none;}
+        ul{list-style: none;}
+        a{outline: none; border: none; text-decoration: none;}
+        button{outline: none; border: none; background: transparent; cursor: pointer;}
+        #hd{width: 100%; height: 120px;}
+        
+        .menu_icon{width: 120px; height: 60px; float: left; padding-top: 1.5rem; display: block; margin-left: 0rem; cursor: pointer; background-color: #414141; transition: 0.6s;}
+        .menu_icon.on{height: 100vh;}
+        .menu_icon li:nth-child(1):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 2rem; left: 2.7rem;}
+        .menu_icon li:nth-child(2):before{content: ""; display: block; position: absolute; width: 35px; height: 1px; background-color: #fff; top: 3.2rem; left: 2.7rem;}
+        
+        .menu_box{position: fixed; top: 0; left: -110%; width: 500px; height: 100vh; background-color: #414141; z-index: 1000; transition: 1s; transform: translateX(0);}
+        .menu_box.on{left: 0%;}
+        .menu_box ul{width: 150px; margin: 19rem auto; padding: 10px;}
+        .menu_box li a{color: #fff; font-size: 26px; line-height: 4; text-align: center; display: block;}
+        .close{width: 50px; height: 50px; display: block; position: absolute; top: 8rem; left: 14rem;padding: 10px;}
+        .close img{display: block; width: 100%;}
+        
+        .menu_box:before{content: ""; transition-duration: 0.3s; position: absolute;
+        right: -40px;
+        top: 47%;
+        margin-top: -15px;
+        border-style: solid;
+        border-width: 20px 20px 20px 20px;
+        border-color:   transparent
+                        transparent
+                        transparent
+                        #414141;}
+        .triangulo_lateral:hover:before{right: -15px;}
+        
+        
+        
+        
+        /* menu_box li 효과주기*/
+        .menu_box a::before, .menu_box a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+        }
+        .menu_box a:hover{
+        color:#fff;
+        }
+        .menu_box a::before {
+        content: '[';
+        margin-right: 12px;
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        transform: translateX(20px);
+        }
+        .menu_box a::after {
+        content: ']';
+        margin-left: 12px;
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        transform: translateX(-20px);
+        }
+        .menu_box a:hover::before,
+        .menu_box a:hover::after,
+        .menu_box a:focus::before,
+        .menu_box a:focus::after {
+        color:#fff;
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+        }
+        
+        
+        
+        .menu_txt{width: 370px; position: absolute; top: 1.5rem; right: 3rem;}
+        .menu_txt li{float: left; margin: 15px 30px; padding: 0 15px;}
+        .menu_txt li a{color: #414141; font-size: 24px; font-weight: bold; cursor: pointer; transition: 0.3s; display: block; }
+        
+        /* 메뉴 텍스트 효과 */
+        .menu_txt a.menu1:hover, .menu_txt a.menu2:hover{
+        color: #fff;
+        -ms-animation: opacity forwards 1s;
+        -moz-animation: opacity forwards 1s;
+        -webkit-animation: opacity forwards 1s;
+        animation: opacity forwards 1s;}
+        @keyframes opacity {
+        0% {opacity: 1;}
+        100% {opacity: 1;}
+        }
+        .menu_txt a.menu1:before,.menu_txt a.menu1:after{
+        position: absolute;
+        top: 0rem;
+        left: -5.5rem;
+        content: "◯";
+        display: block;
+        width: 100%;
+        font-size: 0px;
+        color: rgb(255, 255, 255,0.4);
+        text-align: center;
+        z-index: -100;
+        }
+        .menu_txt a.menu2:before,.menu_txt a.menu2:after{
+        position: absolute;
+        top: 0rem;
+        left: 5rem;
+        content: "◯";
+        display: block;
+        width: 100%;
+        font-size: 0px;
+        color: rgb(255, 255, 255,0.4);
+        text-align: center;
+        z-index: -100;
+        }
+        .menu_txt a.menu1:hover::before, .menu_txt a.menu2:hover::before {
+        animation: drop 1s;
+        -ms-animation: drop 1s;
+        -moz-animation: drop 1s;
+        -webkit-animation: drop 1s;
+        }
+        .menu_txt a.menu1:hover::after, .menu_txt a.menu2:hover::after{
+        animation: drop 1s 0.5s;
+        -ms-animation: drop 1s 0.5s;
+        -moz-animation: drop 1s 0.5s;
+        -webkit-animation: drop 1s 0.5s;
+        }
+        @keyframes drop {
+        0% {opacity: 1;font-size: 0;top:25px;}
+        100% {opacity: 0;font-size: 70px;top:-15px;}
+        }
+        
+        
+        /* skill 박스 */
+        #skill_box{position: fixed; left: 0; bottom: -110%; width: 100%; height: 100%; background: #000000; z-index: 500; transition: 0.5s;}
+        #skill_box.open{bottom: 0;}
+        #skill_box h1{color: #000; text-align: center; padding: 15px; background: #d4d4d4; width: 80%; margin: 60px auto; }
+
+        .skills{width: 84%; margin: 100px auto;}
+        .skills li{float: left; width: 33.3333%;  height: 250px;}
+        .skillimg{float: left; display: block; width: 20%; margin-top: 0px; margin-left: 50px;}
+        .skill_com{float: right; width: 55%; font-weight: bold; margin-right: 30px; margin-top: 0rem;}
+        .skill_com span{color: #d4d4d4; display: block; float: left; width: 40%; padding: 10px;  font-size: 28px;}
+        .skill_com p{color: #9b9b9b; font-size: 14px; width: 85%;  line-height: 1.5; padding: 10px; clear: both;}
+
+        .skill_close{position: absolute; top:4.3rem; right:4.3rem; width: 50px; height: 50px; display: block;}
+        .skill_close img{display: block; width: 100%;}
+
+        /* 메인 텍스트 효과*/
+        .main_tit{clear: both; width: 54%; top: 23rem; left: 27rem; position: absolute;}
+        .main_tit li{margin: 0;}
+        .main_tit li a{display: inline-block; padding: 0px 250px; position: relative; cursor:default;}
+        .iam{color: #555555; font-weight: bold; font-size: 20px; display: block; margin-left: 0.6rem;}
+        .iam{color: #555555; font-weight: bold; font-size: 20px; display: block; margin-left: 0.6rem;}
+        .name{font-family: 'Lalezar', cursive; color: #555555; font-size:100px;}
+        .iam{color: #555555; font-weight: bold; font-size: 20px; display: block; margin-left: 0.6rem;}
+        .com{color: #414141; font-weight: bold; font-size: 20px; margin-left: 20.5rem;}
+        .main_tit li a,.main_tit li a:before,.main_tit li a:after {
+           transition: 1000ms;
+           -webkit-transition: 1000ms;
+           -ms-transition: 1000ms;
+        }
+
+        .main_tit li a:before {
+           content: attr(data-link-alt);
+           position: absolute;
+           left: 250px;
+           top: 0px;
+           white-space: nowrap;
+           width: 0px;
+           color: #fff;
+           overflow: hidden;
+           text-align: initial;
+           transition: 2000ms;
+           -webkit-transition: 2000ms;
+           -ms-transition: 2000ms;
+        }
+
+        .main_tit:hover li a:before {
+           width: 100%;
+        }
+
+        .icon_box{width: 70px; height: 250px; position: absolute; bottom: 0rem; left: 1rem;}
+        .icon_box li a{width: 40px; height: 40px; background-repeat: no-repeat; background-position: center; background-size: contain; margin: 20px; transition: 0.4s; cursor: pointer; display: block;}
+        .icon_box li a.it1{background-image: url(./images/icon1.png);}
+        .icon_box li a.it2{background-image: url(./images/icon2.png);}
+        .icon_box li a.it3{background-image: url(./images/icon3.png);}
+        
+        .icon_box li a.it1:hover {background-image: url(./images/icon11.png);}
+        .icon_box li a.it2:hover {background-image: url(./images/icon21.png);}
+        .icon_box li a.it3:hover {background-image: url(./images/icon31.png);}
+        
+        
+        .by{position: absolute; bottom: 1rem; right: 1rem; color: #414141; display: block; font-size: 20px; font-weight: bold; padding: 15px;writing-mode:vertical-rl; margin: 1.2rem 2rem 1rem 0; cursor: default;}
+    </style>
+</head>
+<body>
+   <header id="hd">
+       <a class="menu_icon">
+          <ul>
+               <li></li>
+               <li></li>
+           </ul>
+       </a>
+       <div class="menu_box">
+           <ul>
+               <li><a href="./index.html">Intro</a></li>
+               <li><a href="./introduce.html">Introduce</a></li>
+               <li><a href="./gallary.html">Portfolio</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+           </ul>
+           <button class="close"><img src="./images/close.png" alt=""></button>
+       </div>
+       <nav class="menu_txt">
+           <ul>
+               <li><a href="./gallary.html" class="menu1">PORTFOLIO</a></li>
+               <li><a class="menu2">SKILL</a></li>
+           </ul>
+       </nav>
+       
+   </header>
+   <div id="skill_box">
+        <h1>Working Skill</h1>
+     <ul class="skills">
+         <li>
+             <img src="./images/skill1.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>HTML5</span>
+                 <p>: 　전체적인 레이아웃 설계, 홈페이지 설계, 위젯 설계, 내비게이션 설계 등 구축 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill2.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>CSS3</span>
+                 <p>: 　미디어쿼리를 이용하여 모바일, 태블릿, 데스크탑 등 반응형 레이아웃 스타일 구현 및 HTML설계 구조에 따른 레이아웃에 대한 스타일 지정 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill3.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>jQuery</span>
+                 <p>: 　메인메뉴, 사이드 메뉴, 탑메뉴, 탭메뉴 등 구현 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill4.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>javascript</span>
+                 <p>: 　날씨, 지도, 계산기 등 표현 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill5.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>Photoshop</span>
+                 <p>: 　콘텐츠 디자인, 포스터 제작, 배너 제작, 마스크 기술, 펜기능, 합성, 이미지 편집기술 수행가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill6.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>Illustrator</span>
+                 <p>: 　로고, 심볼, 패턴, 펜 드로잉, 캐릭터 디자인 등 디자인 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill7.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>Indesign</span>
+                 <p>: 　리플렛, 북커버, 기사글 등 편집 가능</p>
+             </div>
+         </li>
+         <li>
+             <img src="./images/skill8.png" alt="" class="skillimg">
+             <div class="skill_com">
+                 <span>ETC.</span>
+                 <p>: 　파워포인트, 한글, 엑셀을 이용하여 사무적인 기본적인 문서작성 가능</p>
+             </div>
+         </li>
+     </ul>
+     <button class="skill_close"><img src="./images/close.png" alt=""></button>
+    </div>
+   <div class="main_tit">
+        <ul>
+            <li><a href="#" data-link-alt="I am" class="iam">I am</a></li>
+            <li><a href="#" data-link-alt="YOONJEONG" class="name">YOONJEONG</a></li>
+            <li><a href="#" data-link-alt="Web & Graphic designer" class="com">Web & Graphic designer</a></li>
+        </ul>
+    </div>
+   <div class="icon_box">
+       <ul>
+           <li><a href="https://www.facebook.com/profile.php?id=100010934322019" target="blank"  class="it1"></a></li>
+           <li><a href="https://www.pinterest.co.kr/hwyj14" target="blank"  class="it2"></a></li>
+           <li><a href="https://www.instagram.com/yoonding_i/" target="blank"  class="it3"></a></li>
+       </ul>
+   </div>
+    <p class="by">by YoonJeong Choi :-)</p>
+</body>
+</html>
