@@ -30,7 +30,7 @@ background: #fff;}
 .sub_menu li{width: 180px; line-height: 3;}
 .sub_menu li a{display: block; color: #d9d9d9; line-height: 3;}
 
-.tbn{position: fixed; top: 60px; right: -110%; width: 80%;
+.tbn{position: fixed; top: 61px; right: -110%; width: 80%;
 background-color: #3e5574; transition: 0.6s;}
 .tbn.open{right: 0;}
 .tbn.close{right: -110%;}
@@ -50,7 +50,7 @@ background-color: #3e5574; transition: 0.6s;}
 
 
 /* main */
-.trekking{display: block; width: 100%; padding-top: 5rem;}
+.trekking{display: block; width: 100%; padding-top: 3.7rem;}
 .trekking_tit{text-indent: 4.5rem; font-size: 18px; padding:20px; background: #03224b; color: #ffff;}
 
 .rdo{display: none;}
