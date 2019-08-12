@@ -26,19 +26,17 @@
 <script>
     $(document).ready(function() {
         $(".menu_btn").click(function() {
-            $("#gnb").addClass("on");
+            $("#gnb, .sns_box").addClass("on");
         });
         $("#gnb .close").click(function() {
-            $("#gnb").removeClass("on");
+            $("#gnb, .sns_box").removeClass("on");
         });
         $(".menu_box li.main_txt").click(function(){
            $(this).find(".sub_box").slideToggle();
         });
-//        $(".menu_box li.main_txt").click(function(){
-//            $("a").hide(function(){
-//            $(".menu_box li.main_txt").find(".sub_box").slideToggle();
-//            });
         
+        
+
     });
 </script>
 </head>
@@ -48,7 +46,7 @@
     <div class="wrap">
         <header id="hd">
             <button class="menu_btn"><img src="images/menuicon.png"></button>
-            <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="./images/logo.png" alt=""></a>
             <button class="search_btn"><img src="./images/searchicon.png" alt=""></button>
         </header>
         <nav id="gnb">
@@ -60,13 +58,13 @@
             <ul class="menu_box">
                 <li class="main_txt gnb1"><a class="main">제품소개</a>
                     <ul class="sub_box">
-                        <li><a href="">우유류</a></li>
-                        <li><a href="">발효유류</a></li>
-                        <li><a href="">유음료류</a></li>
-                        <li><a href="">커피음료</a></li>
-                        <li><a href="">치즈류</a></li>
-                        <li><a href="">가공식품류</a></li>
-                        <li><a href="">반려동물제품</a></li>
+                        <li><a href="sub.html">우유류</a></li>
+                        <li><a href="sub.html">발효유류</a></li>
+                        <li><a href="sub.html">유음료류</a></li>
+                        <li><a href="sub.html">커피음료</a></li>
+                        <li><a href="sub.html">치즈류</a></li>
+                        <li><a href="sub.html">가공식품류</a></li>
+                        <li><a href="sub.html">반려동물제품</a></li>
                         <li><a href="">외국원산지공지</a></li>
                     </ul>
                 </li>
@@ -92,33 +90,33 @@
                     <ul class="snss">
                         <li>
                             <span>서울우유 공식 SNS</span>
-                            <a href=""><img src="./images/facebook.png" alt=""></a>
-                            <a href=""><img src="./images/blog.png" alt=""></a>
-                            <a href=""><img src="./images/kakao.png" alt=""></a>
-                            <a href=""><img src="./images/instagram.png" alt=""></a>
-                            <a href=""><img src="./images/youtube.png" alt=""></a>
+                            <a href="https://www.facebook.com/SeoulMilk" target="_blank"><img src="./images/facebook.png" alt=""></a>
+                            <a href="http://www.seoulmilkblog.co.kr/" target="_blank"><img src="./images/blog.png" alt=""></a>
+                            <a href="https://story.kakao.com/ch/seoulmilk" target="_blank"><img src="./images/kakao.png" alt=""></a>
+                            <a href="https://www.instagram.com/seoulmilk_official/" target="_blank"><img src="./images/instagram.png" alt=""></a>
+                            <a href="https://www.youtube.com/user/seoulmilk2010" target="_blank"><img src="./images/youtube.png" alt=""></a>
                         </li>
                         <li>
                             <span>유음료 SNS</span>
-                            <a href=""><img src="./images/blog.png" alt=""></a>
+                            <a href="https://blog.naver.com/achimjuice" target="_blank"><img src="./images/blog.png" alt=""></a>
                         </li>
                         <li>
                             <span>아침에주스 SNS</span>
-                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                            <a href="https://www.instagram.com/achim_juice.official" target="_blank"><img src="./images/instagram.png" alt=""></a>
                         </li>
                         <li>
                             <span>스페셜티 카페라떼 SNS</span>
-                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                            <a href="https://www.instagram.com/specialty_cafelatte/" target="_blank"><img src="./images/instagram.png" alt=""></a>
                         </li>
                         <li>
                             <span>치즈 SNS</span>
-                            <a href=""><img src="./images/facebook.png" alt=""></a>
-                            <a href=""><img src="./images/blog.png" alt=""></a>
-                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                            <a href="https://www.instagram.com/specialty_cafelatte" target="_blank"><img src="./images/facebook.png" alt=""></a>
+                            <a href="http://blog.naver.com/seoul_cheese" target="_blank"><img src="./images/blog.png" alt=""></a>
+                            <a href="https://www.instagram.com/seoulcheese_official/" target="_blank"><img src="./images/instagram.png" alt=""></a>
                         </li>
                         <li>
                             <span>밀크홀1937 SNS</span>
-                            <a href=""><img src="./images/instagram.png" alt=""></a>
+                            <a href="https://www.instagram.com/milkhall1937/" target="_blank"><img src="./images/instagram.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
