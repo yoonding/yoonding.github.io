@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="금강유역환경청">
+    <meta name="author" content="YOONJEONG">
+    <meta name="keywords" content="금강유역환경청, 금강, 토지, 환경부">
+    <meta name="copyright" content="COPYRIGHT 2009금강유역환경청. ALL RIGHT RESERVED.">
+    <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="금강유역환경청">
+    <meta property="og:image" content="http://yoonding.guthub.io/kumkang/data/logo.png">
+    <meta property="or:descriprion" content="금강유역환경청">
+    <title>금강유역환경청</title>
+    <link rel="stylesheet icon" href="./images/favicon.png">
+    <link rel="apple-touch icono" sizes="32x32" href="./images/favicon.png">
+    <link rel="stylesheet" href="sub2_trekking_desktop.css" type="text/css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="sub2_trekking_tablet.css" type="text/css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="sub2_trekking_mobile.css" type="text/css" media="screen and (max-width:767px)">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <!-- 웹사이트 정보, 검색어, 저자, 앱이름, 3분 주기로 자동새로고침 -->
+    <meta http-equiv="refresh" content="180">
+    <!-- 앱에서 필요한 내용 환경설정 json(manifest.json) 연결
+    앱에서는 웹사이트, 모바일에 대한 셋팅이 먹히지 않기때문에 연결한다. -->
+    <link rel="manifest" href="manifest.json">
+    <!-- 아이콘 폰트 링크 (어썸아이콘) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <!-- jquery 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        //애널리틱스-빅데이터 관리해주는 사이트다. 이 script를 넣은 데이터를 기준으로 방문자 등을 분석해준다. 구글아이디로 가입.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-143287217-1');
+    </script>
+<script>
+
+        $(document).ready(function(){
+
+            $(".menuicon").click(function() {
+                $(".gnb, .tbn").toggleClass("open");
+            });
+
+            //반응형 메뉴 펼치기
+            $(".gnb_box .mtxt").click(function(){
+                $(this).find(".sub_menu").slideToggle();
+
+            });
+
+
+            //모바일에서 로고 이미지 바꾸기
+            $(window).resize(function() {
+                var wd_s = $(window).width();
+                if (wd_s < 1000) {
+                    $(".hdlogo").attr("src", "./images/mlogo.png");
+                } else {
+                    $(".hdlogo").attr("src", "./images/logo.png");
+                }
+            }).resize();
+
+            
+        
+            
+           
+                
+            $(window).scroll(function(){
+                var sc_top = $(window).scrollTop();
+                    if(sc_top>=100 && sc_top<5000){
+                        $(".logo, .gnb").addClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    } else {
+                        $(".logo, .gnb").removeClass("on");
+                        $(".logo, .gnb").removeClass("off");
+                    }
+                             
+            });        
+                    
+        
+            
+        
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header id="hd">
+            <a href="index.html" class="logo"><img src="./images/logo.png" alt=""
+            class="hdlogo"></a>
+            <div class="hdbtn_box">
+                <a href="index.html"><button class="home"><img src="./images/home.png" alt=""></button></a>
+                <a href=""><button class="search"><img src="./images/search.png" alt=""></button></a>
+                <button class="menuicon"><img src="./images/menuicon.jpg" alt="" ></button>
+            </div>
+            <div class="tbn">
+               <input type="checkbox" id="tnb1" class="tnb1">
+                <a href="" class="tbn_login">로그인</a>
+                <div class="lang">
+                    <label for="tnb1" class="cur desk">한국어</label>
+                    <ul class="lang_cel">
+                        <li><a href="">영어</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="gnb">
+                <ul class="gnb_box">
+                    <li class="mtxt" id="main_txt1"><a class="main_txt"><img src="./images/maintxt1.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu1">
+                            <li><a href="">정보공개제도안내</a></li>
+                            <li><a href="">정보목록</a></li>
+                            <li><a href="">사전정보공표</a></li>
+                            <li><a href="">행정정보공개</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt2"><a class="main_txt"><img src="./images/maintxt2.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu2">
+                            <li><a href="">일반민원신청</a></li>
+                            <li><a href="">일반민원조회</a></li>
+                            <li><a href="">서식민원신청</a></li>
+                            <li><a href="">부조리·불친절신고</a></li>
+                            <li><a href="">밀렵밀거래신고</a></li>
+                            <li><a href="">예산낭비신고</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt3"><a class="main_txt"><img src="./images/maintxt3.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu3">
+                            <li><a href="">청장과의 대화</a></li>
+                            <li><a href="">환경게시판</a></li>
+                            <li><a href="">온라인설문</a></li>
+                            <li><a href="">국민제안</a></li>
+                            <li><a href="">환경참여방</a></li>
+                            <li><a href="">인터넷상담방</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt4"><a class="main_txt"><img src="./images/maintxt4.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu4">
+                            <li><a href="">부서별자료</a></li>
+                            <li><a href="">환경측정·통계자료</a></li>
+                            <li><a href="">조류(녹조)정보 알림방</a></li>
+                            <li><a href="">환경영향평가</a></li>
+                            <li><a href="">토지매수안내</a></li>
+                            <li><a href="">환경인정보교류</a></li>
+                            <li><a href="">사이버 환경교실</a></li>
+                            <li><a href="">국회관련정보</a></li>
+                            <li><a href="">간행물자료</a></li>
+                            <li><a href="">서식자료실</a></li>
+                            <li><a href="">생태하천 모니터링단</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt5"><a class="main_txt"><img src="./images/maintxt5.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu5">
+                            <li><a href="">공지·공고</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">보도·해명자료</a></li>
+                            <li><a href="">동영상홍보관</a></li>
+                            <li><a href="">e-환경뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt6"><a class="main_txt"><img src="./images/maintxt6.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu6">
+                            <li><a href="sub1_trekking.html">금강이야기</a></li>
+                            <li><a href="">금강갤러리</a></li>
+                            <li><a href="sub2_trekking.html">비단물결 금강천리 트레킹</a></li>
+                            <li><a href="">생태탐방</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="mtxt" id="main_txt7"><a class="main_txt"><img src="./images/maintxt7.png" alt=""></a>
+                        <ul class="sub_menu" id="sub_menu7">
+                            <li><a href="">청장소개</a></li>
+                            <li><a href="">일반현황</a></li>
+                            <li><a href="">수계관리위원회</a></li>
+                            <li><a href="">조직 및 업무</a></li>
+                            <li><a href="">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <img src="./images/trekking.jpg" alt="" class="trekking">
+            <h1 class="trekking_tit">비단물결 금강천리 트레킹</h1>
+            
+            <input type="radio" name="rdo" class="rdo" id="rdo1" checked>
+            <input type="radio" name="rdo" class="rdo" id="rdo2">
+            <input type="radio" name="rdo" class="rdo" id="rdo3">
+               
+            <div class="tab_btn">
+                <label for="rdo1" class="rdo1">트레킹소개</label>
+                <label for="rdo2" class="rdo2">일정안내</label>
+                <label for="rdo3" class="rdo3">온라인신청</label>
+            </div>
+            
+            
+            <div class="con_box">
+                <div class="main_con" id="tab1">
+                    <div class="trekking_intro">
+                        <h3 class="com1">※ 트레킹 소개</h3>
+                        <p class="trekkingcom">강길따라 걷는 비단물결 금강천리 트레킹을 만나보세요.</p>
+                        <p class="trekkingcom2">
+                            <b class="stit">▣　목적</b><br>
+                            <br>
+                            - 금강의 발원지부터 하류까지 강길 따라 걸으면서 강과 자연환경의 소중함을 직접 체험 할 수 있는 기회를 제공하여 환경보전 실천의식을 함양<br>
+                            - 생태적 가치가 높은 장소와 역사·문화적 배경을 접목한 프로그램으로 금강유역을 쉽게 알 수 있도록 해설을 곁들인 트레킹으로 이해의 폭을 넓힘
+                        </p>
+
+
+                        <p class="trekkingcom3">
+                            <b class="stit">▣　프로그램 운영개요</b><br>
+                            <br>
+                            <span>- 트레킹 대상</span> : 금강(발원지부터 하구둑까지 397.8㎞)</p>
+
+                        <p class="trekkingcom3">
+                            <span>- 추진일정</span> : 4월~11월(8개월), 연 9회<br>
+                            금강의 지역·역사·문화 등을 아우르는 테마가 있는 프로그램으로 9개 구간을 선정하여 매회 1개구간에 대해 트레킹 실시
+                        </p>
+
+                        <p class="trekkingcom3">
+                            <span>- 참여대상</span> : 트레킹 참여를 희망하는 지역주민 등(회당 약 40명)
+                        </p>
+
+                        <p class="trekkingcom3">
+                            <span>- 참가자 모집</span><br>
+                            (신청절차) 홈페이지에 게재된 일정 및 코스 확인 → 희망하는 날짜와 코스에 따라 참가신청서 제출 → 참가자 확정 → 탐방 실시<br>
+                            (대상자 선정) 신규자 위주로 선착순 선정<br>
+                            ※ 참가인원 미달 시, 기 참가자에게 기회 제공<br>
+                            ㆍ 참가확정 통보 이후, 미참여시 참가로 간주
+                        </p>
+
+
+                        <p class="trekkingcom3">
+                            <span>- 운영방법</span><br>
+                            ㆍ 참여자를 해당구간까지 버스로 이동하여 당해구간을 트레킹<br>
+                            ㆍ 멸종위기종인 미호종개와 감돌고기 등 금강에 서식하는 생물 관찰 생태교육 실시<br>
+                            ㆍ 여울건너기, 자갈밭ㆍ모래밭걷기 등 특색 있는 환경체험 및 변화하는 금강의 모습 체험
+                            금강해설사가 동행하여 트레킹 구간별 생태·환경 등을 효과적으로 설명<br>
+                            ㆍ 참가자 소그룹 인솔 및 트레킹 구간에 대한 자연환경 등 설명<br>
+                            ㆍ 사전 현지답사를 통하여 트레킹참가자들의 안전사고 예방
+                            청소년 대상 '봉사활동 인증제' 실시<br>
+                            ㆍ 체험교육 참여 기회 제공 및 봉사활동 점수 부여(최대 8시간)
+                            구간별 생태체험마을 활용<br>
+                            ㆍ 지역경제 활성화를 위하여 생태체험마을에서 점심식사 진행
+                        </p>
+
+
+                        <p class="trekkingcom3">
+                            <span>- 참가후기 사진전 실시</span><br>
+                            ㆍ 트레킹 참여자가 찍은 사진을 '참가후기 사진전'을 통해 전파함으로써 비단물결 금강천리 트레킹 홍보<br>
+                            ㆍ 우수 작품자에게 금강유역환경청장상 및 상금 지급
+                        </p>
+                    </div>
+                    <div class="btn_box">
+                        <a href="#tab2"><button class="btn1">일정안내</button></a>
+                        <a href="#tab3"><button class="btn2">온라인신청</button></a>
+                    </div>
+                </div>
+            
+            
+            
+            
+            <div class="main_con" id="tab2">
+                <div class="board_box">
+                    <div id="tb5" class="board_fr">
+                        <table class="tb">
+                            <tr>
+                                <th class="num">번호</th>
+                                <th class="title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num numnone">5</td>
+                                <td data-val="제목" class="title"><a href="">2018년 비단물결 금강천리 트레킹 일정 알림</a></td>
+                                <td data-val="등록일" class="date">2018-04-09</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">4</td>
+                                <td data-val="제목" class="title"><a href="">2017년 제9회차 비단물결 금강천리 트레킹 참가신청 안내(11.6.~11.14.) </a></td>
+                                <td data-val="등록일" class="date">2017-11-06</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">3</td>
+                                <td data-val="제목" class="title"><a href="">  2017년 제8회차 장애우와 함께하는 비단물결 금강천리 트레킹 참가신청 안내(10.27.~10.31.)</a></td>
+                                <td data-val="등록일" class="date">2017-10-27</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">2</td>
+                                <td data-val="제목" class="title"><a href="">2017년 제7회차 비단물결 금강천리 트레킹 참가신청 안내(10.16.~10.23.)</a></td>
+                                <td data-val="등록일" class="date">2017-10-13</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">1</td>
+                                <td data-val="제목" class="title"><a href="">2017년 제5회차 비단물결 금강천리 트레킹 참가신청 안내(8.21~8.27)</a></td>
+                                <td data-val="등록일" class="date dateborder">2017-09-01</td>
+                            </tr>
+                        </table>
+                        <div class="num_box">
+                            <a href="#tb1">≪</a>
+                            <a href="#tb1">1</a>
+                            <a href="#tb2">2</a>
+                            <a href="#tb3">3</a>
+                            <a href="#tb4">4</a>
+                            <a class="on">5</a>
+                            <a href="#tb5">≫</a>
+                        </div>
+                    </div>
+
+                    <div id="tb4" class="board_fr">
+                        <table class="tb">
+                            <tr>
+                                <th class="num">번호</th>
+                                <th class="title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num numnone">10</td>
+                                <td data-val="제목" class="title"><a href="">  2018년 제4회차 비단물결 금강천리 트레킹 참가신청 안내(5.28.~6.3.)</a></td>
+                                <td data-val="등록일" class="date">2018-05-28</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">9</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제3회차 비단물결 금강천리 트레킹 참가신청 안내(5.14.~5.20.)</a></td>
+                                <td data-val="등록일" class="date">2018-05-14</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">8</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제2회차 비단물결 금강천리 트레킹 추가접수 안내</a></td>
+                                <td data-val="등록일" class="date">2018-05-03</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">7</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제2회차 비단물결 금강천리 트레킹 참가신청 안내(4.23.~4.29.)</a></td>
+                                <td data-val="등록일" class="date">2018-04-20</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">6</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제1회차 비단물결 금강천리 트레킹 참가신청 안내(4.9.~4.16.) </a></td>
+                                <td data-val="등록일" class="date dateborder">2018-04-09</td>
+                            </tr>
+                        </table>
+                        <div class="num_box">
+                            <a href="#tb1">≪</a>
+                            <a href="#tb1">1</a>
+                            <a href="#tb2">2</a>
+                            <a href="#tb3">3</a>
+                            <a class="on">4</a>
+                            <a href="#tb5">5</a>
+                            <a href="#tb5">≫</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="tb3" class="board_fr">
+                        <table class="tb">
+                            <tr>
+                                <th class="num">번호</th>
+                                <th class="title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num numnone">15</td>
+                                <td data-val="제목" class="title"><a href="">  2018년 제7회차 비단물결 금강천리 트레킹 참가신청 안내(9.18.~9.26.)</a></td>
+                                <td data-val="등록일" class="date">2018-09-18</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">14</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제6회차 비단물결 금강천리 트레킹 추가접수 안내</a></td>
+                                <td data-val="등록일" class="date">2018-09-03</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">13</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제5회차 비단물결 금강천리 트레킹 취소 안내</a></td>
+                                <td data-val="등록일" class="date">2018-08-27</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">12</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제6회차 비단물결 금강천리 트레킹 참가신청 안내(8.27.~9.2.)</a></td>
+                                <td data-val="등록일" class="date">2018-08-24</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">11</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제4회차 비단물결 금강천리 트레킹 참가신청 안내(5.28.~6.3.)</a></td>
+                                <td data-val="등록일" class="date dateborder">2018-08-10</td>
+                            </tr>
+                        </table>
+                        <div class="num_box">
+                            <a href="#tb1">≪</a>
+                            <a href="#tb1">1</a>
+                            <a href="#tb2">2</a>
+                            <a class="on">3</a>
+                            <a href="#tb4">4</a>
+                            <a href="#tb5">5</a>
+                            <a href="#tb5">≫</a>
+                        </div>
+                    </div>
+
+
+
+                    <div id="tb2" class="board_fr">
+                        <table class="tb">
+                            <tr>
+                                <th class="num">번호</th>
+                                <th class="title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num numnone">20</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제4회차 「비단물결 금강천리 트레킹」 참가신청 및 일정 안내(4.24.~4.30)</a></td>
+                                <td data-val="등록일" class="date">2019-04-24</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">19</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제3회차 「비단물결 금강천리 트레킹」 참가신청 및 일정 안내(4.11.~4.17)</a></td>
+                                <td data-val="등록일" class="date">2019-04-11</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">18</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제1회차 「비단물결 금강천리 트레킹」 참가신청 및 일정 안내(3.6.~3.15)</a></td>
+                                <td data-val="등록일" class="date">2019-03-06</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">17</td>
+                                <td data-val="제목" class="title"><a href="">2019년「비단물결 금강천리 트레킹」일정 안내</a></td>
+                                <td data-val="등록일" class="date">2019-03-06</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">16</td>
+                                <td data-val="제목" class="title"><a href="">2018년 제8회차 비단물결 금강천리 트레킹 참가신청 안내(10.8.~10.14.)</a></td>
+                                <td data-val="등록일" class="date dateborder">2018-10-08</td>
+                            </tr>
+                        </table>
+                        <div class="num_box">
+                            <a href="#tb1">≪</a>
+                            <a href="#tb1">1</a>
+                            <a class="on">2</a>
+                            <a href="#tb3">3</a>
+                            <a href="#tb4">4</a>
+                            <a href="#tb5">5</a>
+                            <a href="#tb5">≫</a>
+                        </div>
+                    </div>
+
+                    <div id="tb1" class="board_fr">
+                        <table class="tb">
+                            <tr>
+                                <th class="num">번호</th>
+                                <th class="title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num numnone">25</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제7회차 「비단물결 금강천리 트레킹」 참가신청 및 일정 안내(우천취소)</a></td>
+                                <td data-val="등록일" class="date">2019-07-04</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">24</td>
+                                <td data-val="제목" class="title"><a href="">「금강의 숨겨진 핫플레이스 탐방 2회차」 신청 안내 </a></td>
+                                <td data-val="등록일" class="date">2019-06-21</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">23</td>
+                                <td data-val="제목" class="title"><a href="">「금강의 숨겨진 핫플레이스 탐방」신청 안내(신청기간 연장 ~6/4 까지)</a>
+                                <td data-val="등록일" class="date">2019-05-23</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">22</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제5회차 「비단물결 금강천리 트레킹」 참가신청 및 일정 안내(5.10.~5.16)</a></td>
+                                <td data-val="등록일" class="date">2019-05-10</td>
+                            </tr>
+                            <tr>
+                                <td data-val="번호" class="num">21</td>
+                                <td data-val="제목" class="title"><a href="">2019년도 제4회차 「비단물결 금강천리 트레킹」 추가접수안내 </a></td>
+                                <td data-val="등록일" class="date dateborder">2019-05-01</td>
+                            </tr>
+                        </table>
+                        <div class="num_box">
+                            <a href="#tb1">≪</a>
+                            <a class="on">1</a>
+                            <a href="#tb2">2</a>
+                            <a href="#tb3">3</a>
+                            <a href="#tb4">4</a>
+                            <a href="#tb5">5</a>
+                            <a href="#tb5">≫</a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            </div>
+            
+            <div class="main_con" id="tab3">
+                <div class="tab3_fr">
+                    <div class="name_box">
+                        <span class="name1">프로그램명</span>
+                        <span class="name2">신청기간 및 신청제한</span>
+                        <span class="name3">시간</span>
+                        <span class="name4">신청</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(7회차)</span>
+                        <span class="dday">2019-07-18 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">「금강의 숨겨진 핫플레이스 탐방」(2회차)</span>
+                        <span class="dday">2019-07-13 개인+단체(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">「금강의 숨겨진 핫플레이스 탐방」</span>
+                        <span class="dday">2019-06-08 개인+단체(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">「금강의 숨겨진 핫플레이스 탐방」</span>
+                        <span class="dday">2019-06-07 개인+단체(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(5회차)</span>
+                        <span class="dday">2019-05-25 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(4회차)</span>
+                        <span class="dday">2019-05-09 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(3회차)</span>
+                        <span class="dday">2019-04-25 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(1회차)</span>
+                        <span class="dday">2019-03-28 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(8회차)</span>
+                        <span class="dday">2018-11-01 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                    <div class="online_box">
+                        <span class="name">비단물결 금강천리 트레킹(7회차)</span>
+                        <span class="dday">2018-10-11 개인(신청제한없음)(매일)</span>
+                        <span class="time">접수마감</span>
+                        <span class="apply">-</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            </div>
+            
+            
+        </main>
+
+
+
+
+        <footer class="footer">
+            <ul class="ftmenu">
+                <li><a href="">개인정보침해정보센터</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">영상정보처리기기 운영·관리방침</a></li>
+                <li><a href="">저작권정책</a></li>
+                <li><a href="">홈페이지이용안내</a></li>
+                <li><a href="">홈페이지개선의견</a></li>
+            </ul>
+            <div class="copyright">
+                <img src="./images/ftlogoo.png" alt="">
+                <p>(35220) 대전광역시 서구 청사로 128 칼릭스빌딩 / TEL:042-865-0800 COPYRIGHT 2009 금강유역환경청. ALL RIGHT RESERVED. <br>
+                    본 홈페이지에서 게지된 이메일주소를 자동으로 수집하는 것을 거부하며, 이를 위반시 관련법에 의거 처벌 등을 유념하시기 바랍니다.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

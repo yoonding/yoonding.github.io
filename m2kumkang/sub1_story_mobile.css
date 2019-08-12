@@ -9,20 +9,12 @@ input, button, label, select{outline: none; border:none; background: transparent
 img{border: none;}
 
 .wrap{width: 100%; height: 100%; }
-.frame{width: 90%; margin: 0 auto; position: relative; overflow: hidden;}
 #hd{clear: both; width: 100%; height: 60px; position: fixed; top: 0; left: 0; z-index: 99;
 background: #fff;}
-#page1{clear: both; width: 100%; position: relative; padding-bottom: 970px;}
-#page2{clear: both; width: 100%; height: 100vh; position: relative;}
-#page3{clear: both; width: 100%; height: 100vh; position: relative;}
+
 #ft{clear: both; width: 100%; height: 100px; position: relative; background: #000;}
 
-/* page */
-.page{background-repeat: no-repeat; background-size: cover; 
-    background-position: center center; width: 100%; height: 100vh; }
-.page#page1{background-image: url(./images/vs1.jpg);}
-.page#page2{background-image: url(./images/vs2.jpg);}
-.page#page3{background-image: url(./images/vs3.jpg);}
+
 
 /* header */
 .logo{display: block; position: absolute; top: 12px; left:12px; width: 130px; height:auto; }

@@ -13,6 +13,9 @@ img{border: none;}
 #hd{clear: both; width: 100%; height: 90px; position: fixed; top: 0; left: 0; z-index: 99;}
 
 
+
+
+
 /* header */
 .logo{display: block; position: absolute; top: 25px; left:40px; width: 200px; transition: 0.6s;}
 .logo img{display: block; width: 100%;}
@@ -64,23 +67,101 @@ position: absolute; top: 90px; left: 1225px; overflow: hidden; visibility: hidde
 
 
 /* main */
-.storyimg{display: block; width: 100%; }
-.story_tit{text-indent: 55rem; font-size: 28px; padding:20px; background: #03224b;color: #ffff;}
-.main_con{width: 60%; margin: 0 auto; padding-top: 2rem;}
+.trekking{display: block; width: 100%;}
+.trekking_tit{text-indent: 50rem; font-size: 28px; padding:20px; background: #03224b;color: #ffff;}
+
+.rdo{display: none;}
+.tab_btn{width: 60%; margin: 50px auto; border-bottom: 2px solid #03224b; height: 60px; padding-top: 20px;}
+.tab_btn label{width: 150px; height: 40px; padding: 10px; background-color: #6c7f98; display: block;float: left; font-size: 20px; color: #fff; text-align: center; line-height: 40px; border-radius: 15px 15px 0 0; cursor: pointer;}
+#rdo1:checked ~ .tab_btn .rdo1{background-color: #03224b;}
+#rdo2:checked ~ .tab_btn .rdo2{background-color: #03224b;}
+#rdo3:checked ~ .tab_btn .rdo3{background-color: #03224b;}
+#rdo1:checked ~ .con_box #tab1{display: block;}
+#rdo2:checked ~ .con_box #tab2{display: block;}
+#rdo3:checked ~ .con_box #tab3{display: block;}
+
+
+/* tab1 */
+.main_con{width: 60%; margin: 0 auto;  display: none;}
 .main_con h3{color: #053c85;  font-size: 24px; }
 .main_con p{line-height: 1.8em; width: 90%; margin-left: 2.5%;}
 .main_con img{display: block; margin-left: 15rem; padding: 60px 0 60px 0;}
 .com1{ padding: 0px 10px 10px 0; margin-top: 30px;}
-.com2, .com3, .com4, .com5{margin-top: 100px; padding: 10px 10px 10px 0;}
-.storycom{color: #666666; font-size: 14px; font-weight: bold;}
-.storycom2{font-size: 15px;}
-.storycom3{font-size: 15px; margin-top: 20px; padding: 0px 15px 15px 0px;}
+.trekkingcom{color: #666666; font-size: 14px; font-weight: bold;}
+.trekkingcom2{font-size: 15px; margin-top:3rem; margin-bottom: 5em;}
+.trekkingcom3{font-size: 15px; margin-top:1.5rem;}
+.trekkingcom3 span{color: #004baf; font-weight: bold; font-size: 16px;}
+.stit{font-size: 20px;}
+
+.btn_box{width: 500px; height: 100px; margin: 100px auto;}
+.btn_box a{display: block;}
+.btn_box button{float: left; margin: 20px; width: 210px; height: 60px; text-align: center; color: #fff; font-size: 20px; font-weight: bold; border-radius: 5px; display: block;}
+.btn1{background: #053c85;}
+.btn2{background: #03224b;}
+
+
+/* tab2 */
+.board_box{width: 90%; margin: 0 auto; height: 600px;}
+
+.tb{margin: 1em 0; min-width: 300px; border-bottom: 2px solid #5e4e71} 
+    .tb tr{border-top: 1px solid #000; border-bottom: 1px solid #5e4e71;}
+    .tb th{display: none;}
+    .tb td{display: block;}
+    .tb td:first-child{padding-top: 0.5em;}
+    .tb td:last-child{padding-bottom: 0.5em;}
+    .tb td:before{
+        content: attr(data-val) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+
+    .tb th .tb td{text-align: left;}
+    
+    .board_fr{width: 1000px; height: 550px; position: absolute; top: 42rem; background: #fff; left: calc(50% - 500px); z-index: 10;}
+    .board_fr div{line-height: 80px; }
+    .board_fr div a{padding: 5px 10px; color: #000;}
+    .board_fr div a.on{ color: #03224b; text-decoration: underline; font-weight: bold;}
+    .board_fr:target{z-index: 11;}
+    
+    .num{width:100px; text-align: center;}
+    .date{width:150px; text-align: center;}
+    .title { width:740px; }
+    
+    .num_box{clear: both; margin-left: 20rem; margin-top: 3rem;}
+    .tb td a{color: #000; text-decoration: none;}
+
+
+    .tb td:before{display: none;}
+    .tb th, .tb td{display: table-cell; padding: 0.25em 0.5em; line-height: 50px;}
+    .tit{color: #34495e;}
+    .tb{background: #fff; color: #000; border-radius: 0.2em;}
+    .tb tr{border: 1px solid #46637e; }
+    .tb th, .tb td{margin: 0.5em 1em;}
+    .tb th, .tb td:before{color: #ccc; background: #03224b;}
+
+
+/* tab3 */
+.tab3_fr{width: 100%; height: 680px; border-bottom: 2px solid #03224b;}
+.name_box{width: 100%; }
+.name_box span{display: block; float: left; text-align: center; color: #fff; line-height: 60px; font-size: 18px;}
+.online_box span{display: block; float: left;color: #000; line-height: 60px; font-size: 14px;}
+.name1{width: 50%; height: 60px; background: #03224b;}
+.name2{width: 30%; height: 60px; background: #03224b;}
+.name3{width: 10%; height: 60px; background: #03224b;}
+.name4{width: 10%; height: 60px; background: #03224b;}
+.name{width: 50%; height: 60px; text-indent: 15px;}
+.dday{width: 30%; height: 60px; text-align: center;}
+.time{width: 10%; height: 60px; text-align: center;}
+.apply{width: 10%; height: 60px; text-align: center;}
 
 
 
 
 
 
+
+/*footer*/
 .footer{clear: both; width: 100%; height: 150px; margin-top: 100px; background: #03224b;}
 .ftmenu{width: 950px; height: 50px; margin: 0 auto; border-bottom: 1px solid #666; }
 .ftmenu li{float: left; margin: 20px;}
