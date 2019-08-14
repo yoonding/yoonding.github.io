@@ -30,7 +30,7 @@ background-image: url("images/mvs.jpg"); background-repeat: no-repeat; backgroun
 .mgnb_box{width: 100%; margin-top: 4.3rem; }
 .homego{display: block; width: 100px; height: 40px; position: absolute; color: #329544; font-weight: bold;text-align: center; line-height: 40px; margin-top: 15px; padding-left: 20px;}
 .homego:before{content: ""; width: 3px; height: 20px; display: block; position: absolute; top: 11px; left: 20px; background-color: #329544;}
-.mgnb_box li.mgnb_txt{width: 100%; background: #329544; border-bottom: 1px solid #fff; position: relative;}
+.mgnb_box li.mgnb_txt{width: 100%; background: #329544;margin-top: 1px; position: relative;}
 .mgnb_box li.mgnb_txt a.g_tit{width: 100%; display: block; text-indent: 20px;padding: 15px;}
 
 
@@ -112,7 +112,7 @@ color: #ffffff; text-align: center; line-height: 50px; }
     color: #ffffff; text-align: center; line-height: 50px; margin-top: 10px;}
 .online_box ul li{width: 95%; height: 34px; border: 1px solid #a5a5a5; margin-top: 6px;
 margin-left: 8px; }
-.online_box p{color: #333333; font-size: 12px; float: left; width: 120px; height: 20px; margin-top: 6px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+.online_box p{color: #333333; font-size: 12px; float: left; width: 200px; height: 20px; margin-top: 6px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
 margin-left: 10px;}
 .online_box span{font-size: 10px; color: #333333; float: right; padding-top: 9px; margin-right: 10px;}
 .online_box p:hover{text-decoration: underline; color: #68aa51;}

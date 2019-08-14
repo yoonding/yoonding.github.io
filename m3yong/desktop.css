@@ -18,7 +18,7 @@ button, label, input{outline: none; border: none; cursor: pointer; background: t
 
 /* header 영역 */
 .logo{display: block; text-align: center; padding: 30px;}
-#gnb{width: 100%; height: 60px; background-color: #329544;}
+#gnb{width: 100%; height: 60px; background-color: #329544; z-index: 100;}
 .menu_icon{display: none;}
 #mgnb{display: none;}
 .gnb_box{width: 100%; height: 100%;}
@@ -30,7 +30,7 @@ position: relative;}
 .gnb_box:hover .sub_box{visibility: visible;opacity:1; height: 310px;  }
 .sub_box{position: absolute; top: 60px; left: 0; border-top: 2px solid #fff; 
     border-bottom: 3px solid #329544; background: #e9fae4; width: 100%;
-height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden; opacity:0; transition: 0.6s;}
+height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden; opacity:0; transition: 0.6s; z-index: 200;}
 .sub_box li{width: 100%; line-height: 3.5; transition: 0.5s;}
 .sub_box li a{display: block; font-size: 15px; color: #000; font-weight: 500; text-align: center;}
 .sub_box li:hover{background-color: #329544;}
