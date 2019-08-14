@@ -48,13 +48,38 @@ width: 45px; height: 45px;padding: 5px; margin: 10px;}
 
 
 
-/* map */
-.map_tit{font-size: 16px; font-weight: 100; text-align: center; background: #329544; padding: 5px; color: #fff;}
-.map_stit{font-size: 14px; margin-left: 10px; padding: 10px; display: none;}
-#map{margin-left:calc(50% - 175px);	margin-top:10px; width:350px;height:400px; margin-bottom: 30px;}
+/* main */
+#clinic{width: 100%; clear: both; }
+.rdo_box{float: left; width: 100%;margin-bottom: 70px; margin-top: 00px;}
+.arti_box{float: right; width: 100%;}
 
-#content p{ margin-left: 20px; font-size: 14px; line-height: 1.8; margin-top: 40px;}
-#content p b{color: #329544;font-size: 16px;}
+.rdo_tit{display: block;width: 73%; color: #329544; font-size: 20px; font-weight: bold;padding: 10px; margin-left: 40px; margin-top: 30px; border-bottom: 2px solid #329544; text-align: center;}
+.rdo_box label{display: block; padding: 5px; margin: 15px; width: 73%; border-bottom: 1px solid #ccc; font-weight: 500; margin-left: 50px; display: block; font-size: 15px; text-align: center;}
+.rdo{display: none;}
+#rd1:checked ~ .rdo_box #rbtn1{color: #329544;}
+#rd2:checked ~ .rdo_box #rbtn2{color: #329544;}
+#rd3:checked ~ .rdo_box #rbtn3{color: #329544;}
+#rd4:checked ~ .rdo_box #rbtn4{color: #329544;}
+#rd5:checked ~ .rdo_box #rbtn5{color: #329544;}
+.article{display: none;}
+#rd1:checked ~ .arti_box #tab1{display: block;}
+#rd2:checked ~ .arti_box #tab2{display: block;}
+#rd3:checked ~ .arti_box #tab3{display: block;}
+#rd4:checked ~ .arti_box #tab4{display: block;}
+#rd5:checked ~ .arti_box #tab5{display: block;}
+
+
+.article{width: 90%; margin: 0 auto 100px 1.7rem; }
+.article h1{margin-top: 0px; text-align: center;font-size: 18px;}
+.vsimg{width: 95%; margin-top:10px;}
+.article h2{padding: 10px; width: 87%; margin-top: 30px; border-bottom: 1px solid #68aa51; font-size: 16px; color: #68aa51;}
+.article p{width: 90%; padding: 10px; margin-top: 10px; line-height: 1.8; font-size: 14px;}
+ 
+.subcon{margin-left: 0px;}
+.subcon span{width: 130px; display: block; padding: 5px;color: #fff; background: #68aa51; border-radius: 15px 15px 0 0; text-align: center; margin-top: 20px; margin-left: 0rem; font-size: 14px; }
+.subcon p{font-size: 13px; padding: 10px; border: 1px solid #68aa51; margin-top: 0; color: #666;}
+
+
 
 
 

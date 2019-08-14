@@ -10,7 +10,6 @@ button, label, input{outline: none; border: none; cursor: pointer; background: t
 
 /* 기본설정 */
 #hd{width: 100%; height: 160px clear: both; }
-#content{width: 100%; clear: both;}
 #ft{width: 100%; height: 150px; clear: both; overflow: hidden; border-top: 2px solid #329544; margin-top: 100px;}
 
 /* header 영역 */
@@ -35,14 +34,39 @@ height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden;
 .tsub_box li:hover a{color: #ffffff; font-weight: 100;}
 
 
+/* main */
+#clinic{width: 100%; clear: both; }
+.rdo_box{float: left; width: 20%; height: 100vh; margin-top: 50px;}
+.arti_box{float: right; width: 80%;}
 
-/* map */
-.map_tit{font-size: 30px;margin-left: 120px; padding-top: 100px;}
-.map_stit{font-size: 18px; margin-left: 100px; padding: 20px; display: block;}
-#map{margin-left:calc(50% - 400px);	margin-top:50px; width:800px;height:400px; margin-bottom: 50px;}
+.rdo_tit{display: block;width: 180px; color: #329544; font-size: 24px; font-weight: bold;padding: 15px; margin-left: 40px; margin-top: 30px; border-bottom: 3px solid #329544; margin-left: 3rem;}
+.rdo_box label{display: block; padding: 5px; margin: 15px; width: 180px; border-bottom: 1px solid #ccc; font-weight: 500; text-indent: 10px; margin-left: 50px; display: block; margin-left: 3rem;}
+.rdo{display: none;}
+#rd1:checked ~ .rdo_box #rbtn1{color: #329544;}
+#rd2:checked ~ .rdo_box #rbtn2{color: #329544;}
+#rd3:checked ~ .rdo_box #rbtn3{color: #329544;}
+#rd4:checked ~ .rdo_box #rbtn4{color: #329544;}
+#rd5:checked ~ .rdo_box #rbtn5{color: #329544;}
+.article{display: none;}
+#rd1:checked ~ .arti_box #tab1{display: block;}
+#rd2:checked ~ .arti_box #tab2{display: block;}
+#rd3:checked ~ .arti_box #tab3{display: block;}
+#rd4:checked ~ .arti_box #tab4{display: block;}
+#rd5:checked ~ .arti_box #tab5{display: block;}
 
-#content p{ margin-left: 120px; font-size: 14px; line-height: 1.8; margin-top: 40px;}
-#content p b{color: #329544;font-size: 16px;}
+
+.article{width: 80%; margin: 0 auto 150px 6rem; }
+.article h1{margin-top: 100px; text-indent: 20px; margin-left: 2rem;}
+.vsimg{width: 95%; margin-top:30px; margin-left: 2rem;}
+.article h2{padding: 15px; width: 90%; margin-top: 100px; border-bottom: 3px solid #68aa51; font-size: 24px; color: #68aa51; margin-left: 2rem;}
+.article p{width: 82%; padding: 20px; margin-top: 20px; line-height: 1.8; font-size: 17px; margin-left: 3rem;}
+ 
+.subcon{margin-left: 20px;}
+.subcon span{width: 150px; display: block; padding: 10px;color: #fff; background: #68aa51; border-radius: 15px 15px 0 0; text-align: center; margin-top: 20px; margin-left: 3rem;}
+.subcon p{font-size: 15px; padding: 10px; border: 1px solid #68aa51; margin-top: 0; color: #666;}
+
+
+
 
 
 
