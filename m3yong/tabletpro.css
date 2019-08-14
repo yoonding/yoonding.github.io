@@ -28,12 +28,12 @@ position: relative;}
 .tgnb_box li.tgnb_txt:last-child{border-right: none; }
 .tgnb_box li.tgnb_txt a{display: block; width: 100%;}
 .tgnb_box li.tgnb_txt img{display: block; margin: 0 auto; padding: 21px;}
-.tgnb_box:hover .tsub_box{visibility: visible;opacity:1; height: 270px;  }
+.tgnb_box:hover .tsub_box{visibility: visible;opacity:1; height: 310px;  }
 .tsub_box{position: absolute; top: 60px; left: 0; border-top: 2px solid #fff; 
     border-bottom: 3px solid #329544; background: #e9fae4; width: 100%;
 height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden; opacity:0; transition: 0.6s;}
 .tsub_box li{width: 100%; line-height: 3.5; transition: 0.5s;}
-.tsub_box li a{display: block; font-size: 13px; color: #000; font-weight: 500; text-align: center;}
+.tsub_box li a{display: block; font-size: 15px; color: #000; font-weight: 500; text-align: center;}
 .tsub_box li:hover{background-color: #329544;}
 .tsub_box li:hover a{color: #ffffff; font-weight: 100;}
 #vs img{display: block; width: 100%; height: 100%;}

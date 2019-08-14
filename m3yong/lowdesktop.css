@@ -18,6 +18,8 @@ button, label, input{outline: none; border: none; cursor: pointer; background: t
 
 /* header 영역 */
 #gnb{display: none;}
+#mgnb{display: none;}
+.menu_icon{display: none;}
 .logo{display: block; text-align: center; padding: 20px;}
 #tgnb{width: 100%; height: 60px; background-color: #329544;}
 .tgnb_box{width: 100%; height: 100%;}
@@ -26,12 +28,12 @@ position: relative;}
 .tgnb_box li.tgnb_txt:last-child{border-right: none; }
 .tgnb_box li.tgnb_txt a{display: block; width: 100%;}
 .tgnb_box li.tgnb_txt img{display: block; margin: 0 auto; padding: 21px;}
-.tgnb_box:hover .tsub_box{visibility: visible;opacity:1; height: 270px;  }
+.tgnb_box:hover .tsub_box{visibility: visible;opacity:1; height: 310px;  }
 .tsub_box{position: absolute; top: 60px; left: 0; border-top: 2px solid #fff; 
     border-bottom: 3px solid #329544; background: #e9fae4; width: 100%;
 height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden; opacity:0; transition: 0.6s;}
 .tsub_box li{width: 100%; line-height: 3.5; transition: 0.5s;}
-.tsub_box li a{display: block; font-size: 13px; color: #000; font-weight: 500; text-align: center;}
+.tsub_box li a{display: block; font-size: 15px; color: #000; font-weight: 500; text-align: center;}
 .tsub_box li:hover{background-color: #329544;}
 .tsub_box li:hover a{color: #ffffff; font-weight: 100;}
 
@@ -40,7 +42,7 @@ height: 0px; border-right: 1px solid #fff; overflow: hidden; visibility: hidden;
 /* clinic 영역 */
 .clinic_tit{display: block; margin: 5rem auto 3rem;}
 .clinic_con{width: 100%; height: 100%;}
-.clinic_box{width: 81.5%;  margin: 0 auto;}
+.clinic_box{width: 61%;  margin: 0 auto; padding-left: 50px;}
 .clinic_box li{float: left; width: 250px; height: 300px;  margin-top: 3%; margin-right: 3%; border: 1px solid #a5a5a5; transition: 0.6s;}
 .clinic_box li:last-child{margin-right: 0;}
 .clinic_box li a{display: block; width: 100%; height: 100%;}
@@ -57,3 +59,62 @@ margin: 0 auto; }
 .clinic_box li:hover{background: #329544;}
 .clinic_box li:hover span{color: #ffffff;}
 .clinic_box li:hover .img_outline{border: 2px dashed #fff;}
+
+/* board 영역 */
+#board div.board_box{width: 50%; height:800px; float: left; }
+#news{background-color: #e9fae4;}
+#review{background-color: #d5e3d1;}
+
+.news_tit_box{width: 600px; height: 80px; margin: 60px auto 30px;}
+.news_tit_box h1{font-size: 32px; font-weight: 100;  line-height: 80px; float: left; text-indent: 15px;}
+.news_tit_box a{display: block; width: 30px; height: 30px; padding: 25px; float: right;}
+.news_listbox{width: 800px; height: 600px; margin: 0 auto;}
+.news_listbox li{width: 75%; height: 130px; background: #fff; margin-top: 10px; margin-left: 5%;}
+.news_mtit{display: block; width: 100px; height: 25px; border: 1px solid #d7d7d7;
+color: #329544; margin-left: 20px; margin-top: 20px; text-align: center; float: left;
+font-size: 12px; line-height: 25px;}
+.news_date{display: block; width: 100px; height: 30px; color: #a5a5a5; float: right; margin-right: 20px;
+font-size: 12px; font-weight: 100; line-height: 30px; text-align: center; margin-top: 20px;  }
+.news_listbox a p{display: block; clear: both; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+width: 400px; height: 60px; margin-left: 20px; padding-top: 25px; float: left; text-indent: 15px; color: #333;}
+.news_look{display: block; float: right; width: 100px; height: 30px; background: #329544;
+color: #ffffff; font-size: 12px; font-weight: 100; text-align: center; line-height: 30px;
+margin: 25px;}
+.news_listbox a p:hover{text-decoration: underline;}
+
+/* info 영역 */
+#info article{float: left; width: 29%; height: 370px; margin-right: 30px;
+border: 1px solid #a5a5a5;}
+#info article:first-child{margin-left: 55px;}
+
+.go_servicebox h3{font-size: 28px; font-weight: 100; width: 100%; height: 60px; background: #315e39;
+color: #ffffff; text-align: center; line-height: 60px; }
+.itembox{width: 46%; height: 140px; float: left; margin-left: 10px; margin-top: 10px; border: 1px solid #d6d6d6;}
+.itembox a{display: block; width: 100%; height: 100%;}
+.itembox img{display: block; padding: 15px; width: 40%;margin: 0 auto;}
+.itembox span{display: block; font-size: 16px; color: #333333; text-align: center; font-weight: bold;}
+.itembox4 span{padding-top: 0px; text-align: center; font-weight: bold;}
+.itembox4 span br{display: none;}
+
+.treat_infobox h3{font-size: 28px; font-weight: 100; width: 100%; height: 60px; background: #329544;
+    color: #ffffff; text-align: center; line-height: 60px;}
+.treat_infobox div{width: 250px; height: 200px; margin: 55px auto;}
+.treat_infobox p{font-size: 18px; line-height: 2; color: #333333;}
+.delayday1{color: #68aa51;}
+.delayday2{font-size: 14px; }
+.treat_infobox p:nth-child(5){color: #df1818;}
+
+.online_box h3{font-size: 28px; font-weight: 100; width: 100%; height: 60px; background: #68aa51;
+    color: #ffffff; text-align: center; line-height: 60px;}
+.online_box ul li{width: 96%; height:48px; border: 1px solid #a5a5a5; margin-top: 10px;
+margin-left: 7px; }
+.online_box p{color: #333333; font-size: 14px; float: left; width: 250px; height: 30px; margin-top: 12px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+margin-left: 15px;}
+.online_box span{font-size: 12px; color: #333333; float: right; padding: 16px;}
+.online_box p:hover{text-decoration: underline; color: #68aa51;}
+
+/* footer 영역 */
+.ft_box{width: 840px; margin: 0 auto; margin-top: 10px;}
+#ft img{display: block; margin:35px 0px 30px 30px;  float: left;}
+#ft div.copy_box{margin-top: 20px; width: 550px; float: right;}
+.copy_box p{display: block; font-size: 14px; line-height: 1.7; width: 100%;}

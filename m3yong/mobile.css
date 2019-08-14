@@ -81,8 +81,9 @@ margin: 0 auto;}
 #news{background-color: #e9fae4;}
 #review{background-color: #d5e3d1;}
 
-.news_tit_box{width: 189px; height: 80px;}
-.news_tit_box h1{font-size: 20px; font-weight: 100; text-indent: 10px;padding: 5px; text-align: center; margin: 20px auto;}
+.news_listbox{display: none;}
+.news_tit_box{width: 189px; height: 60px;}
+.news_tit_box h1{font-size: 18px; font-weight: 100; text-indent: 10px;padding: 5px; text-align: center; margin: 20px auto;}
 .news_tit_box a{display: none;}
 .news_mtit{display: none;}
 .news_date{display: none;}
